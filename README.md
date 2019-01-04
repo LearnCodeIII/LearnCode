@@ -3,5 +3,3 @@
 網站協作人員名單：
 Shawn Lin
 jlc7191
-HI777888
-MAN POWER
