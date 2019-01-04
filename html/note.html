@@ -8,6 +8,12 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <style>
+    * {
+        font-family: Verdana, 微軟正黑體;
+    }
+    .container-fluid {
+        padding: 2% 5%;
+    }
     .logo {
         color: #000000;
         font-size: 50px;
@@ -35,8 +41,8 @@
         color: #fff !important;
     }
     footer .glyphicon {
-        font-size: 20px;
-        margin-bottom: 20px;
+        font-size: 15px;
+        margin-bottom: 10px;
         color: #ffffff;
     }
     footer {
@@ -50,84 +56,84 @@
         padding: 50px 0;
         height:100%;
     }
-    .article-top {
-        margin:5%;
+    .article {
+        box-shadow: 0px 0px 10px 1px black;
+        margin:10% 0;
         padding:5%;
-        font-size:3vw;
+        text-align: center;
     }
-    .article-tag {
-        margin:5%;
-        padding: 5%;
-        font-size: 2vw;
+    .article:hover {
+        opacity: 0.8;
+        box-shadow: 0px 0px 20px 3px black;
     }
-    .article-body {
-        margin:5% 10% 20% 10%;
-        padding: 2vw;
-    }
-    .article-header {
-        font-size:3vw;
-    }
-    .article-footer {
-        margin:20% 0;
-        font-size:2vw;
-        line-height: 5vw;
-    }
-    .article-footer img {
-        width:100%;
+    .article a {
+        color:black;
+        text-decoration: none;
     }
 </style>
 </head>
 <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
-<div id="html" class="container-fluid">
-    <div class="row">
-        <div class="col-sm-6">
-            <div class="article-top">
-                <h1>HTML Article</h1>
-            </div>
-        </div>
-        </div>
-    </div>
-</div>
-<div  class="container">
+<!-- <div id="類別" class="container-fluid">
+    <h2>類別名稱</h2>
     <div class="row">
         <div class="col-sm-3">
-            <div class="article-body">
-                <div class="row">
-                    <div class="article-header">
-                        <h2>HTML:</h2>
-                    </div>
-                    <div class="article-footer">
-                        <img src="/pic/work01.jpg">
-                        <h3>Basic</h3>
-                    </div>
-                </div>
+            <div class="article">
+                <a href="網址連結" target="_blank">
+                    <h3>標題</h3>
+                    <h4>內容</h4>
+                </a>
+            </div>
+        </div>
+    </div>
+</div> -->
+<div id="HTML" class="container-fluid">
+    <h2>HTML</h2>
+    <div class="row">
+        <div class="col-sm-3">
+            <div class="article">
+                <a href="網址連結" target="_blank">
+                    <h3>標題</h3>
+                    <h4>內容</h4>
+                </a>
             </div>
         </div>
     </div>
 </div>
-<div id="css" class="container-fluid">
+<div id="CSS" class="container-fluid">
+    <h2>CSS</h2>
     <div class="row">
-        <div class="col-sm-6">
-            <div class="article-top">
-                <h1>CSS Article</h1>
+        <div class="col-sm-3">
+            <div class="article">
+                <a href="網址連結" target="_blank">
+                    <h3>標題</h3>
+                    <h4>內容</h4>
+                </a>
             </div>
         </div>
     </div>
 </div>
-<div id="javascript" class="container-fluid">
-        <div class="row">
-            <div class="col-sm-6">
-                <div class="article-top">
-                    <h1>Javascript Article</h1>
-                </div>
+<div id="HTML" class="container-fluid">
+    <h2>Javascript</h2>
+    <div class="row">
+        <div class="col-sm-3">
+            <div class="article">
+                <a href="網址連結" target="_blank">
+                    <h3>標題</h3>
+                    <h4>內容</h4>
+                </a>
             </div>
         </div>
     </div>
-<div id="jquery" class="container-fluid">
+</div>
+<div id="HTML" class="container-fluid">
+    <h2>jQuery</h2>
     <div class="row">
-        <div class="col-sm-6">
-            <div class="article-top">
-                <h1>jQuery Article</h1>
+        <div class="col-sm-3">
+            <div class="article">
+                <a href="網址連結" target="_blank">
+                    <h3>標題</h3>
+                    <h4>內容</h4>
+                </a>
             </div>
         </div>
     </div>
@@ -144,10 +150,10 @@
         </div>
         <div class="collapse navbar-collapse" id="myNavbar">
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="#html">HTML</a></li>
-                <li><a href="#css">CSS</a></li>
-                <li><a href="#javascript">Javascript</a></li>
-                <li><a href="#jquery">jQuery</a></li>
+                <li><a href="#HTML">HTML</a></li>
+                <li><a href="#CSS">CSS</a></li>
+                <li><a href="#Javascript">Javascript</a></li>
+                <li><a href="#jQuery">jQuery</a></li>
             </ul>
         </div>
     </div>
@@ -167,10 +173,10 @@ $(document).ready(function(){
               scrollTop: $(hash).offset().top
             }, 900, function(){
               window.location.hash = hash;
-              });
-            }
-          });
-        })
+            });
+        }
+    });
+});
 </script>
 </body>
 </html>
