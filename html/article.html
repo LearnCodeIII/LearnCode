@@ -57,85 +57,40 @@
         height:100%;
     }
     .article {
-        box-shadow: 0px 0px 10px 1px black;
-        margin:10% 0;
+        margin:3% 5%;
         padding:5%;
-        text-align: center;
+        border:2px solid black;
     }
-    .article:hover {
-        opacity: 0.8;
-        box-shadow: 0px 0px 20px 3px black;
+    .article span {
+        font-size:100%;
+        width:100%;
     }
-    .article a {
-        color:black;
-        text-decoration: none;
+    .article h3 {
+        font-size: 250%;
+    }
+    .article h4 {
+        font-size: 130%;
+        margin:5% 0;
+        line-height: 150%;
+    }
+    .article pre {
+        font-family:monospace,"微軟正黑體";
     }
 </style>
 </head>
 <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
-<div id="shawn" class="container-fluid">
-    <h2>HTML</h2>
-    <div class="row">
-        <div class="col-sm-3">
-            <div class="article">
-                <a href="網址連結" target="_blank">
-                    <h3>Flexbox技術文章討論</h3>
-                    <h4>Lorem Lorem Lorem Lorem Lorem</h4>
-                    <h4>Lorem Lorem Lorem Lorem Lorem</h4>
-                    <h4>Lorem Lorem Lorem Lorem Lorem</h4>
-                    <h4>Lorem Lorem Lorem Lorem Lorem</h4>
-                    <h4>Lorem Lorem Lorem Lorem Lorem</h4>
-                    <h4>Lorem Lorem Lorem Lorem Lorem</h4>
-                    <h4>Lorem Lorem Lorem Lorem Lorem</h4>
-                    <h4>Lorem Lorem Lorem Lorem Lorem</h4>
-                    <h4>Lorem Lorem Lorem Lorem Lorem</h4>
-                    <h4>Lorem Lorem Lorem Lorem Lorem</h4>
-                    <h4>Lorem Lorem Lorem Lorem Lorem</h4>
-                    <h4>Lorem Lorem Lorem Lorem Lorem</h4>
-                    <h4>Lorem Lorem Lorem Lorem Lorem</h4>
-                    <h4>Lorem Lorem Lorem Lorem Lorem</h4>
-                    <h4>Lorem Lorem Lorem Lorem Lorem</h4>
-                    <h4>Lorem Lorem Lorem Lorem Lorem</h4>
-                    <h4>Lorem Lorem Lorem Lorem Lorem</h4>
-                    <h4>Lorem Lorem Lorem Lorem Lorem</h4>
-                    <h4>Lorem Lorem Lorem Lorem Lorem</h4>
-                    <h4>Lorem Lorem Lorem Lorem Lorem</h4>
-                    <h4>Lorem Lorem Lorem Lorem Lorem</h4>
-                    <h4>Lorem Lorem Lorem Lorem Lorem</h4>
-                    <h4>Lorem Lorem Lorem Lorem Lorem</h4>
-                    <h4>Lorem Lorem Lorem Lorem Lorem</h4>
-                    <h4>Lorem Lorem Lorem Lorem Lorem</h4>
-                    <h4>Lorem Lorem Lorem Lorem Lorem</h4>
-                    <h4>Lorem Lorem Lorem Lorem Lorem</h4>
-                    <h4>Lorem Lorem Lorem Lorem Lorem</h4>
-                    <h4>Lorem Lorem Lorem Lorem Lorem</h4>
-                    <h4>Lorem Lorem Lorem Lorem Lorem</h4>
-                    <h4>Lorem Lorem Lorem Lorem Lorem</h4>
-                    <h4>Lorem Lorem Lorem Lorem Lorem</h4>
-                    <h4>Lorem Lorem Lorem Lorem Lorem</h4>
-                    <h4>Lorem Lorem Lorem Lorem Lorem</h4>
-                    <h4>Lorem Lorem Lorem Lorem Lorem</h4>
-                    <h4>Lorem Lorem Lorem Lorem Lorem</h4>
-                    <h4>Lorem Lorem Lorem Lorem Lorem</h4>
-                    <h4>Lorem Lorem Lorem Lorem Lorem</h4>
-                    <h4>Lorem Lorem Lorem Lorem Lorem</h4>
-                    <h4>Lorem Lorem Lorem Lorem Lorem</h4>
-                    <h4>Lorem Lorem Lorem Lorem Lorem</h4>
-                    <h4>Lorem Lorem Lorem Lorem Lorem</h4>
-                    <h4>Lorem Lorem Lorem Lorem Lorem</h4>
-                    <h4>Lorem Lorem Lorem Lorem Lorem</h4>
-                    <h4>Lorem Lorem Lorem Lorem Lorem</h4>
-                    <h4>Lorem Lorem Lorem Lorem Lorem</h4>
-                    <h4>Lorem Lorem Lorem Lorem Lorem</h4>
-                    <h4>Lorem Lorem Lorem Lorem Lorem</h4>
-                    <h4>Lorem Lorem Lorem Lorem Lorem</h4>
-                    <h4>Lorem Lorem Lorem Lorem Lorem</h4>
-                    <h4>Lorem Lorem Lorem Lorem Lorem</h4>
-                    <h4>Lorem Lorem Lorem Lorem Lorem</h4>
-                </a>
-            </div>
-        </div>
-    </div>
+<div class="article">
+    <h3>《文章標題預設h3》</h3>
+    <span>作者:作者名稱預設為span</span>
+    <h4>文章段落預設為h4</h4>
+    <h4>文章分段另開H4元素</h4>
+<pre>
+將要展示的程式碼放置在pre元素之內(注意會包含縮排)
+而且不會換行行行行行行行行
+.test {
+    text-align:center;
+}
+</pre>
 </div>
 <nav class="navbar navbar-default navbar-fixed-top">
     <div class="container">
