@@ -18,20 +18,19 @@
             padding: 0;
         }
 
-        .flex {
-            display: flex;
-            background-color: #a80b00ec;
-            justify-content: space-around;
-        }
-
-        .webbar {
+        .header {
             display: flex;
             justify-content: space-between;
             margin-top: 0;
             margin-bottom: -90px;
-            font-family: fantasy;
+            font-family: monospace;
             font-size: 20px;
             padding-right: 35px;
+        }
+
+        .nav {
+            display: flex;
+            align-items: center;
         }
 
         .logo {
@@ -41,36 +40,50 @@
             justify-content: right;
         }
 
+        .section-1 {
+            display: flex;
+            margin: 50px 10px;
+            background-color: #a80b00ec;
+            justify-content: space-around;
+        }
+
+        img {
+            border-radius: 100%;
+        }
+
         .homepage {
             display: flex;
+            margin: -50px;
             align-items: flex-start;
             justify-content: center;
         }
 
-        .item {
+        .section-2 {
+            display: flex;
+            margin:100px 10px; 
+            background-color: #000000ec;
+            justify-content: space-around;
+        }
+
+        .figure {
             flex: 1;
             height: 50px;
             width: 50px;
-            margin: 30px;
+            margin-top: 70px;
             padding: 0px;
             display: flex;
             justify-content: space-around;
             align-items: flex-start;
         }
-
-        .flex-2 {
-            flex: 2;
-            background-color: #f08bc3;
-        }
     </style>
 </head>
 
 <body>
-    <div class="webbar">
+    <div class="header">
         <div class="logo">
-            <img width="242" height="140" src="images/logo.png" alt="">
+            <img width="242" height="140" src="images/logo1.png" alt="">
         </div>
-        <div>
+        <div class="nav">
             <ul class="nav nav-tabs">
                 <li><a data-toggle="tab" href="#home">Home</a></li>
                 <li><a data-toggle="tab" href="#menu1">Page 1</a></li>
@@ -83,22 +96,23 @@
                     </ul>
         </div>
     </div>
-    <div class="flex">
+    <div class="section-1">
         <div class="homepage">
             <img width="1300" src="images/homepage-jp.jpg" alt="">
         </div>
+
     </div>
-    <div class="flex">
-        <div class="item ">
+    <div class="section-2">
+        <div class="figure ">
             <img width="400" src="images/apple-black-169573.jpg" alt="">
         </div>
-        <div class="item ">
+        <div class="figure">
             <img width="400" src="images/apple-black-169573.jpg" alt="">
         </div>
-        <div class="item ">
+        <div class="figure">
             <img width="400" src="images/apple-black-169573.jpg" alt="">
         </div>
-        <div class="item ">
+        <div class="figure">
             <img width="400" src="images/apple-black-169573.jpg" alt="">
         </div>
     </div>
