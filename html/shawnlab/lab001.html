@@ -5,19 +5,74 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <style>
+        .navtop ul {
+            margin:0;
+            padding:0;
+            display:flex;
+            list-style-type:none;
+        }
+        .navbot ul {
+            padding:0;
+            display:flex;
+            list-style-type:none;
+            justify-content: space-between;
+        }
+    </style>
 </head>
 <body>
-    <div>
+    <nav class="navtop">
         <ul>
-            <li>Medium</li>
+            <li class="logo">Medium</li>
             <li>搜尋</li>
             <li>鈴鐺</li>
             <li>升級</li>
             <li>個人檔案</li>
         </ul>
-    </div>
-    <div>
+    </nav>
+    <nav class="navbot">     
+        <ul>
+            <li>HOME</li>
+            <li>2069</li>
+            <li>CULTURE</li>
+            <li>TECH</li>
+            <li>STARTUPS</li>
+            <li>SELF</li>
+            <li>POLITICS</li>
+            <li>DESIGN</li>
+            <li>HEALTH</li>
+            <li>SCIENCE</li>
+            <li>POPULAR</li>
+            <li>COLLECTION</li>
+            <li>MORE</li>
+        </ul>
 
+    </nav>
+    <div class="article">
+        <div class="article-left">
+            <img src="./pic01.png" alt="">
+            <h3>Why I Left My Big Fancy Tech Job and Wrote a Book</h3>
+            <p>I love Silicon Valley, but it’s deeply flawed</p>
+            <h4>Jessica Powell in The Big Disruption
+                Oct 2, 2018</h4>
+        </div>
+        <div class="article-right">
+            <div>
+                <img src="./pic02.jpeg" alt="">
+                <h3>How to Develop Better Habits in 2019</h3>
+                <h4>Ryan Holiday in Notes on Changing Your Life</h4>
+            </div>
+            <div>
+                <img src="./pic02.jpeg" alt="">
+                <h3>The Technology That Will Define 2019</h3>
+                <h4>Lance Ulanoff in The Upgrade</h4>
+            </div>
+            <div>
+                <img src="./pic02.jpeg" alt="">
+                <h3>It’s Okay to Not Want a Promotion</h3>
+                <h4>Jean Hannah Edelstein in Power Trip</h4>
+            </div>
+        </div>
     </div>
 </body>
 </html>
