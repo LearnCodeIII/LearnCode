@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <title>Bootstrap Navigation Bar</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <style>
+        html body {
+            margin: 0;
+            padding: 0;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 0;
+            margin-bottom: -90px;
+            font-family: monospace;
+            font-size: 20px;
+            padding-right: 35px;
+        }
+
+        .nav {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            margin-top: 7px;
+            margin-left: 28px;
+            justify-content: right;
+        }
+
+        .section-1 {
+            display: flex;
+            margin: 50px 10px;
+            background-color: #a80b00ec;
+            justify-content: space-around;
+        }
+
+        img {
+            border-radius: 100%;
+        }
+
+        .homepage {
+            display: flex;
+            margin: -50px;
+            align-items: flex-start;
+            justify-content: center;
+        }
+
+        .section-2 {
+            display: flex;
+            margin:100px 10px; 
+            background-color: #000000ec;
+            justify-content: space-around;
+        }
+
+        .figure {
+            flex: 1;
+            height: 50px;
+            width: 50px;
+            margin-top: 70px;
+            padding: 0px;
+            display: flex;
+            justify-content: space-around;
+            align-items: flex-start;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <div class="logo">
+            <img width="242" height="140" src="images/logo1.png" alt="">
+        </div>
+        <div class="nav">
+            <ul class="nav nav-tabs">
+                <li><a data-toggle="tab" href="#home">Home</a></li>
+                <li><a data-toggle="tab" href="#menu1">Page 1</a></li>
+                <li><a data-toggle="tab" href="#menu2">Page 2</a></li>
+                <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Dropdown<span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">First</a></li>
+                        <li><a href="#">Second</a></li>
+                        <li><a href="#">Third</a></li>
+                    </ul>
+        </div>
+    </div>
+    <div class="section-1">
+        <div class="homepage">
+            <img width="1300" src="images/homepage-jp.jpg" alt="">
+        </div>
+
+    </div>
+    <div class="section-2">
+        <div class="figure ">
+            <img width="400" src="images/apple-black-169573.jpg" alt="">
+        </div>
+        <div class="figure">
+            <img width="400" src="images/apple-black-169573.jpg" alt="">
+        </div>
+        <div class="figure">
+            <img width="400" src="images/apple-black-169573.jpg" alt="">
+        </div>
+        <div class="figure">
+            <img width="400" src="images/apple-black-169573.jpg" alt="">
+        </div>
+    </div>
+</body>
+
+</html>
