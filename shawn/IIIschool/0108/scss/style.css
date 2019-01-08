@@ -63,12 +63,16 @@ table {
 */
 body {
   min-width: 900px;
+  padding: 100px 0 0 0;
 }
 
 header {
   background-color: #6da0ff;
   height: 50px;
   padding: 20px 0 0 20px;
+  width: 100%;
+  position: fixed;
+  top: 0;
 }
 
 header h1 {
