@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        fieldset {
+            width: 500px;
+            margin: 15px auto;
+            border:2px solid rgb(0, 160, 253);
+            border-radius: 10px;
+        }
+        em {
+            color:red;
+        }
+        .formset {
+            width: 450px;
+            margin:20px;
+            border-bottom:1px solid black;
+            padding-bottom:10px;
+        }
+        .btn {
+            width: 500px;
+            margin: 20px;
+            text-align: center;
+            margin:15px auto;
+        }
+        .title {
+            width: 100px;
+            float:left;
+            text-align: right;
+            padding-right:15px;
+        }
+        legend {
+           border:2px solid rgb(0, 160, 253);
+           padding:10px 8px
+        }
+    </style>
+</head>
+<body>
+    <form action="#" method="POST">
+        <fieldset>
+            <legend>個人資料<em>(必填)</em></legend>
+            <div class="formset form1">
+                <label class="title">姓名:</label>
+                <input type="text" name="account" placeholder="請輸入姓名" size="10">
+                <!-- <input type="text" name="account" value="請輸入姓名" size="10" onfocus="this.value=''"> -->
+            </div>
+            <div class="formset form1">
+                <label class="title">密碼:</label>
+                <input type="password" name="pwd" size="10" placeholder="請輸入密碼">
+            </div>
+            <div class="formset form1">
+                <label class="title">性別:</label>
+                <input type="radio" name="gender" value="男" checked>男
+                <input type="radio" name="gender" value="女">女
+            </div>
+            <div class="formset form1">
+                <label class="title">身分證字號</label>
+                <input type="text" name="idnumber" placeholder="A123456789">
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend>地址<em>(必填)</em></legend>
+            <div class="formset form2">
+                <label class="title">郵遞區號:</label>
+                <input type="text" name="postcode" size="5" maxlength="5">
+            </div>
+            <div class="formset form2">
+                <label class="title">縣市:</label>
+                <select name="add1">
+                    <option value="1">台北市</option>
+                    <option value="2">新北市</option>
+                    <option value="3">桃園市</option>
+                    <option value="4">新竹市</option>
+                </select>
+            </div>
+            <div class="formset form2">
+                <label class="title">完整地址:</label>
+                <input type="text" name="add2" size="30">
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend>個人資料二<em>(必填)</em></legend>
+            <div class="formset form3">
+                <label class="title">興趣:</label>
+                <input type="checkbox" name="hobby" value="music">音樂
+                <input type="checkbox" name="hobby" value="sport">運動
+                <input type="checkbox" name="hobby" value="reading">閱讀
+                <input type="checkbox" name="hobby" value="movie">電影
+            </div>
+            <div class="formset form3">
+                <label class="title">照片:</label>
+                <input type="file" name="file">
+            </div>
+            <div class="formset form3">
+                <label class="title">意見:</label>
+                <textarea cols="40" rows="5"></textarea>
+            </div>
+        </fieldset>
+        <div class="btn">
+            <input type="submit" value="送出">
+            <input type="reset" value="清除">
+            <input type="button" value="alert" onclick="alert()">
+        </div>
+    </form> 
+</body>
+</html>
