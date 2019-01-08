@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="reset.css">
+    <title>Document</title>
+    <style>
+
+        * {
+            box-sizing: border-box;
+        }
+        html body{
+            margin: 0;
+            padding: 0;
+            }
+
+        /* 以下為ad圖與上nav */
+        header{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin: 0 20%;
+        }
+        .top-ad{
+            display: flex;
+            justify-content: center;
+        }
+
+        .top-ad img{
+            display: flex;
+            width: 48.5%;
+            height: 48.5%;
+            justify-content: center;
+            background-color: rgb(160, 40, 40);
+            margin: 0 0 -0.1% 0;
+        }
+
+        .nav-top{
+            width: 100%;
+            height: 1.5em;
+            display: flex;
+            justify-content:flex-end;
+            flex-wrap: nowrap;
+            background-color: rgb(126, 125, 125);
+            color: white; 
+        }
+
+        .nav-top-1{
+            padding-top: 0 5%;
+            display: flex;
+            flex-direction: row;
+            margin:0.2% -3% 0.2% 0;
+            border-right: 1px solid #ffffff;
+            
+        }
+
+        .nav-top-2{
+            padding: 0 3%;
+            display: flex;
+            flex-direction: row;
+            margin-right: 22%;
+        }
+
+        .nav-top-1 a{
+            display: inline-block;
+            box-sizing: border-box;
+            width: 5.8em;
+            line-height:160%;
+            font-size:0.7em;
+            text-align:center;
+        }
+
+        .nav-top-2 a{
+            display: inline-block;
+            box-sizing: border-box;
+            width: 3em;
+            line-height:190%;
+            font-size:0.7em;
+            text-align: center;
+        }
+
+        .nav-top a{
+            color: white;
+            text-decoration: none;
+        }
+
+        .nav-top a:visited{
+            color: white;
+            text-decoration: none;
+        }
+
+        .nav-top a:hover{
+            color: rgb(53, 53, 53);
+            text-decoration: none;
+        }
+
+        .nav-top a:active{
+            color: white;
+            text-decoration: none;
+        }
+
+/* 以下為logo列 */
+        section{
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: center;
+            margin: 0 25%;
+        }
+
+        .button{
+            width: 20px;
+            height: 20px;
+            background-color: rgba(146, 2, 2, 0.658);
+            border-radius: 25%;
+            margin-right: 1%;
+        }
+
+        .logo img{
+            margin: 2% 0 1% 0;
+            width: 33.5%;
+        }
+
+        .search{
+            display: flex;
+            justify-content: flex-start;
+            margin:0 0 0 -165px; 
+        }
+        .search input{
+            width: 100px;
+            background-color: rgb(221, 221, 221);
+            border-radius: 0.5px;
+        }
+        
+        /* 以下為選單nav */
+        .nav-banner{
+            margin: -0.1% 0 0 0;
+            border-top:1px solid rgb(220, 220, 220);
+            border-bottom: 1px solid rgb(220, 220, 220);  
+        }
+
+        .nav-banner ul{
+            height: 1.7em;
+            background-color: #ffffff;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            overflow: hidden;
+            margin: 0 24.3%;
+        }
+
+        .nav-banner a{
+            line-height: 235%;
+            font-size: 0.7em;
+        }
+
+        .nav-banner a{
+            color:#5a5a5a;
+            text-decoration: none;
+        }
+
+        .nav-banner a:visited{
+            color: #5a5a5a;
+            text-decoration: none;
+        }
+
+        .nav-banner a:hover{
+            color:#5a5a5a;
+            text-decoration: none;
+        }
+
+        .nav-banner a:active{
+            color:#5a5a5a;
+            text-decoration: none;
+        }
+/* 以下為main */
+        main{
+            margin: 0 24.3%;
+            display: flex;
+            justify-content: flex-start;
+            background-color: rgb(245, 245, 245);   
+        }
+
+        main h2{
+            line-height: 260%;
+            font-size: 0.5em;
+            color: #5a5a5a
+        }
+
+        article{
+            margin-right:1% ;
+            background-color: #fcc;
+            width: 50%;
+
+        }
+
+        .atc-1{
+
+        }
+
+        .aside-list{
+            display: flex;
+            flex-direction: column;
+            margin: 0 1%;
+            background-color: #cff;
+            width: 30%;
+        }
+
+        .aside-list-1 ul{
+            font-size: 0.6em;
+            padding: 1%;
+            line-height: 90%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            width: 80%;
+        }
+
+        .aside-list-2 table td{
+            line-height: 150%;
+            width: 450px;
+            overflow: auto;
+            display: inline-block;
+            
+        }
+
+        .aside-ad{
+            display: flex;
+            flex-direction: column;
+            margin: 0 1%;
+            background-color: #cfc;
+        }
+        .aside-ad img{
+            width: 80%;
+        }
+
+        .atc-1 img{
+            width: 100%;
+        }
+
+        .aside-ad{
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- top-ad -->
+    <header>
+        <div class="top-ad">
+            <img src="images/top-ad.jpg" alt="">
+        </div>
+    </header>
+
+    <!-- top nav -->
+    <nav class="nav-top">
+        <ul class="nav-top-1">
+            <li><a href="">English</a></li>
+            <li><a href="">天下全閱讀</a></li>
+            <li><a href="">免費下載App</a></li>
+            <li><a href="">雜誌訂閱</a></li>
+            <li><a href="">網路書店</a></li>
+        </ul>
+        <ul class="nav-top-2">
+            <li><a href="">登入</a></li>
+            <li><a href="">註冊</a></li>
+        </ul>
+    </nav>
+
+    <!-- logo+search -->
+    <section>
+        <div class="button">
+        </div>
+        <div class="logo">
+            <img src="images/logo.png" alt="">
+        </div>
+        <div class="search">
+            <input type="search" value="請輸入關鍵字">
+        </div>
+    </section>
+
+    <!-- 選單nav -->
+    <nav class="nav-banner">
+        <ul>
+            <li><a href="">今日最新</a></li>
+            <li><a href="">財經</a></li>
+            <li><a href="">數位專輯</a></li>
+            <li><a href="">經營管理</a></li>
+            <li><a href="">時尚生活</a></li>
+            <li><a href="">健康關係</a></li>
+            <li><a href="">教育</a></li>
+            <li><a href="">雜誌</a></li>
+            <li><a href="">特色頻道</a></li>
+        </ul>
+    </nav>
+
+    <!-- main -->
+    <main>
+        <article>
+            <h2>最新上線</h2>
+            <div class="atc-1">
+                <img src="images/atc-1.jpg" alt="">
+                <h2>國際</h2>
+                <h3>真巧!中美貿易談判正熱 金正恩</h3>
+                <p>中美貿易戰休兵談判進入第2天，而最新消息顯示，北韓領導人金正恩7日也坐著神秘列車，抵達了北京。事實證明，原來金正恩是習近平邀來的。習近平在想什麼</p>
+            </div>
+            <div>
+                <img src="images/atc-2.jpg" alt="">
+                <h2>產業</h2>
+                <h3>真巧!中美貿易談判正熱 金正恩</h3>
+                <p>蘋果不甜三星也中槍　三星估營利2年來首次下跌
+                    蘋果公司上週罕見地下修季度銷售預測，南韓三星電子也不好過。三..</p>
+            </div>
+            <div>
+                <img src="images/atc-3.jpg" alt="">
+                <h2>產業</h2>
+                <h3>真巧!中美貿易談判正熱 金正恩</h3>
+                <p>宏碁子公司如何用AI　幫澳洲超市減少30%損失？
+                    一家台灣老企業，如何用AI救了澳洲前三大連鎖超市？連虧8年，以...</p>
+            </div>
+        </article>
+
+        <aside class="aside-list">
+            <h2>熱門議題</h2>
+            <div class="aside-list-1">
+                <ul>
+                    <li>最熱門</li>
+                    <li>你最感興趣</li>
+                </ul>
+            </div>
+            <div class="aside-list-2">
+                <table>
+                    <td>1.十年虧1300億元!大同沒倒，</td>
+                    <td>2.汽車油箱蓋為什麼有的在左邊</td>
+                    <td>3.爆款2019年曆，你搶到了嗎？</td>
+                    <td>4.李登輝告訴我：要小心....萬</td>
+                    <td>5.直銷商要被網購淘汰了？安麗</td>
+                </table>
+            </div>
+        </aside>
+        <aside class="aside-ad">
+            <h2>特別推薦</h2>
+            <div class="aside-ad">
+                <img src="images/aside-ad-1.jpg" alt="">
+                <img src="images/aside-ad-2.jpg" alt="">
+            </div>
+        </aside>
+    </main>
+</body>
+
+</html>
