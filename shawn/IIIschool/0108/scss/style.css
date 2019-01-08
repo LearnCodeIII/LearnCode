@@ -1,0 +1,150 @@
+@charset "UTF-8";
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/*
+以上為RESET以上為RESET以上為RESET以上為RESET以上為RESET以上為RESET以上為RESET以上為RESET以上為RESET以上為RESET以上為RESET以上為RESET
+以上為RESET以上為RESET以上為RESET以上為RESET以上為RESET以上為RESET以上為RESET以上為RESET以上為RESET以上為RESET以上為RESET以上為RESET
+以上為RESET以上為RESET以上為RESET以上為RESET以上為RESET以上為RESET以上為RESET以上為RESET以上為RESET以上為RESET以上為RESET以上為RESET
+以上為RESET以上為RESET以上為RESET以上為RESET以上為RESET以上為RESET以上為RESET以上為RESET以上為RESET以上為RESET以上為RESET以上為RESET
+以上為RESET以上為RESET以上為RESET以上為RESET以上為RESET以上為RESET以上為RESET以上為RESET以上為RESET以上為RESET以上為RESET以上為RESET
+以上為RESET以上為RESET以上為RESET以上為RESET以上為RESET以上為RESET以上為RESET以上為RESET以上為RESET以上為RESET以上為RESET以上為RESET
+*/
+body {
+  min-width: 900px;
+}
+
+header {
+  background-color: #6da0ff;
+  height: 50px;
+  padding: 20px 0 0 20px;
+}
+
+header h1 {
+  font-size: 36px;
+  color: white;
+  font-weight: 700;
+  font-family: Arial, Helvetica, sans-serif,"微軟正黑體";
+}
+
+nav {
+  padding: 20px;
+  background-color: transparent;
+  position: fixed;
+  top: 0;
+  right: 0;
+}
+
+nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+nav ul li {
+  display: inline-block;
+  margin: 5px 20px;
+  font-size: 20px;
+}
+
+nav ul li a, nav ul li a:visited {
+  color: #6da0ff;
+  font-weight: bolder;
+  font-size: 20px;
+  padding: 10px 25px;
+  background-color: white;
+  text-decoration: none;
+  border-radius: 50px;
+}
+
+nav ul li a:hover {
+  color: white;
+  font-size: 20px;
+  padding: 10px 25px;
+  background-color: #D6A99A;
+  text-decoration: none;
+  border-radius: 50px;
+}
+
+section {
+  width: 75%;
+  padding: 20px;
+  float: left;
+}
+
+section h2 {
+  font-size: 150%;
+  font-weight: bold;
+}
+
+section article {
+  -webkit-column-count: 3;
+          column-count: 3;
+  -webkit-column-rule: 1px solid black;
+          column-rule: 1px solid black;
+  -webkit-column-gap: 20px;
+          column-gap: 20px;
+  line-height: 40px;
+  padding: 20px;
+}
+
+aside {
+  width: 20%;
+  padding: 20px;
+  float: right;
+}
+/*# sourceMappingURL=style.css.map */
