@@ -5,12 +5,71 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="./css/main.css">
+    <title>-Shawnspace-</title>
     <style>
-        
+        * {
+            box-sizing: border-box;
+        }
+        section {
+            background-image: url('./ps/background.png');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position:center;
+            background-size: cover;
+            height: 100vh;
+            width:100%;
+        }
+        body {
+            min-width: 400px;
+            min-height: 400px;
+        }
+        nav {
+            position: fixed; 
+            width:100%;
+            display: flex;
+            justify-content: space-between;
+        }
+        nav ul {
+            padding:6%;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+        nav ul#nav-logo {
+            display:flex;
+            justify-content: center;
+            align-self: center;
+            font-size:70%;
+            letter-spacing: 1em;
+            font-weight: bold;
+            color:#e8eef2;
+        }
+        nav ul#nav-item {
+            display:flex;
+            justify-content: flex-end;
+            align-content: center;
+            font-size:1em;
+            letter-spacing: 1em;
+            font-weight: 900;
+            color:#e8eef2;
+        }
+        nav ul#nav-item li{
+            margin:0 12.5%;
+        }
     </style>
-    <title>Document</title>
 </head>
 <body>
-
+    <header></header>
+    <nav>
+        <ul id="nav-logo">
+            <li>LOGO</li>
+        </ul>
+        <ul id="nav-item">
+            <li>About</li>
+            <li>Work</li>
+            <li>Contact</li>
+        </ul>
+    </nav>
+    <section></section>
+    <aside></aside>
+    <footer></footer>
 </body>
 </html>
