@@ -1,0 +1,121 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/*
+以上是reset以上是reset以上是reset以上是reset以上是reset以上是reset以上是reset以上是reset
+以上是reset以上是reset以上是reset以上是reset以上是reset以上是reset以上是reset以上是reset
+*/
+*{
+    box-sizing: border-box;
+}
+
+header{
+    height: 360px;
+    padding: 50px;
+    background: url(imges/wallpaper-1792513.jpg) no-repeat 0 0;
+}
+header h1{
+    color: #fff;
+    font-size: 36px;
+    font-weight: 700;
+    font-family: Arial, Helvetica, sans-serif,"微軟正黑體" ;
+}
+nav{
+    padding: 50px;
+    background-color: #000000;
+}
+
+nav ul li{
+    display: inline-block;
+}
+nav ul li{
+    margin: 0 auto;
+}
+
+nav ul li a{
+    color: #000;
+    font-size: 20px;
+    padding: 10px 25px;
+    background-color: #ff9b9b;
+    text-decoration: none;
+    border-radius: 20px;
+}
+nav ul li a:visited{
+    background-color: rgb(51, 247, 26);
+}
+
+nav ul li a:hover{
+    background-color: rgb(133, 33, 226);
+}
+
+nav ul li a:active{
+    color: #d60000;
+    /* text-decoration: underline; */
+}
+
+section{
+    width: 75%;
+    padding: 50px;
+}
+
+section h2{ 
+    font-size: 18px;
+    line-height: 26px;
+}
+
+article{
+
+    font-size: 1em;
+    line-height: 1.5em;
+    column-count:3;
+    column-rule: 1px solid #000;
+    column-gap: 2em;
+    text-align: justify;
+}
+
+
