@@ -54,14 +54,20 @@ table {
 以上為RESET以上為RESET以上為RESET以上為RESET以上為RESET以上為RESET以上為RESET以上為RESET以上為RESET以上為RESET以上為RESET以上為RESET
 以上為RESET以上為RESET以上為RESET以上為RESET以上為RESET以上為RESET以上為RESET以上為RESET以上為RESET以上為RESET以上為RESET以上為RESET
 */
+$shawn-font-size:1000%;
 body {
     min-width: 900px;
+    padding:100px 0 0 0;
 }
 
 header {
     background-color: rgb(109, 160, 255);
     height:50px;
     padding:20px 0 0 20px;
+    width:100%;
+    position:fixed;
+    top:0;
+
 
     h1 {
         font-size: 36px;
