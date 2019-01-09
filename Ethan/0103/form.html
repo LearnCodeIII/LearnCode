@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        fieldset{
+            width: 500px;
+            margin: 15px;
+            border: 1px solid #3f9ce9;
+            border-radius: 30px;
+        }
+        em{
+            color: red;
+        }
+        .st1{
+            width: 500px;
+            margin: 20px;
+            border-bottom: 1px solid #d6d6d6;
+            padding-bottom: 10px;            
+        }
+        .title{
+            width: 100px;
+            float: left;
+            text-align: right;
+            padding-right: 5px;
+        }
+        .submit{
+            width: 450px;
+            text-align: center;
+            margin: 15px auto;
+        }
+        fieldset{
+            margin: 15px auto;
+        }
+    </style>
+</head>
+<body>
+    <form action="" method="POST">
+        <fieldset>
+            <legend>個人資料 <em>必填</em></legend>
+                <div class="st1">
+                    <label class="title">姓名:</label>
+                    <input type="text" name="account" placeholder="請輸入真實姓名" maxlength="10" size="15">
+                </div>
+                <div class="st1">
+                    <label class="title">密碼:</label>
+                    <input type="password" name="password" value="11111111" maxlength="8" size="15" onfocus="this.value=''">
+                </div>
+                <div class="st1">
+                    <label class="title">性別:</label>
+                    <input type="radio" name="gender" value="male" checked>男
+                    <input type="radio" name="gender" value="female">女
+                </div>
+                <div class="st1">
+                    <label class="title">身分證字號:</label>
+                    <input type="text" name="passport" placeholder="輸入身分證字號" maxlength="10" size="15">
+                </div>
+        </fieldset>
+        <fieldset>
+            <legend>地址 <em>必填</em></legend>
+                <div class="st1">
+                    <label class="title">郵遞區號:</label>
+                        <input type="text" name="pastnumber" placeholder="郵遞區號" maxlength="5">
+                </div>
+                <div class="st1">
+                    <label class="title">縣市:</label>
+                    <select name="addchoice" >
+                        <option value="台北市">台北市</option>
+                        <option value="新北市">新北市</option>
+                        <option value="桃園市">桃園市</option>
+                        <option value="新竹市">新竹市</option>
+                    </select>
+                </div>
+                <div class="st1">
+                    <label class="title">完整地址:</label>
+                    <input type="text" name="add" placeholder="完整地址" maxlength="20" size="40">
+                </div>
+        </fieldset>
+        <fieldset>
+            <legend>個人興趣 <em>必填</em></legend>
+                <div class="st1">
+                    <label class="title">興趣:</label>
+                    <input type="checkbox" name="hobby" value="music">音樂
+                    <input type="checkbox" name="hobby" value="sport">運動
+                    <input type="checkbox" name="hobby" value="read">閱讀
+                    <input type="checkbox" name="hobby" value="movie">電影
+                </div>
+                <div class="st1">
+                    <label class="title">照片:</label>
+                    <input type="file">
+                </div>
+                <div class="st1">
+                    <label class="title">意見:</label>
+                    <textarea name="" id="" cols="30" rows="10"></textarea>
+                </div>
+        </fieldset>
+            <div class="submit">
+                <input type="submit" value="go">
+                <input type="reset" value="replay">
+                <input type="button" value="what" >
+            </div>
+    </form>
+</body>
+</html>

@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="reset.css">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+ /* ------------底圖------------- */
+        .wrap {
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background: url(images/main_bg.png) 0 0 no-repeat fixed;
+        }
+        .wrap2 {
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background: url(images/main_bg.jpg) 0 0 no-repeat fixed;
+        }
+
+        /* --------------主結構--------------- */
+
+        .navbar-banner-block {
+            width: 100%;
+            height: 77px;
+            padding: 8px;
+            background-color: #000;
+            position: fixed;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .sec1 {
+            width: 100%;
+            height: 787px;
+        }
+
+        .sec2 {
+            width: 100%;
+            height: 122.6px;
+            background: #3181bfb3;
+            opacity: 0.98;
+        }
+
+        .sec3 {
+            width: 100%;
+            height: 1260px;
+            background: linear-gradient(325deg, #463895b3, #de217ccc);
+        }
+
+        .sec4 {
+            width: 100%;
+            height: 740px;
+            background-color: #8f005d6b;
+        }
+
+        .sec5 {
+            width: 100%;
+            height: 630px;
+            background-color: #463895;
+        }
+        
+        
+        footer {
+            width: 100%;
+            height: 32px;
+            background-color: #000;
+        }
+       
+
+
+        /* 最上方黑框的底與兩個區塊 */
+        .manu-logo {
+            display: flex;
+            align-items: center;
+            width: 400px;
+            height: 60.7px;
+            padding-left: 72px;
+        }
+        .buttom {
+            display: flex;
+            align-items: center;
+            flex-direction: row;
+            padding-right: 72px;
+            color: white;
+        }
+
+        /* logo本體與4個按鈕 */
+        .manu-logo img {
+            width: 292px;
+            height: 40px;
+        }
+
+        .buttom-in {
+            display: flex;
+            align-items: center;
+            flex-direction: row;
+
+        }
+
+        .topbt {
+            padding-left: 16px;
+            color: white;
+            font-size: 1rem;
+            font-family: Arial, Helvetica, sans-serif, "微軟正黑體";
+            font-weight: 700;
+        }
+
+        .topbt-in a,
+        .topbt-in a:visited {}
+
+        .topbt-in a:hover,
+        .topbt-in a:active {}
+
+        #topbt-1 {
+            padding: 0.7rem;
+            margin: 0.65rem;
+        }
+
+        #topbt-2 {
+            padding: 0.7rem;
+            margin: 0.65rem;
+        }
+
+        #topbt-3 {
+            width: auto;
+            height: auto;
+            border-radius: 10rem;
+            background-color: #faa818;
+            letter-spacing: 1px;
+
+        }
+
+        #topbt-4 {}
+
+.sec2-bt-1{
+
+}
+
+
+
+    </style>
+</head>
+
+<body>
+    <div class="wrap2">
+        <div class="wrap">
+
+                <nav class="navbar-banner-block">
+                    <div class="manu-logo">
+                        <img src="images/school-logo.png" alt="">
+                    </div>
+                    <div class="buttom">
+                        <div class="buttom-in">
+                            <div class="topbt">
+                                <a class="topbt-in" id="topbt-1" href="">精彩課程</a>
+                            </div>
+                            <div class="topbt">
+                                <a class="topbt-in" id="topbt-2" href="">課程資訊</a>
+                            </div>
+                            <div class="topbt">
+                                <a class="topbt-in" id="topbt-3" href="">線上報名</a>
+                            </div>
+                            <div class="topbt">
+                                <a class="topbt-in" id="topbt-4" href="">下載報名表</a>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+
+            <main class="sec1">
+                <div></div>
+                <section>
+                    <div class="b-title"></div>
+                    <div class="s-title"></div>
+                    <div class="b-p"></div>
+                    <div class="">
+                        <div class=""></div>
+                        <div class=""></div>
+                        <div class=""></div>
+                        <div class=""></div>
+                    </div>
+                </section>
+            </main>
+
+            <!-- ------------淺藍色橫條section----------------- -->
+            <section class="sec2">
+                <div class="sec2-bt-1">
+                    <input type="button" value="線上報名">
+                    <input type="button" value="下載報名表">
+                </div>
+            </section>
+
+
+
+            <section class="sec3"></section>
+            <section class="sec4"></section>
+            <section class="sec5"></section>
+            <footer></footer>
+        </div>
+    </div>
+</body>
+
+</html>
