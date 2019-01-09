@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="reset.css">
+    <title>Document</title>
+    <style>
+        :root {
+            font-size: 62.5%;
+        }
+        nav {
+            background-color: rgba(44,44,44,0.9);
+
+            position:fixed;
+            padding:30px;
+            top:0;
+            width:100%;
+        }
+        nav ul {
+            width:100%; /*解析小於1480px以100%顯示*/
+            max-width: 1480px; /*解析大於1480px以100%顯示*/
+            margin:0 auto;
+        }
+        nav ul li {
+            float: left;
+            color:white;
+            font-size: 3rem;
+            margin-right: 3rem;
+            letter-spacing: 2px;
+        }
+        nav ul li a,nav ul li a:hover {
+            color:white;
+            text-decoration: none;
+        }
+        .area {
+            width:100%;
+            max-width: 1480px;
+            height: 100vh;
+            box-shadow: 0 0 10px black;
+            margin: 0 auto;
+            border:1px solid black;
+        }
+        #area1 {
+            background: url('./images/puckered.png') no-repeat fixed;
+            background-size: cover;
+        }
+        #area2 {
+            background: url('./images/slide2.jpg') no-repeat fixed;
+            background-size: cover;
+        }
+        #area3 {
+            background: url('./images/slide3.jpg') no-repeat fixed;
+            background-size: cover;
+        }
+        #area4 {
+            background: url('./images/slide4.jpg') no-repeat fixed;
+            background-size: cover;
+        }
+        footer {
+            display:block;
+            background-color: black;
+            border-radius: 100%;
+            width:60px;
+            height:60px;
+            position:fixed;
+            bottom: 10px;
+            right:10px;
+            text-align: center;
+            line-height: 60px;
+            font-size:2em;
+            font-weight: 900;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+        footer a, footer a:visited {
+            color:white;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#area1">頁面1</a></li>
+            <li><a href="#area2">頁面2</a></li>
+            <li><a href="#area3">頁面3</a></li>
+            <li><a href="#area4">頁面4</a></li>
+        </ul>
+    </nav>
+    <section class="area" id="area1"></section>
+    <section class="area" id="area2"></section>
+    <section class="area" id="area3"></section>
+    <section class="area" id="area4"></section>
+    <footer><a class="up" href="#">TOP</a></footer>
+    <script src="./Scroll Page_files/jquery.min.js.下載"></script>
+    <script src="./Scroll Page_files/jquery.scrollTo.min.js.下載"></script>
+    <script src="./Scroll Page_files/script.js.下載"></script>
+</body>
+</html>
