@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="js/jquery-1.7.2.min.js"></script>
+    <script src="js/lightbox.js"></script>
+    <link href="css/lightbox.css" rel="stylesheet" />
+    <link rel="stylesheet" href="reset.css">
+    <style>
+        nav {
+            width: 100%;
+            padding: 20px;
+            position: fixed;
+            top: 0;
+            background-color: rgba(0, 0, 0, .7);
+        }
+
+        nav ul {
+            /* 解析小於1480px,將以100%顯示. */
+            width: 100%;
+            /* 解析大於1480px,將以1480px顯示 */
+            max-width: 1480px;
+            margin: 0 auto;
+        }
+
+        nav a {
+            font-size: 20px;
+            line-height: 30px;
+        }
+
+        nav li {
+            float: left;
+            margin-right: 20px;
+        }
+
+        nav a,
+        nav a:visited {
+            font-size: 20px;
+            font-weight: 700;
+            color: white;
+            font-family: Arial, Helvetica, sans-serif, "微軟正黑體";
+            letter-spacing: 1px;
+        }
+
+        .area {
+            width: 100%;
+            height: 1000px;
+            max-width: 1480px;
+            margin: 0 auto;
+            box-shadow: 0 0 5px #ccc;
+            padding: 65px;
+        }
+
+        #area1 {
+            background: url(images/puckered.png) no-repeat 0 0 fixed;
+            background-size: cover;
+        }
+
+        #area2 {
+            background: url(images/slide2.jpg) no-repeat 0 0 fixed;
+            background-size: cover;
+        }
+
+        #area3 {
+            background: url(images/slide3.jpg) no-repeat 0 0 fixed;
+            background-size: cover;
+        }
+
+        #area4 {
+            background: url(images/slide4.jpg) no-repeat 0 0 fixed;
+            background-size: cover;
+        }
+
+        footer a {
+            width: 70px;
+            height: 70px;
+            position: fixed;
+            right: 15px;
+            bottom: 20px;
+            background-color: rgb(255, 239, 20);
+            line-height: 70px;
+            text-align: center;
+            border-radius: 50%;
+            color: black;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 20px;
+            text-decoration: none;
+        }
+    </style>
+
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li><a href="#area1">項目1</a></li>
+            <li><a href="#area2">項目2</a></li>
+            <li><a href="#area3">項目3</a></li>
+            <li><a href="#area4">項目4</a></li>
+        </ul>
+    </nav>
+    <section class="area" id="area1"></section>
+    <section class="area" id="area2"></section>
+    <section class="area" id="area3">
+        <a href="images/image-1.jpg" rel="lightbox[roadtrip]"><img src="images/thumb-1.jpg" alt=""></a>
+        <a href="images/image-2.jpg" rel="lightbox[roadtrip]"><img src="images/thumb-2.jpg" alt=""></a>
+        <a href="images/image-3.jpg" rel="lightbox[roadtrip]"><img src="images/thumb-3.jpg" alt=""></a>
+    </section>
+    <section class="area" id="area4"></section>
+    <footer>
+        <a class="up" href="#area1">TOP</a>
+    </footer>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-scrollTo/2.1.2/jquery.scrollTo.min.js"></script>
+    <script src="script.js"></script>
+
+</body>
+
+</html>

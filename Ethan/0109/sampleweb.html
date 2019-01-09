@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        #wrap {
+            width: 1366px;
+            margin: 0 auto;
+            background-color: #ccc;
+            margin-top: 84px;
+            position: relative;
+        }
+
+        nav {
+            width: 100%;
+            padding: 30px;
+            background-color: rgba(0, 0, 0, .7);
+            position: fixed;
+            top: 0;
+            z-index: 5;
+        }
+
+        nav ul {
+            width: 1366px;
+            margin: auto;
+            padding: 0;
+            list-style-type: none;
+            overflow: auto;
+        }
+
+        nav li {
+            float: left;
+            margin-right: 20px;
+        }
+
+        nav a,
+        nav a:visited {
+            font-size: 20px;
+            font-weight: 700;
+            color: white;
+        }
+
+        header {
+            background-color: #0c0;
+            height: 300px;
+        }
+
+        header h1 {
+            text-align: center;
+            line-height: 300px;
+        }
+
+        section {
+            height: 600px;
+            background-color: #ddd;
+        }
+
+        footer {
+            padding: 30px;
+            color: #fff;
+            background: #666;
+            text-align: center;
+        }
+        .monkey{
+            position: absolute;
+            top: 600px;
+            left: 600px;
+        }
+
+
+    </style>
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li><a href="">項目1</a></li>
+            <li><a href="">項目2</a></li>
+            <li><a href="">項目3</a></li>
+            <li><a href="">項目4</a></li>
+            <li><a href="">項目5</a></li>
+        </ul>
+    </nav>
+    <div id="wrap">
+        <header>
+            <h1>我是標題</h1>
+        </header>
+        <section>
+            <article>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quae, magnam, fugit necessitatibus
+                exercitationem cum magni sunt tempore molestiae, est aperiam quam maxime dolor repellat natus? Hic
+                exercitationem nobis tempora commodi.
+                <br><br>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quae, magnam, fugit necessitatibus
+                exercitationem cum magni sunt tempore molestiae, est aperiam quam maxime dolor repellat natus? Hic
+                exercitationem nobis tempora commodi.
+
+            </article>
+            <div class="monkey">
+                <img src="images/ATT00036.gif" alt="">
+            </div>
+        </section>
+        <footer>
+            &nbsp;&copy;oh ya it test line
+        </footer>
+    </div>
+</body>
+
+</html>

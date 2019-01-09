@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .outbox {
+            height: 2000px;
+            background-color: #eee;
+        }
+
+        .abs {
+            width: 100px;
+            height: 100px;
+            background-color: #0c0;
+            position: absolute;
+            top: 300px;
+            left: 500px;
+            z-index: 4;
+        }
+
+        .abs2 {
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            top: 350px;
+            left: 550px;
+        }
+
+        .rlv {
+            width: 100px;
+            height: 100px;
+            background-color: #c00;
+            position: relative;
+            top: 400px;
+            left: 400px;
+        }
+
+        .fix {
+            width: 100px;
+            height: 100px;
+            background-color: #00c;
+            position: fixed;
+            top: 0;
+            right: 8px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="outbox">
+        <div class="abs"></div>
+        <div class="abs2"></div>
+        <div class="rlv"></div>
+        <div class="fix"></div>
+    </div>
+</body>
+
+</html>
