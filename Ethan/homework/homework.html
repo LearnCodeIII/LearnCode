@@ -12,13 +12,14 @@
             box-sizing: border-box;
         }
 
- /* ------------底圖------------- */
+        /* ------------底圖------------- */
         .wrap {
             width: 100%;
             height: 100%;
             background-size: cover;
             background: url(images/main_bg.png) 0 0 no-repeat fixed;
         }
+
         .wrap2 {
             width: 100%;
             height: 100%;
@@ -67,34 +68,35 @@
             height: 630px;
             background-color: #463895;
         }
-        
-        
+
+
         footer {
             width: 100%;
             height: 32px;
             background-color: #000;
         }
-       
 
 
         /* 最上方黑框的底與兩個區塊 */
-        .manu-logo {
+        .menu-logo {
             display: flex;
             align-items: center;
             width: 400px;
             height: 60.7px;
             padding-left: 72px;
         }
+
         .buttom {
             display: flex;
             align-items: center;
             flex-direction: row;
-            padding-right: 72px;
+            padding-right: 56px;
+            padding-top: 3px;
             color: white;
         }
 
-        /* logo本體與4個按鈕 */
-        .manu-logo img {
+        /* ---------------logo本體與4個按鈕------------------- */
+        .menu-logo img {
             width: 292px;
             height: 40px;
         }
@@ -103,99 +105,323 @@
             display: flex;
             align-items: center;
             flex-direction: row;
-
+            padding-left: 52px;
         }
 
-        .topbt {
-            padding-left: 16px;
-            color: white;
-            font-size: 1rem;
+        .topbt a {
+            text-decoration: none;
+            font-weight: bolder;
+            font-size: 1.03rem;
             font-family: Arial, Helvetica, sans-serif, "微軟正黑體";
-            font-weight: 700;
+            padding: 11.2px 0;
+            margin: 0 10.4px;
+            line-height: 1;
         }
 
-        .topbt-in a,
-        .topbt-in a:visited {}
-
-        .topbt-in a:hover,
-        .topbt-in a:active {}
-
-        #topbt-1 {
-            padding: 0.7rem;
-            margin: 0.65rem;
+        .topbt a:visited,
+        .topbt a:hover,
+        .topbt a:active {
+            text-decoration: none;
         }
 
-        #topbt-2 {
-            padding: 0.7rem;
-            margin: 0.65rem;
+        #topbt-1 a,
+        #topbt-1 a:visited {
+            color: #fff;
         }
 
-        #topbt-3 {
-            width: auto;
-            height: auto;
+        #topbt-1 a:hover,
+        #topbt-1 a:active {
+            color: #ccc
+        }
+
+        #topbt-2 a,
+        #topbt-2 a:visited {
+            color: #fff;
+        }
+
+        #topbt-2 a:hover,
+        #topbt-2 a:active {
+            color: #ccc;
+        }
+
+        #topbt-3 a,
+        #topbt-3 a:visited {
+            margin: 6.4px;
+            padding: 9px 26px;
             border-radius: 10rem;
             background-color: #faa818;
+            color: #000;
+        }
+
+        #topbt-3 a:hover,
+        #topbt-3 a:active {
+            margin: 6.4px;
+            padding: 9px 26px;
+            border-radius: 10rem;
+            background-color: #fd7e14;
+            color: #fff;
+        }
+
+        #topbt-4 a,
+        #topbt-4 a:visited {
+            margin: 6.4px;
+            padding: 9px 28.5px;
+            border-radius: 10rem;
+            background-color: #fff;
+            color: #000;
+        }
+
+        #topbt-4 a:hover,
+        #topbt-4 a:active {
+            margin: 6.4px;
+            padding: 9px 28.5px;
+            border-radius: 10rem;
+            background-color: #fd7e14;
+            color: #fff;
+        }
+
+        /* -------------sec2藍色區塊的兩顆按鈕------------- */
+        .sec2-bt {
+            width: 100%;
+            height: 122.6px;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .sec2-bt-1 a,
+        .sec2-bt-1 a:visited {
+            width: 105px;
+            height: 20px;
+            background-color: #faa818;
+            font-size: 1.25rem;
+            padding: 17.7px 42px;
+            border-radius: 10rem;
+            margin: 6.4px 12.8px;
+            text-decoration: none;
+            font-family: "微軟正黑體";
+            font-weight: 900;
+            color: #000;
             letter-spacing: 1px;
+        }
+
+        .sec2-bt-1 a:hover,
+        .sec2-bt-1 a:active {
+            width: 105px;
+            height: 20px;
+            background-color: #fd7e14;
+            font-size: 1.25rem;
+            padding: 17.7px 42px;
+            border-radius: 10rem;
+            margin: 6.4px 12.8px;
+            text-decoration: none;
+            font-family: "微軟正黑體";
+            font-weight: 900;
+            color: #fff;
+            letter-spacing: 1px;
+            box-shadow: 0 10px 50px rgba(30%, 30%, 30%, 0.5);
+        }
+
+        .sec2-bt-2 a,
+        .sec2-bt-1a:visited {
+            width: 105px;
+            height: 20px;
+            background-color: #fff;
+            font-size: 1.25rem;
+            padding: 17.7px 42.5px;
+            border-radius: 10rem;
+            margin: 6.4px 12.8px;
+            text-decoration: none;
+            font-family: "微軟正黑體";
+            font-weight: 900;
+            color: #000;
+            letter-spacing: 1px;
+        }
+
+        .sec2-bt-2 a:hover,
+        .sec2-bt-2 a:active {
+            width: 105px;
+            height: 20px;
+            background-color: #fd7e14;
+            font-size: 1.25rem;
+            padding: 17.7px 42.5px;
+            border-radius: 10rem;
+            margin: 6.4px 12.8px;
+            text-decoration: none;
+            font-family: "微軟正黑體";
+            font-weight: 900;
+            color: #fff;
+            letter-spacing: 1px;
+            box-shadow: 0 10px 50px rgba(30%, 30%, 30%, 0.5);
+        }
+
+        /* ---------------以下為一進來的主視覺sec1----------------- */
+
+        .sec1 {
+            padding: 254px 0 0 0;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-content: center;
+        }
+
+        .sec1 section {
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 50%;
+            height: 415px;
+        }
+
+        .sec1 .b-title {
+            display: flex;
+            padding-bottom: 18px;
 
         }
 
-        #topbt-4 {}
+        .sec1 h2 {
+            font-family: "微軟正黑體";
+            font-weight: 900;
+            text-align: center;
+            margin-bottom: 0.5rem;
+            color: #632f91;
+            font-size: 3rem;
+            padding-bottom: 5px;
+        }
 
-.sec2-bt-1{
+        .sec1 p {
+            font-family: "微軟正黑體";
+            font-size: 1.5rem;
+            line-height: 1.6;
+            font-weight: 500;
+            margin-bottom: 2.4rem;
+            text-align: center;
+        }
 
-}
+        .s-word {
+            display: flex;
+            justify-content: space-around;
+            width: 890px;
+            height: 38px;
+        }
+
+        .s-word-t1,
+        .s-word-t2 {
+            background-color: #632f91;
+            display: flex;
+        }
+
+        .s-word-t1 {
+            border-radius: 10rem;
+            width: 112px;
+        }
+
+        .s-word-t2 {
+            border-radius: 10rem;
+            width: 135px;
+        }
+
+        .s-word h3 {
+            font-family: "微軟正黑體";
+            font-weight: 900;
+            color: #fff;
+            font-size: 1.2em;
+            padding: 0.1rem 0.4rem 0.2rem 0.8rem;
+            border-radius: 10rem;
+            text-align: center;
+            line-height: 1.5;
+            display: flex;
+            align-items: center;
+        }
+
+        .word img {
+            padding-left: 25px;
+        }
 
 
 
+        .s-word p {
+            margin-left: -25px;
+            font-size: 1.6em;
+            font-weight: 900;
+        }
     </style>
 </head>
+
+
+
+
+
+<!-- -----------------以下為body---------------------- -->
 
 <body>
     <div class="wrap2">
         <div class="wrap">
 
-                <nav class="navbar-banner-block">
-                    <div class="manu-logo">
-                        <img src="images/school-logo.png" alt="">
-                    </div>
-                    <div class="buttom">
-                        <div class="buttom-in">
-                            <div class="topbt">
-                                <a class="topbt-in" id="topbt-1" href="">精彩課程</a>
-                            </div>
-                            <div class="topbt">
-                                <a class="topbt-in" id="topbt-2" href="">課程資訊</a>
-                            </div>
-                            <div class="topbt">
-                                <a class="topbt-in" id="topbt-3" href="">線上報名</a>
-                            </div>
-                            <div class="topbt">
-                                <a class="topbt-in" id="topbt-4" href="">下載報名表</a>
-                            </div>
+            <nav class="navbar-banner-block">
+                <div class="menu-logo">
+                    <img src="images/school-logo.png" alt="">
+                </div>
+                <div class="buttom">
+                    <div class="buttom-in">
+                        <div class="topbt" id="topbt-1">
+                            <a href="">精彩課程</a>
+                        </div>
+                        <div class="topbt" id="topbt-2">
+                            <a href="">課程資訊</a>
+                        </div>
+                        <div class="topbt" id="topbt-3">
+                            <a href="">線上報名</a>
+                        </div>
+                        <div class="topbt" id="topbt-4">
+                            <a href="">下載報名表</a>
                         </div>
                     </div>
-                </nav>
+            </nav>
 
             <main class="sec1">
-                <div></div>
                 <section>
-                    <div class="b-title"></div>
-                    <div class="s-title"></div>
-                    <div class="b-p"></div>
-                    <div class="">
-                        <div class=""></div>
-                        <div class=""></div>
-                        <div class=""></div>
-                        <div class=""></div>
+                    <div class="b-title">
+                        <img src="images/267px-F_icon.svg" alt="">
+                    </div>
+                    <div class="s-title">
+                        <h2>槓桿指數成長的行銷思維</h2>
+                    </div>
+                    <div class="b-p">
+                        <p> 爆品行銷是網路時代的新戰略，專注成長指標，最佳化資源獲取超額回報。<br>業界實戰現場，解讀產品如何一步步成長變現、變品牌！</p>
+                    </div>
+                    <div class="s-word">
+                        <div class="s-word-t1">
+                            <h3>從0到1</h3>
+                            <img src="images/gogo.svg" alt="">
+                        </div>
+                        <div class="s-word-p1">
+                            <p>產品市場適配，槓桿支點</p>
+                        </div>
+                        <div class="s-word-t2">
+                            <h3>從1到100</h3>
+                            <img src="images/gogo.svg" alt="">
+                        </div>
+                        <div class="s-word-p2">
+                            <p>自動傳播，引爆指數成長</p>
+                        </div>
                     </div>
                 </section>
             </main>
 
             <!-- ------------淺藍色橫條section----------------- -->
             <section class="sec2">
-                <div class="sec2-bt-1">
-                    <input type="button" value="線上報名">
-                    <input type="button" value="下載報名表">
+                <div class="sec2-bt">
+                    <div class="sec2-bt-1">
+                        <a href="">線上報名</a>
+                    </div>
+                    <div class="sec2-bt-2">
+                        <a href="">下載報名表</a>
+                    </div>
                 </div>
             </section>
 
