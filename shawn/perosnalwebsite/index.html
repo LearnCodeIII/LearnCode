@@ -5,71 +5,116 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" type="text/css" href="http://csshake.surge.sh/csshake-slow.min.css">
     <title>-Shawnspace-</title>
     <style>
         * {
-            box-sizing: border-box;
-        }
-        section {
-            background-image: url('./ps/background.png');
-            background-repeat: no-repeat;
-            background-attachment: fixed;
-            background-position:center;
-            background-size: cover;
-            height: 100vh;
-            width:100%;
-        }
-        body {
-            min-width: 400px;
-            min-height: 400px;
+            font-size: 62.5%;
         }
         nav {
-            position: fixed; 
+            position: fixed;
             width:100%;
-            display: flex;
-            justify-content: space-between;
+            z-index:9999;
+            display:flex;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-weight: bold;
+            letter-spacing: 0.2em;
+            padding:3em 5em;
         }
         nav ul {
-            padding:6%;
+            font-size: 100%;;
+        }
+        nav ul.logo{
+            width:50%;
+        }
+        nav ul.item{
+            width:80%;
+            display:flex;
+            justify-content: space-around;
+            font-size: 1em;
+        }
+        nav a,nav a:visited {
+            color:white;
+            text-decoration: none;
+        }
+        article#area1 {
+            height: 100vh;
+            background: url("./ps/background.png") no-repeat center fixed;
+            background-size: cover;
+        }
+        article#area2 {
+            height: 100vh;
+            background: url("./ps/background.png") no-repeat center fixed;
+            background-size: cover;
+        }
+        article h1 {
             font-family: Verdana, Geneva, Tahoma, sans-serif;
-        }
-        nav ul#nav-logo {
-            display:flex;
-            justify-content: center;
-            align-self: center;
-            font-size:70%;
-            letter-spacing: 1em;
             font-weight: bold;
-            color:#e8eef2;
+            font-size: 6vw;
+            letter-spacing: 0.2em;
+            color:white;
+            text-align: center;
+            line-height: 10;
         }
-        nav ul#nav-item {
-            display:flex;
-            justify-content: flex-end;
-            align-content: center;
-            font-size:1em;
-            letter-spacing: 1em;
-            font-weight: 900;
-            color:#e8eef2;
+        img#earth {
+            position: fixed;
+            top:80%;
+            right:0%;
+            z-index: 0
         }
-        nav ul#nav-item li{
-            margin:0 12.5%;
+        img#jupiter {
+            position: fixed;
+            width:10%;
+            top:20%;
+            left:5%;
+            z-index: 0
+        }
+        img#mars {
+            position: fixed;
+            width:5%;
+            top:50%;
+            right:5%;
+            z-index: 0
         }
     </style>
 </head>
 <body>
-    <header></header>
+    <header>
+    </header>
     <nav>
-        <ul id="nav-logo">
-            <li>LOGO</li>
+        <ul class="logo">
+            <li><a href="#area1">LOGO</a></li>
         </ul>
-        <ul id="nav-item">
-            <li>About</li>
-            <li>Work</li>
-            <li>Contact</li>
+        <ul class="item">
+            <li><a href="#area2">ABOUT</a></li>
+            <li><a href="">WORK</a></li>
+            <li><a href="">CONTACT</a></li>
+            <li><a href=""></a></li>
         </ul>
     </nav>
-    <section></section>
+    <section>
+        <article class="area" id="area1">
+            <h1>SHAWNSPACE</h1>
+            <img class="shake-slow shake-hover" id="earth" src="images/planet-earth.svg" alt="">
+            <img class="shake-slow shake-constant" id="jupiter" src="./images/jupiter.svg" alt="">
+            <img class="shake-slow shake-constant" id="mars" src="./images/mars.svg" alt="">
+        </article>
+        <article class="area" id="area2">
+
+        </article>
+    </section>
     <aside></aside>
-    <footer></footer>
+    <footer><a href=></a></footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="/shawn/perosnalwebsite/js/jquery.scrollTo.min.js"></script>
+    <script src="/shawn/perosnalwebsite/js/script.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('nav ul li a').click(function(e){
+                $.scrollTo( this.hash || 0, 1000);
+                e.preventDefault();
+            });
+        });
+    </script>
 </body>
 </html>
