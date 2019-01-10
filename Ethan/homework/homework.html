@@ -414,6 +414,7 @@
             border-bottom: 1px solid rgba(0, 103, 134, 0.5);
             padding: 24px 50px;
             width: 425px;
+            text-align: left;
         }
 
         #sc3-sc2 li {
@@ -453,14 +454,13 @@
             display: flex;
             align-items: center;
             line-height: 1.5;
-            font-size: 1.2em;
+            font-size: 18px;
             text-align: left;
-
         }
 
         .text-black-s-l {
             line-height: 1.25;
-            font-size: 1.2em;
+            font-size: 18px;
             text-align: right;
         }
 
@@ -545,10 +545,56 @@
         .sec5-construct {
             width: 1110px;
             height: 439px;
-            background-color: #afa;
             padding: 0 16px 0 16px;
             display: flex;
         }
+
+        .sec5-wh-s {
+            font-size: 1rem;
+            font-weight: 200;
+            margin: 1rem 0;
+            line-height: 1;
+            color: #fff;
+        }
+
+        .sec5-wh-l {
+            font-size: 1.8rem;
+            line-height: 1;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+            color: white;
+        }
+
+
+        thead tr {
+            text-align: center;
+            font-size: 1.25rem;
+            border-bottom: 2px solid #dee2e6;
+            border-top: 1px solid #dee2e6;
+        }
+
+        tbody tr {
+            text-align: center;
+            font-size: 1.25rem;
+            border-top: 1px solid #dee2e6;
+        }
+
+        .sec5 th,
+        td {
+            padding: 1.82rem 0.12rem;
+            width: 30%;
+
+        }
+
+        .sec5-text-align {
+            padding: 1.5rem 0.5rem;
+        }
+
+
+        .secf-bgc-wh {
+            background-color: rgb(239, 239, 239);
+        }
+
 
         .sec5-add {
             width: 50%;
@@ -563,7 +609,6 @@
         .sec5-button {
             width: 1110px;
             height: 75.156px;
-            background-color: #aad;
             display: flex;
             align-items: center;
         }
@@ -584,7 +629,7 @@
             height: 20px;
             background-color: #faa818;
             font-size: 1.25rem;
-            padding: 17.7px 42px;
+            padding: 16.5px 50px;
             border-radius: 10rem;
             margin: 6.4px 12.8px;
             text-decoration: none;
@@ -601,7 +646,7 @@
             height: 20px;
             background-color: #fd7e14;
             font-size: 1.25rem;
-            padding: 17.7px 42px;
+            padding: 16.5px 50px;
             border-radius: 10rem;
             margin: 6.4px 12.8px;
             text-decoration: none;
@@ -618,7 +663,7 @@
             height: 20px;
             background-color: #fff;
             font-size: 1.25rem;
-            padding: 17.7px 42.5px;
+            padding: 16.5px 48px;
             border-radius: 10rem;
             margin: 6.4px 12.8px;
             text-decoration: none;
@@ -635,7 +680,7 @@
             height: 20px;
             background-color: #fd7e14;
             font-size: 1.25rem;
-            padding: 17.7px 42.5px;
+            padding: 16.5px 48px;
             border-radius: 10rem;
             margin: 6.4px 12.8px;
             text-decoration: none;
@@ -909,7 +954,43 @@
             <section class="sec5">
                 <div class="sec5-construct">
                     <div class="sec5-add">
-
+                        <h3 class="sec5-wh-s">
+                            時　間｜
+                        </h3>
+                        <h4 class="sec5-wh-l">
+                            2018/12/19 <span style="font-size:1.1rem; font-weight:200;">(三)14:00-17:30</span>
+                        </h4>
+                        <h3 class="sec5-wh-s">
+                            地　址｜
+                        </h3>
+                        <h4 class="sec5-wh-l">
+                            張榮發國際會議中心<span style="font-size:1.1rem; font-weight:200;">(台北市中正區中山南路11號)</mall>
+                        </h4>
+                        <h3 class="sec5-wh-s">
+                            費　用｜
+                        </h3>
+                        <table>
+                            <thead>
+                                <tr bgcolor="#efefef" style="color:#000;">
+                                    <th class="sec5-text-align">一般報名</th>
+                                    <th style="background-color:#ffb916">12/13前早鳥報名</th>
+                                    <th class="sec5-text-align">三人以上團報</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr bgcolor="#efefef" style="color:#000;">
+                                    <td class="sec5-text-align">每人3,000</td>
+                                    <td style="background-color:#ffb916">每人2,600</td>
+                                    <td class="sec5-text-align">每人2,400</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <h3 class="sec5-wh-s">
+                            ※報名均含課程教材、午茶、《數位時代》三期 <span style="font-size:12px; color:#999;">(2019.1月號起算)</span>
+                        </h3>
+                        <h3 class="sec5-wh-s">
+                            活動洽詢：(02)8773-9808 分機327 黃小姐／分機326 張小姐
+                        </h3>
                     </div>
                     <div class="sec5-map">
                         <iframe class="googlemap" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7229.725821506948!2d121.51869500000001!3d25.038726!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x99f529730969be7f!2z5by15qau55m85Z-66YeR5pyD!5e0!3m2!1szh-TW!2stw!4v1547122493002"
