@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="stylesheet" href="./css/reset.css">
+	<link rel="stylesheet" type="text/css" href="http://csshake.surge.sh/csshake-slow.min.css">
+	<title>【爆品行銷】槓桿指數成長的行銷思維</title>
+	<style>
+		/*********************************引入字體*********************************/
+		@import url(https://fonts.googleapis.com/earlyaccess/notosanstc.css);
+
+		/*********************************crazy*********************************/
+		.crazy1 {
+			position: fixed;
+			top: 200px;
+			left: 100px;
+			z-index: 9998;
+			display: flex;
+			flex-direction: column;
+			font-family: 'Noto Sans TC', sans-serif;
+			font-size: 60px
+		}
+
+		.crazy2 {
+			position: fixed;
+			top: 200px;
+			right: 100px;
+			z-index: 9998;
+			display: flex;
+			flex-direction: column;
+			font-family: 'Noto Sans TC', sans-serif;
+			font-size: 60px
+		}
+
+		/*********************************crazy*********************************/
+		/*********************************Mainset start*********************************/
+		html,
+		body {
+			height: 100%;
+			font-size: 62.5%;
+		}
+
+		body {
+			background-image: url('./images/main_bg.png'), url('./images/main_bg.jpg');
+			background-attachment: fixed, fixed;
+			background-size: cover, cover;
+			background-position: 0 0, 0 0;
+			height: 100%;
+		}
+
+		.container {
+			padding: 0 381.5px;
+			height: 100%;
+		}
+
+		.wrap {
+			height: 100%;
+		}
+
+		/*********************************Mainset end*********************************/
+		/*********************************Navbar start*********************************/
+		.navbar {
+			position: fixed;
+			top: 0;
+			width: 100%;
+			height: 77px;
+			background-color: black;
+			display: flex;
+			align-content: center;
+			z-index: 9999;
+		}
+
+		.navbar .logo {
+			padding-top: 18px;
+			padding-left: 80px;
+		}
+
+		.navbar .logo img {
+			height: 40px;
+		}
+
+		.navbar .item {
+			width: 100%;
+			display: flex;
+			justify-content: flex-end;
+			align-items: center;
+			flex: 1;
+			padding-right: 68px;
+			font-size: 16px;
+			font-weight: 500;
+			font-family: 'Noto Sans TC', sans-serif;
+		}
+
+		.item1,
+		.item2 {
+			margin: 11px;
+			padding: 20px 0;
+		}
+
+		.item1 a,
+		.item2 a,
+		.item1 a:visited,
+		.item2 a:visited {
+			color: white;
+			text-decoration: none;
+		}
+
+		.item1 a:active,
+		.item2 a:active,
+		.item1 a:hover,
+		.item2 a:hover {
+			color: rgba(190, 190, 190, 0.9);
+			text-decoration: none;
+			transition-duration: 0.3s;
+		}
+
+		.item3 {
+			padding: 10px 26px;
+			background: #F9AA36;
+			border-radius: 25px;
+			margin: 6.4px;
+			transition-duration: 0.3s;
+
+		}
+
+		.item4 {
+			padding: 10px 26px;
+			background: white;
+			border-radius: 25px;
+			margin: 6.4px;
+			transition-duration: 0.3s;
+		}
+
+		.item3:hover,
+		.item4:hover {
+			background-color: rgb(237, 112, 34);
+			color: white;
+		}
+
+		a {
+			color: black;
+			text-decoration: none;
+		}
+
+		/*********************************Navbar end*********************************/
+		/*********************************Header start*********************************/
+		.header {
+			height: 787px;
+		}
+
+		.header img {
+			display: block;
+			margin: 0 auto;
+			padding-top: 288px;
+			width: 500px;
+			height: 115.313px;
+		}
+
+		.c1 .p1 {
+			font-family: 'Noto Sans TC', sans-serif;
+			display: block;
+			color: #68268C;
+			text-align: center;
+			font-weight: bolder;
+			margin: 10px;
+			font-size: 48px;
+			padding: 5px 0 16px 0;
+		}
+
+		.c1 .p2 {
+			font-family: 'Noto Sans TC', sans-serif;
+			display: block;
+			color: #272727;
+			text-align: center;
+			margin: -4px 10px 10px 7px;
+			font-weight: 100;
+			font-size: 24px;
+			padding: 0 0 16px 0;
+		}
+
+		.c1 .p3 {
+			font-family: 'Noto Sans TC', sans-serif;
+			display: block;
+			color: #272727;
+			text-align: center;
+			margin: -12px 10px 10px 10px;
+			font-weight: 100;
+			font-size: 24px;
+			padding: 0 0 16px 0;
+		}
+
+		.box {
+			display: flex;
+			padding: 5px;
+		}
+
+		.b1 {
+			display: flex;
+			justify-content: center;
+			padding: 17px;
+			margin-left: 125px;
+		}
+
+		.b2 {
+			display: flex;
+			justify-content: center;
+			padding: 17px;
+		}
+
+		.bc .btn {
+			position: relative;
+			font-family: 'Noto Sans TC', sans-serif;
+			background-color: #68268C;
+			color: white;
+			font-size: 20.5px;
+			border-radius: 25px;
+			padding: 6px 13px 1px 13px;
+		}
+
+		.bc img {
+			float: right;
+			margin: 0;
+			padding: 0;
+			width: 20px;
+			height: 20px;
+			padding: 5px 0px 2px 4px;
+		}
+
+		.c1 .p4,
+		.c1 .p5 {
+			font-family: 'Noto Sans TC', sans-serif;
+			font-size: 25px;
+		}
+
+		/*********************************Header end*********************************/
+		/*********************************Section1 start*********************************/
+		.section1 {
+			background: #3181BFB3;
+			height: 123px;
+		}
+
+		.box2 {
+			font-family: 'Noto Sans TC', sans-serif;
+			display: flex;
+			justify-content: center;
+			margin: 0;
+			padding: 31px 50px 50px 30px;
+		}
+
+		.box2 .item3,
+		.box2 .item4 {
+			width: auto;
+			height: 30px;
+			font-size: 20px;
+			border-radius: 30px;
+			line-height: 30px;
+			font-weight: 500;
+			padding: 15px 30px;
+			margin-left: 12px;
+		}
+
+		/*********************************Section1 end*********************************/
+		/*********************************Section2 start*********************************/
+		.section2 {
+			background: linear-gradient(325deg, #463895b3 0%, #de217ccc 100%);
+			height: 1276px;
+		}
+
+		.c3 .p6 {
+			font-family: 'Noto Sans TC', sans-serif;
+			color: white;
+			text-align: center;
+			font-size: 50px;
+			font-weight: bolder;
+			padding-top: 54px;
+		}
+
+		.table {
+			margin: 0 auto;
+			margin-top: 14px;
+			height: 1060px;
+			width: 1078px;
+			background: white;
+			border-radius: 10px;
+			padding:0 16px 40px;
+		}
+
+		/*********************************Section2 end*********************************/
+		/*********************************Section3 start*********************************/
+		.section3 {
+			background: #8f005d6b;
+			height: 738.75px;
+		}
+
+		/*********************************Section3 end*********************************/
+		/*********************************Section4 start*********************************/
+		.section4 {
+			background-color: #463895;
+			height: 634.156px;
+		}
+
+		/*********************************Section4 end*********************************/
+		/*********************************footer start*********************************/
+		.footer {
+			width: 100%;
+			background-color: black;
+			width: 100%;
+			height: 37px;
+			color: white;
+			text-align: center;
+		}
+
+		/*********************************footer end*********************************/
+	</style>
+</head>
+
+<body>
+	<div class="crazy1 shake-slow shake-constant">跑<br>版<br>跑<br>的<br>心<br>好<br>累<br>，</div>
+	<div class="crazy2 shake-slow shake-constant">前<br>端<br>離<br>我<br>好<br>遙<br>遠<br>。</div>
+	<div class="wrap">
+		<nav class="navbar">
+			<div class="logo"><img src="./images/school-logo.png" alt=""></div>
+			<div class="item">
+				<div class="item1"><a href="">精彩課程</a></div>
+				<div class="item2"><a href="">課程資訊</a></div>
+				<a href="">
+					<div class="item3">線上報名</div>
+				</a>
+				<a href="">
+					<div class="item4">下載報名表</div>
+				</a>
+			</div>
+		</nav>
+		<header class="section header">
+			<div class="container c1">
+				<img src="./images/267px-F_icon.svg" alt="">
+				<h3 class="p1">槓桿指數成長的行銷思維</h3>
+				<h4 class="p2">爆品行銷是網路時代的新戰略，專注成長指標，最佳化資源獲取超額回報。</h4>
+				<h4 class="p3">業界實戰現場，解讀產品如何一步步成長變現、變品牌！</h4>
+				<div class="box">
+					<div class="bc b1">
+						<div class="btn">從0到1<img src="./images/gogo.svg" alt=""></div>
+						<div class="p4">產品市場適配，槓桿支點</div>
+					</div>
+					<div class="bc b2">
+						<div class="btn">從1到100<img src="./images/gogo.svg" alt=""></div>
+						<div class="p5">自動傳播，引爆指數成長</div>
+					</div>
+				</div>
+			</div>
+		</header>
+		<section class="section section1">
+			<div class="container c2">
+				<div class="box2">
+					<div class="item3">線上報名</div>
+					<div class="item4">下載報名表</div>
+				</div>
+			</div>
+		</section>
+		<section class="section section2">
+			<div class="container c3">
+				<div class="p6">精彩議程</div>
+				<div class="table">
+					<tr class="row">
+						<td><span>14:00-14:40</span>
+							<span>瞄準用戶，引領成長的</span>
+							<span>行銷戰略</span></td>
+						<td><span>從0到1，1到100：啟動自動成長的機器</span>
+							<span>從目標到領先指標設定</span>
+							<span>讓團隊與行動對準成長指標</span>
+						</td>
+						<td><span>陶韻智／德豐管顧合夥人，Line前總經理</span></td>
+					</tr>
+					<tr class="row">
+						<td><span>14:40-15:20</span>
+							<span>爆品策略1</span>
+							<span>會員經營</span></td>
+						<td><span>全家app｜洞察用戶足跡，找出超級用戶</span>
+							<span>台灣每三人就有一人是會員，全家App圈800萬會員</span>
+						</td>
+						<td><span>王啟丞／全家會員暨電商推進部部長</span></td>
+					</tr>
+					<tr class="row">
+						<td><span>15:20-16:00</span>
+							<span>爆品策略2</span>
+							<span>數據決策</span></td>
+						<td><span>早餐吃麥片｜數據主導營運決策</span>
+							<span>阿里巴巴投資、年營業額破兩億的垂直電商</span>
+						</td>
+						<td><span>陳家翔／早餐吃麥片成長駭客</span></td>
+					</tr>
+					<tr class="row">
+						<td><span>16:20-17:00</span>
+							<span>爆品策略3</span>
+							<span>行銷創新</span></td>
+						<td><span>泰山Cheers氣泡水｜時尚平民化，推進高成長</span>
+							<span>年銷500萬瓶，上市首月登上第一</span>
+						</td>
+						<td><span>雷松清／泰山企業行銷群副總</span></td>
+					</tr>
+					<tr class="row">
+						<td><span>17:00-17:30</span>
+							<span>提問與對談</span>
+						<td><span>主持人：齊立文 / 《數位時代》內容長</span>
+							<span>與談人：陶韻智／王啟丞／陳家翔／雷松清</span>
+						</td>
+						<td></td>
+					</tr>
+				</div>
+			</div>
+		</section>
+		<section class="section section3">
+
+		</section>
+		<section class="section section4">
+
+		</section>
+		<footer class="section footer">
+
+		</footer>
+	</div>
+</body>
+
+</html>
