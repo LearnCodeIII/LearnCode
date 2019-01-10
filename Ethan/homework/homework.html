@@ -7,12 +7,19 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <link rel="stylesheet" href="reset.css">
+
     <style>
+        @import url(https://fonts.googleapis.com/earlyaccess/notosanstc.css);
+
         * {
             box-sizing: border-box;
         }
 
-        /* ------------底圖------------- */
+        html body {
+            font-family: 'Noto Sans TC', sans-serif;
+        }
+
+        /* ------------------------底圖--------------------- */
         .wrap {
             width: 100%;
             height: 100%;
@@ -27,8 +34,7 @@
             background: url(images/main_bg.jpg) 0 0 no-repeat fixed;
         }
 
-        /* --------------主結構--------------- */
-
+        /* ----------------------主結構------------------------ */
         .navbar-banner-block {
             width: 100%;
             height: 77px;
@@ -37,6 +43,7 @@
             position: fixed;
             display: flex;
             justify-content: space-between;
+            z-index: 9999;
         }
 
         .sec1 {
@@ -55,6 +62,10 @@
             width: 100%;
             height: 1260px;
             background: linear-gradient(325deg, #463895b3, #de217ccc);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 55px 0;
         }
 
         .sec4 {
@@ -69,7 +80,6 @@
             background-color: #463895;
         }
 
-
         footer {
             width: 100%;
             height: 32px;
@@ -77,7 +87,7 @@
         }
 
 
-        /* 最上方黑框的底與兩個區塊 */
+        /* ---------------最上方nav黑框的底與兩個區塊------------ */
         .menu-logo {
             display: flex;
             align-items: center;
@@ -91,11 +101,10 @@
             align-items: center;
             flex-direction: row;
             padding-right: 56px;
-            padding-top: 3px;
             color: white;
         }
 
-        /* ---------------logo本體與4個按鈕------------------- */
+        /* --logo本體與4個按鈕-- */
         .menu-logo img {
             width: 292px;
             height: 40px;
@@ -105,17 +114,17 @@
             display: flex;
             align-items: center;
             flex-direction: row;
-            padding-left: 52px;
+            padding-left: 45px;
         }
 
         .topbt a {
             text-decoration: none;
-            font-weight: bolder;
-            font-size: 1.03rem;
-            font-family: Arial, Helvetica, sans-serif, "微軟正黑體";
+            font-weight: 500;
+            font-size: 1rem;
             padding: 11.2px 0;
             margin: 0 10.4px;
             line-height: 1;
+            letter-spacing: 0.3px;
         }
 
         .topbt a:visited,
@@ -127,16 +136,19 @@
         #topbt-1 a,
         #topbt-1 a:visited {
             color: #fff;
+            transition-duration: 0.5s;
         }
 
         #topbt-1 a:hover,
         #topbt-1 a:active {
-            color: #ccc
+            color: #ccc;
         }
 
         #topbt-2 a,
         #topbt-2 a:visited {
             color: #fff;
+            transition-duration: 0.5s;
+
         }
 
         #topbt-2 a:hover,
@@ -147,16 +159,17 @@
         #topbt-3 a,
         #topbt-3 a:visited {
             margin: 6.4px;
-            padding: 9px 26px;
+            padding: 5.8px 26px;
             border-radius: 10rem;
             background-color: #faa818;
             color: #000;
+            transition-duration: 0.5s;
         }
 
         #topbt-3 a:hover,
         #topbt-3 a:active {
             margin: 6.4px;
-            padding: 9px 26px;
+            padding: 5.8px 26px;
             border-radius: 10rem;
             background-color: #fd7e14;
             color: #fff;
@@ -165,99 +178,25 @@
         #topbt-4 a,
         #topbt-4 a:visited {
             margin: 6.4px;
-            padding: 9px 28.5px;
+            padding: 5.8px 28.5px;
             border-radius: 10rem;
             background-color: #fff;
             color: #000;
+            transition-duration: 0.5s;
         }
 
         #topbt-4 a:hover,
         #topbt-4 a:active {
             margin: 6.4px;
-            padding: 9px 28.5px;
+            padding: 5.8px 28.5px;
             border-radius: 10rem;
             background-color: #fd7e14;
             color: #fff;
         }
 
-        /* -------------sec2藍色區塊的兩顆按鈕------------- */
-        .sec2-bt {
-            width: 100%;
-            height: 122.6px;
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
-            align-items: center;
-        }
 
-        .sec2-bt-1 a,
-        .sec2-bt-1 a:visited {
-            width: 105px;
-            height: 20px;
-            background-color: #faa818;
-            font-size: 1.25rem;
-            padding: 17.7px 42px;
-            border-radius: 10rem;
-            margin: 6.4px 12.8px;
-            text-decoration: none;
-            font-family: "微軟正黑體";
-            font-weight: 900;
-            color: #000;
-            letter-spacing: 1px;
-        }
-
-        .sec2-bt-1 a:hover,
-        .sec2-bt-1 a:active {
-            width: 105px;
-            height: 20px;
-            background-color: #fd7e14;
-            font-size: 1.25rem;
-            padding: 17.7px 42px;
-            border-radius: 10rem;
-            margin: 6.4px 12.8px;
-            text-decoration: none;
-            font-family: "微軟正黑體";
-            font-weight: 900;
-            color: #fff;
-            letter-spacing: 1px;
-            box-shadow: 0 10px 50px rgba(30%, 30%, 30%, 0.5);
-        }
-
-        .sec2-bt-2 a,
-        .sec2-bt-1a:visited {
-            width: 105px;
-            height: 20px;
-            background-color: #fff;
-            font-size: 1.25rem;
-            padding: 17.7px 42.5px;
-            border-radius: 10rem;
-            margin: 6.4px 12.8px;
-            text-decoration: none;
-            font-family: "微軟正黑體";
-            font-weight: 900;
-            color: #000;
-            letter-spacing: 1px;
-        }
-
-        .sec2-bt-2 a:hover,
-        .sec2-bt-2 a:active {
-            width: 105px;
-            height: 20px;
-            background-color: #fd7e14;
-            font-size: 1.25rem;
-            padding: 17.7px 42.5px;
-            border-radius: 10rem;
-            margin: 6.4px 12.8px;
-            text-decoration: none;
-            font-family: "微軟正黑體";
-            font-weight: 900;
-            color: #fff;
-            letter-spacing: 1px;
-            box-shadow: 0 10px 50px rgba(30%, 30%, 30%, 0.5);
-        }
 
         /* ---------------以下為一進來的主視覺sec1----------------- */
-
         .sec1 {
             padding: 254px 0 0 0;
             display: flex;
@@ -283,8 +222,8 @@
 
         }
 
-        .sec1 h2 {
-            font-family: "微軟正黑體";
+        .sec1 .s-title {
+            font-family: 'Noto Sans TC', sans-serif;
             font-weight: 900;
             text-align: center;
             margin-bottom: 0.5rem;
@@ -293,11 +232,11 @@
             padding-bottom: 5px;
         }
 
-        .sec1 p {
-            font-family: "微軟正黑體";
+        .sec1 .b-p {
+            font-family: 'Noto Sans TC', sans-serif;
             font-size: 1.5rem;
             line-height: 1.6;
-            font-weight: 500;
+            font-weight: 300;
             margin-bottom: 2.4rem;
             text-align: center;
         }
@@ -326,8 +265,8 @@
         }
 
         .s-word h3 {
-            font-family: "微軟正黑體";
-            font-weight: 900;
+            font-family: 'Noto Sans TC', sans-serif;
+            font-weight: 500;
             color: #fff;
             font-size: 1.2em;
             padding: 0.1rem 0.4rem 0.2rem 0.8rem;
@@ -342,12 +281,186 @@
             padding-left: 25px;
         }
 
-
-
         .s-word p {
             margin-left: -25px;
-            font-size: 1.6em;
+            font-size: 25.6px;
+            font-weight: 400;
+        }
+
+
+        /* -------------sec2藍色區塊的兩顆按鈕------------- */
+        .sec2-bt {
+            width: 100%;
+            height: 123px;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        .sec2-bt-1 a,
+        .sec2-bt-1 a:visited {
+            width: 105px;
+            height: 20px;
+            background-color: #faa818;
+            font-size: 1.25rem;
+            padding: 17.7px 42px;
+            border-radius: 10rem;
+            margin: 6.4px 12.8px;
+            text-decoration: none;
+            font-family: 'Noto Sans TC', sans-serif;
+            font-weight: 500;
+            color: #000;
+            letter-spacing: 1px;
+            transition-duration: 0.5s;
+        }
+
+        .sec2-bt-1 a:hover,
+        .sec2-bt-1 a:active {
+            width: 105px;
+            height: 20px;
+            background-color: #fd7e14;
+            font-size: 1.25rem;
+            padding: 17.7px 42px;
+            border-radius: 10rem;
+            margin: 6.4px 12.8px;
+            text-decoration: none;
+            font-family: 'Noto Sans TC', sans-serif;
+            font-weight: 500;
+            color: #fff;
+            letter-spacing: 1px;
+            box-shadow: 0 10px 50px rgba(30%, 30%, 30%, 0.5);
+        }
+
+        .sec2-bt-2 a,
+        .sec2-bt-1a:visited {
+            width: 105px;
+            height: 20px;
+            background-color: #fff;
+            font-size: 1.25rem;
+            padding: 17.7px 42.5px;
+            border-radius: 10rem;
+            margin: 6.4px 12.8px;
+            text-decoration: none;
+            font-family: 'Noto Sans TC', sans-serif;
+            font-weight: 500;
+            color: #000;
+            letter-spacing: 1px;
+            transition-duration: 0.5s;
+        }
+
+        .sec2-bt-2 a:hover,
+        .sec2-bt-2 a:active {
+            width: 105px;
+            height: 20px;
+            background-color: #fd7e14;
+            font-size: 1.25rem;
+            padding: 17.7px 42.5px;
+            border-radius: 10rem;
+            margin: 6.4px 12.8px;
+            text-decoration: none;
+            font-family: 'Noto Sans TC', sans-serif;
+            font-weight: 500;
+            color: #fff;
+            letter-spacing: 1px;
+            box-shadow: 0 10px 50px rgba(30%, 30%, 30%, 0.5);
+        }
+
+        /* --------------------以下為漸層的sec3------------------ */
+        .sec3 .b-title {
+            font-family: 'Noto Sans TC', sans-serif;
             font-weight: 900;
+            text-align: center;
+            margin-bottom: 0.5rem;
+            color: #fff;
+            font-size: 3rem;
+            padding-bottom: 7px;
+        }
+
+        .sc3-bg {
+            background-color: #fff;
+            width: 1110px;
+            height: 1070px;
+            border-radius: 0.5rem;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            padding: 0 16px 40px 16px;
+        }
+
+        .sc3-bg-2 {
+            width: 95%;
+            margin: 20px auto 0 auto;
+        }
+
+        .sc3-sc1 {
+            border-bottom: 1px solid rgba(77, 196, 233, 0.5);
+            padding: 24px 9px;
+            width: 350px;
+        }
+
+        .sc3-sc2 {
+            border-bottom: 1px solid rgba(77, 196, 233, 0.5);
+            padding: 24px 50px;
+            width: 425px;
+        }
+
+        #sc3-sc2 li {
+            list-style-type: circle;
+        }
+
+        .sc3-sc3 {
+            border-bottom: 1px solid rgba(77, 196, 233, 0.5);
+            padding: 24px 9.6px;
+        }
+
+        .text-black-s {
+            font-size: 18px;
+            font-weight: 400;
+        }
+
+        .text-purple-l {
+            color: #632f91;
+            font-weight: bold;
+            line-height: 1.25;
+            margin-bottom: .5rem;
+            font-size: 2rem;
+            text-align: right;
+        }
+
+        .text-purple-m {
+            color: #632f91;
+            font-size: 1.4rem;
+            line-height: 1.8;
+            font-weight: 600;
+            text-align: right;
+        }
+
+        .text-black-m {
+            font-weight: 700;
+            font-size: 1.55rem;
+            line-height: 1.25;
+            padding: 9.6px 0;
+        }
+
+        .text-black-s {
+            line-height: 1.25;
+            font-size: 1.2em;
+            text-align: right;
+        }
+
+        .text-black-s-l {
+            line-height: 1.5;
+            font-size: 1.2em;
+            text-align: left;
+        }
+
+        .text-pink-m {
+            color: #ed0b78;
+            font-size: 1.4rem;
+            margin-bottom: 0 0 16px 0;
+            line-height: 1.5;
         }
     </style>
 </head>
@@ -361,10 +474,9 @@
 <body>
     <div class="wrap2">
         <div class="wrap">
-
             <nav class="navbar-banner-block">
                 <div class="menu-logo">
-                    <img src="images/school-logo.png" alt="">
+                    <a href=""><img src="images/school-logo.png" alt=""></a>
                 </div>
                 <div class="buttom">
                     <div class="buttom-in">
@@ -381,8 +493,8 @@
                             <a href="">下載報名表</a>
                         </div>
                     </div>
+                </div>
             </nav>
-
             <main class="sec1">
                 <section>
                     <div class="b-title">
@@ -425,12 +537,142 @@
                 </div>
             </section>
 
+            <!-- ----------------漸層第三塊section------------------ -->
+            <section class="sec3">
+                <h2 class="b-title">精彩議程</h2>
+                <!-- -------------------白底+底線---------------------->
+                <div class="sc3-bg">
+                    <div class="sc3-bg-2">
+                        <table>
+                            <!-- -------------------sc3-1----------------------------- -->
+                            <tr #sc3-1>
+                                <td class="sc3-sc1">
+                                    <p class="text-black-s">14:00-14:40</p>
+                                    <h2 class="text-purple-l">瞄準用戶，引領成長的行銷戰略</h2>
+                                </td>
+
+                                <td id="sc3-sc2" class="sc3-sc2">
+                                    <ul>
+                                        <li class="text-black-m">從0到1，1到100：<br>啟動自動成長的機器</li>
+                                        <li class="text-black-m">從目標到領先指標設定</li>
+                                        <li class="text-black-m">讓團隊與行動對準成長指標</li>
+                                    </ul>
+                                </td>
+
+                                <td class="sc3-sc3">
+                                    <div class="sc3-sc3-center">
+                                        <p class="text-black-s-l">陶韻智／<br>德豐管顧合夥人，Line前<br>總經理</p>
+                                    </div>
+                                </td>
+                            </tr>
+                            <!-- ---------------------sc3-2----------------------------- -->
+                            <tr>
+                                <td class="sc3-sc1">
+                                    <p class="text-black-s">14:40-15:20</p>
+                                    <h2 class="text-purple-m">爆品策略1</h2>
+                                    <h2 class="text-purple-l">會員經營</h2>
+                                </td>
+
+                                <td class="sc3-sc2">
+                                    <ul>
+                                        <li class="text-black-m">全家app｜洞察用戶足跡，找出超級用戶</li>
+                                        <li class="text-pink-m">台灣每三人就有一人是會員，全家App圈800萬會員</li>
+
+                                    </ul>
+                                </td>
+
+                                <td class="sc3-sc3">
+                                    <div class="sc3-sc3-center">
+                                        <p class="text-black-s-l">王啟丞／全家會員暨<br>電商推進部部長 </p>
+                                    </div>
+                                </td>
+                            </tr>
+
+                            <!-- ---------------------sc3-3----------------------------- -->
+                            <tr>
+                                <td class="sc3-sc1">
+                                    <p class="text-black-s">15:20-16:00</p>
+                                    <h2 class="text-purple-m">爆品策略2</h2>
+                                    <h2 class="text-purple-l">數據決策</h2>
+                                </td>
+
+                                <td class="sc3-sc2">
+                                    <ul>
+                                        <li class="text-black-m">早餐吃麥片｜數據主導營運決策</li>
+                                        <li class="text-pink-m">阿里巴巴投資、年營業額破兩億的垂直電商</li>
+                                    </ul>
+                                </td>
+
+                                <td class="sc3-sc3">
+                                    <div class="sc3-sc3-center">
+                                        <p class="text-black-s-l">陳家翔／<br>早餐吃麥片成長駭客</p>
+                                    </div>
+                                </td>
+                            </tr>
+
+                            <!-- ---------------------sc3-4----------------------------- -->
+                            <tr>
+                                <td class="sc3-sc1">
+                                    <p class="text-black-s">16:20-17:00</p>
+                                    <h2 class="text-purple-m">爆品策略3</h2>
+                                    <h2 class="text-purple-l">行銷創新</h2>
+                                </td>
+
+                                <td class="sc3-sc2">
+                                    <ul>
+                                        <li class="text-black-m">泰山Cheers氣泡水｜時尚平民化，推進高成長</li>
+                                        <li class="text-pink-m">年銷500萬瓶，上市首月登上第一</li>
+                                    </ul>
+                                </td>
+
+                                <td class="sc3-sc3">
+                                    <div class="sc3-sc3-center">
+                                        <p class="text-black-s-l">雷松清／<br>泰山企業行銷群副總</p>
+                                    </div>
+                                </td>
+                            </tr>
+                            
+                            <!-- ---------------------sc3-5----------------------------- -->
+                            <tr>
+                                <td class="sc3-sc1">
+                                    <p class="text-black-s">17:00-17:30</p>
+                                    <h2 class="text-purple-l">提問與對談</h2>
+                                </td>
+
+                                <td class="sc3-sc2">
+                                    <ul>
+                                        <li class="text-black-m">主持人：齊立文 / 《數位時代》內容長</li>
+                                        <li class="text-black-m">與談人：陶韻智／王啟丞／陳家翔／雷松清</li>
+                                    </ul>
+                                </td>
+
+                                <td class="sc3-sc3">
+                                    <div>
+                                        <p class="text-black-s"></p>
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </section>
 
 
-            <section class="sec3"></section>
+
+
+            <!-- ----------------淡紫分4塊section------------------- -->
             <section class="sec4"></section>
+
+
+
+
+            <!-- ----------------深紫聯絡塊section------------------- -->
             <section class="sec5"></section>
-            <footer></footer>
+
+
+            <footer>
+
+            </footer>
         </div>
     </div>
 </body>
