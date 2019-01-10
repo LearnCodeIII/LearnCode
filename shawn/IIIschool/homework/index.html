@@ -41,6 +41,7 @@
 		body {
 			height: 100%;
 			font-size: 62.5%;
+			font-family: 'Noto Sans TC', sans-serif;
 		}
 
 		body {
@@ -250,8 +251,7 @@
 			padding: 31px 50px 50px 30px;
 		}
 
-		.box2 .item3,
-		.box2 .item4 {
+		.box2 .item3,.box2 .item4 {
 			width: auto;
 			height: 30px;
 			font-size: 20px;
@@ -302,19 +302,47 @@
 			border-bottom: 1px solid #81AED0;
 		}
 		.row1{
-			background: rgb(29, 106, 248);
-			flex:1;
+			flex:1.1;
+			text-align: right;
+			padding:30px;
 		}
 		.row2{
-			background: rgb(90, 145, 247);
-			flex:1;
+			flex:1.2;
+			margin-left: 10px;
+			padding:30px;
 		}
 		.row3{
-			background: rgb(181, 207, 255);
-			flex:1;
+			flex:0.7;
 		}
 		.c-date {
-			
+			font-size: 17px;
+			line-height: 40px;
+		}
+		.c-title {
+			font-size: 34px;
+			color: #632f91;
+			font-weight: bold;
+			line-height: 40px;
+		}
+		.c-stitle {
+			font-size: 20px;
+			color: #632f91;
+			font-weight: bold;
+			line-height: 40px;
+		}
+		.c-content {
+			font-size: 25px;
+			font-weight: bold;
+			line-height: 40px;
+		}
+		.c-highlight {
+			color: #ed0b78;
+			font-size: 25px;
+			line-height: 40px;
+		}
+		.c-speaker {
+			font-size: 20px;
+			line-height: 40px;
 		}
 		/*********************************Section2 end*********************************/
 		/*********************************Section3 start*********************************/
@@ -322,14 +350,126 @@
 			background: #8f005d6b;
 			height: 738.75px;
 		}
-
+		.section3 .p6 {
+			font-family: 'Noto Sans TC', sans-serif;
+			color: white;
+			text-align: center;
+			font-size: 50px;
+			font-weight: bolder;
+			padding-top: 54px;
+		}
+		.c4 {
+			height:517px;
+			margin-bottom: 0;
+		}
+		.panelbox {
+			margin-top:50px;
+			display:flex;
+			justify-content: space-around;
+		}
+		.panel {
+			width:245px;
+			height:517px;
+			background-color: white;
+			font-family: 'Noto Sans TC', sans-serif;
+			
+		}
+		.panelheader {
+			width:100%;
+			height:123px;
+			background-color: gray;
+		}
+		.panel img {
+			width:100%;
+		}
+		.panelbody {
+			padding: 30px 10px;
+			line-height: 30px;
+			height: 250px;
+			font-weight:300;
+			font-size: 17px;
+			color: #888888;
+			text-align: justify;
+		}
+		.panelfooter {
+			height: 105px;
+			text-align: center;
+		}
+		
+		.panelfooter .title {
+			display:block;
+			font-size: 18px;
+			font-weight: bold;
+			margin-bottom: 7px;
+		}
+		.panelfooter .subtitle {
+			display:block;
+			font-size: 15px;
+			font-weight: 300;
+			margin-bottom: 7px;
+		}
 		/*********************************Section3 end*********************************/
 		/*********************************Section4 start*********************************/
 		.section4 {
 			background-color: #463895;
 			height: 634.156px;
 		}
-
+		.databox {
+			box-sizing: border-box;
+			padding-top:60px;
+			width: 1110px;
+			height: 499px;
+			display: flex;
+		}
+		.data {
+			width:50%;
+			height:439px;
+			color:white;
+			line-height: 40px;
+		}
+		.data .sp {
+			display:block;
+			font-size: 16px;
+			font-weight: lighter;
+		}
+		.data .lp {
+			display:block;
+			font-size: 30px;
+			font-weight: bold;
+		}
+		.data .inlinep {
+			display: inline;
+		}
+		.data .grayp {
+			font-weight: lighter;
+			color: #999;
+		}
+		.data table {
+			width:525px;
+			height:159px;
+			background:#EEEEEE;
+			text-align: center;
+			line-height:79.5px;
+			font-size: 20px;
+			color:black;
+		}
+		.data table td:nth-child(2n) {
+			background:#ffb916;
+		}
+		.data table .bottomline{
+			border-bottom: 1px #EEEEEE solid;
+		}
+		.map {
+			width:50%;
+			height:439px;
+		}
+		.map iframe {
+			width: 525px;
+			height: 400px;
+		}
+		.c5 .btn {
+			display:block;
+		}
 		/*********************************Section4 end*********************************/
 		/*********************************footer start*********************************/
 		.footer {
@@ -339,8 +479,23 @@
 			height: 37px;
 			color: white;
 			text-align: center;
+			line-height: 37px;
+			font-size: 14.4px;
 		}
-
+		.footer a {
+			width: 100%;
+			background-color: black;
+			width: 100%;
+			height: 37px;
+			color: #BFBFBF;
+			text-align: center;
+			line-height: 37px;
+			font-size: 14.4px;
+		}
+		.footer a:hover {
+			transition-duration: 0.2s;
+			color:white;
+		}
 		/*********************************footer end*********************************/
 	</style>
 </head>
@@ -409,7 +564,7 @@
 					<div class="row col2">
 						<div class="row1">
 							<p class="c-date">14:40-15:20</p>
-							<p class="c-title">爆品策略1</p>
+							<p class="c-stitle">爆品策略1</p>
 							<p class="c-title">會員經營</p>						
 						</div>
 						<div class="row2">
@@ -423,7 +578,7 @@
 					<div class="row col3">
 						<div class="row1">
 							<p class="c-date">15:20-16:00</p>
-							<p class="c-title">爆品策略2</p>
+							<p class="c-stitle">爆品策略2</p>
 							<p class="c-title">數據決策</p>
 						</div>
 						<div class="row2">
@@ -465,15 +620,78 @@
 				</div>
 		</section>
 		<section class="section section3">
-
+				<div class="p6">講師介紹</div>
+				<div class="container c4">
+					<div class="panelbox">
+						<div class="panel">
+							<div class="panelheader"><img src="./images/download.jpg" alt=""></div>
+							<div class="panelbody"><span>專注於提供企業數位轉型的策略與實務。多家公司CEO顧問。先前為LINE與LINE PAY董事暨總經理與直播平台副總裁，三次帶領互聯網事業從零快速成長超過十億年營收。</span></div>
+							<div class="panelfooter"><span class="title">陶韻智
+									</span><span class="subtitle">德豐管顧 合夥人</span></div>
+						</div>
+						<div class="panel">
+							<div class="panelheader"><img src="./images/face1.jpg" alt=""></div>
+							<div class="panelbody"><span>全家便利商店創新代表人物，擁有17年零售產業經驗，開創多項創新商流，擅長新商流研發與整合、會員經營、數據分析洞察等，近年主攻全家會員發展，短短2年半全家已累積800萬名會員，會員創新服務商品預售，更創造10億元業績。</span></div>
+							<div class="panelfooter"><span class="title">王啟丞
+								</span><span class="subtitle">全家/會員暨電商推進部部長</span></div>
+						</div>
+						<div class="panel">
+							<div class="panelheader"><img src="./images/face2.jpg" alt=""></div>
+							<div class="panelbody"><span>資管背景、研究語音辨識相關題目，學生時期興趣開發小專案和經營媒體網站，透過流量與網路廣告賺零用錢；六年電商經驗，擅長社群操作、數據化行銷、打造最小可行性產品。</span></div>
+							<div class="panelfooter"><span class="title">陳家翔
+								</span><span class="subtitle">早餐吃麥片 成長駭客</span></div>
+						</div>
+						<div class="panel">
+							<div class="panelheader"><img src="./images/download2.jpg" alt=""></div>
+							<div class="panelbody"><span>帶領團隊將泰山新產品Cheers氣泡水Cheers氣泡水年銷500多萬瓶，市占近4成，為台灣第一。曾任泰山經營管理群副總與台灣比菲多行銷協理。</span></div>
+							<div class="panelfooter"><span class="title">雷松清
+								</span><span class="subtitle">泰山企業行銷群 副總</span></div>
+						</div>
+					</div>
+				</div>
 		</section>
 		<section class="section section4">
-
+			<div class="container c5">
+				<div class="databox">
+					<div class="data">
+						<span class="sp">時　間｜</span>
+						<span class="lp inlinep">2018/12/19</span>
+						<span class="sp inlinep">(三)14:00-17:30</span>
+						<span class="sp">地　址｜</span>
+						<span class="lp inlinep">張榮發國際會議中心</span>
+						<span class="sp inlinep">(台北市中正區中山南路11號)</span>
+						<span class="sp">費　用｜</span>
+						<table>
+							<tr class="bottomline">
+								<td>一般報名</td>
+								<td>12/13前早鳥報名	</td>
+								<td>三人以上團報</td>
+							</tr>
+							<tr>
+								<td>每人3,000</td>
+								<td>每人2,600</td>
+								<td>每人2,400</td>
+							</tr>
+						</table>
+						<span class="sp inlinep">※報名均含課程教材、午茶、《數位時代》三期</span>
+						<span class="ssp inlinep grayp"> (2019.1月號起算)</span>
+						<span class="sp">活動洽詢：(02)8773-9808 分機327 黃小姐／分機326 張小姐</span>
+					</div>
+					<div class="map"><iframe frameborder="0" style="border:0" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3614.8627827224673!2d121.51647975098943!3d25.038730344176255!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a975c13ae63d%3A0x99f529730969be7f!2z5by15qau55m85Z-66YeR5pyD!5e0!3m2!1szh-TW!2stw!4v1543306207150" allowfullscreen=""></iframe></div>
+					<div class="btn">
+							<div class="item3">線上報名</div>
+						</a>
+						<a href="">
+							<div class="item4">下載報名表</div>
+						</a>
+					</>
+			</div>
 		</section>
 		<footer class="section footer">
-
+			<div class="container">
+				<div> &copy; 2018 Business Next Publishing Corp.　<a href="">聯絡、建議</a>　<a href="">服務條款與隱私權政策</a></div>
+			</div>
 		</footer>
 	</div>
 </body>
-
 </html>
