@@ -393,37 +393,95 @@
             width: 1110px;
             height: 1070px;
             border-radius: 0.5rem;
-            /* display: flex;
-            flex-direction: row;
-            justify-content: center; */
             padding: 0 16px 40px 16px;
         }
 
         .sc3-bg-2 {
             width: 95%;
-            margin: 20px auto 0 auto;
+            margin: 0 auto;
+        }
+
+        .sc3-bg tr {
+            border: none;
+            display: flex;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+        }
+
+        #sc3-1 {
+            display: flex;
+            flex-direction: row;
+            align-items: flex-end;
+            height: 239px;
+        }
+
+        #sc3-2 {
+            display: flex;
+            flex-direction: row;
+            align-items: flex-end;
+            height: 224px;
+        }
+
+        #sc3-3 {
+            display: flex;
+            flex-direction: row;
+            align-items: flex-end;
+            height: 194px;
+        }
+
+        #sc3-4 {
+            display: flex;
+            flex-direction: row;
+            align-items: flex-end;
+            height: 191px;
+        }
+
+        #sc3-5 {
+            display: flex;
+            flex-direction: row;
+            align-items: flex-end;
+            height: 221px;
         }
 
         .sc3-sc1 {
             border-bottom: 1px solid rgba(0, 103, 134, 0.5);
-            padding: 24px 9px;
+            padding: 9px auto;
             width: 350px;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            justify-content: center;
         }
 
         .sc3-sc2 {
             border-bottom: 1px solid rgba(0, 103, 134, 0.5);
-            padding: 24px 50px;
+            padding: 10px 10px 10px 50px;
             width: 425px;
             text-align: left;
+            height: 100%;
+            display: flex;
+            align-items: center;
+        }
+
+        .a {
+            margin: 0 0 0 10px;
+            padding: 10px 60px 10px 40px;
         }
 
         #sc3-sc2 li {
             list-style-type: circle;
+            list-style-position: outside;
         }
 
         .sc3-sc3 {
             border-bottom: 1px solid rgba(0, 103, 134, 0.5);
-            padding: 24px .6px;
+            width: 249px;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            padding: auto 10;
         }
 
         .text-purple-l {
@@ -447,14 +505,14 @@
             font-weight: 700;
             font-size: 1.55rem;
             line-height: 1.25;
-            padding: 9.6px 0;
+            padding: 9.6px 10px;
         }
 
         .text-black-s {
             display: flex;
             align-items: center;
             line-height: 1.5;
-            font-size: 18px;
+            font-size: 19.2px;
             text-align: left;
         }
 
@@ -469,6 +527,7 @@
             font-size: 1.4rem;
             margin-bottom: 0 0 16px 0;
             line-height: 1.5;
+            padding: 0 10px;
         }
 
 
@@ -565,7 +624,6 @@
             color: white;
         }
 
-
         thead tr {
             text-align: center;
             font-size: 1.25rem;
@@ -583,18 +641,15 @@
         td {
             padding: 1.82rem 0.12rem;
             width: 30%;
-
         }
 
         .sec5-text-align {
             padding: 1.5rem 0.5rem;
         }
 
-
         .secf-bgc-wh {
             background-color: rgb(239, 239, 239);
         }
-
 
         .sec5-add {
             width: 50%;
@@ -620,7 +675,6 @@
             flex-direction: row;
             justify-content: center;
             align-items: center;
-
         }
 
         .sec5-bt-1 a,
@@ -785,7 +839,7 @@
                     <div class="sc3-bg-2">
                         <table>
                             <!-- -------------------sc3-1----------------------------- -->
-                            <tr #sc3-1>
+                            <tr id="sc3-1">
                                 <td class="sc3-sc1">
                                     <p class="text-black-s-l">14:00-14:40</p>
                                     <h2 class="text-purple-l">瞄準用戶，引領成長的行銷戰略</h2>
@@ -793,9 +847,9 @@
 
                                 <td id="sc3-sc2" class="sc3-sc2">
                                     <ul>
-                                        <li class="text-black-m">從0到1，1到100：<br>啟動自動成長的機器</li>
-                                        <li class="text-black-m">從目標到領先指標設定</li>
-                                        <li class="text-black-m">讓團隊與行動對準成長指標</li>
+                                        <li class="text-black-m a"><span style="position:relative; left:-10px;">從0到1，1到100：<br>啟動自動成長的機器</span></li>
+                                        <li class="text-black-m a"><span style="position:relative; left:-10px;">從目標到領先指標設定</span></li>
+                                        <li class="text-black-m a"><span style="position:relative; left:-10px;">讓團隊與行動對準成長指標</span></li>
                                     </ul>
                                 </td>
 
@@ -806,7 +860,7 @@
                                 </td>
                             </tr>
                             <!-- ---------------------sc3-2----------------------------- -->
-                            <tr>
+                            <tr id="sc3-2">
                                 <td class="sc3-sc1">
                                     <p class="text-black-s-l">14:40-15:20</p>
                                     <h2 class="text-purple-m">爆品策略1</h2>
@@ -829,7 +883,7 @@
                             </tr>
 
                             <!-- ---------------------sc3-3----------------------------- -->
-                            <tr>
+                            <tr id="sc3-3">
                                 <td class="sc3-sc1">
                                     <p class="text-black-s-l">15:20-16:00</p>
                                     <h2 class="text-purple-m">爆品策略2</h2>
@@ -851,7 +905,7 @@
                             </tr>
 
                             <!-- ---------------------sc3-4----------------------------- -->
-                            <tr>
+                            <tr id="sc3-4">
                                 <td class="sc3-sc1">
                                     <p class="text-black-s-l">16:20-17:00</p>
                                     <h2 class="text-purple-m">爆品策略3</h2>
@@ -873,7 +927,7 @@
                             </tr>
 
                             <!-- ---------------------sc3-5----------------------------- -->
-                            <tr>
+                            <tr id="sc3-5">
                                 <td class="sc3-sc1">
                                     <p class="text-black-s">17:00-17:30</p>
                                     <h2 class="text-purple-l">提問與對談</h2>
