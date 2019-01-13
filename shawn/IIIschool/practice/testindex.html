@@ -1,17 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        html, body {
+            width:100%;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width:100%;
+            border:5px solid black;
+            height: 50px;
+            font-size: 50px;
+            text-align:center;
+            line-height: 40px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            color: white;
+            display:block;
+        }
+        .col1 {
+            background: #000;
+            width:8.33%;
+        }
+        .col2 {
+            background: #111;
+            width:16.66%;
+        }
+        .col3 {
+            background: #222;
+            width:25%;
+        }
+        .col4 {
+            background: #333;
+            width:33.33%
+        }
+        .col5 {
+            background: #444;
+            width: 41.66%;
+        }
+        .col6 {
+            background: #555;
+            width:50%;
+        }
+        .col7 {
+            background: #666;
+            width:58.33%;
+        }
+        .col8 {
+            background: #777;
+            width:66.66%;
+        }
+        .col9 {
+            background: #888;
+            width:75%;
+        }
+        .col10 {
+            background: #999;
+            width:83.33%;
+        }
+        .col11 {
+            background: #aaa;
+            width:91.66%;
+        }
+        .col12 {
+            background: #bbb;
+            width:100%;
+        }
+        @media (max-width:600px){
+            [class*="col"] {
+                width:100%;
+            }
+        }
+        .center {
+            margin: 0 auto;
+            display:block;
+        }
+
+        body {
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;       
+background-color: #506566;
+}
+aside {
+background-color: #23354B;
+color: #CDB09E;
+padding: 25px;
+margin: 5px;
+}
+    </style>
 </head>
+
 <body>
-<form>
-<fieldset>
-    <input name="zip_code" type="text" pattern="\d{5}(-\d{4})?" required="required" />
-    <input name="profile_url" type="url" value="test"readonly="readonly" />
-</form>
-<input type="submit" disabled="disabled" />
+    <nav>
+        <aside>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</aside>
+        <aside>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</aside>
+        <aside>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</aside>
+    </nav>
 </body>
+
 </html>
