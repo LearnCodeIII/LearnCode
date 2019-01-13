@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="reset.css">
+
+    <style>
+        @import url(https://fonts.googleapis.com/earlyaccess/notosanstc.css);
+
+        * {
+            box-sizing: border-box;
+        }
+
+        /*-------------------------------------底圖------------------------------------- */
+        .bgi-shadow {
+            background: url(images/main_bg.jpg) 0 0 no-repeat fixed;
+            background-size: cover;
+        }
+
+        .bgi-img {
+            background: url(images/main_bg.png) 0 0 no-repeat fixed;
+            background-size: cover;
+        }
+
+        /*-------------------------------------字形------------------------------------- */
+        html body {
+            font-family: 'Noto Sans TC', sans-serif;
+        }
+
+        /*-------------------------------------nav-------------------------------------- */
+        .nav-bg {
+            width: 100%;
+            height: 77px;
+            background-color: #000;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 80px;
+            position: fixed;
+            z-index: 999;
+        }
+
+        .nav-bg img {
+            height: 40px;
+        }
+
+        .nav-bg a {
+            text-decoration: none;
+            font-weight: 500;
+            margin: 0 4.5px;
+            letter-spacing: 0.6px;
+        }
+
+        .nav-btn1,
+        .nav-btn1:visited {
+            color: #fff;
+            transition-duration: 0.5s;
+        }
+
+        .nav-btn1:hover,
+        .nav-btn1:active {
+            color: #ccc;
+        }
+
+        .nav-btn2,
+        .nav-btn2:visited {
+            color: #fff;
+            transition-duration: 0.5s;
+        }
+
+        .nav-btn2:hover,
+        .nav-btn2:active {
+            color: #ccc;
+        }
+
+        .nav-btn3,
+        .nav-btn4 {
+            border-radius: 10rem;
+            padding: 6px 28px;
+        }
+
+        .nav-btn3,
+        .nav-btn3:visited {
+            background-color: #faa818;
+            color: #000;
+            transition-duration: 0.5s;
+        }
+
+        .nav-btn3:hover,
+        .nav-btn3:active {
+            background-color: #fd7e14;
+            color: #fff;
+        }
+
+        .nav-btn4,
+        .nav-btn4:visited {
+            background-color: #fff;
+            color: #000;
+            transition-duration: 0.5s;
+        }
+
+        .nav-btn4:hover,
+        .nav-btn4:active {
+            background-color: #fd7e14;
+            color: #fff;
+        }
+
+        /*-------------------------------------sec1------------------------------------- */
+        .sc1 {
+            height: 787.313px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding-top: 120px;
+        }
+
+        .sc1-h1 {
+            color: #632f91;
+            font-size: 48px;
+            font-weight: 900;
+            line-height: 72px;
+            margin-bottom: 8px;
+        }
+
+        .sc1-p1 {
+            font-size: 24px;
+            font-weight: 300;
+            line-height: 36px;
+            margin-bottom: 1.5rem;
+            height: 92px;
+            width: 800px;
+            text-align: center;
+        }
+
+        .sc1-2 {
+            display: flex;
+            align-items: center;
+        }
+
+        .sc1-h2 {
+            background-color: #632f91;
+            color: white;
+            font-size: 20.48px;
+            line-height: 30.72px;
+            border-radius: 160px;
+            text-align: center;
+            padding: 2px 13px;
+        }
+
+        .sc1-p2 {
+            font-size: 25.6px;
+            line-height: 38.4px;
+            padding: 0 15px;
+        }
+
+        /*-------------------------------------sec2------------------------------------- */
+        .sc2 {
+            height: 122.6px;
+            background: #3181bfb3;
+            opacity: 0.98;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .sc2 a {
+            font-size: 1.25rem;
+            padding: 17.7px 42px;
+            border-radius: 10rem;
+            margin: 6.4px 12.8px;
+            text-decoration: none;
+            font-weight: 500;
+            letter-spacing: 1px;
+        }
+
+        .sec2-bt-1 a,
+        .sec2-bt-1 a:visited {
+            background-color: #faa818;
+            color: #000;
+            transition-duration: 0.5s;
+        }
+
+        .sec2-bt-1 a:hover,
+        .sec2-bt-1 a:active {
+            background-color: #fd7e14;
+            color: #fff;
+            box-shadow: 0 10px 50px rgba(30%, 30%, 30%, 0.5);
+        }
+
+        .sec2-bt-2 a,
+        .sec2-bt-1a:visited {
+            background-color: #fff;
+            color: #000;
+            transition-duration: 0.5s;
+        }
+
+        .sec2-bt-2 a:hover,
+        .sec2-bt-2 a:active {
+            background-color: #fd7e14;
+            color: #fff;
+            box-shadow: 0 10px 50px rgba(30%, 30%, 30%, 0.5);
+        }
+
+        /*-------------------------------------sec3------------------------------------- */
+        .sc3 {
+            height: 1260px;
+            background: linear-gradient(325deg, #463895b3, #de217ccc);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 55px 0;
+        }
+
+        .sc3 .b-title {
+            font-weight: 900;
+            text-align: center;
+            margin-bottom: 0.5rem;
+            color: #fff;
+            font-size: 3rem;
+            padding-bottom: 7px;
+        }
+
+        .sc3-bg {
+            background-color: #fff;
+            width: 1110px;
+            height: 1070px;
+            border-radius: 0.5rem;
+            padding: 0 16px 40px 16px;
+        }
+
+        .sc3-bg-in {
+            padding: 0 2%;
+            display: flex;
+            justify-content: center;
+        }
+
+        .sc3-1 {
+            border-bottom: 1px solid rgba(0, 103, 134, 0.5);
+            /* padding: 24px 9px; */
+            margin: 24px 9px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            width: 100%;
+        }
+
+        .sc3-1 td {
+            padding: 24px 9px;
+        }
+
+        #sc3-1-2 {
+            padding: 0 30px 20px 0;
+            margin: 0 50px 0 40px;
+        }
+
+        .sc3-1-2 ul {
+            list-style-type: circle;
+        }
+
+        .text-purple-l {
+            color: #632f91;
+            font-weight: bold;
+            line-height: 1.25;
+            margin-bottom: .5rem;
+            width: 273px;
+            font-size: 2rem;
+            text-align: right;
+        }
+
+        .text-purple-m {
+            color: #632f91;
+            font-size: 1.4rem;
+            line-height: 1.8;
+            font-weight: 600;
+            text-align: right;
+        }
+
+        .text-black-m {
+            font-weight: 700;
+            font-size: 1.55rem;
+            line-height: 1.25;
+            padding: 9.6px 0 0 40px;
+        }
+
+        .text-black-s {
+            display: flex;
+            align-items: center;
+            line-height: 1.5;
+            font-size: 18px;
+            text-align: left;
+            width: 208px;
+            margin: 0 0 0 75px;
+        }
+
+        .text-black-s-l {
+            line-height: 1.25;
+            font-size: 18px;
+            text-align: right;
+        }
+
+        .text-pink-m {
+            color: #ed0b78;
+            font-size: 1.4rem;
+            m7argin-bottom: 0 0 16px 0;
+            line-height: 1.5;
+            padding: 0 0 0 40px;
+        }
+
+        /*-------------------------------------sec4------------------------------------- */
+        .sc4 {
+            height: 740px;
+            background-color: #8f005d6b;
+            padding: 48px 0;
+        }
+
+        /*-------------------------------------sec5------------------------------------- */
+
+        /*------------------------------------footer------------------------------------ */
+        footer {
+            width: 100%;
+            height: 37px;
+            background-color: #000;
+            display: flex;
+            justify-content: center;
+            padding: 11px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="bgi-shadow">
+        <div class="bgi-img">
+            <!-- -----nav----- -->
+            <nav class="nav-bg">
+                <div>
+                    <img src="images/school-logo.png" alt="">
+                </div>
+                <div class="nav-btn">
+                    <a class="nav-btn1" href="">精彩課程</a>
+                    <a class="nav-btn2" href="">課程資訊</a>
+                    <a class="nav-btn3" href="">線上報名</a>
+                    <a class="nav-btn4" href="">下載報名表</a>
+                </div>
+            </nav>
+            <!-- -----sec1----- -->
+            <section class="sc1">
+                <img src="images/267px-F_icon.svg" alt="">
+                <p class="sc1-h1">槓桿指數成長的行銷思維</p>
+                <p class="sc1-p1">爆品行銷是網路時代的新戰略，專注成長指標，最佳化資源獲取超額回報。
+                    業界實戰現場，解讀產品如何一步步成長變現、變品牌！</p>
+                <div class="sc1-2">
+                    <p class="sc1-h2">從0到1 &nbsp;<img src="images/gogo.svg" alt=""></p>
+                    <p class="sc1-p2">產品市場適配，槓桿支點</p>
+                    <p class="sc1-h2">從1到100 &nbsp;<img src="images/gogo.svg" alt=""></p>
+                    <p class="sc1-p2">自動傳播，引爆指數成長</p>
+                </div>
+            </section>
+            <!-- -----sec2----- -->
+            <section class="sc2">
+                <div class="sec2-bt-1">
+                    <a href="">線上報名</a>
+                </div>
+                <div class="sec2-bt-2">
+                    <a href="">下載報名表</a>
+                </div>
+            </section>
+            <!-- -----sec3----- -->
+            <section class="sc3">
+                <h2 class="b-title">精彩議程</h2>
+                <div class="sc3-bg">
+                    <div class="sc3-bg-in">
+                        <table>
+                            <!-- -----sec3-1----- -->
+                            <tr class="sc3-1">
+                                <td>
+                                    <p class="text-black-s-l">14:00-14:40</p>
+                                    <p class="text-purple-l">瞄準用戶，引領成長的行銷戰略</p>
+                                </td>
+                                <td class="sc3-1-2">
+                                    <ul>
+                                        <li id="sc3-1-2" class="text-black-m">從0到1，1到100：<br>啟動自動成長的機器</li>
+                                        <li id="sc3-1-2" class="text-black-m">從目標到領先指標設定</li>
+                                        <li id="sc3-1-2" class="text-black-m">讓團隊與行動對準成長指標</li>
+                                    </ul>
+                                </td>
+                                <td>
+                                    <p class="text-black-s">陶韻智／<br>德豐管顧合夥人，Line前<br>總經理</p>
+                                </td>
+                            </tr>
+                            <!-- ---------------------sc3-2----------------------------- -->
+                            <tr class="sc3-1">
+                                <td>
+                                    <p class="text-black-s-l">14:40-15:20</p>
+                                    <p class="text-purple-m">爆品策略1</p>
+                                    <p class="text-purple-l">會員經營</p>
+                                </td>
+                                <td>
+                                    <p class="text-black-m">全家app｜洞察用戶足跡，找出超級用戶</p>
+                                    <p class="text-pink-m">台灣每三人就有一人是會員，全家App圈800萬會員</p>
+                                </td>
+                                <td>
+                                    <p class="text-black-s">王啟丞／全家會員暨<br>電商推進部部長 </p>
+                                </td>
+                            </tr>
+
+                            <!-- ---------------------sc3-3----------------------------- -->
+                            <tr class="sc3-1">
+                                <td>
+                                    <p class="text-black-s-l">15:20-16:00</p>
+                                    <p class="text-purple-m">爆品策略2</p>
+                                    <p class="text-purple-l">數據決策</p>
+                                </td>
+                                <td>
+                                    <p class="text-black-m">早餐吃麥片｜數據主導營運決策</p>
+                                    <p class="text-pink-m">阿里巴巴投資、年營業額破兩億的垂直電商</p>
+                                </td>
+                                <td>
+                                    <p class="text-black-s">陳家翔／<br>早餐吃麥片成長駭客</p>
+                                </td>
+                            </tr>
+
+                            <!-- ---------------------sc3-4----------------------------- -->
+                            <tr class="sc3-1">
+                                <td>
+                                    <p class="text-black-s-l">16:20-17:00</p>
+                                    <p class="text-purple-m">爆品策略3</p>
+                                    <p class="text-purple-l">行銷創新</p>
+                                </td>
+                                <td>
+                                    <p class="text-black-m">泰山Cheers氣泡水｜時尚平民化，推進高成長</p>
+                                    <p class="text-pink-m">年銷500萬瓶，上市首月登上第一</p>
+                                </td>
+                                <td>
+                                    <p class="text-black-s">雷松清／<br>泰山企業行銷群副總</p>
+                                </td>
+                            </tr>
+
+                            <!-- ---------------------sc3-5----------------------------- -->
+                            <tr class="sc3-1">
+                                <td>
+                                    <p class="text-black-s-l">17:00-17:30</p>
+                                    <p class="text-purple-l">提問與對談</p>
+                                </td>
+                                <td>
+                                    <p class="text-black-m">主持人：齊立文 / 《數位時代》內容長</p>
+                                    <p class="text-black-m">與談人：陶韻智／王啟丞／陳家翔／雷松清</p>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </section>
+            <!-- -----sec4----- -->
+            <section class="sc4">
+
+
+            </section>
+
+
+
+
+
+
+
+
+        </div>
+    </div>
+
+
+
+    <footer>
+        <div class="iheatefooter-1">&copy;&nbsp;2018 Business Next Publishing Corp.&nbsp;&nbsp;&nbsp;&nbsp; </div>
+        <div class="iheatefooter-2">聯絡、建議　服務條款與隱私權政策</div>
+    </footer>
+</body>
+
+</html>
