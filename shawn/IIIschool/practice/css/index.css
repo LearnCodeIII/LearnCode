@@ -1,0 +1,31 @@
+fieldset {
+    width: 500px;
+    margin: 15px auto;
+    border:2px solid rgb(0, 160, 253);
+    border-radius: 10px;
+}
+em {
+    color:red;
+}
+.formset {
+    width: 450px;
+    margin:20px;
+    border-bottom:1px solid black;
+    padding-bottom:10px;
+}
+.btn {
+    width: 500px;
+    margin: 20px;
+    text-align: center;
+    margin:15px auto;
+}
+.title {
+    width: 100px;
+    float:left;
+    text-align: right;
+    padding-right:15px;
+}
+legend {
+   border:2px solid rgb(0, 160, 253);
+   padding:10px 8px
+}
