@@ -6,103 +6,83 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <style>
-        * {
-            box-sizing: border-box;
-        }
-        html, body {
-            width:100%;
-            margin: 0;
-            padding: 0;
-        }
-        .container {
-            width:100%;
-            border:5px solid black;
-            height: 50px;
-            font-size: 50px;
-            text-align:center;
-            line-height: 40px;
-            font-family: Verdana, Geneva, Tahoma, sans-serif;
-            color: white;
-            display:block;
-        }
-        .col1 {
-            background: #000;
-            width:8.33%;
-        }
-        .col2 {
-            background: #111;
-            width:16.66%;
-        }
-        .col3 {
-            background: #222;
-            width:25%;
-        }
-        .col4 {
-            background: #333;
-            width:33.33%
-        }
-        .col5 {
-            background: #444;
-            width: 41.66%;
-        }
-        .col6 {
-            background: #555;
-            width:50%;
-        }
-        .col7 {
-            background: #666;
-            width:58.33%;
-        }
-        .col8 {
-            background: #777;
-            width:66.66%;
-        }
-        .col9 {
-            background: #888;
-            width:75%;
-        }
-        .col10 {
-            background: #999;
-            width:83.33%;
-        }
-        .col11 {
-            background: #aaa;
-            width:91.66%;
-        }
-        .col12 {
-            background: #bbb;
-            width:100%;
-        }
-        @media (max-width:600px){
-            [class*="col"] {
-                width:100%;
-            }
-        }
-        .center {
-            margin: 0 auto;
-            display:block;
-        }
-
-        body {
-font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;       
-background-color: #506566;
-}
-aside {
-background-color: #23354B;
-color: #CDB09E;
-padding: 25px;
-margin: 5px;
-}
-    </style>
+    <link rel="stylesheet" href="./css/index.css">
 </head>
 
 <body>
-    <nav>
-        <aside>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</aside>
-        <aside>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</aside>
-        <aside>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</aside>
-    </nav>
+    <form action="#" method="get">
+        <fieldset>
+            <legend>個人資料<em>(必填)</em></legend>
+            <div class="formset form1">
+                <label class="title" id="name">姓名:</label>
+                <input type="text" name="account" placeholder="請輸入姓名" size="10">
+                <!-- <input type="text" name="account" value="請輸入姓名" size="10" onfocus="this.value=''"> -->
+            </div>
+            <div class="formset form1">
+                    <label class="title" id="name">信箱:</label>
+                    <input type="email" name="email"  id="
+                    eamil"  placeholder="請輸入信箱" size="10">
+                </div>
+            <div class="formset form1">
+                <label class="title">密碼:</label>
+                <input type="password" name="pwd" size="10" placeholder="請輸入密碼">
+            </div>
+            <div class="formset form1">
+                <label class="title">性別:</label>
+                <input type="radio" name="gender" value="男" checked>男
+                <input type="radio" name="gender" value="女">女
+            </div>
+            <div class="formset form1">
+                <label class="title">身分證字號</label>
+                <input type="text" name="idnumber" placeholder="A123456789">
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend>地址<em>(必填)</em></legend>
+            <div class="formset form2">
+                <label class="title">郵遞區號:</label>
+                <input type="text" name="postcode" size="5" maxlength="5">
+            </div>
+            <div class="formset form2">
+                <label class="title">縣市:</label>
+                <select name="add1">
+                    <option value="1">台北市</option>
+                    <option value="2">新北市</option>
+                    <option value="3">桃園市</option>
+                    <option value="4">新竹市</option>
+                </select>
+            </div>
+            <div class="formset form2">
+                <label class="title">完整地址:</label>
+                <input type="text" name="add2" size="30">
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend>個人資料二<em>(必填)</em></legend>
+            <div class="formset form3">
+                <label class="title">興趣:</label>
+                <input type="checkbox" name="hobby" value="music">音樂
+                <input type="checkbox" name="hobby" value="sport">運動
+                <input type="checkbox" name="hobby" value="reading">閱讀
+                <input type="checkbox" name="hobby" value="movie">電影
+            </div>
+            <div class="formset form3">
+                <label class="title">照片:</label>
+                <input type="file" name="file">
+            </div>
+            <div class="formset form3">
+                <label class="title">意見:</label>
+                <textarea cols="40" rows="5"></textarea>
+            </div>
+        </fieldset>
+        <div class="btn">
+            <input type="submit" value="送出" onclick="processFormData()">
+            <input type="reset" value="清除">
+            <input type="button" value="alert" onclick="alert()">
+        </div>
+    </form>
+    <div id="testjs"></div>
+    <script src="./js/index.js"></script>
 </body>
 
 </html>
