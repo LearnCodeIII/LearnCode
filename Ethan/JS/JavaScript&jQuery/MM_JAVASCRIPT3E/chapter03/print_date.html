@@ -5,7 +5,10 @@
 <title>Using Functions</title>
 <link href="../_css/site.css" rel="stylesheet">
 <script>
-
+function prinToday(){
+  var Today = new Date();
+  document.write(Today.toDateString())
+}
 </script>
 </head>
 
@@ -17,7 +20,7 @@
   <div class="content">
     <div class="main">
       <h1>Using Functions</h1>
-      <p>Today is <strong> </strong></p>
+      <p>Today is <strong><script>prinToday()</script></strong></p>
     </div>
   </div>
   <footer>
