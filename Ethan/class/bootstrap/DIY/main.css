@@ -1,0 +1,23 @@
+.carousel-inner img{
+    width: 100%;
+    height: 100%;
+}
+
+.bglight{
+    background-color: #fcfcfc;
+}
+.icon-title{
+    background-color: #ffcdcd;
+    width: 100px;
+    height: 100px;
+}
+
+.bottom-line::after{
+    position: absolute ;
+    content: '' ;
+    height: 1px ;
+    width: 100% ;
+    background-color: #ffcdcd;
+    left: 0 ;
+}
+
