@@ -1,0 +1,35 @@
+html,body {
+    width: 100%;
+    height: 100%;
+}
+.carousel img {
+    width: 100%;
+    height: 100%;
+}
+.s2 {
+    background: #fafafa;
+}
+.d-flex {
+    width: 100px;
+    height: 100px;
+    background:#ffcdcd;
+}
+.d-flex img {
+    width: 50%;
+    height: 50%;
+}
+.sb {
+    height:30%;
+    background: rgb(83, 157, 241);
+}
+.bottom-line::after {
+    position:absolute;
+    content:"";
+    height:1px;
+    width: 100%;
+    background-color: #ffcdcd;
+    left:0;
+}
+.section-counter {
+    color:white;
+}

@@ -1,0 +1,19 @@
+$('#btn1').click(function(){
+    $('p').fadeOut();
+    $('p').fadeIn();
+    $('p').fadeOut();
+    $('p').fadeIn();
+    $('p').fadeOut();
+    $('p').fadeIn();
+    $('p').fadeOut();
+    $('p').fadeIn();
+    $('p').fadeOut();
+    $('p').fadeIn();
+    $('p').fadeOut();
+    $('p').fadeIn();
+    $('p').fadeOut();
+    $('p').fadeIn();
+});
+$(".btn1").click(function(){
+    $("p").animate({borderBottomWidth:"10px"});
+    });

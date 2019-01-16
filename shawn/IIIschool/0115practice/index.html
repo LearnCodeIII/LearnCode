@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        html,
+        body {
+            background: #AFD8DB;
+            font-size: 36px;
+            font-family: "微軟正黑體";
+        }
+
+        button {
+            width: 180px;
+            height: 50px;
+            margin: 0;
+            background: #80CED7;
+            font-size: 20px;
+            font-family: verdana;
+            border-radius: 20px;
+            border: 1px solid #003249;
+        }
+
+        button:hover {
+            background: #007EA7;
+        }
+
+        button:active {
+            background: #003249;
+        }
+
+        h3 {
+            margin: 0;
+        }
+
+        p {
+            margin: 0;
+        }
+
+        span {
+            font-size: 26px;
+        }
+
+        .container {
+            padding-left: 60px;
+            width: 600px
+        }
+    </style>
+</head>
+
+<body>
+    <div class="appwrap">
+        <h3>商品數量檢測</h3>
+        <p>上架商品：
+            <div class="container">
+                <span id="displayitem"></span>
+            </div>
+        </p>
+        <p>商品狀況：
+            <div class="container">
+                <span id="printp"></span>
+            </div>
+        </p>
+        <button onclick="pushitem()">Add item</button>
+        <button onclick="unshiftitem()">Add new item</button><br>
+        <button onclick="popitem()">Delete item</button>
+        <button onclick="shiftitem()">Delete new item</button><br>
+    </div>
+    <script
+    src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+    <script>
+        var shop = ["滷肉飯",
+            "麵條",
+            "燙青菜",
+            "小菜"];
+        function pushitem() {
+            var item = prompt("要新增什麼商品","")
+            if (item != ""){
+                if (isNaN(item)){
+                    shop.push(item);
+                    showresult();
+                }
+                else {
+                    alert('請輸入中英文商品名稱')
+                }
+            }
+            else {
+                document.write("")
+            }     
+        }
+        function unshiftitem() {
+            var item = prompt("要新增什麼最新商品","")
+            if (item != ""){
+                if (isNaN(item)){
+                    shop.unshift(item);
+                    showresult();
+                }
+                else {
+                    alert('請輸入中英文商品名稱')
+                }
+            }
+            else {
+                alert('請輸入商品名稱')
+            }
+        }
+        function popitem() {
+            shop.pop()
+            showresult();
+        }
+        function shiftitem() {
+            shop.shift();
+            showresult();
+        }
+        function showresult() {
+            document.getElementById('displayitem').innerHTML = shop;
+            if (shop.length > 4) {
+                document.getElementById('printp').innerHTML = "商品超載，請減少商品數量";
+            }
+            else if (shop.length < 2) {
+                document.getElementById('printp').innerHTML = "商品過少，請增加商品數量";
+            }
+            else {
+                document.getElementById('printp').innerHTML = "商品數量剛好，請繼續保持";
+            }
+        }
+        showresult();
+        function password(){
+            do{
+                var guessnum =prompt("請輸入授權密碼","若不清楚密碼請聯絡管理人員");
+            }while(guessnum!=123);
+        }
+        password();
+    </script>
+    
+</body>
+</html>

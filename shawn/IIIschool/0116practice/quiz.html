@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var score=0;
+        var question = [["4是2的幾次方?",2],
+                        ["2的4次方是?",256],
+                        ["問題二的答案是問題一答案的幾次方?",4]
+        ];
+        for (var i=0;i<question.length;i++){
+            askQuestion(question[i]);
+        }
+        function askQuestion(question){
+            var answer = prompt(question[0],'');
+            if (answer == question[1]){
+                alert('正確');
+                score++;
+            }
+            else {
+                alert('錯誤，正確答案是'+question[1]); 
+            }
+        }
+        var message = '你得了'+score+'/'+question2.length+'分';
+        document.write('<h3>'+message+'</h3>');
+    </script>
+</body>
+</html>
