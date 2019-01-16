@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        section#carousel>figure>img {
+            display: none;
+            margin: 0px auto;
+        }
+
+        section#carousel>figure.visible>img {
+            display: block;
+            position: relative;
+            overflow: hidden;
+        }
+
+        section#carousel>figure>figcaption {
+            display: none;
+        }
+
+        section#carousel>figure.visible>figcaption {
+            display: block;
+            text-align: center;
+            font-weight: bold;
+            font-size: 1.5em;
+        }
+    </style>
+</head>
+
+<body>
+    <section id="carousel">
+        <figure class="visible">
+            <img src="./efficient_cars.png" alt="Efficient Cars" />
+            <figcaption>2017 Cars Promise to be More Fuel Efficient Than Ever</figcaption>
+        </figure>
+        <figure>
+            <img src="./natural_disaster.png" alt="Natural Disaster" />
+            <figcaption>Hurricane Threatens to Touch Down on the East Coast This Weekend</figcaption>
+        </figure>
+        <figure>
+            <img src="./health_records.png" alt="Health Records" />
+            <figcaption>Many Doctors are Moving to Digital Health Records This Year</figcaption>
+        </figure>
+    </section>
+    <script>
+        var slideInterval = 3500;
+        function getFigures() {
+            return document.getElementById('carousel').getElementsByTagName('figure');
+        }
+        function moveForward() {
+            var pointer;
+            var figures = getFigures();
+            for (var i = 0; i < figures.length; i++) {
+                if (figures[i].className == 'visible') {
+                    figures[i].className = '';
+                    pointer = i;
+                }
+            }
+            if (++pointer == figures.length) {
+                pointer = 0;
+            }
+            figures[pointer].className = 'visible';
+            setTimeout(moveForward, slideInterval);
+        }
+        function startPlayback() {
+            setTimeout(moveForward, slideInterval);
+        }
+        startPlayback();
+    </script>
+</body>
+
+</html>
