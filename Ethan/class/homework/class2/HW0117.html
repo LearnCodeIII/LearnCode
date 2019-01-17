@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <!-- -------------------bootstrap------------------- -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
+        crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
+        crossorigin="anonymous"></script>
+
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        html body{
+            font-family: Microsoft JhengHei, Heiti TC, -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+        }
+        /* ----------------------------------------nav-css---------------------------------------- */
+        nav{
+            position:fixed;
+        }
+        nav .container{
+            padding: 0;
+        }
+
+        .navlogo img{
+            padding-right:2px ;
+        }
+
+        .navbtn{
+            border:1px solid rgba(255,255,255,0.1)
+        }
+
+        .logo1{
+            padding-left: 5px;
+        }
+
+        .logobar{
+            padding: 0;
+        }
+        nav a{
+            color: rgba(255, 255, 255, 0.5)
+        }
+
+        nav a:hover{
+            color: rgba(255, 255, 255, 0.75)
+        }
+
+        .navbg{
+            background-color: #01277a;
+        }
+        .blue-buttom{
+            font-weight: 900;
+            font-size: 1.25rem;
+        }
+        .fb-logo img{
+            width: 25px;
+        }
+/* ----------------------------------------sc1-css---------------------------------------- */
+/* style="background:url(images/lead_01.png) repead 0 0;height: 37px;width: 100%; */
+
+.bg{
+        background: #ffc800 url(images/lead_02.png)no-repeat 0 bottom;
+        background-size: contain;
+        padding-bottom: 20%;
+
+}
+        .bgline{
+            background: url(images/lead_01.png) repeat 0 0;
+            margin-top: 4rem;
+            padding-top: 1.4rem;
+        }
+        .circle-g{
+            display: flex;
+            justify-content: flex-start;
+        }
+
+        .circle{
+            width: 45%;
+            height: 100%;
+        }
+        .sc2-y{
+            background-color: #ffc800;
+            }
+        .sc3-w{
+
+            }
+        .sc4-y{
+            background-color: #ddbc61;
+            }
+        .sc5-p{
+
+            }
+        .sc6-w{
+
+            }
+        .sc7-b{
+            background-color: #01277b;
+            }
+        </style>
+</head>
+
+
+
+
+<body>
+    <nav class="navbar navbar-expand-md navbg navbar-dark fixed-top">
+        <div class="container">
+            <div class="navbar-brand navlogo py-0 m-0">
+                <a class="navbar-brand m-0 pr-1 logo1 " href="# img-fluid"><img style="max-width：100％;height：auto"  src="images/mtlogo.svg" alt="">
+                </a>
+                <a class="navbar-brand m-0 logo2 " href="#"><img src="images/mtschool.svg" alt=""></a>
+            </div>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+                <ul class="navbar-nav mt-2 mr-4 mt-md-0 d-flex align-items-center ">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">精彩議程</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">課程資訊</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">傳真報名</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" target="_blank" class="btn ml-2 text-white btn-primary px-3 ">
+                            <img src="images/ticket-alt-solid.svg" alt="" style="width:25px">
+                            <p class="d-inline text-white blue-buttom">預約席位</p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="btn navbar-btn ml-3" href="#"><img src="images/facebook-logo.png" style="width: 25px"></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- ---------------------------------sc1--------------------------------- -->
+    <section class="bg">
+        <!-- <div style="background: #ffc800"> -->
+            <div class="bgline"></div>
+            <div class="container mt-2">
+                <div class="row">
+                    <div class="mx-auto">
+                        <img class="img-fluid d-block" src="images/lead_03_01.png" alt="">
+                    </div>
+                    <div class="mx-auto d-block">
+                        <img class="img-fluid" src="images/lead_03_02.png" alt="">
+                    </div>
+                    <div class="col-md-6 circle-g " style="max-width:100%; height: auto;">
+                        <img class="img-fluid circle" style="max-width：100％;height：auto;" src="images/lead_03_03_01.png"
+                            alt="">
+                        <img class="img-fluid circle" style="max-width：100％;height：auto;" src="images/lead_03_03_02.png"
+                            alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- ---------------------------------sc2--------------------------------- -->
+    <section class="sc2-Y">
+
+    </section>
+
+    <!-- ---------------------------------sc3--------------------------------- -->
+    <section class="sc3-W">
+
+    </section>
+
+    <!-- ---------------------------------sc4--------------------------------- -->
+    <section class="sc4-Y">
+
+    </section>
+
+    <!-- ---------------------------------sc5--------------------------------- -->
+    <section class="sc5-P">
+
+    </section>
+
+    <!-- ---------------------------------sc6--------------------------------- -->
+    <section class="sc6-W">
+        <div class="container">
+            <div class="row">
+                <h2>常 見 問 題</h2>
+            </div>
+        </div>
+        <div class="container">
+            <div class="accordion" id="accordionExample">
+                <div class="card">
+                    <div class="card-header" id="headingOne">
+                        <h5 class="mb-0">
+                            <button class="btn btn-link text-center" type="button" data-toggle="collapse" data-target="#collapseOne"
+                                aria-expanded="true" aria-controls="collapseOne">
+                                Q 雙日課一定要一起購買嗎？只上單堂課會影響學習效果嗎？
+                            </button>
+                        </h5>
+                    </div>
+
+                    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                        <div class="card-body">
+                            A
+                            可以只報名單堂。兩堂課程內容是獨立且完整的，沒有先修或基礎需求，若您目前只對單一主題有興趣，可以只報名單堂，之後再依需要參加即可。商學院精選這兩堂課，推薦您一起參與，完整掌握帶人的技術！
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header" id="headingTwo">
+                        <h5 class="mb-0">
+                            <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo"
+                                aria-expanded="false" aria-controls="collapseTwo">
+                                Q 公司申請報帳有時間限制，付款後大概多久可以收到發票呢？
+                            </button>
+                        </h5>
+                    </div>
+                    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                        <div class="card-body">
+                            A 您付款完成後的兩週內，我們會將發票寄出，若您需要登打統編資料或拆分多張發票等需求，也請在報名時備註告知，我們會再和您核對細節。
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header" id="headingThree">
+                        <h5 class="mb-0">
+                            <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree"
+                                aria-expanded="false" aria-controls="collapseThree">
+                                Q 付款後若臨時有行程更動，可以退費嗎？
+                            </button>
+                        </h5>
+                    </div>
+                    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                        <div class="card-body">
+                            A
+                            若您無法出席課程，請於課前來電或來信告知，我們會為您保留名額半年，半年內若您對其他課程有興趣可轉移至該堂課；若您需要退款，我們將收取課程的一成費用，並索取銀行轉帳之手續費。請注意，若您於課程結束後告知，恕不另行退費。
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ---------------------------------sc7--------------------------------- -->
+    <section class="sc7-B">
+
+    </section>
+
+    <!-- ---------------------------------footer--------------------------------- -->
+    <footer></footer>
+</body>
+
+</html>

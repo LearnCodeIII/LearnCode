@@ -20,4 +20,43 @@
     background-color: #ffcdcd;
     left: 0 ;
 }
+.counter{
+    color: #fff;
+    padding: 6em 0;
+}
 
+    .counter .bg{
+    background: rgba(0, 0, 0, .7)
+}
+    .counter some{
+    font-style: 20px;
+}
+
+.counter h2{
+    font-size: 40px;
+}
+
+.counter strong{
+    font-size: 40px;
+    font-weight: 700;
+}
+
+.project{
+    color: #fff;
+    padding: 6em 0;
+}
+.project h2, .project p{
+    color: black;
+}
+.project h3{
+    position: absolute;
+    font-size: 30px;
+    bottom: 1.2em;
+    left: 1.2em;
+}
+
+.blog-entry .bg {
+    display: block;
+    height: 275px;
+    background-size: cover;
+}
