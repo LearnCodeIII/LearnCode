@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+  <meta charset="UTF-8">
+  <title>Layout</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0; " />
+</head>
+<style>
+  body{
+    background: #ccc;
+  }
+  .clearfix:after {
+    clear: both;
+    content: "";
+    display: block;
+    height: 0;
+    visibility: hidden;
+  }
+  *{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+  }
+  a, a:link{
+    text-decoration: none;
+    color:#3c5a9c;
+  }
+  a:hover{
+    text-decoration: underline;
+  }
+  header{
+    background: #fff;
+    position: relative;
+  }
+  header .wrapper{
+    position: relative;
+  }
+  header img{
+    width:200px;
+  }
+  .wrapper{
+    max-width: 960px;
+    margin:0 auto;
+  }
+  .header_link{
+    position: absolute;
+    top:6px;
+    right:0;
+  }
+  ul li{
+    list-style: none;
+  }
+  nav{
+    background: #3c5a9c;
+  }
+  nav ul li{
+    float:left;
+  }
+  nav ul li a{
+    color:#fff;
+    display: block;
+    padding:12px;
+    text-align: center;
+  }
+  nav ul li a:hover{
+    background: #355089;
+    text-decoration: none;
+  }
+  .main{
+    /*display: flex;*/
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  aside{
+    flex:1;
+  }
+  article{
+    background: #fff;
+    padding:20px;
+    float:left;
+    min-height: 500px;
+    border-radius: 6px;
+    border:1px solid #ccc;
+    width: 60%;
+  }
+  article h1{
+    margin:0px 0 6px;
+    font-size: 21px;
+  }
+  article p{
+    margin:15px 0;
+    font-size: 15px;
+    line-height: 1.5;
+  }
+  figure{
+    background: #fff;
+    border:1px solid #ccc;
+    border-radius: 6px;
+    overflow: hidden;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  .l_aside{
+    margin-right: 2%;
+    float: left;
+    width: 18%;
+  }
+  .l_aside li a{
+    display: block;
+    padding:10px;
+    color:#4b4f56;
+    border-left: 4px solid transparent;
+  }
+  .l_aside li a:hover, .l_aside li.current a{
+    font-weight: bold;
+    background: #dddfe2;
+    text-decoration: none;
+    border-left: 4px solid #4267b2;
+  }
+  .r_aside{
+    float:right;
+    width:20%;
+    position: relative;
+  }
+  figure img{
+    max-width: 100%;
+  }
+  time{
+    color: #999;
+  }
+  footer{
+    height:60px;
+    text-align: center;
+  }
+  @media screen and (max-width: 768px){
+    article, .l_aside, .r_aside{
+      float:none;
+      width: 100%;
+    }
+    nav ul li{
+      width:20%;
+      text-align: center;
+    }
+    .l_aside ul li{
+      float: left;
+      width:25%;
+      text-align: center;
+    }
+    .l_aside ul li a{
+      border:none;
+      border-bottom:4px solid transparent;
+    }
+    .l_aside ul li a:hover, .l_aside ul li.current a{
+      border:none;
+      border-bottom:4px solid #4267b2;
+    }
+  }
+</style>
+<body>
+  <header class="">
+    <section class="wrapper">
+      <img src="images/facebook.png" alt="facebook">
+      <div class="header_link"><a href="">Log In</a> | <a href="">Sign Up</a></div>
+    </section>
+  </header>
+  <nav>
+    <ul class="wrapper clearfix">
+      <li><a href="">Home</a></li>
+      <li><a href="">Product</a></li>
+      <li><a href="">Story</a></li>
+      <li><a href="">Contact</a></li>
+      <li><a href="">About</a></li>
+    </ul>
+  </nav>
+  <section class="main wrapper clearfix">
+    <aside class="l_aside">
+      <figure>
+        <img src="images/logo.jpg" alt="">
+      </figure>
+      <ul class="clearfix">
+        <li class="current"><a href="">首頁</a></li>
+        <li><a href="">關於</a></li>
+        <li><a href="">相簿</a></li>
+        <li><a href="">影片</a></li>
+      </ul>
+    </aside>
+    <article>
+      <h1>Uniform Map</h1>
+      <time>2017/5/5 14:00:00</time>
+      <p>Just Uniform Map</p>
+    </article>
+    <aside class="r_aside">
+      <img src="images/jk.png" alt="">
+    </aside>
+  </section>
+  <footer>
+    copyright by facebook
+  </footer>
+</body>
+</html>

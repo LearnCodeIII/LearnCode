@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>box-model</title>
+    <style>
+        .box {
+            margin: 10px;
+            height: 300px;
+            width: 300px;
+            background-color: cadetblue;
+            border-radius: 10px;
+        }
+
+        .radius1 {
+            border-radius: 10px;
+        }
+
+        .radius2 {
+            border-radius: 10px 50px;
+        }
+
+        .radius3 {
+            border-radius: 10px 50px 100px;
+        }
+
+        .radius4 {
+            border-radius: 50px/100px;
+        }
+
+        .radius5 {
+            border-radius: 50%;
+        }
+
+        .radius6 {
+            border-radius: 100% 0 0 0;
+        }
+
+        body,
+        html {
+            height: 100%;
+        }
+
+        figure.avatar {
+            overflow: hidden;
+            width: 200px;
+            height: 200px;
+            transition: .5s;
+        }
+
+        figure.avatar img {
+            width: 100%;
+        }
+
+        .box {
+            display: none;
+            transition: .5s;
+        }
+
+        .shadow {
+            box-shadow: 3px 3px 15px 5px rgb(83, 12, 7);
+        }
+
+        .shadow:hover {
+            box-shadow: 5px 8px 20px 10px rgb(83, 12, 7);
+            width: 10vw;
+            height: 25vh;
+        }
+        .shadow2 {
+            box-shadow: 3px 3px 15px 5px rgb(83, 12, 7);
+        }
+
+        .shadow2:hover {
+            box-shadow: 5px 8px 20px 10px rgb(83, 12, 7);
+            width: 10vw;
+            height: 25vh;
+        }
+        .shadow3 {
+            box-shadow: 5px 5px 15px 10px rgb(rgb(15, 147, 255));
+        }
+
+        .shadow3:hover {
+            box-shadow: 5px 8px 20px 10px rgb(6, 56, 194);
+            
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box radius1"></div>
+    <div class="box radius2"></div>
+    <div class="box radius3"></div>
+    <div class="box radius4"></div>
+    <div class="box radius5"></div>
+    <div class="box radius6"></div>
+    <figure class="avatar radius5 shadow">
+        <img src="./css3/sample/dr_strange.jpg" alt="">
+    </figure>
+    <figure class="avatar radius5 shadow2">
+        <img src="./css3/sample/dr_strange.jpg" alt="">
+    </figure>
+    <figure class="avatar radius5 shadow3">
+        <img src="./css3/sample/dr_strange.jpg" alt="">
+    </figure>
+</body>
+
+</html>

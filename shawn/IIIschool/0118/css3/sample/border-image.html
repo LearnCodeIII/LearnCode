@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+  <meta charset="UTF-8">
+  <title>Border Image</title>
+</head>
+<style>
+  .border{
+    border: 20px solid transparent;
+    padding:40px;
+    border-image: url(border-image.png) 20 repeat;
+    -webkit-border-image: url(border-image.png) 20 repeat;
+    margin-bottom: 20px;
+  }
+  .border.border2{
+    border-image: url(border-image.png) 10 round;
+    -webkit-border-image: url(border-image.png) 10 round;
+  }
+  .border.border3{
+    border-image: url(border-image.png) 20 stretch;
+    -webkit-border-image: url(border-image.png) 20 stretch;
+  }
+  .border.border4{
+    border-image: url(border-image.png) 30% round;
+    -webkit-border-image: url(border-image.png) 30% round;
+  }
+  .border.border5{
+    border-image: url(border-image.png) 30% round;
+    -webkit-border-image: url(border-image.png) 30% round;
+    border-image-outset: .5;
+    border-image-width: 15px;
+  }
+</style>
+<body>
+  <div class="border"></div>
+  <div class="border border2"></div>
+  <div class="border border3"></div>
+  <div class="border border4"></div>
+  <div class="border border5"></div>
+</body>
+</html>

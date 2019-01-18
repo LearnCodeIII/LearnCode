@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+  <meta charset="UTF-8">
+  <title>Gradients</title>
+</head>
+<style>
+div{
+  padding:20px;
+  height:50px;
+  text-align: center;
+  margin:0 auto 20px;
+  width:50%;
+}
+.gradient{
+  background: linear-gradient(red, blue);
+}
+.gradient2{
+  background: -webkit-linear-gradient(left, red , blue); 
+  background: -o-linear-gradient(right, red, blue); 
+  background: -moz-linear-gradient(right, red, blue); 
+  background: linear-gradient(to left, red , blue); 
+}
+.gradient3{
+  background: -webkit-linear-gradient(0deg, red, blue);   
+  background: -o-linear-gradient(0deg, red, blue);   
+  background: -moz-linear-gradient(0deg, red, blue);   
+  background: linear-gradient(0deg, red, blue); 
+  }
+.gradient4{
+  background: -webkit-linear-gradient(left, red, orange, yellow, green, blue, purple);
+  background: -o-linear-gradient(left, red, orange, yellow, green, blue, purple); 
+  background: -moz-linear-gradient(left, red, orange, yellow, green, blue, purple); 
+  background: linear-gradient(to right, red, orange, yellow, green, blue, purple); 
+}
+.gradient5{
+  background: linear-gradient(to right, red, orange 20%, yellow 30%, green 50%, blue, purple); 
+}
+.gradient6{
+  background: linear-gradient(to right, rgba(0,0,255,0), rgba(0,0,255,1) 80%); 
+}
+.gradient7{
+  background: repeating-linear-gradient(deeppink, orchid 8%, hotpink 16%, deeppink 25%);
+}
+</style>
+<body>
+  <div class="gradient"></div>
+  <div class="gradient2"></div>
+  <div class="gradient3"></div>
+  <div class="gradient4"></div>
+  <div class="gradient5"></div>
+  <div class="gradient6"></div>
+  <div class="gradient7"></div>
+</body>
+</html>

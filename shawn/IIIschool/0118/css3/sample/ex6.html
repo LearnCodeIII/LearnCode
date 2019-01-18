@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+  <meta charset="UTF-8">
+  <title>Ex6</title>
+</head>
+<style>
+body{
+  margin:50px;
+}
+.container{
+  /*perspective:1000px;*/
+  /*perspective:1000px;*/
+}
+.box img{
+  width:300px;
+}
+.card{
+  position: relative;
+  transform-style:preserve-3d; /* 要加這個裏面的影響才會繼承 */
+  float:left;
+  margin: 0 20px 20px;
+  width:200px;
+  height:280px; 
+  /*height:400px;*/
+}
+.card:active{
+  transform: rotateY(180deg);
+  -webkit-transform: rotateY(180deg);
+}
+.card img{
+  width:100%;
+  position: absolute;
+  left:0;
+  top:0;
+  display: block;
+  -webkit-backface-visibility: hidden;  
+  backface-visibility: hidden;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.front{
+  transform: rotateY(180deg);
+  -webkit-transform: rotateY(180deg);
+}
+.back{
+  
+}
+.transition{
+  transition: all .5s;
+  -webkit-transition: all .5s;
+}
+.box:hover{
+  transform:rotateY(180deg);
+  -webkit-transform:rotateY(180deg);
+}
+</style>
+<body>
+  <div class="container">
+    <div class="card transition">
+      <div class="card_wrap">
+        <img class="back" src="images/card.jpg">
+        <img class="front" src="images/dr_strange.jpg" alt="">
+      </div>
+    </div>
+    <div class="card transition">
+      <div class="card_wrap">
+        <img class="back" src="images/card.jpg">
+        <img class="front" src="images/dr_fate.jpg" alt="">
+      </div>
+    </div>
+    <div class="card transition">
+      <div class="card_wrap">
+        <img class="back" src="images/card.jpg">
+        <img class="front" src="images/dr_fate.jpg" alt="">
+      </div>
+    </div>
+    <div class="card transition">
+      <div class="card_wrap">
+        <img class="back" src="images/card.jpg">
+        <img class="front" src="images/dr_strange.jpg" alt="">
+      </div>
+    </div>
+  </div>
+</body>
+</html>

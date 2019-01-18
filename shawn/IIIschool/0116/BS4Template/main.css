@@ -9,7 +9,7 @@ html,body {
 .s2 {
     background: #fafafa;
 }
-.d-flex {
+.s2 .d-flex {
     width: 100px;
     height: 100px;
     background:#ffcdcd;
@@ -32,4 +32,45 @@ html,body {
 }
 .section-counter {
     color:white;
+}
+strong.d-block {
+    font-size: 40px;
+    font-weight: 700;
+}
+.counter-bg {
+    background: rgba(0,0,0,0.7);
+}
+section.project {
+    padding:6em 0;
+}
+section .text {
+    color:white;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding:2em;
+    text-transform: uppercase;
+}
+.blog-entry .bg {
+    display:block;
+    height: 275px;
+    background-size:cover;
+}
+.meta {
+    display: block;
+    width: 260px;
+    font-size: 12px ;
+}
+.meta>div a{
+    color: #aaa ;
+}
+.blog-entry .heading a {
+    color: #000 ;
+    font-size: 20px ;
+    line-height: 1.5em ;
+
+}
+footer {
+    background: #000;
+    color: #fff ;
 }

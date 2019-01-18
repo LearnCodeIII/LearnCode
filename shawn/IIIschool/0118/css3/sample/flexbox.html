@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+  <meta charset="UTF-8">
+  <title>FlexBox</title>
+</head>
+<style>
+body{
+  /*direction: rtl;*/
+}
+div{
+  /*text-align: center;*/
+  color:#fff;
+}
+.flex{
+  display: flex;
+  -webkit-display: flex;
+  width: 460px;
+  height:240px;
+  background: #ccca;
+  color:#fff;
+  padding:10px;
+}
+.flex>div{
+  width:100px;
+  height:100px;
+  background: purple;
+  margin: 5px;
+}
+.flex_n{
+  display: flex;
+  -webkit-display: flex;
+  width: 460px;
+  height:240px;
+  background: #ccca;
+  color:#fff;
+}
+.flex_n.shrink>div{
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 100px;
+}
+.flex_n.shrink>div:nth-of-type(4){
+  -webkit-flex-shrink: 3; 
+  flex-shrink: 3;
+}
+.flex_n.grow>div{
+  -webkit-flex-grow: 1; 
+    flex-grow: 1;
+}
+.flex_n.grow>div:nth-of-type(2){
+  -webkit-flex-grow: 4; 
+  flex-grow: 4;
+}
+.flex-direction{
+  display: flex;
+  -webkit-display: flex;
+  width:400px;
+  padding:10px;
+  height: 400px;
+  background: #ccc;
+  flex-direction:column-reverse;
+}
+.flex-direction>div{
+  width:40px;
+  height:40px;
+  padding:5px;
+  text-align: center;
+  margin: 5px;
+}
+.justify_content{
+  -webkit-justify-content: flex-end;
+  justify-content: space-around;
+}
+.align-items{
+  display: flex;
+  width: 460px;
+  height:240px;
+  border:1px solid #ccc;
+  -webkit-align-items: baseline;
+  align-items: baseline;
+  color:#fff;
+}
+.align-items>div{
+  -webkit-flex: 1;
+  flex: 1;
+}
+.wrap{
+  flex-wrap:wrap-reverse;
+}
+.wrap>div{
+  width:120px;
+}
+.align_content{
+  display:flex;
+  flex-wrap:wrap;
+  align-content: space-between;
+  border:1px solid #ccc;
+  width:100px;
+  height:420px;
+}
+.align_content>div{
+  width:100px;
+  height:100px;
+}
+#oa{
+  order:2;
+}
+#ob{
+  order:3;
+}
+#align_b{
+   align-self: center;
+}
+</style>
+<body>
+  <h2>Flex</h2>
+<div class="flex">
+  <div class=""></div><div class=""></div><div class=""></div>
+</div>
+<!-- <h2>Flex Grow</h2>
+<div class="flex_n grow">
+  <div style="background: red">A</div>
+  <div style="background: orange">B</div>
+  <div style="background: yellow">C</div>
+  <div style="background: green">D</div>
+  <div style="background: blue">E</div>
+  <div style="background: purple">F</div>
+</div>
+<h2>Flex Shrink</h2>
+<div class="flex_n shrink">
+  <div style="background: red">A</div>
+  <div style="background: orange">B</div>
+  <div style="background: yellow">C</div>
+  <div style="background: green">D</div>
+  <div style="background: blue">E</div>
+  <div style="background: purple">F</div>
+</div> -->
+<h2>Flex Direction</h2>
+<div class="flex-direction">
+  <div style="background: red">A</div>
+  <div style="background: orange">B</div>
+  <div style="background: yellow">C</div>
+  <div style="background: green">D</div>
+  <div style="background: blue">E</div>
+</div>
+<h2>Justify Content</h2>
+  <div class="flex justify_content">
+    <div class="">item 1</div><div class="">item 2</div><div class="">item 3</div>
+  </div>
+<h2>Align Items</h2>
+  <div class="align-items">
+    <div style="background:red;">RED</div>
+    <div style="background:blue;">BLUE</div>  
+    <div style="background:green;">GREEN</div>
+  </div>
+<h2>Flex Wrap</h2>
+<div class="flex wrap">
+  <div style="background: red">A</div>
+  <div style="background: orange">B</div>
+  <div style="background: yellow">C</div>
+  <div style="background: green">D</div>
+  <div style="background: blue">E</div>
+</div>
+<h2>Align Content</h2>
+<div class="align_content">
+  <div style="background: red">A</div>
+  <div style="background: orange">B</div>
+  <div style="background: yellow">C</div>
+</div>
+<h2>Order</h2>
+<div class="flex">
+  <div style="background: red" id="oa">A</div>
+  <div style="background: orange" id="ob">B</div>
+  <div style="background: yellow" id="oc">C</div>
+</div>
+<h2>Align Self</h2>
+<div class="align-items">
+    <div style="background:red;">RED</div>
+    <div style="background:blue;" id="align_b">BLUE</div>  
+    <div style="background:green;">GREEN</div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+  <meta charset="UTF-8">
+  <title>Transition</title>
+</head>
+<style>
+body{
+  margin:50px;
+}
+ div{
+  text-align: center;
+  padding:20px;
+  width:120px;
+  height:120px;
+  background: violet;
+  float: left;
+  margin:0 20px 20px 0;
+  border:3px solid purple;
+  transition: transform 2s;
+  -webkit-transition: transform 2s;
+ }
+ .translate:hover{
+  -ms-transform: translate(30px, 70px); 
+  -webkit-transform: translate(30px, 70px); 
+  transform: translate(30px, 70px);
+ }
+ .rotate{
+  transition-timing-function: ease;
+  -webkit-transition-timing-function: ease;
+ }
+ .rotate:hover{
+  -ms-transform: rotate(30deg); 
+    -webkit-transform: rotate(30deg); 
+    transform: rotate(30deg);
+ }
+ .scale{
+  transition-delay: 1s;
+  -webkit-transition-delay: 1s;
+ }
+ .scale:hover{
+  -ms-transform: scale(1.5, 2); 
+  -webkit-transform: scale(1.5, 2); 
+  transform: scale(1.5, 2);
+ }
+ .skewX:hover{
+  -ms-transform: skewX(-30deg); 
+  -webkit-transform: skewX(-30deg); 
+  transform: skewX(-30deg);
+ }
+ .skewY:hover{
+  -ms-transform: skewY(-30deg); 
+  -webkit-transform: skewY(-30deg); 
+  transform: skewY(-30deg);
+ }
+ .matrix{
+  -webkit-transition: all 2s ease-in-out .5s;
+  transition: all 2s ease-in-out .5s;
+ }
+ .matrix:hover{
+  -ms-transform: matrix(1, -0.3, 0, 1, 0, 0); 
+  -webkit-transform: matrix(1, -0.3, 0, 1, 0, 0); 
+  transform: matrix(1, -0.3, 0, 1, 0, 0);
+ }
+</style>
+<body>
+  <div class="translate">translate</div>
+  <div class="rotate">rotate with ease</div>
+  <div class="scale">scale with delay 1s</div>
+  <div class="skewX">skewX</div>
+  <div class="skewY">skewY</div>
+  <div class="matrix">matrix</div>
+</body>
+</html>

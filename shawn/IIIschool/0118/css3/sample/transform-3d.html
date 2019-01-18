@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+  <meta charset="UTF-8">
+  <title>Transform 3D</title>
+</head>
+<style>
+body{
+  margin:50px;
+}
+ div.box{
+  text-align: center;
+  padding:20px;
+  width:120px;
+  height:120px;
+  background: violet;
+  float: left;
+  margin:0 20px 20px 0;
+  border:3px solid purple;
+  transition: all 2s;
+  -webkit-transition: all 2s;
+ }
+ .clear{
+  float:none;
+  clear:both;
+ }
+ .translatex:hover{
+  -ms-transform: translateX(30px); 
+  -webkit-transform: translateX(30px); 
+  transform: translateX(30px);
+ }
+ .translatey:hover{
+  -ms-transform: translateY(30px); 
+  -webkit-transform: translateY(30px); 
+  transform: translateY(30px);
+ }
+ .translatez:hover{
+  -ms-transform: translateZ(30px); 
+  -webkit-transform: translateZ(30px); 
+  transform: translateZ(30px);
+ }
+ .translate3d:hover{
+  -ms-transform: translate3d(30px,20px, 10px); 
+  -webkit-transform: translate3d(30px,20px, 10px); 
+  transform: translate3d(30px,20px, 10px);
+ }
+ .rotatex:hover{
+  -ms-transform: rotateX(60deg); 
+    -webkit-transform: rotateX(60deg); 
+    transform: rotateX(60deg);
+ }
+ .rotatey:hover{
+  -ms-transform: rotateY(60deg); 
+    -webkit-transform: rotateY(60deg); 
+    transform: rotateY(60deg);
+ }
+ .rotatez:hover{
+  -ms-transform: rotateZ(60deg); 
+    -webkit-transform: rotateZ(60deg); 
+    transform: rotateZ(60deg);
+ }
+ .rotate3d:hover{
+  -ms-transform: rotate3D(1,1,1,60deg); 
+  -webkit-transform: rotate3D(1,1,1,60deg); 
+  transform: rotate3D(1,1,1,60deg);
+ }
+ .scalex:hover{
+  -ms-transform: scaleX(1.2); 
+  -webkit-transform: scaleX(1.2); 
+  transform: scaleX(1.2);
+ }
+ .scaley:hover{
+  -ms-transform: scaleY(1.2); 
+  -webkit-transform: scaleY(1.2); 
+  transform: scaleY(1.2);
+ }
+ .scalez:hover{
+  -ms-transform: scaleZ(1.2); 
+  -webkit-transform: scaleZ(1.2); 
+  transform: scaleZ(1.2);
+ }
+ .matrix{
+  -webkit-transition: all 2s ease-in-out .5s;
+  transition: all 2s ease-in-out .5s;
+ }
+ .matrix:hover{
+  -ms-transform: matrix(1, -0.3, 0, 1, 0, 0); 
+  -webkit-transform: matrix(1, -0.3, 0, 1, 0, 0); 
+  transform: matrix(1, -0.3, 0, 1, 0, 0);
+ }
+</style>
+<body>
+  <h3>Translate 3D</h3>
+  <div class="translatex box">translateX</div>
+  <div class="translatey box">translateY</div>
+  <div class="translatez box">translateZ</div>
+  <div class="translate3d box">translate3D</div>
+  <div class="clear"></div>
+  <h3>Rotate 3D</h3>
+  <div class="rotatex box">rotateX</div>
+  <div class="rotatey box">rotateY</div>
+  <div class="rotatez box">rotateZ</div>
+  <div class="rotate3d box">rotate3D</div>
+  <div class="clear"></div>
+  <h3>Scale 3D</h3>
+  <div class="scalex box">scaleX</div>
+  <div class="scaley box">scaleY</div>
+  <div class="scalez box">scaleZ</div>
+</body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ex7-3</title>
+    <style>
+        @keyframes earthRotate{
+            from{
+                transform: rotate(0) translateX(220px);
+            }
+            to{
+                transform: rotate(360deg) translateX(220px);
+            }
+        }
+        @keyframes moonRotate{
+            from{
+                transform: rotate(0) translateX(72px);
+            }
+            to{
+                transform: rotate(360deg) translateX(72px);
+            }
+        }
+    *{
+        margin:0;
+        padding:0;
+    }
+    body{
+        background: url(images/space-bg.jpg);
+    }
+    .wrapper{
+        position: relative;
+        width: 500px;
+        height:500px;
+        margin: 20px auto;
+        /* border: 1px solid #ccc; */
+    }
+    img{
+        position:absolute;
+        left: 50%;
+        top: 50%;
+        /* transform: translate(-50%, -50%); */
+    }
+    .orbit{
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        border: 1px solid #ccc;
+        border-radius: 50%;
+    }
+    .earth_orbit{
+        width: 440px;
+        height: 440px;
+        margin: -220px 0 0 -220px;
+    }
+    .moon_orbit{
+        width: 144px;
+        height: 144px;
+        margin: -72px 0 0 -72px;
+    }
+    .sun{
+        margin: -64px 0 0 -64px;
+    }
+    .earth{
+        margin: -36px 0 0 -36px;
+        /* animation: earthRotate 5s linear infinite; */
+    }
+    .moon{
+        margin: -24px 0 0 -24px;
+        z-index: 10;
+        animation: moonRotate 3s linear infinite;
+    }
+    .earth_wrap{
+        width: 144px;
+        height: 144px;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        margin: -72px 0 0 -73px;
+        /* border: 1px solid #ccc; */
+        animation: earthRotate 12s linear infinite;
+    }
+    .earth_wrap_relative{
+        width: 144px;
+        height: 144px;
+        position: relative;
+    }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="orbit earth_orbit"></div>
+        <img class="sun" src="images/sun.png" alt="">
+        <div class="earth_wrap">
+            <div class="earth_wrap_relative">
+                <div class="orbit moon_orbit"></div>
+                <img class="moon" src="images/moon.png" alt="">
+                <img class="earth" src="images/earth.png" alt="">
+            </div>  
+        </div>
+        <!-- <img class="earth" src="images/earth.png" alt=""> -->
+    </div>
+</body>
+</html>

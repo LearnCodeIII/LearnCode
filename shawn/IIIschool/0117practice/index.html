@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <title>HTML Page</title>
+    <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+    <script src="js/script.js"></script>
+</head>
+
+<body>
+    <header class="demo"></header>
+    <article name="topFirst" class="blueBg" id="test1">
+        Lorem Ipsum...
+    </article>
+    <article name="topSecond">
+        Lorem Ipsum...
+    </article>
+    <article name="bottomFirst" class="blueBg">
+        Lorem Ipsum...
+    </article>
+    <article name="bottomSecond" class="redBg">
+        Lorem Ipsum...
+    </article>
+    <footer class="redBg">
+        <p>Test</p>
+        <p></p>
+    </footer>
+</body>
+<script>
+    $('*').length;
+    $('*:empty').length;
+    $('p').length;
+    $('.blueBg').length;
+    $('.redBg').length;
+    $('article.redBg').length;
+    $('#test1').length;
+    $('article[name=topFirst]').length
+    $('article[name!=top]').length
+    $('article[name^=top]').length
+    $('article[name^=bottom]').length
+    $('article[name$=Second]').length
+    $('footer > p').length
+    $('article[class]').length
+    $('article[id]').length
+</script>
+
+</html>

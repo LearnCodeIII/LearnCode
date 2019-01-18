@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Flex Layout</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            background: #e9ebef;
+        }
+        *{
+            padding:0;
+            margin:0;
+        }
+        a, a:link{
+            color:#3a589e;
+            text-decoration: none;
+        }
+        .transition{
+            transition: all .5s;
+        }
+        li{
+            list-style: none;
+        }
+        a:hover{
+            color:#355089;
+        }
+        header{
+            background: #fff;
+        }
+        header .wrapper{
+            justify-content: space-between;
+            height: 80px;
+            align-items: center;
+            
+        }
+        nav{
+            background: #3a589e;
+        }
+        nav ul{
+            display: flex;
+        }
+        nav ul li a{
+            padding:10px 20px;
+            color:#fff;
+            display: block;
+        }
+        nav ul li a:link{
+            color:#fff;
+        }
+        nav ul li a:hover{
+            background: #355089;
+        }
+        @media screen and (max-width: 767px){
+            nav ul li{
+                flex:1;
+            }
+            nav ul li a{
+                padding: 10px 0;
+                text-align: center;
+            }
+        }
+        figure{
+		    border:1px solid #ccc;
+		    border-radius: 6px;
+		    overflow: hidden;
+		    margin-bottom: 20px;
+		  }
+          footer{
+              padding:40px 0;
+          }
+        .flex{
+            display: flex;
+        }
+        .wrapper{
+            max-width: 960px;
+            margin:0 auto;
+        }
+        .text_center{
+            text-align: center;
+        }
+        .logo{
+            /* width:200px; */
+            height: 50px;
+        }
+        .user_setting{
+            align-self: flex-start;
+            margin-top:10px;
+        }
+        .main{
+            margin: 20px auto;
+        }
+        aside{
+            /* flex:1; */
+            width: 160px;
+        }
+        main{
+            flex-grow:1;
+            margin: 0 20px;
+            background: #fff;
+  			border: 1px solid #ccc;
+  			border-radius: 4px;
+  			padding:20px;
+              width:50%;
+        }
+        .main_pic img{
+           max-width:100%;
+           display: block;
+        }
+        .l_aside li a{
+		    display: block;
+		    padding:10px;
+		    color:#4b4f56;
+		    border-left: 4px solid transparent;
+		  }
+		  .l_aside li a:hover, .l_aside li.current a{
+		    font-weight: bold;
+		    background: #dddfe2;
+		    text-decoration: none;
+		    border-left: 4px solid #4267b2;
+		  }
+          article{
+  			
+  		}
+  		main p{
+  			margin:5px 0;
+  			line-height: 1.7;
+              height: 500px;
+  		}
+          .r_aside{
+			display: flex;
+			justify-content: flex-end;
+			align-items: flex-end;
+  		}
+  		.r_aside img{
+  			height:240px;
+  		}
+        @media screen and (max-width:767px){
+            .main{
+                flex-wrap: wrap;
+            }
+            aside{
+                width:100%;
+            }
+            aside figure{
+                max-width: 160px;
+                margin:0px auto 20px;
+            }
+            .l_aside ul{
+                display: flex;
+                margin-bottom:20px;
+            }
+            .l_aside ul li{
+                flex:1;
+            }
+            .r_aside img{
+                display: none;
+            }
+            .l_aside li a{
+                border-left: none;
+                border-bottom: 4px solid transparent;
+                text-align: center;
+            }
+            .l_aside li a:hover, .l_aside li.current a{
+                /* background: #dddfe2; */
+                /* text-decoration: none; */
+                border-left: none;
+                border-bottom: 4px solid #4267b2;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="">
+        <section class="wrapper flex">
+            <img class="logo" src="images/facebook.png" alt="facebook">
+            <div class="user_setting">
+                <a href="">Login</a> | <a href="">Sing Up</a>
+            </div>
+        </section>
+    </header>
+    <nav>
+        <ul class="wrapper">
+            <li><a href="/">Home</a></li>
+            <li><a href="/">Product</a></li>
+            <li>
+                <a href="/">Story</a>
+            </li>
+            <li>
+                <a href="/">Contact</a>
+            </li>
+            <li>
+                <a href="/">About</a>
+            </li>
+        </ul>
+    </nav>
+    <section class="wrapper flex main">
+        <aside class="l_aside">
+            <figure class="main_pic transition">
+                <img src="images/logo.jpg" alt="">
+            </figure>
+            <ul>
+                <li class="current">
+                    <a href="">首頁</a>
+                </li>
+                <li>
+                    <a href="">關於</a>
+                </li>
+                <li>
+                    <a href="">相簿</a>
+                </li>
+                <li>
+                    <a href="">影片</a>
+                </li>
+            </ul>
+        </aside>
+        <main>
+            <h1>FlexBox</h1>
+            <time>2017/5/5 14:00:00</time>
+            <p>The Flexible Box Module, usually referred to as flexbox, was designed as a one-dimensional layout model, and as a method
+            that could offer space distribution between items in an interface and powerful alignment capabilities. This article gives
+            an outline of the main features of flexbox, which we will be exploring in more detail in the rest of these guides.</p>
+        </main>
+        <aside class="r_aside">
+            <img src="images/jk.png" alt="">
+        </aside>
+    </section>
+    <footer class="text_center">
+        Facebook
+    </footer>
+</body>
+</html>

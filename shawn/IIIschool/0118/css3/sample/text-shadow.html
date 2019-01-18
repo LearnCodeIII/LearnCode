@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+  <meta charset="UTF-8">
+  <title>Text Shadow</title>
+</head>
+<style>
+  h1{
+    text-shadow: 2px 3px 5px gray;
+  }
+  div{
+    margin: 20px 40px;
+  }
+  .title{
+    font-size: 25px;
+    font-weight: bold;
+    color:#fff;
+  }
+  div.text_shadow{  
+    color:#fff;
+  }
+  div.text_shadow:hover{
+    text-shadow: 2px 3px 5px gray;
+  }
+  div.text_shadow:active{
+    text-shadow: 1px 2px 3px red;
+  }
+  .multi_shadow{
+    text-shadow: 0 0 2px red, 0 0 8px purple;
+  }
+    .multi_shadow2{
+        font-size:48px;
+        padding:20px;
+        background: #1a98cb;
+        font-family: Arial;
+        text-shadow: 0 1px rgb(200,200, 200), 0 2px rgb(160,160, 160), 0 3px rgb(120,120, 120), 0 4px rgb(80,80, 80), 0 5px rgb(40,40, 40);
+    }
+    .multi_shadow3{
+        font-size:48px;
+        padding:20px;
+        background: #1a98cb;
+        font-family: Arial;
+        text-shadow: 1px 1px black, 2px 2px black, 3px 3px black, 4px 4px black, 5px 5px black, 6px 6px black;
+    }
+</style>
+<body>
+   <h1>This is title</h1>
+   <div class="text_shadow title">Text shadow</div>
+   <div class="multi_shadow title">Shadow</div>
+   <div class="multi_shadow2 title">Shadow</div>
+   <div class="multi_shadow3 title">Shadow</div>
+</body>
+</html>
