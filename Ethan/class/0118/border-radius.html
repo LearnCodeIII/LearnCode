@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>border-radius</title>
+    <style>
+        .box {
+            width: 200px;
+            height: 200px;
+            background-color: #acc;
+            margin: 10px;
+        }
+
+        .radius1 {
+            border-radius: 10p：x;
+        }
+
+        .radius2 {
+            border-radius: 10px 20px;
+        }
+
+        .radius3 {
+            border-radius: 10px 20px 40px;
+        }
+
+        .radius4 {
+            border-radius: 10px/40px;
+        }
+
+        .radius5 {
+            border-radius: 50%;
+        }
+
+        .radius6 {
+            border-radius: 100% 0 0 0;
+        }
+
+        .img1 {
+            width: 250px;
+            height: 250px;
+            /* border-radius: 50%; */
+            overflow: hidden;
+            position: relative;
+        }
+
+        figure.img1 img {
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box radius1"></div>
+    <div class="box radius2"></div>
+    <div class="box radius3"></div>
+    <div class="box radius4"></div>
+    <div class="box radius5"></div>
+    <div class="box radius6"></div>
+    <figure class="img1 radius6">
+        <img src="dr-strange.jpg" alt="">
+    </figure>
+    Hello Css3!
+</body>
+
+</html>
