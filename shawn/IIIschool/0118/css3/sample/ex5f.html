@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+  <meta charset="UTF-8">
+  <title>Ex5-6</title>
+</head>
+<style>
+body{
+  background: #ccc;
+}
+.clearfix:after {
+    clear: both;
+    content: ".";
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+.wrapper{
+  margin:0 auto;
+  width: 800px;
+}
+ul, li{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.transition{
+  transition:all .5s;
+  -webkit-transition: all .5s;
+}
+nav{
+  background: #fff;
+}
+nav>ul{
+  background: #fff;
+}
+li{
+  cursor: pointer;
+}
+nav>ul>li{
+  float:left;
+  position: relative;
+}
+nav>ul>li>a{
+  padding:8px 20px;
+  display: block;
+}
+nav>ul>li:hover .sub_nav{
+  max-height: 300px;
+}
+nav ul li a:hover{
+  background: lightblue;
+}
+.sub_nav{
+  position: absolute;
+  background: #fff;
+  top:31px;
+  width:120px;
+  max-height: 0;
+  overflow: hidden;
+}
+.sub_nav a{
+  padding:8px 20px;
+  display: block;
+}
+
+</style>
+<body>
+  <section class="wrapper">
+    <nav>
+      <ul class="clearfix">
+        <li><a class="transition">Home</a></li>
+        <li><a class="transition">About</a></li>
+        <li><a class="transition">Album</a>
+          <ul class="sub_nav transition">
+            <li><a class="transition">Family</a></li>
+            <li><a class="transition">School</a></li>
+            <li><a class="transition">Pet</a></li>
+          </ul>
+        </li>
+        <li><a class="transition">Contact</a></li>
+      </ul>
+    </nav>
+  </section><!-- wrapper -->
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+  <meta charset="UTF-8">
+  <title>Ex7-2</title>
+</head>
+<style>
+body{
+  margin:50px;
+}
+.cat{   
+    width:350px;   
+    height:380px;   
+    margin:2% auto;   
+    background: url(images/cat.png) left top;   
+}  
+@keyframes play {  
+   100% { background-position: -3150px; }   
+}
+.cat{   
+    animation: play .8s steps(9) infinite;   
+    -webkit-animation: play .8s steps(9) infinite;   
+}
+.cat:hover{
+  animation-play-state:paused;
+  -webkit-animation-play-state:paused;
+}
+</style>
+<body>
+  <div class="cat"></div>
+</body>
+</html>

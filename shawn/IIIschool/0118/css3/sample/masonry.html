@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+  <meta charset="UTF-8">
+  <title>Masonry</title>
+</head>
+<style>
+  body{
+    background: #eee;
+  }
+.wrapper{
+  margin:0 auto;
+  max-width: 960px;
+}
+.masonry{
+  column-count: 4;
+}
+@media screen and (max-width: 767px){
+  .masonry{
+    column-count: 3;
+  }
+}
+.item{
+  border-radius: 4px;
+  overflow: hidden;
+  margin-bottom:10px;
+  background: #fff;
+  -webkit-column-break-inside: avoid; /* Chrome, Safari, Opera */
+  page-break-inside: avoid; /* Firefox */
+  break-inside: avoid; /* IE 10+ */
+}
+.item p{
+  padding:0 20px 10px;
+}
+  .masonry img{
+    max-width: 100%;
+  }
+</style>
+<body>
+  <section class="wrapper">
+    <div class="masonry">
+      <div class="item">
+        <img src="https://unimap.wingzero.tw//uniform/kaohsiung/shute/w_a2_77_15288154880_1_thumb.jpg" alt="">
+        <p>高雄市私立樹德高級家事商業職業學校（Shu-Te Home economics&Commercial High School）簡稱樹德家商，是位於高雄市三民區的私立職業學校。</p>
+      </div>
+      <div class="item">
+        <img src="https://unimap.wingzero.tw//uniform/taipei/hs/w_a2_60_15266061210_1_thumb.jpg" alt="">
+        <p>高雄市私立樹德高級家事商業職業學校（Shu-Te Home economics&Commercial High School）簡稱樹德家商，是位於高雄市三民區的私立職業學校。</p>
+      </div>
+      <div class="item">
+        <img src="https://unimap.wingzero.tw//uniform/newtaipei/tksh/15260559350_1.jpg" alt="">
+        <p>淡江高中</p>
+      </div>
+      <div class="item">
+        <img src="https://unimap.wingzero.tw//uniform/tainan/ccgsh/w_a2_79_15288594110_1_thumb.jpg" alt="">
+        <p>高雄市私立樹德高級家事商業職業學校（Shu-Te Home economics&Commercial High School）簡稱樹德家商，是位於高雄市三民區的私立職業學校。</p>
+      </div>
+      <div class="item">
+        <img src="https://unimap.wingzero.tw//uniform/kaohsiung/hcvs/w_a2_59_15265754802_3_thumb.jpg" alt="">
+        <p>高雄市私立樹德高級家事商業職業學校（Shu-Te Home economics&Commercial High School）簡稱樹德家商，是位於高雄市三民區的私立職業學校。</p>
+      </div>
+      <div class="item">
+        <img src="https://unimap.wingzero.tw//uniform/nantou/pshs/152772941911_12.jpg" alt="">
+        <p>高雄市私立樹德高級家事商業職業學校（Shu-Te Home economics&Commercial High School）簡稱樹德家商，是位於高雄市三民區的私立職業學校。</p>
+      </div>
+      <div class="item">
+        <img src="https://unimap.wingzero.tw//uniform/tainan/cjshs/w_a2_46_15261288860_1.jpg" alt="">
+        <p>長榮高中</p>
+      </div>
+      <div class="item">
+        <img src="https://unimap.wingzero.tw//uniform/taipei/tcnvs/w_a2_44_15260832642_3.jpg" alt="">
+        <p>美姿美儀</p>
+      </div>
+      <div class="item">
+        <img src="https://unimap.wingzero.tw//uniform/taipei/hs/w_a2_60_15266061224_5.jpg" alt="">
+        <p>高雄市私立樹德高級家事商業職業學校（Shu-Te Home economics&Commercial High School）簡稱樹德家商，是位於高雄市三民區的私立職業學校。</p>
+      </div>
+    </div>
+  </section><!-- wrapper -->
+</body>
+</html>

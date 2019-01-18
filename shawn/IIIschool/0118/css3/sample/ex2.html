@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+  <meta charset="UTF-8">
+  <title>Ex2</title>
+</head>
+<style>
+body{
+  background: #aaa;
+}
+  .box{
+    position:relative;
+    box-shadow: 0 1px 5px #666;
+    margin:20px auto;
+    background: #fff;
+    width:320px;
+  }
+  .box:hover{
+    box-shadow: 0 2px 5px #333;
+  }
+  .border_image{
+    border: 20px solid transparent;
+    border-image: url(images/border-image2.png) 20 round;
+  }
+  .box_inside{
+    padding:40px 20px 20px;
+  }
+  .radius_border{
+    border-radius: 4px;
+    overflow: hidden;
+  }
+  .banner{
+    height:160px;
+    background: #000;
+    background: url(images/light.jpg) center center no-repeat;
+    background-size: cover;
+  }
+  figure{
+    width:120px;
+    height:120px;
+    background: purple;
+    color:#fff;
+    position: absolute;
+    left:50%;
+    top:80px;
+    z-index: 5;
+    margin-left:-60px;
+  }
+  figure img{
+    max-width: 100%;
+  }
+  .circle{
+    border-radius: 50%;
+    overflow: hidden;
+  }
+  h3{
+    text-align: center;
+    color:#333;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #aaa;
+  }
+  p{
+    line-height: 1.7;
+    color:#aaa;
+  }
+</style>
+<body>
+  <div class="box radius_border">
+    <div class="banner"></div>
+      <figure class="circle">
+        <img src="dr_strange.jpg" alt="">
+      </figure>
+    <div class="box_inside border_image">
+      <h3>Dr. Strange</h3>
+      <p>
+        Hello, I am Steve Strange.
+      </p>
+    </div>
+  </div>
+  
+</body>
+</html>

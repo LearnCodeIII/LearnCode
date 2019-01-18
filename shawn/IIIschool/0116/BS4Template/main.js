@@ -14,6 +14,8 @@ $('#btn1').click(function(){
     $('p').fadeOut();
     $('p').fadeIn();
 });
-$(".btn1").click(function(){
-    $("p").animate({borderBottomWidth:"10px"});
+$("#btn2").click(function(){
+    $('p').fadeOut();
+    $('p').fadeIn();
+    $("section.section-counter").animate({borderBottomWidth:"10px"});
     });

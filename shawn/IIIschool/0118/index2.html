@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>shadow test</title>
+</head>
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+    }
+
+    .box {
+        margin: 0;
+        padding: 0;
+        height: 50px;
+        width: 50px;
+        background: #ddd;
+        transition: 0.3s;
+    }
+
+    .shadow {
+        box-shadow: 0 0 0 #ccc, 0 0 0 #ccc, 0 0 0 #ccc, 0 0 0 #ccc;
+    }
+    .shadow:hover{
+    box-shadow: 50px 0 0 #ccc,-50px 0 0 #ccc,0 50px  0 #ccc,0 -50px 0 #ccc;
+}
+</style>
+
+<body>
+    <div class="box shadow"></div>
+</body>
+<script>
+    var bg,
+    if(bg <= 100){
+        document.write('test')
+    }
+    document.write(bg)
+</script>
+</html>

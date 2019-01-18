@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+  <meta charset="UTF-8">
+  <title>Ex7-3</title>
+</head>
+<style>
+body{
+  margin-top:80px;
+  background: url(images/space-bg.jpg);
+
+}
+.wrapper{
+  width:500px;
+  height:500px;
+  margin:0 auto;
+  position: relative;
+}
+@keyframes earth {
+  from {  transform: rotate(0deg) translateX(220px); }
+  to {  transform: rotate(360deg) translateX(220px); }
+}
+@keyframes moon {
+  from {  transform: rotate(0deg) translateX(72px); }
+  to {  transform: rotate(360deg) translateX(72px); }
+}
+@keyframes orbit {
+  from {  transform: rotate(0deg) }
+  to {  transform: rotate(-360deg) }
+}
+.orbit_circle{
+  position: absolute;
+  width:440px;
+  height:440px;
+  border:1px solid #ccc;
+  left:50%;
+  top:50%;
+  margin: -220px 0 0 -220px;
+  border-radius: 50%;
+}
+.relative{
+  position: relative;
+  width:72px;
+  height: 72px;
+  padding:40px;
+  border-radius: 50%;
+  border:1px solid #ccc;
+}
+.ball{
+  position: absolute;
+  left:50%;
+  top:50%;
+}
+.ball.sun{
+  margin:-64px 0 0 -64px;
+}
+.ball.earth{
+  margin:-76px 0 0 -76px;
+  animation: earth 20s linear infinite;
+}
+.ball.moon{
+  margin:-24px 0 0 -24px;
+  animation: moon 5s linear infinite;
+}
+.img_earth, .img_moon{
+  /*animation: orbit 20s linear infinite;*/
+}
+</style>
+<body>
+  <div class="wrapper">
+    <div class="orbit_circle"></div>
+    <div class='ball sun'><img src="images/sun.png" alt=""></div>
+    <div class="ball earth">
+      <div class="relative">
+        <img class="img_earth" src="images/earth.png" alt="">
+        <div class="ball moon"><img class="img_moon" src="images/moon.png" alt=""></div></div>
+    </div>
+  </div><!-- wrapper -->
+</body>
+</html>

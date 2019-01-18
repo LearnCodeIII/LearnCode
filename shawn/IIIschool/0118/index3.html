@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>css3 card</title>
+</head>
+<style>
+    *{
+        box-sizing: border-box;
+    }
+    body{
+        margin: 0;
+        padding: 0;
+        background:#93C0A4;
+    }
+    .card {
+        margin: 0 auto;
+        padding:15px;
+        background:white;
+        width:200px;
+        height:300px;
+        border-radius: 20px;
+        background: #DCE2BD;
+        box-shadow: 0px 5px 15px 5px #A5B294;
+        z-index: 10;
+    }
+    .avatar{
+        width:150px;
+        height:150px;
+        margin: 0 auto;
+        overflow: hidden;
+        border-radius: 50%;
+    }
+    .avatar img{
+        width:100%;
+    }
+    .content {
+        margin: 25px auto;
+        font-family: verdana;
+        font-size: 1em;
+    }
+    .content .title {
+        font-weight: bolder;
+        font-size: 24px;
+    }
+    .content .quote{
+        font-size: 16px;
+        font-weight: bold;
+    }
+    .box {
+        float: left;
+        margin: 0;
+        padding: 0;
+        height: 50px;
+        width: 50px;
+        background: #93C0A4;
+        transition: 0.3s;
+    }
+    .box2 {
+        float: left;
+        margin: 0;
+        padding: 0;
+        height: 50px;
+        width: 50px;
+        background: #83AA92;
+        transition: 0.3s;
+    }
+    .box3 {
+        float: left;
+        margin: 0;
+        padding: 0;
+        height: 50px;
+        width: 50px;
+        background: #93C0A4;
+        transition: 0.3s;
+    }
+    .box4 {
+        float: left;
+        margin: 0;
+        padding: 0;
+        height: 50px;
+        width: 50px;
+        background: #83AA92;
+        transition: 0.3s;
+    }
+    .shadow {
+        box-shadow: 0 0 0 #8E9B90, 0 0 0 #8E9B90, 0 0 0 #8E9B90, 0 0 0 #8E9B90;
+    }
+    .shadow:hover{
+    box-shadow: 50px 0 0 #D4CDAB,-50px 0 0 #D4CDAB,0 50px  0 #D4CDAB,0 -50px 0 #D4CDAB;
+}
+</style>
+<body>
+    <div class="card">
+        <div class="avatar">
+            <img src="./css3/sample/dr_strange.jpg" alt="">
+        </div>
+        <div class="content">
+            <div class="title">
+                Name
+            </div>
+            <div class="quote">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    var bgcounter = 0;
+    while (bgcounter <= 200){
+        document.write('<div class="box shadow"></div><div class="box2 shadow"></div><div class="box3 shadow"></div><div class="box shadow"></div>')
+        bgcounter++
+    }
+    
+</script>
+</html>

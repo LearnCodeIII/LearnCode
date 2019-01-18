@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+  <meta charset="UTF-8">
+  <title>User Interface</title>
+</head>
+<style>
+.wrapper{
+  margin:0 auto;
+  max-width: 800px;
+}
+div{
+  margin-bottom: 10px;
+}
+.resize{
+  height:300px;
+  border:1px solid #ccc;
+  padding:10px;
+  resize: both;
+  overflow: auto;
+}
+.outline{
+  border:1px solid #ccc;
+  outline: 2px solid red;
+  outline-offset:10px;
+  height:200px;
+  max-width: 300px;
+}
+</style>
+<body>
+  <section class="wrapper">
+    <h2>Resize</h2>
+    <div class="resize">
+      hello, you can drag to resize.
+    </div>
+    <h2>Outline</h2>
+    <div class="outline"></div>
+  </section><!-- wrapper -->
+</body>
+</html>
