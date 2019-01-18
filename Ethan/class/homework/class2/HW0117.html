@@ -72,8 +72,8 @@
         .bg{
             background: #ffc800 url(images/lead_02.png)no-repeat center bottom;
             /* background-size: contain; */
-            padding-bottom: 12%;
-            background-size: 107% auto;
+            padding-bottom: 10%;
+            /* background-size: 107% auto; */
             
         }
         .bgline{
@@ -96,20 +96,101 @@
             background-color: #ffc800;
             color: #ae0a14;
             background-size: cover;
-            margin-top: -5%;
             }
         .sc2-y .container{
             display: flex;
             justify-content: space-around;
         }
-        .sc2-y h4{
+        .sc2-Y h4{
             font-size: 1.2rem;
             line-height: 1.1;
+            font-weight: 800;
         }
 /* ----------------------------------------sc3-css---------------------------------------- */
-        .sc3-w{
-
+        .day{
+            width: 100px;
+            height: 100px;
+            background-color: #00437e;
+            border-radius: 50%;
+            font-size: 32px;
+            font-weight: 700;
+            color: #fff;
+            text-align: center;
+            display: inline-block;
+            line-height: 1;
+            /* padding: 15px 0; */
             }
+        .day span{
+            font-size: 18px;
+            }
+        .day p{
+            /* padding: 0; */
+            line-height: 1;
+            }
+        .day1{
+            background-color: #004371;
+            }
+        .day2{
+            background-color: #ff840a;
+            }
+        .sc3-line{    
+            /* padding-top: 20px; */
+            display: block;
+            /* margin-top: -50px; */
+            border-top: 1px solid #c5d4e8;
+            }
+        .sc3-title-b{
+            text-align: center;
+            color: #0051bd;
+            font-size: 1.875rem;
+            font-weight: 700;
+            letter-spacing: -1px;
+            line-height: 40px;
+            }
+        .sc3-box{
+            color: #4595db;
+            border:2px dotted #999999;
+            font-size: 23px;
+            font-weight: 600;
+            line-height: 25.3px;
+            /* padding: 10px 20px; */
+            text-align:center;
+            /* margin: 0 0 8px 0; */
+        }
+        .sc3-p-s{
+            font-size: 16px;
+            font-weight: 900;
+            line-height: 17.6px;
+            /* margin-bottom: 8px; */
+            text-align: center;
+            color: #686868;
+        }
+        .sc3-time{
+            font-size: 16px;
+            line-height: 24px;
+            border-top: 1px solid #7d7d7d;
+            border-bottom: 1px solid #7d7d7d;
+            /* margin-top: 20px; */
+        }
+        .sc3-title-o{
+            color: #ff8521;
+
+        }
+
+        .sc3-title-o h3{
+            /* margin-left: -43px; */
+            font-size: 23;
+            font-weight: 700;
+            line-height: 31.05px;
+            /* margin-top: 10px; */
+        }
+        .sc3-title-o li{
+            list-style-position: outside;
+            font-weight: normal;
+            font-size: 17px;
+            line-height: 30px;
+            color: #666666;
+        }
 /* ----------------------------------------sc4-css---------------------------------------- */
         .sc4-y{
             background-color: #ddbc61;
@@ -139,6 +220,297 @@
 
         .sc7-b{
             background-color: #01277b;
+                }
+
+
+
+
+
+/* ----------------------media----------------------                 */
+            @media screen and (max-width: 576px) {
+                /* ---nav--- */
+                .navlogo .logo1 img{
+                    width: 70%;
+                    margin-left: 8%;
+                }
+                .navlogo .logo2 img{
+                    width: 80%;
+                    margin-left: -13%;
+                }
+                .navbar-toggler{
+                    margin-right: 2.2%;
+                }
+                .bg {
+                    background-size: 200% auto;
+                    padding-bottom: 42%;
+                }
+                /* ---sc1--- */
+                .sc1-bgline{
+                    background: url(images/lead_01.png) repeat 0 0;
+                    margin-top: 2.8rem;
+                    padding-top: 1.4rem;
+                }
+                .sc1-b-title{
+                    padding: 0.5% 3.9% 0 3.9%;
+                }
+                .sc1-r-title{
+                    padding: 0 3.9%;
+                }
+                .circle-g{
+                    display: flex;
+                    justify-content: flex-start;
+                    height: auto;
+                    margin-left: -1%;
+                }
+                .circle{
+                    width: 39%;
+                    height: 100%;
+                    margin: 0 0 -0.1% 1%;
+                }
+                /* ---sc2--- */
+                .sc2-Y{
+                    padding: 1.01rem;
+                    margin-top: -5.2%;
+                }
+                .sc2-Y .container{
+                    padding: 0 15px;
+                    margin: 0;
+                }
+                .sc2-Y img{
+                    width: 11%;
+                }
+                .sc2-Y h4{
+                    padding:0.1% 0 0.1% 0.02%;
+                    margin: 0;
+                }
+                /* ---sc3--- */
+                .sc3-title{
+                    padding-top: 4.8%;
+                }
+                .sc3 .container{
+                    
+                }
+                .day1{
+                    width: 100%;
+                    height: auto;
+                    background-color: #00437e;
+                    border-radius: 10px 10px 0 0;
+                    font-size: 20px;
+                    font-weight: 700;
+                    color: #fff;
+                    text-align: center;
+                    line-height:0.9;
+                    margin-top:6.1%;
+                    padding: 3.5% 0;
+                    letter-spacing: -0.5px;
+                }
+                .day span{
+                    font-style: 18px;
+                    line-height: 1.1;
+                }
+                .sc3-W .left{
+                    padding: 0;
+
+                }
+                .sc3-line{
+                    line-height: 1;
+                    margin: 5.2% 0 3.8% 0;
+                    border:0;
+                }
+                .sc3-box{
+                    width: 93%;
+                    margin: 0 auto;
+                    padding: 2.9%;
+                }
+                .sc3-p-s{
+                    margin: 2.1% 0 5.9% 0;
+                }
+                .sc3-in{
+                    padding: 0 3.5%;
+                }
+                .sc3-title-o h3{
+                    font-size: 23px;
+                    margin: 3.1% 0 0 -9.2%;
+                }
+                .sc3-title-o li{
+                    margin-left: 3.8%;
+                    padding-right: 3%;
+                }
+                .sc3-W .right{
+                    padding: 0;
+                }
+                .sc3-W .day2{
+                    width: 100%;
+                    height: auto;
+                    background-color: #ff840a;
+                    border-radius: 10px 10px 0 0;
+                    font-size: 20px;
+                    font-weight: 700;
+                    color: #fff;
+                    text-align: center;
+                    line-height:0.9;
+                    margin-top:8.2%;
+                    padding: 3.5% 0;
+                    letter-spacing: -0.5px;
+                }
+
+                /* ---sc4--- */
+                .sc4-Y{
+                    margin:17% 0 0 0;
+                    background-color: #ddbc61;
+                    padding: 6% 0 0 0;
+                }
+
+                .sc4-Y h2{
+                    font-size: 2rem;
+                }
+                
+                .sc4-Y h4{
+                    color: #143097;
+                    font-weight: 900;
+                }
+
+                .sc4-Y h6{ 
+                    color: #143097;
+                    font-size: 1rem;
+                    font-weight: 900;
+                }
+
+                .sc4-Y .left,.sc4-Y .right{
+                    padding: 0;
+                }
+                .sc4-Y .img-center {
+                    width: 46%;
+                    margin: 2% auto 0 auto;
+                }
+
+                .sc4-Y img{
+                    width: 100%;
+                }
+                .text-right h4, .text-right h6, .text-right p{
+                    text-align: left;
+                    padding: 0 2% 0 2%;
+                }
+                .text-right p{
+                    padding: 4.4% 2%;
+                }
+
+                /* ---sc5--- */
+                .sc5-title{
+                    margin: 0 0 13% 0;
+                    padding-top: 5.7%;
+                }
+                .sc5-center {
+                    text-align: center;
+                }
+                .sc5-p{
+                    padding-bottom: 20%;
+                }
+
+                /* ---sc6--- */
+                .sc6-title1 p{
+                    margin-left: -5%;
+                    padding-top: 6%;
+                    color:black;
+                    font-weight: 700;
+                    font-size: 1.2rem;
+                    text-align:center;
+                }
+                .sc6-title2 p{
+                    margin-left: -11%;
+                    padding-top: 6%;
+                    color:black;
+                    font-weight: 700;
+                    font-size: 1.2rem;
+                    text-align:center;
+                }
+                .sc6-title3 p{
+                    margin-left: 7%;
+                    padding-top: 6%;
+                    color:black;
+                    font-weight: 700;
+                    font-size: 1.2rem;
+                    text-align:center;
+                }
+                /* ---sc7--- */
+                .sc7-B{
+                    background-color: #01277a;
+                    color: white;
+                    padding: 0 15px;
+                }
+                .sc7-B h2{
+                    color: white;
+                }
+                .sc7-B table{
+                    border:1px solid white;
+                }
+
+
+                /* ---footer--- */
+                footer{
+                    font-size: 0.25rem;
+                    text-align: center;
+                    padding: 5% 5% 0.5% 5%;
+                    background-color: #001e5e;
+                    color: #fff;
+                }
+        }
+
+
+
+
+            @media screen and (max-width: 768px) {
+                /* .navlogo .logo1 img{
+                    width: 70%;
+                    margin-left: 8%;
+                }
+                .navlogo .logo2 img{
+                    width: 80%;
+                    margin-left: -13%;
+                }
+                .navbar-toggler{
+                    margin-right: 2.2%;
+                }
+                .bg {
+                    background-size: 200% auto;
+                    padding-bottom: 38.5%;
+                }
+                .sc1-bgline{
+                    background: url(images/lead_01.png) repeat 0 0;
+                    margin-top: 2.8rem;
+                    padding-top: 1.4rem;
+                }
+                .sc1-b-title{
+                    padding: 0.5% 3.7% 0 3.7%;
+                }
+                .sc1-r-title{
+                    padding: 0 3.7%;
+                }
+                .circle-g{
+                    display: flex;
+                    justify-content: flex-start;
+                    height: auto;
+                }
+                .circle{
+                    width: 35.5%;
+                    height: 100%;
+                    margin: 0 -1% 0 1%;
+                } */
+            }
+            
+
+
+            @media screen and (max-width: 992px) {
+                body {
+                }
+            }
+
+
+
+            
+            @media screen and (max-width: 1200px) {
+                body {
+                }
             }
         </style>
 </head>
@@ -150,7 +522,7 @@
     <nav class="navbar navbar-expand-md navbg navbar-dark fixed-top p-2">
         <div class="container">
             <div class="navbar-brand navlogo py-0 m-0 w-sm">
-                <a class="navbar-brand m-0 logo1 " href="# img-fluid"><img src="images/mtlogo.svg" alt="">
+                <a class="navbar-brand m-0 logo1 " href="#"><img src="images/mtlogo.svg" alt="">
                 </a>
                 <a class="navbar-brand m-0 logo2 " href="#"><img src="images/mtschool.svg" alt=""></a>
             </div>
@@ -184,17 +556,17 @@
         </div>
     </nav>
     <!-- ---------------------------------sc1--------------------------------- -->
-    <section class="bg mb-md-0">
-        <div class="bgline"></div>
+    <section class="bg">
+        <div class="sc1-bgline"></div>
         <div class="container mt-2">
             <div class="row">
                 <div class="mx-auto">
-                    <img class="img-fluid d-block px-3" src="images/lead_03_01.png" alt="">
+                    <img class="img-fluid d-block sc1-b-title" src="images/lead_03_01.png" alt="">
                 </div>
                 <div class="mx-auto d-block">
-                    <img class="img-fluid px-3" src="images/lead_03_02.png" alt="">
+                    <img class="img-fluid sc1-r-title" src="images/lead_03_02.png" alt="">
                 </div>
-                <div class="col-md-6 circle-g mb-5 pl-md-5 pl-0">
+                <div class="col-md-6 circle-g">
                     <img class="img-fluid circle" src="images/lead_03_03_01.png" alt="">
                     <img class="img-fluid circle" src="images/lead_03_03_02.png" alt="">
                 </div>
@@ -204,8 +576,7 @@
 
     <!-- ---------------------------------sc2--------------------------------- -->
     <section class="sc2-Y" style="">
-        <div class="container px-3 d-md-flex justify-content-around
-        py-md-2 py-3">
+        <div class="container d-md-flex justify-content-around">
             <h4 class="font-weight-bold"><img class="" src="images/check.png" alt="">2大標準職能進修</h4>
             <h4 class="font-weight-bold"><img class="" src="images/check.png" alt="">1200名以上主管參訓</h4>
             <h4 class="font-weight-bold"><img class="" src="images/check.png" alt="">97%以上滿意推薦</h4>
@@ -214,17 +585,155 @@
 
     <!-- ---------------------------------sc3--------------------------------- -->
     <section class="sc3-W">
-
+        <div class="container">
+            <div class="m-auto sc3-title">
+                <h2 class="text-center">精 彩 議 程</h2>
+            </div>
+            <div class="row d-flex m-auto">
+                <div class="col-md-6 left">
+                    <div class="day day1">
+                        <span>DAY 1</span><br>
+                        3/13
+                    </div>
+                    <h2 class="sc3-title-b sc3-line">教練領導學</h2>
+                    <div class="sc3-box">激發部屬潛能 x 引導自主成長</div>
+                    <div class="sc3-p-s">陳煥庭／起初國際台灣分公司執行長</div>
+                    <div class="sc3-in">
+                        <div class="sc3-time">09:30 - 17:00</div>
+                    </div>
+                    <div class="sc3-title-o">
+                        <ul>
+                            <h3>教練式領導力</h3>
+                            <li>激發潛能的教練式領導</li>
+                            <li>部屬需要教練式領導的時機</li>
+                            <li>對話的關鍵技巧：讚美與激勵</li>
+                        </ul>
+                    </div>
+                    <div class="sc3-title-o">
+                        <ul>
+                            <h3>教練式領導四流程</h3>
+                            <li>了解部屬狀態：融入與抽離的提問技巧</li>
+                            <li>建立信賴關係：同理心訓練＋自我表露技術</li>
+                            <li>釐清問題核心：有效溝通的深度探詢</li>
+                            <li>持續成長動能：引導改變的策略</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-6 right">
+                    <div class="day day2">
+                        <span>DAY2</span><br>
+                        3/26
+                    </div>
+                    <div class="sc3-title-b sc3-line">團隊經營學</div>
+                    <div class="sc3-box">團隊成員判讀 x 團隊發展策略</div>
+                    <div class="sc3-p-s">林聖修／丞鑫企業管理顧問有限公司創辦人</div>
+                    <div class="sc3-in">
+                        <div class="sc3-time">09:30 - 17:00</div>
+                    </div>
+                    <div class="sc3-title-o">
+                        <ul>
+                            <h3>組建核心團隊</h3>
+                            <li>團隊組建四象限：I, It, Its, We</li>
+                            <li>判讀團隊人才：部屬類型辨識與實戰</li>
+                            <li>盤點領導風格：領導者的自察與突破</li>
+                        </ul>
+                    </div>
+                    <div class="sc3-title-o">
+                        <ul>
+                            <h3>打造團隊動能</h3>
+                            <li>解決團隊問題的思考邏輯：判別類型＞擬定策略＞有效溝通＞展開行動</li>
+                            <li>團隊動態管理心法：3個關鍵與6個步驟</li>
+                            <li>團隊定錨與人才策略地圖</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
-
     <!-- ---------------------------------sc4--------------------------------- -->
     <section class="sc4-Y">
+        <div id="speaker">
+            <h2 class="text-center">講 師 介 紹</h2>
+            <div class="container">
+                <div class="row">
+                    <div class="left col-md-6">
+                        <div class="img-center">
+                            <img src="images/speaker_01.png" alt="" />
+                        </div>
+                        <div class="text-right">
+                            <h4>陳煥庭</h4>
+                            <h6>起初國際台灣分公司執行長</h6>
+                            <p> 國內深層溝通的權威講師，擅長教練式領導與團隊激勵，知識理論和實用技巧同時掌握。一萬場以上授課經歷，合作企業如台積電、星巴克與中國信託等。</p>
+                        </div>
+                    </div>
+                    <div class="right col-md-6">
+                        <div class="img-center">
+                            <img src="images/speaker_02.png" alt="" />
+                        </div>
+                        <div class="text-right">
+                            <h4>林聖修</h4>
+                            <h6>丞鑫企業管理顧問有限公司創辦人</h6>
+                            <p> 擅長微行為洞察、教練式引導與情商力管理。以教練思維為核心，行為洞察為動力，協助企業改善組織運作，優化團隊能量。</p>
+                        </div>
+                    </div>
+                </div>
 
+            </div>
     </section>
 
     <!-- ---------------------------------sc5--------------------------------- -->
     <section class="sc5-P">
-
+        <div id="demo" class="carousel slide" data-ride="carousel" style="background:#dadbe9">
+            <!-- Indicators -->
+            <ul class="carousel-indicators">
+                <li data-target="#demo" data-slide-to="0" class="active"></li>
+                <li data-target="#demo" data-slide-to="1"></li>
+                <li data-target="#demo" data-slide-to="2"></li>
+            </ul>
+            <div class="sc5-center sc5-title">
+                <h2>學 員 回 饋</h2>
+            </div>
+            <!-- The slideshow -->
+            <div class="container">
+                <div class="carousel-inner sc5-center">
+                    <div class="carousel-item active sc5-center">
+                        <h3>案例具體搭上演練操作，很受用！</h3>
+                        <p class="sc5-p">觀光產業/初中階主管/2018.4月教練課</p>
+                    </div>
+                    <div class="carousel-item">
+                        <h3>有效學習，解決職場上溝通及帶人障礙</h3>
+                        <p class="sc5-p">醫療生技產業/高階主管/2018.4月教練課</p>>
+                    </div>
+                    <div class="carousel-item">
+                        <h3>大班制，稍影響實際演練效果，但課堂上有多位助教可隨時請教</h3>
+                        <p class="sc5-p">2018.4月教練課</p>
+                    </div>
+                    <div class="carousel-item">
+                        <h3>再次回訓仍有不同收獲，推薦！</h3>
+                        <p class="sc5-p">資訊產業/一般職員/2018.5月團隊課</p>
+                    </div>
+                    <div class="carousel-item">
+                        <h3>NLP理論和應用有高度相關，可以用在實際工作中</h3>
+                        <p class="sc5-p">傳產製造業/負責人/2018.5月團隊課</p>
+                    </div>
+                    <div class="carousel-item">
+                        <h3>老師提供非常具體的應對技巧跟溝通腳本，非常有用</h3>
+                        <p class="sc5-p">醫療生技產業/初中階主管/2018.9月教練課</p>
+                    </div>
+                    <div class="carousel-item">
+                        <h3>老師講解很生動，理論和實例結合，可以充分吸收</h3>
+                        <p class="sc5-p">設計產業/初中階主管/2018.10月團隊課</p>
+                    </div>
+                </div>
+                <!-- Left and right controls -->
+                <a class="carousel-control-prev" href="#demo" data-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </a>
+                <a class="carousel-control-next" href="#demo" data-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </a>
+            </div>
+        </div>
     </section>
 
     <!-- ---------------------------------sc6--------------------------------- -->
@@ -239,9 +748,9 @@
                     <div class="card">
                         <div class="card-header" id="headingOne">
                             <h5 class="mb-0">
-                                <button class="btn btn-link sc6-title" type="button" data-toggle="collapse"
+                                <button class="btn btn-link sc6-title1" type="button" data-toggle="collapse"
                                     data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                    Q 雙日課一定要一起購買嗎？<br>只上單堂課會影響學習效果嗎？
+                                    <p>雙日課一定要一起購買嗎？<br>只上單堂課會影響學習效果嗎？</p>
                                 </button>
                             </h5>
                         </div>
@@ -256,9 +765,9 @@
                     <div class="card">
                         <div class="card-header" id="headingTwo">
                             <h5 class="mb-0">
-                                <button class="btn btn-link collapsed sc6-title" type="button" data-toggle="collapse" data-target="#collapseTwo"
-                                    aria-expanded="false" aria-controls="collapseTwo">
-                                    Q 公司申請報帳有時間限制，<br>付款後大概多久可以收到發票呢？
+                                <button class="btn btn-link collapsed sc6-title2" type="button" data-toggle="collapse"
+                                    data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                    <p>公司申請報帳有時間限制，<br>付款後大概多久可以收到發票呢？</p>
                                 </button>
                             </h5>
                         </div>
@@ -271,9 +780,9 @@
                     <div class="card">
                         <div class="card-header" id="headingThree">
                             <h5 class="mb-0">
-                                <button class="btn btn-link collapsed sc6-title" type="button" data-toggle="collapse" data-target="#collapseThree"
-                                    aria-expanded="false" aria-controls="collapseThree">
-                                    Q 付款後若臨時有行程更動，<br>可以退費嗎？
+                                <button class="btn btn-link collapsed sc6-title3" type="button" data-toggle="collapse"
+                                    data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                    <p>付款後若臨時有行程更動，<br>可以退費嗎？</p>
                                 </button>
                             </h5>
                         </div>
@@ -291,11 +800,61 @@
 
     <!-- ---------------------------------sc7--------------------------------- -->
     <section class="sc7-B">
-
+        <section>
+            <div class="container">
+                <div class="row">
+                    <div class="mx-auto">
+                        <h2>課程資訊</h2>
+                    </div>
+                    <p>地　點：張榮發國際會議中心 (台北市中正區中山南路11號)</p>
+                    <table>
+                        <thead>
+                            <tr">
+                                <th class="sec5-text-align">一般報名</th>
+                                <th style="background-color:#ffb916">早鳥優惠</th>
+                                <th class="sec5-text-align">三人以上團報</th>
+                                <th class="sec5-text-align">兩堂套票</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr">
+                                <td class="sec5-text-align">每人4,500元</td>
+                                <td style="background-color:#ffb916">每人4,000元</td>
+                                <td class="sec5-text-align">每人3,700元</td>
+                                <td class="sec5-text-align">每人7,400元</td>
+                            </tr>
+                        </tbody>
+                        <tfoot class="">
+                            <tr>
+                                <td colspan="4">•3/13教練領導：早鳥至2/27 •3/26團隊經營：早鳥至3/14</td>
+                                <td colspan="4">本課程附午餐與午茶；每堂贈送《經理人月刊》1期 (4月號起算)</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                    <p>活動洽詢：02-8773-9808 分機355　楊小姐 karen.yang@managertoday.com.tw <span style="color:#fff100;">karen.yang@managertoday.com.tw</span></p>
+                    <p class="sec5-wh-s">客服專線：02-8771-6326　 服務時間：週一到週五9:30~12:30；13:30~17:00</p>
+                </div>
+                <div class="sec5-map">
+                    <iframe class="googlemap" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7229.725821506948!2d121.51869500000001!3d25.038726!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x99f529730969be7f!2z5by15qau55m85Z-66YeR5pyD!5e0!3m2!1szh-TW!2stw!4v1547122493002"
+                        width="100%" height="auto" frameborder="0" style="border:0" allowfullscreen></iframe>
+                </div>
+            </div>
+            <div class="sec5-button">
+                <div class="sec5-bt">
+                    <div class="sec5-bt-1"><a href="">線上報名</a></div>
+                    <div class="sec5-bt-2"><a href="">下載報名表</a></div>
+                </div>
+            </div>
+        </section>
     </section>
 
     <!-- ---------------------------------footer--------------------------------- -->
-    <footer></footer>
+    <footer>
+        <p>主辦單位保留活動及課程大綱異動之權利，更新資訊以活動網站內容為主。</p>
+        <p>&copy; 2018 Business Next Publishing Corp. All Rights Reserved. 106台北市光復南路102號9樓</p>
+    </footer>
 </body>
 
 </html>

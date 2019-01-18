@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>box shadow</title>
+    <style>
+        .box {
+            width: 200px;
+            height: 200px;
+            background-color: #acc;
+            margin: 30px auto;
+            transition: 2s;
+        }
+
+        .shodow {
+            box-shadow: rgb(15, 75, 75) 20px 20px 50px;
+        }
+
+        .shodow:hover {
+            box-shadow: rgb(17, 92, 2) -20px -20px 50px;
+        }
+
+        .shodow2 {
+            box-shadow: rgb(15, 75, 75) 20px 20px 50px;
+        }
+
+        .shodow2:hover {
+            box-shadow: rgb(15, 75, 75) 20px 20px 90px 20px;
+        }
+
+        .shodow3 {
+            box-shadow: rgb(29, 136, 136) 20px 20px 50px inset;
+        }
+
+        .shodow3:hover {
+            box-shadow: rgb(184, 0, 144) -20px -20px 50px inset;
+        }
+
+        .shodow5 {
+            box-shadow: 0 0 red, 0 0 orange, 0 0 olivedrab, 0 0 peru;
+        }
+
+        .shodow4:hover {
+            box-shadow: 30px 0 70px red, -30px 0 70px orange, 0 -30px 70px olivedrab, 0 30px 70px peru;
+        }
+
+        .shodow5 {
+            box-shadow: 0 0 red, 0 0 orange, 0 0 olivedrab, 0 0 peru;
+        }
+
+        .shodow5:hover {
+            box-shadow: 200px 0 red, -200px 0 orange, 0 -200px olivedrab, 0 200px peru;
+        }
+
+        .shodow6 {
+            border-radius: 50%;
+            box-shadow: 0 0 red, 0 0 orange, 0 0 olivedrab, 0 0 peru;
+        }
+
+        .shodow6:hover {
+            box-shadow: 200px 0 red, -200px 0 orange, 0 -200px olivedrab, 0 200px peru;
+        }
+
+        .shodow7 {
+            border-radius: 50%;
+            box-shadow: 0 0 red, 0 0 orange, 0 0 olivedrab, 0 0 peru;
+        }
+
+        .shodow7:hover {
+            box-shadow: 0 0 10px black, 0 0 20px purple, 0 0 30px blue, 0 0 40px red, 0 0 50px orange, 0 0 60px yellow;
+        }
+
+        .text {
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 10px;
+            background-color: rgb(104, 146, 224);
+            text-align: center;
+            font-size: 50px;
+        }
+
+        .text-shadow {
+            text-shadow: 0 3px 5px #000;
+        }
+
+        .text-shadow2 {
+            text-shadow: 0 0 5px rgb(236, 0, 0), 0 0 7px rgb(93, 0, 0);
+        }
+
+        .text-shadow3 {
+            text-shadow: 0 1px rgb(200, 200, 200), 0 2px rgb(160, 160, 160), 0 3px rgb(120, 120, 120), 0 4px rgb(80, 80, 80), 0 5px rgb(40, 40, 40);
+        }
+
+        .text-shadow4 {
+            text-shadow: 1px 1px black, 2px 2px black, 3px 3px black, 4px 4px black, 5px 5px black, 6px 6px black;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box shodow"></div>
+    <div class="box shodow2"></div>
+    <div class="box shodow3"></div>
+    <div class="box shodow4"></div>
+    <div class="box shodow5"></div>
+    <div class="box shodow6"></div>
+    <div class="box shodow7"></div>
+    <h2 class="text text-shadow">Text Shadow</h2>
+    <h2 class="text text-shadow2">Text Shadow</h2>
+    <h2 class="text text-shadow3">Text Shadow</h2>
+    <h2 class="text text-shadow4">Text Shadow</h2>
+
+</body>
+
+</html>
