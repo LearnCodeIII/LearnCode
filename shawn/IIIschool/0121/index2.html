@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    .wrapper {
+        width:640px;
+        height: 400px;
+        position: relative;
+        color:white;
+        
+    }
+    .scene {
+        width:640px;
+        height: 400px;
+        background:url('./images/slide1.jpeg') no-repeat center center;
+        background-size:cover;
+        opacity:1;
+        transition: .5s;
+    }
+    .title {
+        color:white;
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%,0%);
+        bottom: 0;
+        text-align: center;
+        opacity: 0.7;
+        transition: .5s;
+        z-index: 9;
+        background:black;
+        display:block;
+        width:100%;
+    }
+    .wrapper:hover .scene{
+        opacity:0.8;
+    }
+    .wrapper:hover .title{
+        opacity:1;
+    }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="scene"></div>
+        <h1 class="title">遠雄大飯店</h1>
+    </div>
+</body>
+</html>
