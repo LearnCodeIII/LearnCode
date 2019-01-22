@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>font-Size</title>
+    <style>
+        html{
+            font-size: 12px;
+        }
+        .em{
+            font-size: 2em;
+        }
+        .rem{
+            font-size: 2rem;
+        }
+
+/* 實際應用可這樣設,然後只調整html原始大小,rem這個相對大小就會跟著改變 */
+        h1{
+            font-size: 2rem;
+        }
+        p{
+            font-size: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="em">
+        Hello~~~
+        <div class="em">
+            Hello~~~2
+            <div class="em">
+                Hello~~~3
+            </div>
+        </div>
+    </div>
+
+    <div class="rem">
+        Hello~~~
+        <div class="rem">
+            Hello~~~2
+            <div class="rem">
+                Hello~~~3
+            </div>
+        </div>
+    </div>
+
+<!-- 實際應用 -->
+    <div>
+        <h1>this is title</h1>
+        <p>this is not title</p>
+    </div>
+</body>
+</html>

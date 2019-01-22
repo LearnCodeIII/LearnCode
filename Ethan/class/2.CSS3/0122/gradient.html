@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>gradient</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .box{
+            height: 300px;
+            margin: 20px;
+        }
+        .color1{
+            background: linear-gradient(to right,rgb(24, 106, 184),rgb(95, 217, 248),rgb(78, 78, 207),rgb(109, 255, 219))
+        }
+        .color2{
+            background: linear-gradient(to right,rgb(24, 106, 184) 20%,rgb(95, 217, 248) 50%,rgb(78, 78, 207),rgb(109, 255, 219) 80%)
+        }
+        .color3{
+            background: linear-gradient(to bottom,#cccccc ,black 5px, #aaa 50%,white 10%,black 95%);
+        }
+        .color4{
+            background: linear-gradient(to bottom , rgba(0 ,0,0,0),rgba(0, 0, 0, 1));
+        }
+        .color5{
+            background: repeating-linear-gradient(to bottom ,rgb(24, 106, 184) ,rgb(95, 217, 248) ,rgb(78, 78, 207),rgb(109, 255, 219) )
+        }
+        .color6{
+            background: radial-gradient(circle,rgb(24, 106, 184) ,rgb(95, 217, 248) ,rgb(78, 78, 207),rgb(109, 255, 219));
+        }
+        .color7{
+            background: radial-gradient(circle at 80% bottom,rgb(24, 106, 184) ,rgb(95, 217, 248) ,rgb(78, 78, 207),rgb(109, 255, 219));
+        }
+        .color8{
+            background: repeating-radial-gradient(circle,rgb(24, 106, 184)10% ,rgb(95, 217, 248)20% ,rgb(78, 78, 207)30%,rgb(109, 255, 219)40%);
+        }
+        .color9{
+            background: linear-gradient(rgb(24, 106, 184)50% ,rgb(95, 217, 248)50%);
+            background-size: auto 20px; 
+        }
+        .h1,.color2{
+            font-size: 40px;
+            font-weight: 900;
+            -webkit-background-clip: text;
+            color: transparent;
+            padding: 30px;
+            text-align: center;
+        }
+
+        .btn{
+            display: inline-block;
+            padding: 35px 95px;
+            border-radius: 35%;
+            margin: 30px;
+            box-shadow: 10px 10px 70px #000,0 0 2px #fff inset;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="box color1"></div>
+    <div class="box color2"></div>
+    <div class="box color3"></div>
+    <a href="" class="btn color3" role="button">Button</a>
+    <div class="box color4"></div>
+    <div class="box color5"></div>
+    <div class="box color6"></div>
+    <div class="box color7"></div>
+    <div class="box color8"></div>
+    <h1 class="color2">Hello world!!</h1>
+    <div class="box color9"></div>
+</body>
+</html>

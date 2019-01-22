@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>background2</title>
+    <style>
+        .box{
+            width: 260px;
+            height: 260px;
+            margin: 20px;
+            padding: 20px;
+            background: url(images/check.jpg)no-repeat;
+            border: 10px dashed #ccc;
+            color: aliceblue;
+        }
+        .padding{
+            background-origin: padding-box;
+        }
+        .border{
+            background-origin: border-box;
+        }
+        .contain{
+            background-origin: content-box;
+        }
+    </style>
+</head>
+<body>
+    <div class="box padding">padding</div>
+    <div class="box border">border</div>
+    <div class="box contain">contain</div>
+</body>
+</html>

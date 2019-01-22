@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Transform</title>
+    <style>
+        .box {
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+            transition: .5s;
+            margin: 10px;
+            /* float: left; */
+            display: inline-block;
+        }
+        .box2 {
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+            transition: .5s;
+            margin: 0px;
+            /* float: left; */
+            display: inline-block;
+        }
+        .wrap{
+            width: 200px;
+            height: 200px;
+            border: 2px solid #aaa;
+        }
+        
+        /* -----1----- */
+        .transform:hover{
+            transform:translate(50px,50px); 
+        }
+
+        /* -----2----- */
+        .rotate:hover{
+            transform: rotate(320deg);
+        }
+
+        /* -----3----- */
+        .scale:hover{
+            transform: scale(1.2,1.8);
+        }
+
+        /* -----4----- */
+        .skew:hover{
+            transform: skew(20deg,0);
+        }
+
+        /* -----5----- */
+        .trans:hover{
+            transform: rotate(20deg) skew(10deg,0) translate(20px ,0);
+        }
+
+        /* -----6----- */
+        .wrap:hover .scale2{
+            transform: scale(0.1);
+        }
+        
+        /* -----7----- */
+        .wrap .trans2{
+            transform: translate(1200px,0) scale(0.3) skew(20deg) rotate(280deg);
+        }
+        .wrap:hover .trans2{
+            transform: scale(1);
+        }
+        
+        /* -----8----- */
+        .matrix:hover{
+            transform: matrix(1,0.5,0,1,40,80)
+        }
+        
+        /* -----9----- */
+        .rotate2{
+            transform-origin: left bottom;
+        }
+        .rotate2:hover{
+            transform: rotate(360deg);
+        }
+        </style>
+</head>
+
+<body>
+    <div class="box transform">1</div>
+
+    <div class="box rotate">2</div>
+
+    <div class="box scale">3</div>
+
+    <div class="box skew">4</div>
+
+    <div class="box trans">5</div>
+
+    <div class="wrap">
+        <div class="box2 scale2">6</div>
+    </div>
+
+    <div class="wrap">
+        <div class="box2 trans2">7</div>
+    </div>
+    <div class="box matrix">8</div>
+
+    <div class="box rotate2">9</div>
+</body>
+
+</html>
