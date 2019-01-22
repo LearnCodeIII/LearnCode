@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .bg {
+            height: 400px;
+            width: 640px;
+            position: relative;
+            margin: 0 auto;
+        }
+        
+        .word {
+            width: 640px;
+            font-size: 30px;
+            font-weight: 900;
+            color: #000;
+            opacity: .5;
+            position: absolute;
+            bottom: 0;
+            left: 50px;
+            margin-left: -50px;
+            font-weight: 900;
+            transition: .5s;
+            z-index: 10;
+            background: linear-gradient(to bottom,rgba(0,0,0,0),rgba(0,0,0,1));
+            padding: 15px 0;
+            text-align: center;
+        }
+        
+        .bg:hover .word {
+            color: #fff;
+            opacity: 1;
+        }
+        
+        .img {
+            height: 400px;
+            width: 640px;
+            background: url(images/slide1.jpeg)no-repeat 0 0;
+            background-size: cover;
+            opacity: .5;
+            transition: .5s;
+        }
+        
+        .bg:hover .img {
+            opacity: 1;
+        }
+        </style>
+</head>
+
+<body>
+    <div class="bg">
+        <div class="word">高雄總圖</div>
+        <div class="img"></div>
+    </div>
+</body>
+
+</html>

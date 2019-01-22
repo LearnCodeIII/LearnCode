@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .background {
+            max-width: 960px;
+            height: 300px;
+            margin: 0 auto;
+            background: url(images/25.png)no-repeat left top, url(images/4.png)no-repeat right top, url(images/map.png);
+            transition: .5s;
+            background-size: 120px auto, 150px auto, 100% auto;
+        }
+
+        /* .background:hover{
+            background: url(images/25.png)no-repeat right top ,url(images/4.png)no-repeat left top ,url(images/map.png)no-repeat;
+        } */
+
+        .container {
+            max-width: 800px;
+            height: 300px;
+            margin: 20px auto;
+            background: url(images/map.png)center center no-repeat;
+            border: 2px solid #ccc;
+        }
+        .cover{
+            background-size: cover;
+        }
+        .contain{
+            background-size: contain;
+        }
+
+        /* .container img{
+            max-width: 100%;
+        } */
+    </style>
+
+</head>
+
+<body>
+    <div class="background">
+    </div>
+    <div class="container">
+    </div>
+    <div class="container cover">
+    </div>
+    <div class="container contain">
+    </div>
+</body>
+
+</html>

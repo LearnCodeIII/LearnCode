@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>background 3</title>
+    <style>
+        .box{
+            width: 140px;
+            height: 140px;
+            margin: 20px;
+            padding: 20px;
+            background: url(images/check.jpg)no-repeat 0 0;
+            border: 5px dashed #ccc;
+            color: aliceblue;
+        }
+        .padding{
+            background-clip: padding-box;
+        }
+        .border{
+            background-clip: border-box;
+        }
+        .contain{
+            background-clip: content-box;
+        }
+        .text{
+            color: transparent;
+            background-clip: text;
+            -webkit-background-clip: text;
+            font-size: 40px;
+            font-weight: 900;
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <div class="box padding">padding</div>
+    <div class="box border">border</div>
+    <div class="box contain">contain</div>
+    <div class="box text">TEXT</div>
+</body>
+</html>
