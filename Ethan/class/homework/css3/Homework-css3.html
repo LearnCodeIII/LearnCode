@@ -20,7 +20,8 @@
         .nav {
             width: 100%;
             position: fixed;
-            background-color: white;
+            background-color: rgb(255, 255, 255);
+            z-index: 2;
         }
 
         .nav-container {
@@ -220,7 +221,7 @@
 
         /* ----------sc3---------- */
         .sc3 {
-            max-width: 1500px;
+            max-width: 1300px;
             margin: 0 auto;
         }
 
@@ -246,7 +247,7 @@
 
         .sc3-1 {
             display: flex;
-            justify-content: space-evenly;
+            justify-content: space-between;
         }
 
         .sc3-img {
@@ -297,35 +298,232 @@
 
         /* ----------sc4---------- */
         .sc4 {
-            background-color: #ccc;
-            background-color: #cfc;
+            height: auto;
+            position: relative;
+            margin-bottom: 20px;
         }
+
         .sc4-container {
-            max-width: 1500px;
+            max-width: 1300px;
             margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
 
         .sc4-img {
-            background-color: #cff;
+            width: 100%;
             display: flex;
             flex-wrap: wrap;
-            justify-content: space-evenly;
+            justify-content: space-between;
         }
-        .sc4-2{
-            max-width: 500px;
+
+        .sc4-1 {
+            display: flex;
+            justify-content: center;
+        }
+
+        .sc4-2-img {
+            max-width: 400px;
             min-width: 50px;
             height: 250px;
             overflow: hidden;
+            -webkit-filter: brightness(.95);
         }
-        .sc4-img img{
+
+        .sc4-2-img img {
             width: 100%;
             height: 100%;
             object-fit: cover;
             object-position: center center;
-            margin: 10px;
         }
 
-        .sc4-img img {}
+        .sc4-2-word {
+            position: absolute;
+            bottom: 40%;
+            text-align: center;
+            font-size: 22px;
+            font-weight: 900;
+            color: white;
+            -webkit-text-stroke: 0.1px #333;
+            letter-spacing: 1px;
+        }
+
+        .sc4-3 {
+            width: 100%;
+            display: flex;
+            justify-content: flex-end;
+            margin-top: 10px;
+        }
+
+        .sc4-2-1 {
+            background-color: rgb(177, 54, 119);
+            width: 100px;
+            height: 25px;
+            border-radius: 3px;
+            font-size: 20px;
+            color: white;
+            text-align: center;
+            padding-top: 10px;
+        }
+
+        /* ----------sc5---------- */
+        .sc5 {
+            background-color: #ccc;
+            width: 100%;
+            height: 30vh;
+            display: flex;
+            justify-content: center;
+            position: relative;
+            flex-wrap: wrap;
+        }
+
+        .sc5-1 {
+            width: 55%;
+            max-width: 250px;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        .sc5-1 img {
+            height: 100%;
+            object-fit: contain;
+            object-position: bottom left;
+        }
+
+        .sc5-2 {
+            width: 45%;
+            max-width: 400px;
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+            justify-content: space-evenly;
+        }
+
+        .sc5-2-1-title {
+            font-size: 30px;
+            padding: 10px 0 0 7px;
+        }
+
+        .sc5-2-2-app {
+            padding-bottom: 10px;
+        }
+
+        .sc5-2-applink {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .sc5-2-p {
+            padding: 10px 0 5px 7px;
+            font-size: 16px;
+            color: rgba(199, 21, 116, 0.699);
+        }
+
+        /* ----------sc6---------- */
+        .sc6 {
+            background-color: rgba(51, 25, 0, 0.863);
+            width: 100%;
+            min-height: 30vh;
+            height: 100%;
+            color: white;
+            padding-bottom: 10px;
+        }
+
+        .sc6-container {}
+
+        .sc6-1-up {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .sc6-1-up p {
+            font-size: 20px;
+            line-height: 40px;
+            letter-spacing: 1px;
+        }
+
+        .sc6-2-left,
+        .sc6-2-right {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin: 30px 100px 10px 100px;
+        }
+
+        .sc6-1-up h2 {
+            font-size: 60px;
+            letter-spacing: 2px;
+        }
+
+        .sc6-1-down {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .sc6-2-button {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            align-items: center;
+            margin: 10px;
+            max-width: 400px;
+
+        }
+
+        .sc6-2-title {
+            font-size: 30px;
+            margin: 10px;
+            letter-spacing: 2px;
+            margin: 15px 10px;
+            padding-top: 5px;
+        }
+
+        .sc6-3 {
+            background-color: rgba(194, 194, 194, 0.9);
+            border-radius: 3px;
+            margin: 10px 5px;
+            width: 150px;
+            text-align: center;
+            padding: 15px 0 10px;
+            color: black;
+        }
+
+        /* ----------sc7---------- */
+        .sc7 {
+            min-height: 40vh;
+            background-color: #ccc;
+        }
+        .sc7-container{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .sc7-1-left{
+            background-color: #fcc;
+        }
+
+        .sc7-2-top{
+            display: flex;
+            align-items: center;
+            background-color: #cfc;
+        }
+        .sc7-2-down{
+            display: flex;
+            align-items: center;
+            background-color: #ccf;
+        }
+        .sc7-1-right{
+            background-color: #ffc;
+        }
+        /* ----------footer---------- */
+        footer {
+            background-color: #ccc;
+        }
     </style>
 </head>
 
@@ -396,7 +594,7 @@
         </div>
     </section>
 
-    <div class="sc3">
+    <section class="sc3">
         <div class="sc3-title">熱門主題</div>
         <div class="sc3-container">
             <div class="sc3-1">
@@ -427,21 +625,101 @@
             </div>
             <div class="sc3-2">
                 <div class="sc3-2-1">more</div>
-                <div class="sc3-2-2"></div>
             </div>
         </div>
-    </div>
+    </section>
 
-    <div class="sc4">
+    <section class="sc4">
         <div class="sc4-container">
-            <div class="sc4-title">趨勢話題</div>
+            <div class="sc4-title">
+                <h2>趨勢話題</h2>
+            </div>
             <div class="sc4-img">
-                <div class="sc4-2"><img src="images/sc4/11155.jpg" alt=""></div>
-                <div class="sc4-2"><img src="images/sc4/128141.jpg" alt=""></div>
-                <div class="sc4-2"><img src="images/sc4/9344.jpg" alt=""></div>
+                <div class="sc4-1">
+                    <div class="sc4-2-img"><img src="images/sc4/11155.jpg" alt=""></div>
+                    <div class="sc4-2-word">鬆感的劉海！配上極捲的捲度!反而...</div>
+                </div>
+                <div class="sc4-1">
+                    <div class="sc4-2-img"><img src="images/sc4/128141.jpg" alt=""></div>
+                    <div class="sc4-2-word">日系鬆鬆捲度 吹感即可霧面髮色</div>
+                </div>
+                <div class="sc4-1">
+                    <div class="sc4-2-img"><img src="images/sc4/9344.jpg" alt=""></div>
+                    <div class="sc4-2-word">歐巴新寵，括號瀏海你跟風了嗎？</div>
+                </div>
+            </div>
+            <div class="sc4-3">
+                <div class="sc4-2-1">more</div>
             </div>
         </div>
-    </div>
+
+    </section>
+
+    <section class="sc5">
+        <div class="sc5-1"><img src="images/sc5/phones_v3.png" alt=""></div>
+        <div class="sc5-2">
+            <div class="sc5-2-1-title">快速找到好髮型</div>
+            <div class="sc5-2-2-app">
+                <div class="sc5-2-applink">
+                    <img src="images/sc5/btn_app_ios_h.png" alt="">
+                    <img src="images/sc5/btn_app_android_h.png" alt="">
+                </div>
+                <div class="sc5-2-p">下載並註冊後就可以開始發表作品囉!</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="sc6">
+        <div class="sc6-container">
+            <div class="sc6-1-up">
+                <div class="sc6-2-left">
+                    <p>已有</p>
+                    <h2>635</h2>
+                    <p>位設計師</p>
+                </div>
+                <div class="sc6-2-right">
+                    <P>發表</P>
+                    <h2>6421</h2>
+                    <p>張髮型作品</p>
+                </div>
+            </div>
+            <div class="sc6-1-down">
+                <div class="sc6-2-title">優秀設計師募集中</div>
+                <div class="sc6-2-button">
+                    <div class="sc6-3 sc6-3-left">了解更多</div>
+                    <div class="sc6-3 sc6-3-right">立即免費註冊</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="sc7">
+        <div class="sc7-container">
+            <div class="sc7-1-left">
+                <img src="" alt="">
+                <p>StyleMap團隊致力於打造出最貼心實用的美髮服務媒合<br>平台，讓美髮時光成為每個人生命中的美好時刻。</p>
+            </div>
+            <div class="sc7-1-center">
+                <div class="sc7-2-top">
+                    <div class="sc7-3-left">聯絡我們</div>
+                    <div class="sc7-3-right">iOS</div>
+                </div>
+                <div class="sc7-2-down">
+                    <div class="sc7-3-left">粉絲專頁</div>
+                    <div class="sc7-3-right">Android</div>
+                </div>
+            </div>
+            <div class="sc7-1-right">
+                <img src="" alt="">
+                <h4>設計師加入</h4>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>髮弄資訊股份有限公司 &copy; 2018. All Rights Reserved</p>
+        <p>使用者條款與隱私權政策</p>
+    </footer>
 </body>
 
 </html>
