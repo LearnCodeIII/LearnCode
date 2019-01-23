@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: gray;
+        }
+
+        .wrapper {
+            width: 960px;
+            margin: 0 auto;
+        }
+
+        .box {
+            float: left;
+            margin: 20px 1%;
+            width: 300px;
+            height: 200px;
+            background: white;
+            padding:10px;
+        }
+
+        .box h1 {
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            text-align: center;
+            padding:12px;
+            font-size: 24px;
+        }
+        .box span {
+            overflow: hidden;
+            -webkit-line-clamp: 4;
+            overflow:hidden;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            word-break: break-all;
+            text-align: justify;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="box">
+            <h1>titletitletitletitletitletitletitle</h1>
+            <span>Loremmmmmmmmmmmmmmmmmmmmmmmmmmmmmmf ipsum dolor sit amet consectetur, adipisicing elit. Officiis, odio. Sit soluta voluptatum sed
+                officia corporis laudantium sapiente at, mollitia voluptas aperiam voluptatibus omnis quia magnam sunt
+                minima ratione architecto!</span>
+        </div>
+        <div class="box">
+            <h1>title</h1>
+        </div>
+        <div class="box">
+            <h1>title</h1>
+        </div>
+    </div>
+</body>
+
+</html>

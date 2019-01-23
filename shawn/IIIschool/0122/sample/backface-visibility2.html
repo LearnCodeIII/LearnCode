@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+  <meta charset="UTF-8">
+  <title>Backface Visibility</title>
+</head>
+<style>
+body{
+  margin:50px;
+}
+.container{
+  /*perspective:1000px;*/
+}
+.box img{
+  width:300px;
+}
+.card_wrap{
+  width:300px;
+  height:400px;
+}
+.card{
+  position: relative;
+  transform-style:preserve-3d;
+  display: inline-block;
+  height:400px;
+  width: 300px;
+}
+.card_wrap:hover .card{
+  transform: rotateY(180deg);
+}
+.card img{
+  width:100%;
+  position: absolute;
+  left:0;
+  top:0;
+  display: block;
+  backface-visibility: hidden;
+}
+.front{
+  
+}
+.back{
+  transform: rotateY(180deg);
+}
+.transition{
+  transition: all .5s;
+}
+.box:hover{
+  /*transform:rotateY(180deg);*/
+}
+</style>
+<body>
+  <div class="container">
+    <div class="card_wrap">
+      <div class="card transition">
+        <img class="front" src="images/dr_strange.jpg" alt="">
+        <img class="back" src="images/dr_fate.jpg" alt="">
+      </div>
+    </div>
+  </div>
+</body>
+</html>

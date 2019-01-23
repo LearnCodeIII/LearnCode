@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+  <meta charset="UTF-8">
+  <title>Background Ogirin</title>
+</head>
+<style>
+  .bg{
+    height:200px;
+    width: 200px;
+    background-image: url(images/check.jpg);
+    background-repeat: no-repeat;
+    float:left;
+    margin: 20px;
+    border:20px solid gray;
+    padding:10px;
+  }
+  .bg_border{
+    background-origin: border-box;
+  }
+  .bg_padding{
+    background-origin: padding-box;
+  }
+  .bg_content{
+    background-origin: content-box;
+  }
+</style>
+<body>
+  <div class="bg"></div>
+  <div class="bg bg_padding"></div>
+  <div class="bg bg_border"></div>
+  <div class="bg bg_content"></div>
+</body>
+</html>

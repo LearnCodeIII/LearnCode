@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+  <meta charset="UTF-8">
+  <title>Transform Origin</title>
+</head>
+<style>
+body{
+  margin:50px;
+}
+ div{
+  text-align: center;
+  padding:20px;
+  width:120px;
+  height:120px;
+  background: violet;
+  float: left;
+  margin:0 20px 20px 0;
+  border:3px solid purple;
+ }
+ .translate:hover{
+  -ms-transform: translate(30px, 70px); 
+  -webkit-transform: translate(30px, 70px); 
+  transform: translate(30px, 70px);
+ }
+  .rotate{
+    transform-origin: left top;
+ }
+ .rotate:hover{
+  -ms-transform: rotate(30deg); 
+    -webkit-transform: rotate(30deg); 
+    transform: rotate(30deg);
+ }
+ .scale{
+    transform-origin: 20px 70px;
+ }
+ .scale:hover{
+  -ms-transform: scale(1.2, 1.2); 
+  -webkit-transform: scale(1.2, 1.2); 
+  transform: scale(1.2, 1.2);
+ }
+ .skew{
+  transform-origin: center bottom;
+ }
+ .skew:hover{
+  -ms-transform: skew(-30deg, 20deg); 
+  -webkit-transform: skew(-30deg, 20deg); 
+  transform: skew(-30deg, 20deg);
+ }
+ .matrix:hover{
+  -ms-transform: matrix(1,0, 1.2, 1, 0, 1.4); 
+  -webkit-transform: matrix(1, 0, 1.2, 1, 0, 1.4); 
+  transform: matrix(1, 0, 1.2, 1, 0, 1.4);
+ }
+</style>
+<body>
+  <div class="translate">translate</div>
+  <div class="rotate">rotate<br>(left top)</div>
+  <div class="scale">scale<br>(20px 70px)</div>
+  <div class="skew">skew<br>(center bottom)</div>
+  <div class="matrix">matrix</div>
+</body>
+</html>

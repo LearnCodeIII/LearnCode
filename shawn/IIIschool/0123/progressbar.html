@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC" rel="stylesheet">
+    <title>Document</title>
+    <style>
+        .progress_wrap {
+            background: #ccc;
+            border-radius: 20px;
+            height: 30px;
+            overflow: hidden;
+            position: relative;
+            transition: 3s;
+            box-shadow: 0 0 0px 0px rgba(255, 249, 168, 0.527);
+        }
+        .wrapper:hover .progress_wrap {
+            box-shadow: 0 0 30px 5px rgba(255, 249, 168, 0.527);
+        }
+
+        .progress_bar {
+            height: 0%;
+            width: 100%;
+            transition: 3s;
+        }
+
+        .wrapper:hover .progress_bar {
+
+            height: 100%;
+            width: 100%;
+        }
+
+        .prpgress_bar.sun {
+            background: rgb(250, 145, 162);
+        }
+
+        .wrapper:hover .progress_bar.sun {
+            background: rgb(255, 46, 81);
+        }
+
+        .prpgress_bar.moon {
+            background: rgb(251, 215, 115);
+        }
+
+        .wrapper:hover .progress_bar.moon {
+            background: rgb(253, 148, 29);
+        }
+
+        .prpgress_bar.night {
+            background: rgb(172, 127, 255);
+        }
+
+        .wrapper:hover .progress_bar.night {
+            background: rgb(123, 21, 255);
+        }
+
+        .circle {
+            border-radius: 50%;
+            width: 10rem;
+            height: 10rem;
+        }
+
+        .progress_title {
+            font-family: 'Noto Sans TC', sans-serif;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 2rem;
+            color: #ccc;
+            transition: 2s 0.5s;
+        }
+
+        .wrapper:hover .progress_title {
+            font-family: 'Noto Sans TC', sans-serif;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 2rem;
+            color: rgb(255, 255, 255);
+        }
+
+        .wrapper {
+            margin: 0 auto;
+            max-width: 800px;
+            height: 800px;
+            display: flex;
+            background: rgb(87, 87, 87);
+            flex-direction: row;
+            justify-content: space-evenly;
+            align-items:stretch;
+        }
+
+        .item {
+            margin: 10px;
+        }
+
+        .item1 {
+         
+        }
+        .item2 {
+            align-self: center;
+        }
+        .item3 {
+            align-self: flex-end;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="item item1">
+            <div class="progress_wrap circle">
+                <div class="progress_bar sun"></div>
+                <div class="progress_title">朝</div>
+            </div>
+        </div>
+        <div class="item item2">
+            <div class="progress_wrap circle">
+                <div class="progress_bar moon"></div>
+                <div class="progress_title">夕</div>
+            </div>
+        </div>
+        <div class="item item3">
+            <div class="progress_wrap circle">
+                <div class="progress_bar night"></div>
+                <div class="progress_title">暮</div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

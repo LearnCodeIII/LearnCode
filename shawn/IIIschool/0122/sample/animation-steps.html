@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+  <meta charset="UTF-8">
+  <title>Steps</title>
+</head>
+<style>
+body{
+  margin:50px;
+}
+@keyframes change {
+  from {
+    background: blue;
+  }
+  /*50%{*/
+    /*background: blue;*/
+  /*}*/
+  to {
+    background: red;
+  }
+}
+.box{
+  width:300px;
+  height:300px;
+  margin:20px;
+}
+.box1{
+  animation: change 9s steps(1, end) infinite;
+}
+.box2{
+  animation: change 9s steps(1, start) infinite;
+}
+</style>
+<body>
+  <div class="box box1"></div>
+  <div class="box box2"></div>
+</body>
+</html>

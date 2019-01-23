@@ -1,0 +1,323 @@
+/*main start*/
+* {
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: 'Noto Sans TC', sans-serif;
+}
+html,body {
+    margin: 0;
+    padding: 0;
+    height: 100%
+}
+/*navbar start*/
+    .navbar {
+        height:4rem;
+        background: rgb(255, 255, 255);
+        width:100%;
+        position:fixed;
+        display:flex;
+        align-content: center;
+        z-index: 9999;
+    }
+    .logo {
+        height: 100%;
+        flex:1;
+        display:flex;
+        padding:10px;
+    }
+    .logo .brand {
+        max-width: 150px;
+    }
+    
+    nav .item {
+        height: 100%;
+        flex:5;
+        display:flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    nav .item a {
+        color:rgb(168, 168, 168);
+        text-decoration: none;
+        font-family: 'Noto Sans TC', sans-serif;
+        font-size: 1.3rem;
+
+    }
+    nav .item .left {
+        width:25vw;
+        display:flex;
+        justify-content: space-evenly;
+    }
+    nav .item .right {
+        width:20vw;
+        display:flex;
+        justify-content: space-evenly;
+    }
+/*navbar end*/
+/*section1 start*/
+.section1 {
+    padding-top: 4rem;
+    height: 100vh;
+    background:url('./images/avatar/long-hair.jpg') center center no-repeat;
+    background-size:cover;
+}
+.section1 .maincover {
+    background:rgba(0, 0, 0, 0.445);
+    height:70vh;
+    display:flex;
+    justify-content: center;
+}
+.section1 .title svg {
+    display: block;
+    margin: 0 auto;
+    margin-top: 10vh;
+    max-width: 350px;
+    fill:white;
+}
+
+.section1 h1 {
+    text-align: center;
+    color:white;
+    font-weight: normal;
+    font-size: 4rem;
+}
+.section1 h2 {
+    text-align: center;
+    color:white;
+    font-weight: normal;
+    font-size: 2rem;
+    margin: 1rem;
+}
+.section1 .search-bar {
+    background:rgba(0, 0, 0, 0.315);
+    border:2px solid rgb(168, 77, 96);
+    height: 3.5rem;
+    width: 600px;
+    display: flex;
+    position: relative;
+}
+.section1 input {
+    background:rgba(0, 0, 0, 0.185);
+    padding:3px;
+    border:none;
+    height: 3.5rem;
+    font-size:1.3rem;
+    color:rgb(255, 255, 255);
+    font-weight: normal;
+}
+.section1 input::placeholder {
+    color:rgba(255, 255, 255, 0.87);
+    font-weight: normal;
+}
+.section1 .search-place {
+    max-width:150px;
+    text-align: center;
+}
+.section1 .search-catogories {
+    max-width:600px;
+}
+.section1 .icon1{
+    position: absolute;
+    top:32%;
+    left:2%;
+}
+.section1 .search-btn .icon2{
+    width: 1.5rem;
+    transform: translate(-20%,20%);
+}
+.section1 .search-btn {
+    background:rgb(168, 77, 96);
+    text-decoration: none;
+    color:white;
+    width:80%;
+    text-align: center;
+    line-height: 3rem;
+    font-size: 1.3rem;
+    transition:.5s;
+}
+.section1 .search-btn:hover {
+    background:rgb(161, 30, 58);
+}
+/*slogan*//*slogan*//*slogan*//*slogan*/
+.section1 .slogan {
+    height:30vh;
+    width:100%;
+    background:rgb(0, 0, 0);
+    display:flex;
+    justify-content: center;
+}
+.section1 .slogan-item {
+    display:flex;
+    justify-content: space-evenly;
+    align-content: center;
+    width:75vw;
+
+}
+.section1 .slogan-item .item{
+    justify-content: center;
+    align-content: center;
+    flex:0 0 25%;
+    flex-wrap: nowrap;
+}
+.section1 .slogan-item .item img{
+    max-height:120px;
+}
+.section1 .slogan h4 {
+    text-align: center;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: normal;
+}
+/*section1 end*/
+/*section2 start*/
+.section2 {
+    padding-top: 2rem;
+    min-height:50vh;
+    background:rgb(230,230,230);
+}
+.section2 .title {
+    display:flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.section2 h3{
+    text-align: center;
+    font-size: 2rem;
+    margin:0;
+    padding: 0;
+}
+.section2 .panelwrap{
+    margin: 0 auto;
+    display:flex;
+    justify-content: space-evenly;
+    flex-wrap:wrap;
+    max-height: 900px;;
+}
+.section2 .panelbox{
+    max-width:300px;
+    height:350px;
+    margin: 2vh;
+    flex:1;
+    position: relative;
+}
+.section .panel {
+    overflow: hidden;
+}
+.section2 .panel1 {
+    background:url('./images/avatar/22736_8.jpg') center center no-repeat;
+    background-size:cover;
+    height: 100%;
+}
+.section2 .panel2 {
+    background:url('./images/avatar/9344.jpg') calc( 50% - 70px ) center no-repeat;
+    background-size:cover;
+    height: 100%;
+}
+.section2 .panel3 {
+    background:url('./images/avatar/9743_2.jpg') calc( 50% - 30px ) center no-repeat;
+    background-size:cover;
+    height: 100%;
+}
+.section2 .panel4 {
+    background:url('./images/avatar/14366_18.jpg') calc( 50% + 30px ) center no-repeat;
+    background-size:cover;
+    height: 100%;
+}
+.section2 .panel-title {
+    position: absolute;
+    padding:0 1.8rem;
+    font-size: 1.6rem;
+    border:2px solid rgb(168, 77, 96);
+    color:rgb(168, 77, 96);
+    background:rgba(255, 255, 255, 0.781);
+    right:-1rem;
+    bottom:2rem;
+}
+.section2 a .panel-title {
+    position: absolute;
+    padding:0 1rem;
+    font-size: 1rem;
+    color:white;
+    background:rgb(168, 77, 96);
+    right:0;
+    bottom:-40px;
+}
+/*section2 end*/
+/*section3 start*/
+.section3 {
+    padding-top: 2rem;
+    height:60vh;
+    background:rgb(230,230,230);
+}
+.section3 h3{
+    text-align: center;
+    font-size: 2rem;
+    margin:0;
+    padding: 0;
+}
+.section3 .panelwrap{
+    margin: 0 auto;
+    display:flex;
+    justify-content: space-evenly;
+    flex-wrap:wrap;
+    max-height: 300px;;
+}
+.section3 .panelbox{
+    max-width:550px;
+    height:300px;
+    margin: 2vh;
+    flex:1;
+    position: relative;
+}
+.section3 .panel {
+    overflow: hidden;
+}
+.section3 .panel1 {
+    background:url('./images/avatar/11155.jpg') center center no-repeat;
+    background-size:cover;
+    height: 100%;
+}
+.section3 .panel2 {
+    background:url('./images/avatar/138974.jpg') calc( 50% - 70px ) center no-repeat;
+    background-size:cover;
+    height: 100%;
+}
+.section3 .panel3 {
+    background:url('./images/avatar/141965.jpg') calc( 50% - 30px ) center no-repeat;
+    background-size:cover;
+    height: 100%;
+}
+.section3 div.panel-title {
+    position: absolute;
+    text-align: center;
+    font-size: 1.2rem;
+    color:white;
+    width: 100%;
+    bottom:50%;
+    text-shadow: 2px 2px 2px 3px black;
+    z-index: 10;
+}
+.section3 a .panel-last {
+    position: absolute;
+    padding:0 1rem;
+    font-size: 1rem;
+    color:white;
+    background:rgb(168, 77, 96);
+    right:0;
+    bottom:-40px;
+    width:80px;
+}
+/*section3 end*/
+/*section4 start*/
+.section4 {
+    height:90vh;
+    background:rgb(220,220,220);
+}
+/*section5 end*/
+/*footer start*/
+/*footer end*/
+.footer {
+    height: 10vh;
+    background:rgb(200,200,200)
+}

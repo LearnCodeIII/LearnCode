@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+  <meta charset="UTF-8">
+  <title>Backface Visibility</title>
+</head>
+<style>
+body{
+  margin:50px;
+}
+.container{
+
+}
+.box{
+  perspective:1000px;
+  float:left;
+  margin:0 20px;
+}
+.box img{
+  width:300px;
+}
+.transition{
+  transition: all .5s;
+  -webkit-transition: all .5s;
+}
+.box:hover{
+  transform:rotateY(180deg);
+  -webkit-transform:rotateY(180deg);
+}
+.hidden{
+  -webkit-backface-visibility: hidden;  
+  backface-visibility: hidden;
+}
+.visible{
+  -webkit-backface-visibility: visible;  
+  backface-visibility: visible;
+}
+</style>
+<body>
+  <div class="container">
+    <div class="box transition visible">
+      <img class="" src="images/dr_strange.jpg" alt="">
+    </div>
+    <div class="box transition hidden">
+      <img class="" src="images/dr_strange.jpg" alt="">
+    </div>
+  </div>
+</body>
+</html>

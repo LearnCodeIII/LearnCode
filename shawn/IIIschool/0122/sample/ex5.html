@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+  <meta charset="UTF-8">
+  <title>Ex5</title>
+  <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+</head>
+<style>
+body{
+  background: #aaa;
+  font-family: 'Lobster', cursive;
+}
+  .transition{
+    transition: all .5s;
+    -webkit-transition: all .5s;
+  }
+  .box{
+    position:relative;
+    box-shadow: 0 0px 5px #333;
+    margin:20px auto;
+    background: #fff;
+    width:320px;
+  }
+  .box:hover{
+    box-shadow: 0 5px 5px #666;
+    -webkit-transform: translate(0,-5px);
+    transform: translate(0,-5px);
+  }
+  h3{
+     letter-spacing: 0px;
+  }
+  .box:hover h3{
+    letter-spacing: 3px;
+    text-indent: 3px; /*letter-spacing 是文字後面的間距*/
+  }
+  .box_inside{
+    padding:40px 20px 20px;
+  }
+  .radius_border{
+    border-radius: 4px;
+    overflow: hidden;
+  }
+  .banner{
+    height:160px;
+    background: #000;
+    background: url(images/light.jpg) center center no-repeat;
+    background-size: cover;
+  }
+  figure{
+    width:120px;
+    height:120px;
+    background: purple;
+    color:#fff;
+    position: absolute;
+    left:50%;
+    top:80px;
+    z-index: 5;
+    margin-left:-60px;
+    background:#000;
+  }
+  figure .icon{
+    position: absolute;
+    width:36px;
+    left:50%;
+    top:50%;
+    z-index: 1;
+    /* margin-left:-18px; */
+    transform: translate(-50%, -50%);
+    opacity: 0;
+  }
+  figure:hover img.head{
+    opacity: .5;
+  }
+  figure:hover img.icon{
+    opacity: 1;
+  }
+  figure img{
+    max-width: 100%;
+  }
+  .circle{
+    border-radius: 50%;
+    overflow: hidden;
+  }
+  h3{
+    text-align: center;
+    color:#333;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #aaa;
+  }
+  p{
+    line-height: 1.7;
+    color:#aaa;
+  }
+  .btn{
+    position: relative;
+    transition: all 2s ease-in;
+    -webkit-transition: all 2s ease-in;
+    text-shadow:0 -1px 0 #000;
+    cursor: pointer;
+    border-radius: 4px;
+    display: block;
+    padding:15px 10px;
+    color: #fff;
+    text-align: center;
+    margin-top: 10px;
+    background-color: rgba(239,1,124, 1); /* Old browsers */
+    overflow: hidden;
+  }
+  .btn::after{
+    transition:all .5s;
+    -webkit-transition:all .5s;
+    padding:15px 10px;
+    content:"Follow me";
+    position: absolute;
+    left:0;
+    top:0;
+    right:0;
+    bottom:0;
+    background: linear-gradient(to bottom, rgba(255,93,177,1) 0%,rgba(239,1,124, 1) 100%);
+  }
+  .btn:hover{
+    background-color: #ef017c;
+  }
+  .btn:hover::after{
+    opacity:0;
+  }
+</style>
+<body>
+  <div class="box radius_border transition">
+    <div class="banner"></div>
+      <figure class="circle">
+        <img class="icon transition" src="images/picture.svg" alt="">
+        <img class="transition head" src="dr_strange.jpg" alt="">
+      </figure>
+    <div class="box_inside">
+      <h3 class="transition">Dr. Strange</h3>
+      <p>
+        Hello, I am Steve Strange.
+      </p>
+      <a class="btn transition">Follow me</a>
+    </div>
+  </div>
+  
+</body>
+</html>

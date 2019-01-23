@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+  <meta charset="UTF-8">
+  <title>Flex</title>
+</head>
+<style>
+h2{
+  text-align: center;
+}
+  .flex{
+    display: flex;
+    margin:20px auto;
+    max-width:600px;
+  }
+  .item{
+    height:60px;
+    line-height: 60px;
+    text-align: center;
+    vertical-align: middle;
+    color: #fff;
+  }
+  .item1{
+    background: #ED3796;
+  }
+  .item2{
+    background: #5F6BF0;
+  }
+  .item3{
+    background: #EF8E3D;
+  }
+  .item4{
+    background: #B3F74B;
+  }
+  .grow0{
+    flex-grow:0;
+  }
+  .grow1{
+    flex-grow:1;
+  }
+  .grow2{
+    flex-grow:2;
+  }
+  .shrink0{
+    width:50%;
+    flex-shrink:0;
+  }
+  .shrink1{
+    width:50%;
+    flex-shrink:1;
+  }
+  .shrink2{
+    width:50%;
+    flex-shrink:2;
+  }
+  .basis1{
+    flex-basis:200px;
+  }
+  .basis2{
+    flex-basis:400px;
+  }
+  .basis3{
+    flex-basis:800px;
+  }
+</style>
+<body>
+  <h2>flex-grow</h2>
+  <div class="flex flex1">
+    <div class="item item1 grow2">2</div>
+    <div class="item item2 grow1">1</div>
+    <div class="item item3 grow0">0</div>
+  </div>
+  <h2>flex-shink</h2>
+  <div class="flex flex1">
+    <div class="item item1 shrink2">2</div>
+    <div class="item item2 shrink1">1</div>
+    <div class="item item3 shrink0">0</div>
+  </div>
+  <h2>flex-basis</h2>
+  <div class="flex flex1">
+    <div class="item item1 basis1">200px</div>
+    <div class="item item2 basis2">400px</div>
+    <div class="item item3 basis3">800px</div>
+  </div>
+</body>
+</html>

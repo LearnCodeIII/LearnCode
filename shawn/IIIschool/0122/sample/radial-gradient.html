@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+  <meta charset="UTF-8">
+  <title>Gradients</title>
+</head>
+<style>
+div{
+  padding:20px;
+  height:70px;
+  text-align: center;
+  margin:0 auto 20px;
+  width:50%;
+}
+.gradient{
+  background: radial-gradient(red, blue);
+}
+.gradient2{
+  background: radial-gradient(red, orange 20%, yellow 30%, green 50%, blue, purple); 
+}
+.gradient3{
+  background: radial-gradient(circle, red, orange 20%, yellow 30%, green 50%, blue, purple); 
+}
+.gradient4{
+  background: -webkit-radial-gradient(top, circle, red, blue); 
+  background: radial-gradient(at top, circle, red , blue); 
+}
+.gradient5{
+  background: -webkit-radial-gradient(70% 80px, red, blue); 
+  background: radial-gradient(at 70% 80px, red , blue); 
+}
+.gradient6{
+  background: repeating-radial-gradient(circle, deeppink, orchid 8%, hotpink 16%, deeppink 25%);
+}
+</style>
+<body>
+  <div class="gradient"></div>
+  <div class="gradient2"></div>
+  <div class="gradient3"></div>
+  <div class="gradient4"></div>
+  <div class="gradient5"></div>
+  <div class="gradient6"></div>
+</body>
+</html>

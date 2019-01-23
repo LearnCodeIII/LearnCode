@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+  <meta charset="UTF-8">
+  <title>Transform</title>
+</head>
+<style>
+body{
+  margin:50px;
+}
+ div{
+  text-align: center;
+  padding:20px;
+  width:120px;
+  height:120px;
+  background: violet;
+  float: left;
+  margin:0 20px 20px 0;
+  border:3px solid purple;
+ }
+ .translate:hover{
+  -ms-transform: translate(30px, 70px); 
+  -webkit-transform: translate(30px, 70px); 
+  transform: translate(30px, 70px);
+ }
+ .rotate:hover{
+  -ms-transform: rotate(30deg); 
+    -webkit-transform: rotate(30deg); 
+    transform: rotate(30deg);
+ }
+ .scale:hover{
+  -ms-transform: scale(1.5, 2); 
+  -webkit-transform: scale(1.5, 2); 
+  transform: scale(1.5, 2);
+ }
+ .skewX:hover{
+  -ms-transform: skewX(-30deg); 
+  -webkit-transform: skewX(-30deg); 
+  transform: skewX(-30deg);
+ }
+ .skewY:hover{
+  -ms-transform: skewY(-30deg); 
+  -webkit-transform: skewY(-30deg); 
+  transform: skewY(-30deg);
+ }
+ .matrix:hover{
+  -ms-transform: matrix(1, -0.3, 0, 1, 0, 0); 
+  -webkit-transform: matrix(1, -0.3, 0, 1, 0, 0); 
+  transform: matrix(1, -0.3, 0, 1, 0, 0);
+ }
+</style>
+<body>
+  <div class="translate">translate</div>
+  <div class="rotate">rotate</div>
+  <div class="scale">scale</div>
+  <div class="skewX">skewX</div>
+  <div class="skewY">skewY</div>
+  <div class="matrix">matrix</div>
+</body>
+</html>

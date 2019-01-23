@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    .box {
+        display:inline-block;
+        border-radius: 50%;
+        height: 180px;
+        width: 180px;
+        line-height: 180px;
+        margin-bottom: 30px;
+        text-align: center;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-weight: bolder;
+        font-size: 36px;
+        color:white;
+    }
+    .sun {
+        background: linear-gradient(35deg,#fa709a 10%,#fee140);
+    }
+    .moon {
+        background: linear-gradient(35deg,#cebcae 15%,#fdfbfa);
+    }
+    .pearl {
+        background: linear-gradient(35deg, rgb(211, 110, 127),rgb(248, 212, 212) 60%,rgb(243, 178, 189))
+    }
+    .metal {
+        background:radial-gradient(at 70% 30%,rgb(196, 195, 195),rgb(146, 145, 145) 15%, rgb(36, 36, 36) 60%,rgb(0, 0, 0) 90%);
+    }
+    .stripes {
+        background:linear-gradient(black 50%, white 50%);
+        background-size: 10px 10px;
+    }
+    a.box {
+        text-decoration: none;
+        transition:0.6s;
+    }
+    a:hover.box {
+        box-shadow: 0px 5px 10px -2px black;
+    }
+    .button {
+        border-radius: 15px;
+        height:45px;
+        width: 180px;
+        color:white;
+        line-height:45px;
+        font-size: 24px;
+
+    }
+    span.box.text {
+        line-height: 45px;
+        display:inline-block;
+        height:45px;
+        color:transparent;
+        -webkit-background-clip: text;
+    }
+    </style>
+</head>
+<body>
+    <div class="box sun">sun</div>
+    <div class="box moon">moon</div>
+    <div class="box pearl">pearl</div>
+    <div class="box metal">metal</div>
+    <div class="box stripes">stripes</div>
+    <a class="box sun button" href="" role="button">sun</a>
+    <a class="box moon button" href="" role="button">Button</a>
+    <a class="box pearl button" href="" role="button">Button</a>
+    <a class="box metal button" href="" role="button">Button</a>
+    <a class="box stripes button" href="" role="button">stripes</a>
+    <span class="box sun text">sun</span>
+    <span class="box moon text">Text</span>
+    <span class="box pearl text">Text</span>
+    <span class="box metal text">Text</span>
+    <span class="box stripes text">stripes</span>
+</body>
+</html>

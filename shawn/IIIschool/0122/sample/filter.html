@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+  <meta charset="UTF-8">
+  <title>Filter</title>
+</head>
+<style>
+  img{
+    transition: all .5s;
+    width:200px;
+  }
+  .blur:hover{
+    -webkit-filter: blur(5px); 
+    filter: blur(5px);
+  }
+  .brightness:hover{
+    -webkit-filter: brightness(200%); /* Safari */
+    filter: brightness(200%);
+  }
+  .contrast:hover {
+    -webkit-filter: contrast(200%); /* Safari */
+    filter: contrast(200%);
+  }
+  .drop-shadow:hover {
+    -webkit-filter: drop-shadow(2px 2px 5px #8B49D5); /* Safari */
+    filter: drop-shadow(2px 2px 5px #8B49D5);
+  }
+  .grayscale:hover {
+    -webkit-filter: grayscale(50%); /* Safari */
+    filter: grayscale(50%);
+  }
+  .hue-rotate:hover {
+    -webkit-filter: hue-rotate(180deg); /* Safari */
+    filter: hue-rotate(180deg);
+  }
+  .invert:hover{
+    -webkit-filter: invert(100%); /* Safari */
+    filter: invert(100%);
+  }
+  .opacity:hover {
+    -webkit-filter: opacity(30%); /* Safari */
+    filter: opacity(30%);
+  }
+  .saturate:hover {
+    -webkit-filter: saturate(800%); /* Safari */
+    filter: saturate(800%);
+  }
+  .sepia:hover {
+    -webkit-filter: sepia(100%); /* Safari */
+    filter: sepia(100%);
+  }
+</style>
+<body>
+  <img class="blur" src="images/ironman.jpg" alt="">
+  <img class="brightness" src="images/ironman.jpg" alt="">
+  <img class="contrast" src="images/ironman.jpg" alt="">
+  <img class="drop-shadow" src="images/ironman.jpg" alt="">
+  <img class="grayscale" src="images/ironman.jpg" alt="">
+  <img class="hue-rotate" src="images/ironman.jpg" alt="">
+  <img class="invert" src="images/ironman.jpg" alt="">
+  <img class="opacity" src="images/ironman.jpg" alt="">
+  <img class="saturate" src="images/ironman.jpg" alt="">
+  <img class="sepia" src="images/ironman.jpg" alt="">
+</body>
+</html>

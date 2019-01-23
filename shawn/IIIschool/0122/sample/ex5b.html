@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+  <meta charset="UTF-8">
+  <title>Transition</title>
+</head>
+<style>
+body{
+  margin:50px;
+  background: #aaa;
+}
+ img{
+  height:180px;
+  transition: transform 1s;
+  margin: 0 10px;
+ }
+ .rotate{
+  transition-timing-function: cubic-bezier(.22,-0.54,.88,1.59);
+  transform-origin: center top;
+ }
+ .rotate:hover{
+    transform: rotate(-15deg);
+ }
+
+ 
+</style>
+<body>
+  <img class="rotate" src="images/clothes.png" alt="">
+  <img class="rotate" src="images/clothes2.png" alt="">
+  <img class="rotate" src="images/clothes3.png" alt="">
+</body>
+</html>
