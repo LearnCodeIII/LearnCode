@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Flex box</title>
+    <style>
+        .wrapper {
+            background-color: #eee;
+            max-width: 960px;
+            height: 500px;
+            margin: 10px auto;
+            display: flex;
+        }
+
+        .box {
+            background-color: lightblue;
+            width: 150px;
+            height: 150px;
+            margin: 10px;
+            border-radius: 50%;
+        }
+
+        /* flex-derection */
+        .row {
+            flex-direction: row;
+        }
+
+        .row-reverse {
+            flex-direction: row-reverse;
+        }
+
+        .column {
+            flex-direction: column;
+        }
+
+        .column-reverse {
+            flex-direction: column-reverse;
+        }
+
+        /* flex-grow */
+        .box2 {
+            background-color: lightblue;
+            width: 150px;
+            height: 150px;
+            margin: 10px;
+        }
+
+        .box2-1 {
+            flex-grow: 1
+        }
+
+        .box2-2 {
+            flex-grow: 2
+        }
+
+        /* flex-shrink */
+        .box3 {
+            background-color: lightblue;
+            width: 250px;
+            height: 150px;
+            margin: 10px;
+        }
+
+        .box3-1 {
+            flex-shrink: 3;
+        }
+
+        /* flex-basis */
+        .box4 {
+            background-color: lightblue;
+            width: 250px;
+            height: 150px;
+            margin: 10px;
+        }
+
+        .box4-1 {
+            flex-basis: 150px;
+        }
+
+        /* justify-content */
+        .justify-content-start {
+            display: flex;
+            justify-content: flex-start;
+        }
+
+        .justify-content-end {
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        .justify-content-center {
+            display: flex;
+            justify-content: center;
+        }
+
+        .justify-content-around {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .justify-content-between {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .justify-content-evenly {
+            display: flex;
+            justify-content: space-evenly;
+        }
+
+        .box5 {
+            background-color: lightblue;
+            width: 250px;
+            height: 150px;
+            margin: 10px;
+        }
+
+        .box5-1 {
+            flex-basis: 150px;
+        }
+
+        /* align-items */
+        .align-items-stretch {
+            align-items: stretch;
+        }
+
+        .box6 {
+            background-color: lightblue;
+            width: 250px;
+            /* height: 150px; */
+            margin: 10px;
+        }
+
+        .box6-1 {
+            flex-basis: 150px;
+        }
+
+        /* align-content */
+        .align-content-center {
+            align-content: center;
+            flex-wrap: wrap;
+        }
+
+        .box7 {
+            background-color: lightblue;
+            width: 250px;
+            height: 150px;
+            margin: 10px;
+        }
+
+        .box7-1 {
+            flex-basis: 150px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper row">row
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+    </div>
+    <div class="wrapper row-reverse">row-reverse
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+    </div>
+    <div class="wrapper column">column
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+    </div>
+    <div class="wrapper column-reverse">column-reverse
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+    </div>
+
+    <!-- flex-grow把剩餘的空間給指定區域 -->
+    <div class="wrapper">
+        <div class="box2 box2-1">1</div>
+        <div class="box2 box2-1">2</div>
+        <div class="box2 box2-1">3</div>
+        <div class="box2 box2-1">4</div>
+        <div class="box2 box2-1">5</div>
+    </div>
+    <div class="wrapper">
+        <div class="box2 box2-1">1</div>
+        <div class="box2">2</div>
+        <div class="box2">3</div>
+    </div>
+    <div class="wrapper">
+        <div class="box2 box2-1">1</div>
+        <div class="box2 box2-2">2</div>
+        <div class="box2 box2-3">3</div>
+    </div>
+
+    <!-- flex-shrink把用不夠的空間給指定區域縮小 -->
+    <div class="wrapper">
+        <div class="box3 box3-1">1</div>
+        <div class="box3">2</div>
+        <div class="box3">3</div>
+        <div class="box3">4</div>
+        <div class="box3">5</div>
+    </div>
+
+    <!-- flex-basis就是複寫width -->
+    <div class="wrapper">
+        <div class="box4 box4-1">1</div>
+        <div class="box4">2</div>
+        <div class="box4">3</div>
+    </div>
+
+    <!-- justify-content -->
+    <div class="wrapper justify-content-start">
+        <div class="box5 box5-1">1</div>
+        <div class="box5">2</div>
+        <div class="box5">3</div>
+    </div>
+    <div class="wrapper justify-content-end">
+        <div class="box5 box5-1">1</div>
+        <div class="box5">2</div>
+        <div class="box5">3</div>
+    </div>
+    <div class="wrapper justify-content-center">
+        <div class="box5 box5-1">1</div>
+        <div class="box5">2</div>
+        <div class="box5">3</div>
+    </div>
+    <div class="wrapper justify-content-around">
+        <div class="box5 box5-1">1</div>
+        <div class="box5">2</div>
+        <div class="box5">3</div>
+    </div>
+    <div class="wrapper justify-content-between">
+        <div class="box5 box5-1">1</div>
+        <div class="box5">2</div>
+        <div class="box5">3</div>
+    </div>
+    <!-- evenly是new的~可完全平均分配剩餘空間 -->
+    <div class="wrapper justify-content-evenly">
+        <div class="box5 box5-1">1</div>
+        <div class="box5">2</div>
+        <div class="box5">3</div>
+    </div>
+
+    <!-- align-items -->
+
+    <!-- stretch是預設屬性,他會把wrapper裡的全部元素高度都撐到一樣高,而且是填滿整個高度 -->
+    <div class="wrapper justify-content-center align-items-stretch">
+        <div class="box6 box6-1">1</div>
+        <div class="box6">2</div>
+        <div class="box6">3</div>
+    </div>
+
+    <!-- align-content要與flex wrap一起才會有作用,另外若align-items狀態是預設(stretch),也會沒有空間給align-content排 -->
+    <div class="wrapper justify-content-center align-content-center">
+        <div class="box7 box7-1">1</div>
+        <div class="box7">2</div>
+        <div class="box7">3</div>
+        <div class="box7">4</div>
+        <div class="box7 box7-1">5</div>
+        <div class="box7">6</div>
+        <div class="box7 box7-1">7</div>
+    </div>
+    <!-- order是對個別元素做設置,設定完若有元素沒設置,有設定為正數的,會先往沒設定的元素後排,負數則往沒設定的元素前排. 若是全部都有設置,則參照數字大小作排列. -->
+
+    <!-- align-self也是對個別人元素做設置,但不是順序,是對其方式,屬性內容與align-items一樣,只是每次只更動一項元素. -->
+    </div>
+</body>
+
+</html>
