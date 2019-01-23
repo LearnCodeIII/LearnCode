@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC" rel="stylesheet">
+
+    <title>Document</title>
+    <style>
+    .wrapper {
+        width:640px;
+        height: 400px;
+        position: relative;
+        color:white;
+        overflow: hidden;
+        
+    }
+    .scene {
+        width:640px;
+        height: 400px;
+        background:url('./images/slide1.jpeg') no-repeat center center;
+        background-size:cover;
+        opacity:1;
+        transition: .5s;
+    }
+    .wrapper .title {
+        color:white;
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%,150%);
+        bottom: 0;
+        text-align: center;
+        opacity: 0.7;
+        transition: .5s;
+        z-index: 9;
+        background:linear-gradient(to top,black,rgba(0, 0, 0, 0));
+        display:block;
+        width:100%;
+    }
+    .wrapper:hover .title {
+        color:white;
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%,0%);
+        bottom: 0;
+        text-align: center;
+        opacity: 0.7;
+        transition: .5s;
+        z-index: 9;
+        background:linear-gradient(to top,black,rgba(0, 0, 0, 0));
+        display:block;
+        width:100%;
+    }
+    .wrapper:hover .scene{
+        opacity:0.8;
+    }
+    .wrapper:hover .title{
+        opacity:1;
+    }
+    h1 {
+        margin: 0;
+    }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="scene"></div>
+        <h1 class="title">遠雄大飯店</h1>
+    </div>
+</body>
+</html>

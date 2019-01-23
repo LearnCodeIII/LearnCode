@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+  <meta charset="UTF-8">
+  <title>Media Query</title>
+</head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0; " />
+<link rel="stylesheet" href="css/reset.css">
+<style>
+body{
+  background: lightblue;
+}
+header{
+  height:160px;
+  display: flex;
+  display: -webkit-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: url(images/earth.jpg) center center no-repeat;
+  background-size: cover;
+}
+.wrapper{
+  margin: 0 auto;
+  width:96%;
+}
+.logo{
+  max-height:84px;
+}
+.box{
+  box-shadow:0 0 3px #666;
+  background: #fff;
+}
+.round_corner{
+  border-radius:4px;
+  overflow: hidden;
+}
+.transition{
+  transition: all .5s;
+  -webkit-transition: all .5s;
+}
+.box_con{
+  padding:20px;
+}
+nav{
+  margin-bottom: 20px;
+}
+nav ul li{
+  float:left;
+  width:33.33%;
+  box-sizing:border-box;
+}
+nav ul li a{
+  display: block;
+  text-align: center;
+  padding:12px 0;
+  cursor: pointer;
+}
+nav ul li a:hover{
+  background: gainsboro;
+}
+article, aside{
+  margin-bottom: 20px;
+}
+article figure{
+  padding:40px 0;
+  text-align: center;
+}
+aside li{
+  display: flex;
+  display: -webkit-flex;
+  align-items: center;
+  position: relative;
+  padding:6px 6px 6px 58px;
+  height: 48px;
+}
+aside li:hover{
+  background: gainsboro;
+}
+aside li figure{
+  position: absolute;
+  left:6px;
+  top:6px;
+  width:48px;
+  height: 48px;
+  overflow: hidden;
+}
+aside li figure img{
+  width:100%;
+  height:100%;
+  object-fit: cover;
+}
+.intro{
+  display: flex;
+}
+.intro>li{
+  flex: 1;
+  align-items: center;
+  text-align: center;
+  color:#999;
+  font-size: 13px;
+}
+.intro>li div{
+  height: 40px;
+  color:#000;
+}
+.intro>li div h4{
+  font-size: 21px;
+}
+.intro>li div span{
+  display: inline-block;
+  padding:2px 8px;
+  text-align: center;
+  min-width: 48px;
+}
+.main{
+
+}
+footer{
+  padding:10px 0;
+  height:40px;
+  text-align: center;
+}
+@media screen and (min-width: 1024px){
+  header{
+    text-align: left;
+  }
+  nav ul{
+    border-left:1px solid #ccc;
+  }
+  nav ul li{
+    border-right:1px solid #ccc;
+    width:auto;
+  }
+  nav ul li a{
+    padding:12px 18px;
+  }
+  .wrapper{
+    width: 960px;
+  }
+  article{
+    float:left;
+    width:66%;
+  }
+  aside{
+    width:30%;
+    float:right;
+  }
+}
+</style>
+<body>
+  <header>
+    <div class="wrapper">
+      <img src="images/logo.png" class="logo" alt="Pokemon">
+    </div>
+  </header>
+  <nav class="box">
+    <ul class="clearfix wrapper">
+      <li><a class="transition">Home</a></li>
+      <li><a class="transition">Pokemon</a></li>
+      <li><a class="transition">Map</a></li>
+    </ul>
+  </nav>
+  <section class="wrapper main clearfix">
+    <article class="">
+      <section class="box round_corner box_con">
+        <h2>皮卡丘</h2>
+        <figure>
+          <img src="images/25.png" alt="皮卡丘">
+        </figure>
+        <ul class="intro">
+          <li>
+            <div class="types">
+              <span style="background:gold; border:1px solid saddlebrown">電</span>
+            </div>
+            Type
+          </li>
+          <li>
+            <div>
+              <h4>6 kg</h4>
+            </div>
+            Weight
+          </li>
+          <li>
+            <div>
+              <h4>0.4 m</h4>
+            </div>
+            Height
+          </li>
+        </ul>
+      </section>
+    </article>
+    <aside>
+      <ul class="box round_corner">
+        <li class="transition">
+          <figure>
+            <img src="images/1.png" alt="妙蛙種子">
+          </figure>
+          妙蛙種子
+        </li>
+        <li class="transition">
+          <figure>
+            <img src="images/4.png" alt="小火龍">
+          </figure>
+          妙蛙種子
+        </li>
+        <li class="transition">
+          <figure>
+            <img src="images/7.png" alt="傑尼龜">
+          </figure>
+          妙蛙種子
+        </li>
+      </ul>
+    </aside>
+  </section>
+  <footer>
+    Pokemon Information
+  </footer>
+</body>
+</html>

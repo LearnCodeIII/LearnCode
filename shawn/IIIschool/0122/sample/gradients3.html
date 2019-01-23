@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+  <meta charset="UTF-8">
+  <title>Gradients</title>
+</head>
+<style>
+  *{
+    margin:0;
+    padding:0;
+  }
+  div{
+    width:20vw;
+    height:20vw;
+  }
+  .check{
+    background: white;
+    background-image: linear-gradient(90deg, rgba(197,77,153,.5) 50%, transparent 0),
+      linear-gradient(rgba(197,77,153,.5) 50%, transparent 0);
+    background-size: 40px 40px;
+  }
+  .check2{
+    background: white;
+    background-image: linear-gradient(90deg, transparent 20%, rgba(197,77,153,.5) 0, rgba(197,77,153,.5) 28%, transparent 0, transparent 36%, rgba(197,77,153,.5) 36%, rgba(197,77,153,.5) 64%, transparent 64%,transparent 72%, rgba(197,77,153,.5) 72%, rgba(197,77,153,.5) 80%, transparent 0), linear-gradient(transparent 20%, rgba(197,77,153,.5) 0, rgba(197,77,153,.5) 28%, transparent 0, transparent 36%, rgba(197,77,153,.5) 36%, rgba(197,77,153,.5) 64%, transparent 64%,transparent 72%, rgba(197,77,153,.5) 72%, rgba(197,77,153,.5) 80%, transparent 0);
+    background-size: 60px 60px;
+  }
+</style>
+<body>
+  <div class="check"></div>
+  <div class="check2"></div>
+</body>
+</html>

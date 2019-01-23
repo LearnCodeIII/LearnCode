@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+  <meta charset="UTF-8">
+  <title>Background Size</title>
+</head>
+<style>
+  .bg{
+    height:400px;
+    max-width: 800px;
+    margin:0 auto;
+    background-image: url(images/uniform.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 300px auto;
+  }
+  .bg2{
+    height:400px;
+    max-width: 800px;
+    margin:0 auto;
+    background: url(images/jk.png) center center no-repeat, url(images/uniform.png) center center repeat;
+    background-size: auto 120px, auto;
+  }
+  .bg_orin{
+    height:200px;
+    max-width: 400px;
+    background: url(images/uniform.png) center center no-repeat;
+    margin: 20px auto;
+    border:2px solid #aaa;
+  }
+  .bg_contain{
+    background-size: contain;
+  }
+  .bg_cover{
+    background-size: cover;
+  }
+</style>
+<body>
+  <div class="bg"></div>
+  <div class="bg2"></div>
+  <div class="bg_orin"></div>
+  <div class="bg_orin bg_contain"></div>
+  <div class="bg_orin bg_cover"></div>
+</body>
+</html>

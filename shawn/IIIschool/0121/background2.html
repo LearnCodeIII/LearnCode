@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 260px;
+            height: 260px;
+            background:url('./images/check.jpg') no-repeat;
+            margin:20px;
+            border:10px dashed gray;
+            color:white;
+            font-family: verdana;
+            font-size: 20px;
+            padding:20px;
+        }
+        .border {
+            background-origin: border-box;
+        }
+        .content {
+            background-origin: content-box;
+        }
+        .padding {
+            background-origin: padding-box;
+        }
+    </style>
+</head>
+<body>
+    <div class="box border">border</div>
+    <div class="box content">content</div>
+    <div class="box padding">padding</div>
+</body>
+</html>

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+  <meta charset="UTF-8">
+  <title>Animation</title>
+</head>
+<style>
+  @keyframes animation {
+    from {background: red;}
+    to {background: blue;}
+  }
+  @keyframes animation2 {
+    0% {background: red;}
+    50% {background: blue;}
+    100% {background: red;}
+  }
+  .clear{
+    float:none;
+    clear:both;
+  }
+  div.box{
+    width:160px;
+    height:160px;
+    padding:20px;
+    text-align: center;
+    margin:0 20px 20px;
+    color:#fff;
+    float:left;
+  }
+  .ani1{
+    background:red;
+    animation-name: animation;
+    animation-duration: 2s;
+  }
+  .ani2{
+    background:red;
+    animation-name: animation2;
+    animation-duration: 2s;
+  }
+  .ani3{
+    background:red;
+    animation-name: animation2;
+    animation-duration: 2s;
+    animation-delay:1s;
+  }
+  .ani4{
+    background:red;
+    animation-name: animation;
+    animation-duration: 2s;
+    animation-direction:normal;
+    -webkit-animation-direction:normal;
+  }
+  .ani4b{
+    background:red;
+    animation-name: animation;
+    animation-duration: 2s;
+    animation-direction:reverse;
+    -webkit-animation-direction:reverse;
+  }
+  .ani5{
+    background:red;
+    animation-name: animation;
+    animation-duration: 2s;
+    animation-fill-mode:forwards;
+    -webkit-animation-fill-mode:forwards;
+  }
+  .ani5b{
+    background:red;
+    animation-name: animation;
+    animation-duration: 2s;
+    animation-fill-mode:backwards;
+    -webkit-animation-fill-mode:backwards;
+  }
+  .ani5c{
+    background:red;
+    animation-name: animation;
+    animation-duration: 2s;
+    animation-fill-mode:both;
+    -webkit-animation-fill-mode:both;
+  }
+  .ani6{
+    background:red;
+    animation-name: animation2;
+    animation-duration: 2s;
+    animation-timing-function:linear;
+    -webkit-animation-timing-function:linear;
+    animation-iteration-count: infinite;
+    -webkit-animation-iteration-count: infinite;
+  }
+  .ani6b{
+    background:red;
+    animation-name: animation2;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    -webkit-animation-iteration-count: infinite;
+  }
+  .ani6c{
+    background:red;
+    animation-name: animation2;
+    animation-duration: 2s;
+    animation-timing-function:ease-in;
+    -webkit-animation-timing-function:ease-in;
+    animation-iteration-count: infinite;
+    -webkit-animation-iteration-count: infinite;
+  }
+  .ani6d{
+    background:red;
+    animation-name: animation2;
+    animation-duration: 2s;
+    animation-timing-function:step-start;
+    -webkit-animation-timing-function:step-start;
+    animation-iteration-count: infinite;
+    -webkit-animation-iteration-count: infinite;
+  }
+  .ani6e{
+    background:red;
+    animation-name: animation2;
+    animation-duration: 2s;
+    animation-timing-function:step-end;
+    -webkit-animation-timing-function:step-end;
+    animation-iteration-count: infinite;
+    -webkit-animation-iteration-count: infinite;
+  }
+  .ani6f{
+    background:red;
+    animation-name: animation2;
+    animation-duration: 2s;
+    animation-timing-function:steps(2);
+    -webkit-animation-timing-function:steps(2);
+    animation-iteration-count: infinite;
+    -webkit-animation-iteration-count: infinite;
+  }
+</style>
+<body>
+   <div class="ani1 box"></div>
+   <div class="ani2 box"></div>
+   <div class="clear"></div>
+   <h2>Delay</h2>
+   <div class="ani3 box">delay: 1s</div>
+   <div class="clear"></div>
+   <h2>Direction</h2>
+   <div class="ani4 box">direction normal</div>
+   <div class="ani4b box">direction reverse</div>
+   <div class="clear"></div>
+   <h2>Fill Mode</h2>
+   <div class="ani5 box">fill mode forwards</div>
+   <div class="ani5b box">fill mode backwards</div>
+   <div class="ani5c box">fill mode both</div>
+   <div class="clear"></div>
+   <h2>Timing Function</h2>
+   <div class="ani6 box">timing function linear</div>
+   <div class="ani6b box">timing function ease</div>
+   <div class="ani6c box">timing function ease-in</div>
+   <div class="ani6d box">timing function step-start</div>
+   <div class="ani6e box">timing function step-end</div>
+   <div class="ani6f box">timing function steps(2)</div>
+</body>
+</html>

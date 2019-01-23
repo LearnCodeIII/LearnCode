@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+  <meta charset="UTF-8">
+  <title>Background Clip</title>
+</head>
+<style>
+  .bg_text{
+    font-family: Arial, "微軟正黑體", sans-serif;
+    color: rgba(255, 255, 255, 0);
+    background: linear-gradient(135deg, #fb83fa 0%, #31bcb8 100%);
+    background-clip: text;
+    display: inline-block;
+    margin: 10 px;
+    padding:10px;
+    border: 1px solid transparent;
+    border-image: linear-gradient(135deg, #fb83fa 0%, #31bcb8 100%) 1 round;
+  }
+</style>
+<body>
+  <h1 class="bg_text">Hello World!</h1>
+</body>
+</html>

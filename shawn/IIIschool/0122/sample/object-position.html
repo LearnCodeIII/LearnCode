@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+  <meta charset="UTF-8">
+  <title>Object Position</title>
+  <style>
+  .box{
+    width:300px;
+    height:300px;
+    border:3px solid #ccc;
+    margin-bottom:20px;
+    float:left;
+    text-align: center;
+  }
+  img{
+    width:200px;
+    height:100%;
+  }
+    .fill{
+      object-fit: fill;
+    }
+    .contain{
+      object-fit:contain;
+      object-position: left top;
+    }
+  .cover{
+    object-fit:cover;
+    object-position: right bottom;
+  }
+    .none{
+      object-fit:none;
+      object-position: left top;
+    }
+  </style>
+</head>
+
+<body>
+  <figure class="box">
+    <img class="fill" src="images/dr_strange.jpg" alt="Dr. Strange">
+    <figcaption>fill</figcaption>
+  </figure>
+  <figure class="box">
+    <img class="contain" src="images/dr_strange.jpg" alt="Dr. Strange">
+    <figcaption>contain</figcaption>
+  </figure>
+  <figure class="box">
+    <img class="cover" src="images/dr_strange.jpg" alt="Dr. Strange">
+    <figcaption>cover</figcaption>
+  </figure>
+  <figure class="box">
+    <img class="none" src="images/dr_strange.jpg" alt="Dr. Strange">
+    <figcaption>none</figcaption>
+  </figure>
+</body>
+</html>

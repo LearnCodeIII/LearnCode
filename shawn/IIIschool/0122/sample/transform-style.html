@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+  <meta charset="UTF-8">
+  <title>Transform Style</title>
+</head>
+<style>
+body{
+  margin:50px;
+}
+.container{
+  perspective: 2000px;
+}
+.transition{
+  transition:all .5s;
+  -webkit-transition:all .5s;
+}
+ div.box{
+  text-align: center;
+  padding:20px;
+  float: left;
+  margin:0 20px 20px 0;
+  transition: all 2s;
+  -webkit-transition: all 2s;
+  
+ }
+ div.style_3d{
+  transform:rotateX(20deg);
+  -webkit-transform:rotateX(20deg);
+  transform-style:preserve-3d;
+ }
+ div.style_3d:hover img{
+  transform:rotateY(60deg);
+  -webkit-transform:rotateY(60deg);
+ }
+ div.style_flat{
+  transform:rotateX(20deg);
+  -webkit-transform:rotateX(20deg);
+  transform-style:flat;
+ }
+ div.style_flat:hover img{
+  transform:rotateY(60deg);
+  -webkit-transform:rotateY(60deg);
+ }
+</style>
+<body>
+  <div class="container">
+    <div class="translatex style_3d box">
+      <img class="transition" src="images/dr_strange.jpg" alt="">
+    </div>
+    <div class="translatey style_flat box">
+      <img class="transition" src="images/dr_strange.jpg" alt="">
+    </div>
+  </div>
+</body>
+</html>

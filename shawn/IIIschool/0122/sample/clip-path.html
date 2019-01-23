@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Clip-path</title>
+  <style>
+  .box{
+    width:300px;
+    height:300px;
+    background:url(images/ironman.jpg);
+    background-size: cover;
+    margin: 20px;
+  }
+  .circle{
+    clip-path:circle(50% at 50% 50%);
+  }
+  .ellipse{
+    clip-path:ellipse(25% 50% at 50% 50%);
+  }
+  .inset{
+    clip-path:inset(5px 10px 20px 30px round 10% 20% 30% 50%);
+  }
+  .triangle{
+    clip-path:polygon(0% 100%, 50%  0%,100% 100%);
+  }
+  .diamond{
+    clip-path:polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+  }
+  .container{
+    position: relative;
+    height: 500px;
+  }
+  .container .box{
+    transition:all .5s;
+    position: absolute;
+
+  }
+  .container .diamond{
+    clip-path:polygon(50% 10%, 90% 50%, 50% 90%, 10% 50%);
+  }
+  .container .diamond:hover{
+    clip-path:polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+  }
+  .diamond2{
+    left:160px;
+    top:160px;
+    background: url(images/dr_strange.jpg);
+    background-size: cover;
+  }
+  .diamond3{
+    left:320px;
+    background: url(images/dr_fate.jpg);
+    background-size: cover;
+  }
+  </style>
+</head>
+<body>
+  <div class="box circle">
+    
+  </div>
+  <div class="box ellipse">
+    
+  </div>
+  <div class="box inset">
+    
+  </div>
+  <div class="box triangle">
+    
+  </div>
+  <div class="box diamond"></div>
+  <div class="container">
+    <div class="box diamond"></div>
+    <div class="box diamond diamond2"></div>
+    <div class="box diamond diamond3"></div>
+  </div>
+</body>
+</html>

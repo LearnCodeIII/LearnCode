@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+  <meta charset="UTF-8">
+  <title>Color</title>
+</head>
+<style>
+.color{
+  padding:20px;
+  text-align: center;
+}
+.color.c20{
+  background: rgba(255, 0, 0, 0.2);
+  color: rgba(255,255,255,1);
+}
+.color.c40{
+  background: rgba(255, 0, 0, 0.4);
+  color: rgba(255,255,255,0.8);
+}
+.color.c60{
+  background: rgba(255, 0, 0, 0.6);
+  color: rgba(255,255,255,0.4);
+}
+.color.h25{
+  background: hsla(255, 50%, 50%, 0.6);
+  color:hsla(120, 100%, 60%, .9);
+}
+.color.hover{
+  color:#fff;
+  background: rgba(255, 0, 0, 0.2);
+}
+.color.hover:hover{
+  background: rgba(255, 0, 0, 0.5);
+}
+.color.hover:active{
+  background: rgba(255, 0, 0, 1);
+}
+.opbg{
+  float: left;
+  width:50%;
+  height:300px;
+}
+.bg_100{
+  background: url(images/uniform.png);
+}
+.bg_50{
+  background: url(images/uniform.png);
+  opacity: .5
+}
+</style>
+<body>
+  <h2>RGBA</h2>
+  <div class="color c20">background:20%, text: 100%</div>
+  <div class="color c40">background:40%, text: 80%</div>
+  <div class="color c60">background:60%, text: 60%</div>
+  <h2>HSL</h2>
+  <div class="color h25">background: hsla(255, 50%, 50%, 0.6), color: hsla(120, 100%, 60%, .9) </div>
+  <h2>Hover</h2>
+  <div class="color hover"></div>
+  <h2>Opacity</h2>
+  <div class="opbg bg_100"></div>
+  <div class="opbg bg_50"></div>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+  <meta charset="UTF-8">
+  <title>Ex7</title>
+</head>
+<style>
+body{
+  margin:50px;
+  background: #aaa;
+}
+ img{
+  height:180px;
+  margin: 0 10px;
+  transform-origin: center top;
+ }
+@keyframes wave{
+  0%{-ms-transform: rotate(0deg); 
+    -webkit-transform: rotate(0deg); 
+    transform: rotate(0deg);}
+  50%{-ms-transform: rotate(-10deg); 
+    -webkit-transform: rotate(-10deg); 
+    transform: rotate(-10deg);}
+  100%{-ms-transform: rotate(0deg); 
+    -webkit-transform: rotate(0deg); 
+    transform: rotate(0deg);}
+}
+ .rotate:hover{
+  animation: wave .5s;
+  -webkit-animation: wave .5s;
+ }
+ 
+</style>
+<body>
+  <img class="rotate" src="images/clothes.png" alt="">
+  <img class="rotate" src="images/clothes2.png" alt="">
+  <img class="rotate" src="images/clothes3.png" alt="">
+</body>
+</html>

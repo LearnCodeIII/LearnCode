@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+  <meta charset="UTF-8">
+  <title>Cube</title>
+  <style>
+  .w1 {
+  perspective: 1000px;
+}
+.cube {
+  font-size: 50px;
+  width: 250px;
+  margin: 187.5px auto;
+  transform-style: preserve-3d;
+  transform: rotateX(-40deg) rotateY(45deg);
+}
+.cube:hover .front{
+  transform:                  translateZ(250px);
+}
+  .cube:hover .back{
+    transform:  rotateY(-180deg)  translateZ(250px);
+  }
+.side {
+  position: absolute;
+  width: 250px;
+  height: 250px;
+  background: rgba(229,126,184, .6);
+  border: 1px solid rgba(0,0,0,.5);
+  color: white; 
+  text-align: center;
+  line-height: 250px;
+  transition: all .5s;
+}
+
+.front  { transform:                  translateZ(125px); }
+.top    { transform: rotateX( 90deg)  translateZ(125px); }
+.right  { transform: rotateY( 90deg)  translateZ(125px); }
+.left   { transform: rotateY(-90deg)  translateZ(125px); }
+.bottom { transform: rotateX(-90deg)  translateZ(125px); }
+.back   { transform: rotateY(-180deg) translateZ(125px); }
+</style>
+</head>
+<body>
+  <div class="w1">
+  <div class="cube">
+    <div class="side front">1</div>
+    <div class="side back">6</div>
+    <div class="side right">4</div>
+    <div class="side left">3</div>
+    <div class="side top">5</div>
+    <div class="side bottom">2</div>
+  </div>
+  </div>
+</body>
+</html>

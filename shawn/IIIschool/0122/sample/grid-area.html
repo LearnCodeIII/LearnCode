@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+  <meta charset="UTF-8">
+  <title>Grid</title>
+</head>
+<style>
+  body{
+    margin: 0;
+    font-family: '微軟正黑體', Arial, sans-serif;
+  }
+  .container {
+    max-width:960px;
+    margin:0 auto;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 240px auto auto;
+    grid-template-areas: "header header header header"
+    "main main main sidebar"
+    "footer footer footer footer";
+  }
+  h1{
+    padding:0;
+    margin:0;
+    font-size: 2rem;
+  }
+  .grid-item div {
+    height: 100%;
+  }
+
+  header {
+    background: url(https://uniform.wingzero.tw/assets/images/japan-tohoku.jpg);
+    background-size: cover;
+    grid-area: header;
+  }
+
+  main {
+    grid-area: main;
+  }
+
+  aside {
+    grid-area: sidebar;
+  }
+
+  .footer {
+    border-top:1px solid #ccc;
+    padding:10px;
+    text-align: center;
+    grid-area: footer;
+  }
+</style>
+<body>
+<div class="container">
+  <header class="grid-item header">
+    <div></div>
+  </header>
+  <main class="grid-item main">
+    <div>
+      <h1>這是主要內容</h1>
+    </div>
+  </main>
+  <aside class="grid-item sidebar">
+    <div>sidebar</div>
+  </aside>
+  <footer class="grid-item footer">
+    <div>footer</div>
+  </footer>
+</div>
+</body>
+</html>

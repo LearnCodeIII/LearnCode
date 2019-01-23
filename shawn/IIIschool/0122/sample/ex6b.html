@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+  <meta charset="UTF-8">
+  <title>Ex6-2</title>
+  <link rel="stylesheet" href="css/reset.css">
+  <style>
+body{
+  margin:50px;
+}
+li{
+  float: left;
+  margin: 0 10px 10px 0;
+  background: #ffe2af;
+  box-shadow: 0 0 5px #666, 0 0 10px #d5bb8f inset;
+}
+.container{
+  perspective:2000px;
+}
+.inside{
+  transform: rotateX(60deg);
+  -webkit-transform: rotateX(60deg);
+  transition: all .5s;
+  -webkit-transition: all .5s;
+  width:600px;
+  margin:0 auto;
+}
+.inside:hover{
+  transform: rotateY(0deg);
+  -webkit-transform: rotateY(0deg);
+}
+.container figure{
+  width:150px;
+  /*height: 160px;
+  overflow: hidden;*/
+  padding:10px;
+  
+}
+figcaption{
+  padding: 4px 0 0;
+  text-align: center;
+  color: brown;
+}
+.container figure img{
+  width:100%;
+}
+</style>
+</head>
+
+<body>
+  <div class="container">
+    <ul class="inside clearfix">
+      <li>
+        <figure>
+          <img src="images/dr_strange.jpg" alt="">
+          <figcaption>Dr. Strange</figcaption>
+        </figure>
+      </li>
+      <li>
+        <figure>
+          <img src="images/dr_fate.jpg" alt="">
+          <figcaption>Dr. Fate</figcaption>
+        </figure>
+      </li>
+      <li>
+        <figure>
+          <img src="images/deadpool.jpg" alt="">
+          <figcaption>Deadpool</figcaption>
+        </figure>
+      </li>
+      <li>
+        <figure>
+          <img src="images/batman.jpg" alt="">
+          <figcaption>Batman</figcaption>
+        </figure>
+      </li>
+      <li>
+        <figure>
+          <img src="images/ironman.jpg" alt="">
+          <figcaption>Ironman</figcaption>
+        </figure>
+      </li>
+      <li>
+        <figure>
+          <img src="images/superman.jpg" alt="">
+          <figcaption>Superman</figcaption>
+        </figure>
+      </li>
+    </ul>
+    
+  </div>
+</body>
+</html>

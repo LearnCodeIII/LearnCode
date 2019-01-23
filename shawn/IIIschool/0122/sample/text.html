@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+  <meta charset="UTF-8">
+  <title>Text</title>
+</head>
+<style>
+h2{
+  text-align: center;
+}
+p{
+  max-width: 400px;
+  margin:10px auto;
+  border: 1px solid #ccc;
+  padding:10px;
+}
+.ellipsis{
+  text-overflow:ellipsis;
+  overflow : hidden;
+  white-space: nowrap;
+}
+.break-all{
+  word-break: break-all;
+}
+.keep-all{
+  word-break: keep-all;
+}
+.break-word{
+  word-wrap: break-word;
+}
+</style>
+<body>
+  <h2>Text Overflow</h2>
+  <p>
+    A uniform is a type of clothing worn by members of an organization while participating in that organization's activity. Modern uniforms are most often worn by armed forces and paramilitary organizations such as police, emergency services, security guards, in some workplaces and schools and by inmates in prisons.
+  </p>
+  <p class="ellipsis">
+    A uniform is a type of clothing worn by members of an organization while participating in that organization's activity. Modern uniforms are most often worn by armed forces and paramilitary organizations such as police, emergency services, security guards, in some workplaces and schools and by inmates in prisons.
+  </p>
+  <h2>Word Break</h2>
+  <p>
+    A uniform is a type of clothing worn by members of an organization while participating in that organization's activity. Modern uniforms are most often worn by armed forces and paramilitary organizations such as police, emergency services, security guards, in some workplaces and schools and by inmates in prisons.
+  </p>
+  <p class="break-all">
+    A uniform is a type of clothing worn by members of an organization while participating in that organization's activity. Modern uniforms are most often worn by armed forces and paramilitary organizations such as police, emergency services, security guards, in some workplaces and schools and by inmates in prisons.
+  </p>
+  <p class="keep-all">
+    A uniform is a type of clothing worn by members of an organization while participating in that organization's activity. Modern uniforms are most often worn by armed forces and paramilitary organizations such as police, emergency services, security guards, in some workplaces and schools and by inmates in prisons.
+  </p>
+  <h2>Word Wrap</h2>
+  <p>
+    A uniform is a type of clothing worn by members of an organization while participating in that organization's activity. Modern uniforms are most often worn by armed forces and paramilitary organizations such as police, emergency services, security guards, in some workplaces and schools and by inmates in prisons.
+  </p>
+  <p class="break-word">
+    A uniform is a type of clothing thisisaveryveryveryveryveryverylongwordthisisaveryveryveryveryveryverylongword worn by members of an organization while participating in that organization's activity. Modern uniforms are most often worn by armed forces and paramilitary organizations such as police, emergency services, security guards, in some workplaces and schools and by inmates in prisons.
+  </p>
+</body>
+</html>

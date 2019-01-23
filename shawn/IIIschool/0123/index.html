@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        html,body {
+            margin: 0;
+            padding: 0;
+        }
+    .wrap {
+        width: 100vw;
+        height: 100vh;
+        border:1px
+    }
+    .box {
+        opacity: 0.5;
+        width:100vw;
+        height:10vh;
+        background:yellow;
+        transition: 0.5s;
+        
+    }
+    .wrap:hover .box {
+        background:rgb(253, 145, 145);
+    }
+    .wrap:active .box {
+        width: 100px;
+        height: 100px;
+        background:rgb(177, 177, 253);
+    }
+    .transition {
+        transition: .5s .3s;
+    }
+    .linear {
+        transition: .5s linear .5s;
+    }
+    .ease-in {
+        transition: .5s ease-in .7s;
+    }
+    .cube1 {
+        transition: .5s cubic-bezier(.8,.27,.34,.68) .9s;
+    }
+    .cube2 {
+        transition: .5s cubic-bezier(.8,.27,.34,.68) 1.1s;
+    }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div class="box cover"></div>
+        <div class="box cover"></div>
+        <div class="box cover"></div>
+        <div class="box cover"></div>
+        <div class="box cover"></div>
+        <div class="box cover"></div>
+        <div class="box cover"></div>
+        <div class="box cover"></div>
+        <div class="box cover"></div>
+        <div class="box cover"></div>
+        <div class="box cover"></div>
+    </div>
+    <div class="wrap">
+        <div class="box transition"></div>
+        <div class="box linear"></div>
+        <div class="box ease-in"></div>
+        <div class="box cube1"></div>
+        <div class="box cube2"></div>
+    </div>
+</body>
+</html>
