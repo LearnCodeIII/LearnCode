@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .container{
+            width: 800px;
+            margin: 30px auto;
+        }
+        .progress_bg{
+            background: #eee;
+            border-radius: 4px;
+            overflow: hidden;
+        }
+        .progress_bar{
+            background: lightblue;
+            height: 20px;
+            width: 0%;
+            transition: .5s;
+        }
+        .progress_bg:hover .progress_bar{
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="progress_bg">
+            <div class="progress_bar"></div>
+        </div>
+    </div>
+</body>
+</html>

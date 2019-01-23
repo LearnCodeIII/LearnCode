@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>EX5</title>
+    <link href="https://fonts.googleapis.com/css?family=Satisfy" rel="stylesheet">
+    <style>
+        body {
+            background-color: #aaa;
+        }
+
+        .bg {
+            border-radius: 10px;
+            background-color: white;
+            width: 330px;
+            height: 540px;
+            margin: 20px auto;
+            box-shadow: 1px 1px 15px black;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .transition {
+            transition: .5s;
+        }
+
+        .banner {
+            height: 180px;
+            background: url(images/light.jpg)no-repeat center center;
+            background-size: cover;
+        }
+
+        .radious {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin: 20px auto;
+            /* margin-top: -100px; */
+            position: absolute;
+            top: 50px;
+            left: 50%;
+            margin-left: -90px;
+        }
+
+        .radious img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center top;
+        }
+
+        .bg:hover .radious img {
+            transform: scale(1.05);
+        }
+
+        .bg:hover .word1 {
+            letter-spacing: 6px;
+            /* text-indent就是文章縮排用的那個,可以修正letter spacing的位移 */
+            text-indent: 6px;
+        }
+
+        .bg:hover {
+            transform: translate(0, -4px);
+            box-shadow: 1px 3px 25px black;
+        }
+
+        .word {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .yo {
+            margin: 0 auto;
+            padding: 60px 20px 40px 20px;
+            border: 13px solid transparent;
+            border-image: url(images/border-image2.png) 14 round;
+        }
+
+        .word1 {
+            font-family: 'Satisfy', cursive;
+            font-weight: 900;
+            text-align: center;
+            border-bottom: 1px solid #ccc;
+            line-height: 3;
+            letter-spacing: 1px;
+        }
+
+        .word2 {
+            font-weight: 500;
+            text-align: center;
+            color: #aaa;
+        }
+
+        a,
+        .button {
+            display: block;
+            font-size: 20px;
+            font-weight: 500;
+            background: linear-gradient(to bottom, rgb(251, 35, 186), rgb(173, 0, 173));
+            padding: 10px;
+            border-radius: 10px;
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+            text-decoration: none;
+            text-align: center;
+        }
+        a,
+        .button2 {
+            display: block;
+            font-size: 20px;
+            font-weight: 500;
+            background: linear-gradient(to bottom, rgb(251, 35, 186), rgb(173, 0, 173));
+            padding: 10px;
+            border-radius: 10px;
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+            text-decoration: none;
+            text-align: center;
+        }
+
+        a,.button:hover{
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="bg transition">
+        <div class="banner">
+
+        </div>
+        <figure class="radious">
+            <img class="transition" src="images/dr-strange.jpg" alt="">
+        </figure>
+
+        <div class="yo ">
+            <h2 class="word word1 transition">Dr. Strange</h2>
+            <h2 class="word word2">Hello, I am Steve Strage !</h2>
+            <a href="" class="button">Follow Me</a>
+            <a href="" class="button2">Follow Me</a>
+        </div>
+
+
+    </div>
+</body>
+
+</html>

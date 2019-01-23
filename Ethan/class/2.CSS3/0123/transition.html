@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Transition</title>
+    <style>
+        .box {
+            width: 200px;
+            height: 120px;
+            background-color: lightblue;
+            transition: .5s;
+            margin: 10px;
+        }
+
+        .transition {
+            transition: .5s;
+        }
+
+        .linear {
+            transition: .5s linear;
+            transition-delay: 0.4s;
+        }
+
+        .ease-in {
+            transition: .5s ease-in;
+            transition-delay: 0.8s;
+        }
+
+        .ease-out {
+            transition: .5s ease-out;
+            transition-delay: 1.2s;
+        }
+
+        .times {
+            transition: .5s cubic-bezier(0,.99,1,-0.01);
+            transition-delay: 1.6s;
+        }
+
+        .times2 {
+            transition: .5s cubic-bezier(0, -1.38, .7, 1.93);
+            transition-delay: 2s;
+        }
+        .Multiple {
+            transition:width .5s cubic-bezier(0, -1.38, .7, 1.93),background .5s .5s,height .5s .5s ;
+        }
+
+        .wrap:hover .box {
+            background-color: pink;
+            width: 500px;
+            height: 300px;
+        }
+
+        .box:active {
+            background-color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="box transition">transition</div>
+        <div class="box linear">linear</div>
+        <div class="box ease-in">ease-in</div>
+        <div class="box ease-out">ease-out</div>
+        <div class="box times">times</div>
+        <div class="box times2">times2</div>
+        <div class="box Multiple">Multiple</div>
+    </div>
+</body>
+
+</html>

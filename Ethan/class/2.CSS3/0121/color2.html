@@ -12,6 +12,7 @@
             width: 640px;
             position: relative;
             margin: 0 auto;
+            overflow: hidden;
         }
         
         .word {
@@ -19,15 +20,15 @@
             font-size: 30px;
             font-weight: 900;
             color: #000;
-            opacity: .5;
             position: absolute;
             bottom: 0;
+            transform: translateY(50px);
             left: 50px;
             margin-left: -50px;
             font-weight: 900;
             transition: .5s;
             z-index: 10;
-            background: linear-gradient(to bottom,rgba(0,0,0,0),rgba(0,0,0,1));
+            background: rgba(0, 0, 0, .5)
             padding: 15px 0;
             text-align: center;
         }
@@ -35,6 +36,7 @@
         .bg:hover .word {
             color: #fff;
             opacity: 1;
+            transform: translateY(-20px);
         }
         
         .img {
