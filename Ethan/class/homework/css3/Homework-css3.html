@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="reset.css">
     <!-- font -->
     <link href="https://fonts.googleapis.com/css?family=El+Messiri|Noto+Sans+TC" rel="stylesheet">
+
     <title>CSS3Homework3</title>
 
     <style>
@@ -46,6 +47,7 @@
             display: flex;
             align-items: center;
             flex-grow: 3;
+            flex-wrap: wrap;
         }
 
         .nav-2 {
@@ -53,6 +55,7 @@
             align-items: center;
             justify-content: flex-end;
             flex-grow: 1;
+            flex-wrap: wrap
         }
 
         .word-left {
@@ -77,7 +80,6 @@
             max-width: 100%;
             background: url(images/sc1/long-hair.jpg)no-repeat center top;
             background-size: cover;
-            height: 70vh;
             min-height: 40vh;
         }
 
@@ -102,7 +104,7 @@
         }
 
         .sc1 .logo {
-            margin: 100px 0 20px 0;
+            margin: 150px 0 20px 0;
         }
 
         .sc1 h1 {
@@ -122,7 +124,7 @@
             border: 1px solid rgb(235, 139, 190);
             width: 85vw;
             max-width: 600px;
-            margin: 35px;
+            margin: 40px;
         }
 
         .sc1-2-black {
@@ -208,6 +210,8 @@
         }
 
         .sc2 img {
+            display: flex;
+            flex-wrap: wrap;
             width: 100px;
         }
 
@@ -248,6 +252,7 @@
         .sc3-1 {
             display: flex;
             justify-content: space-between;
+            flex-wrap: wrap;
         }
 
         .sc3-img {
@@ -498,33 +503,83 @@
             min-height: 40vh;
             background-color: #ccc;
         }
-        .sc7-container{
+
+        .sc7-container {
             display: flex;
-            align-items: center;
+            align-items: flex-start;
             justify-content: center;
-        }
-        .sc7-1-left{
-            background-color: #fcc;
+            flex-wrap: wrap;
+            padding: 30px 0;
         }
 
-        .sc7-2-top{
+        .sc7-1-left {
+            background-color: #fcc;
+            display: flex;
+            width: 100%;
+            max-width: 500px;
+            padding: 10px;
+        }
+
+        .sc7-1-left img {
+            width: 30px;
+            height: 100%;
+            padding: 0 5px;
+        }
+
+        .sc7-1-center {}
+
+        .sc7-2-top {
             display: flex;
             align-items: center;
             background-color: #cfc;
         }
-        .sc7-2-down{
+
+        .sc7-2-down {
             display: flex;
             align-items: center;
             background-color: #ccf;
         }
-        .sc7-1-right{
-            background-color: #ffc;
+
+        .sc7-3-left,
+        .sc7-3-right {
+            display: flex;
+            align-items: center;
+            padding: 10px;
         }
+
+        .sc7-1-right {
+            display: flex;
+            justify-content: center;
+            background-color: #ffc;
+            width: 200px;
+            height: 30px;
+            padding: 7px;
+            border: 1px solid rgb(177, 54, 119);
+            border-radius: 5px;
+            background-size: cover;
+        }
+
+        .sc7-1-right img {
+            width: auto;
+            height: auto;
+            ;
+        }
+
         /* ----------footer---------- */
         footer {
             background-color: #ccc;
         }
     </style>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.0/jquery.js"></script>
+    <script>
+        $(document).ready(function () {
+            $(window).resize(function () {
+                width = $(window).width();
+                $("span").text(width);
+            });
+        });    
+    </script>
 </head>
 
 <body>
@@ -545,6 +600,8 @@
             </div>
         </div>
     </div>
+
+
 
     <section class="sc1">
         <div class="sc1-black-bg">
@@ -652,7 +709,6 @@
                 <div class="sc4-2-1">more</div>
             </div>
         </div>
-
     </section>
 
     <section class="sc5">
@@ -696,30 +752,46 @@
     <section class="sc7">
         <div class="sc7-container">
             <div class="sc7-1-left">
-                <img src="" alt="">
-                <p>StyleMap團隊致力於打造出最貼心實用的美髮服務媒合<br>平台，讓美髮時光成為每個人生命中的美好時刻。</p>
+                <img src="images/sc1/logo_icon_g.png" alt="">
+                <p>HairMap美髮地圖團隊致力於打造出最貼心實用的美髮資訊交流<br>社群，讓美髮時光成為每個人生命中的美好時刻。</p>
             </div>
             <div class="sc7-1-center">
                 <div class="sc7-2-top">
-                    <div class="sc7-3-left">聯絡我們</div>
-                    <div class="sc7-3-right">iOS</div>
+                    <div class="sc7-3-left">
+                        <img src="images/sc7/email.svg" alt="">
+                        <p>聯絡我們</p>
+                    </div>
+                    <div class="sc7-3-right">
+                        <img src="images/sc7/ios.svg" alt="">
+                        <p>iOS</p>
+                    </div>
                 </div>
                 <div class="sc7-2-down">
-                    <div class="sc7-3-left">粉絲專頁</div>
-                    <div class="sc7-3-right">Android</div>
+                    <div class="sc7-3-left">
+                        <img src="images/sc7/facebook_g.svg" alt="">
+                        <p>粉絲專頁</p>
+                    </div>
+                    <div class="sc7-3-right">
+                        <img src="images/sc7/android.svg" alt="">
+                        <p>Android</p>
+                    </div>
                 </div>
             </div>
             <div class="sc7-1-right">
-                <img src="" alt="">
+                <img src="images/sc7/btn-join4.png" alt="">
                 <h4>設計師加入</h4>
             </div>
         </div>
     </section>
 
+
+
     <footer>
         <p>髮弄資訊股份有限公司 &copy; 2018. All Rights Reserved</p>
         <p>使用者條款與隱私權政策</p>
+        <div id="show"></div>
     </footer>
+
 </body>
 
 </html>
