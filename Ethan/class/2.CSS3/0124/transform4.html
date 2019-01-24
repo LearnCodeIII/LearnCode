@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .wrapper {
+            display: flex;
+            margin: 200px;
+            transform: rotatey(5deg);
+        }
+
+        .wrap {
+            transform-style: preserve-3d;
+            transition: 600000s;
+            position: relative;
+            /* width: 400px; */
+            /* height: 560px; */
+        }
+
+        .wrapper:hover .wrap {
+            transform: rotateY(1800000000deg);
+            /* backface-visibility: hidden; */
+        }
+
+        .photo1 {
+            position: absolute;
+        }
+
+        .photo2 {
+            /* position: absolute; */
+            transform: rotateY(1800000000deg);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="wrap">
+            <img class="photo1" src="images/dr-strange.jpg" alt="">
+            <img class="photo2" src="images/dr_fate.jpg" alt="">
+        </div>
+    </div>
+</body>
+
+</html>

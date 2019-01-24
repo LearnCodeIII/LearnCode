@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    container{
+        display: flex;
+    }
+    img{
+        transition: .5s;
+    }
+    figure:hover img{
+        transform: rotateX(30deg);
+        transform-origin:top right;
+    }
+    
+    .pr1000{
+        perspective: 1000px;
+    }
+    </style>
+</head>
+<body>
+    <container>
+        <figure>
+            <img src="images/dr-strange.jpg" alt="">
+        </figure>
+        <figure class="pr1000">
+            <img src="images/dr-strange.jpg" alt="">
+        </figure>
+        <figure class="pr500">
+            <img src="images/dr-strange.jpg" alt="">
+        </figure>
+    </container>
+</body>
+</html>

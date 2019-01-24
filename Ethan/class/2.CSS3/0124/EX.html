@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS3 EX</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            display: flex;
+            background-image: url(images/earth.jpg);
+            height: 100vh;
+            transform-origin: top center;
+        }
+
+        ul {
+            transform-style: preserve-3d;
+            transform: rotateY(40deg);
+            height: 150px;
+            width: 150px;
+            margin: 150px;
+        }
+
+        .container li {
+            border: 1px solid lightblue;
+            list-style: none;
+            font-size: 30px;
+            font-weight: 700;
+            transition: .5s;
+            margin: 5px;
+            text-align: center;
+        }
+
+        li a,
+        li a:link {
+            color: lightblue;
+        }
+
+        li:hover {
+            color: lightblue;
+            transform: rotateZ(20deg);
+            background-clip: rgb(16, 93, 119);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="move">
+            <ul>
+                <li><a href="">Home</a></li>
+                <li><a href="">About</a></li>
+                <li><a href="">Content</a></li>
+                <li><a href="">Footer</a></li>
+            </ul>
+        </div>
+    </div>
+</body>
+
+</html>

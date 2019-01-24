@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/normalize.css">
+    <title>Flex</title>
+    <style>
+        body {
+            background-color: #ccc;
+        }
+
+        .d-flex {
+            display: flex;
+        }
+
+        a,
+        a:link {
+            color: rgb(52, 69, 214);
+            cursor: pointer;
+        }
+
+        a:hover {
+            color: lightblue;
+        }
+
+        .list-styled {
+            padding-left: 5px;
+        }
+
+        .list-styled li {
+            list-style: none;
+        }
+
+        .box {
+            border: 2px solid #aaa;
+            border-radius: 10px;
+            overflow: hidden;
+            background-color: #fff;
+        }
+
+        .main {
+            margin-top: 20px;
+            height: 680px;
+        }
+
+        .container {
+            max-width: 960px;
+            margin: 0 auto;
+        }
+
+        header {
+            background-color: #fff;
+        }
+
+        header .container {
+            padding: 18px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header img {
+            height: 48px;
+        }
+
+        /* nav */
+        nav {
+            background: rgb(14, 63, 126);
+        }
+
+        nav ul {
+            padding: 0;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 20px 10px;
+            display: block;
+        }
+        .submenu1{
+            max-height: 0;
+            overflow: hidden;
+        }
+        
+        nav a:hover,
+        nav .active a {
+            background-color: rgb(4, 41, 87);
+            max-height: 200px;
+        }
+
+        nav li {
+            list-style: none;
+            position: relative;
+        }
+
+
+        .submenu {
+            text-align: center;
+            position: absolute;
+            background: rgb(14, 63, 126);
+        }
+
+        @media screen and (max-width:768px) {
+            nav li {
+                flex-grow: 1;
+                text-align: center;
+                flex-basis: 0;
+            }
+
+            aside figure {
+                width: 100%;
+            }
+
+            aside {
+                flex-basis: auto;
+            }
+
+            .sc1 {
+                flex-direction: column;
+                flex-wrap: wrap;
+            }
+
+            aside ul {
+                display: flex;
+                margin-bottom: 0;
+            }
+
+            aside top {
+                margin-top: 20px;
+            }
+
+            aside ul li {
+                flex-grow: 1;
+                text-align: center;
+                flex-basis: 0;
+            }
+
+            aside ul li a,
+            aside ul li a:link {
+                color: rgb(10, 74, 151);
+                border-left: none;
+                display: block;
+                padding: 10px;
+            }
+
+            aside ul li a:hover,
+            aside ul li.active a {
+                background-color: #eee;
+                border-left: none;
+                border-top: 6px solid rgb(10, 74, 151);
+                color: black;
+            }
+
+            .main {
+                margin-top: 0;
+            }
+        }
+
+        nav a {
+            padding: 20px 20px;
+        }
+
+        aside figure {
+            margin: 0;
+            width: 200px;
+        }
+
+        aside figure img {
+            width: 100%;
+        }
+
+
+        aside ul li a,
+        aside ul li a:link {
+            color: rgb(10, 74, 151);
+            border-left: 6px solid transparent;
+            display: block;
+            padding: 10px;
+        }
+
+        aside ul li a:hover,
+        aside ul li.active a {
+            background-color: #eee;
+            border-left: 6px solid rgb(3, 24, 51);
+            color: black;
+        }
+
+        article {
+            padding: 10px;
+        }
+
+        article p {
+            line-height: 1.5;
+        }
+
+        main {
+            flex-grow: 1;
+            margin: 20px 10px;
+        }
+
+        footer {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .right {
+            align-items: flex-end;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="container d-flex">
+            <img src="images/facebook.png" alt="">
+            <div><a>Log In</a> | <a>Sing Up</a></div>
+        </div>
+    </header>
+    <nav>
+        <ul class="container d-flex list-styled">
+            <li><a href="#">Home</a></li>
+            <li><a class="submenu1" href="#">Product</a>
+                <ul class="submenu">
+                    <li><a href="">clothes</a></li>
+                    <li><a href="">shoes</a></li>
+                </ul>
+
+            </li>
+            <li class="active"><a href="#">Story</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">About</a></li>
+        </ul>
+    </nav>
+    <section class="d-flex container sc1">
+        <aside class="main">
+            <div class="box">
+                <figure>
+                    <img src="images/logo.jpg" alt="">
+                </figure>
+            </div>
+            <ul class="list-styled">
+                <li><a href="">Home</a></li>
+                <li class="active"><a href="">About</a></li>
+                <li><a href="">Photo</a></li>
+                <li><a href="">Vedio</a></li>
+            </ul>
+        </aside>
+        <main class="main">
+            <article class="box">
+                <h2>Uniform Map</h2>
+                <time>2019/01/24</time>
+                <p>
+                    CSS
+                    （層疊樣式表）
+                    CSS-shade.svg
+                    副檔名 .css
+                    網路媒體型式 text/css
+                    統一類型標識 public.css
+                    開發者 哈肯·維姆·萊、伯特·波斯、全球資訊網協會
+                    初始版本 1996年12月17日，​22年前
+                    格式類型 樣式表語言
+                    標準 第一版
+                    第二版
+                    第二版第一次修訂
+                    第三版各模組目前的規格化進度與規格書連結
+                    層疊樣式表（英語：Cascading Style
+                    Sheets，簡寫CSS），又稱串樣式列表、級聯樣式表、串接樣式表、階層式樣式表，一種用來為結構化文件（如HTML文件或XML應用）添加樣式（字型、間距和顏色等）的電腦語言，由W3C定義和維護。目前最新版本是CSS2.1，為W3C的推薦標準。CSS3現在已被大部分現代瀏覽器支援，而下一版的CSS4仍在開發中。</p>
+            </article>
+        </main>
+        <aside class="right main d-flex">
+            <figure>
+                <img src="images/jk.png" alt="">
+            </figure>
+        </aside>
+    </section>
+    <footer>
+        facebook
+    </footer>
+</body>
+
+</html>
