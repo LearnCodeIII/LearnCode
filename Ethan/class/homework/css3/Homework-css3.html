@@ -10,9 +10,11 @@
     <!-- font -->
     <link href="https://fonts.googleapis.com/css?family=El+Messiri|Noto+Sans+TC" rel="stylesheet">
 
-    <title>CSS3Homework3</title>
+    <title>CSS3 Homework 3</title>
 
     <style>
+        @meida and screen and (max-width:960px) {}
+
         body {
             font-family: 'El Messiri', 'Noto Sans TC', sans-serif;
         }
@@ -28,6 +30,7 @@
         .nav-container {
             display: flex;
             align-items: center;
+            width: 100%;
             max-width: 1200px;
             margin: 0 auto;
         }
@@ -198,9 +201,11 @@
             max-width: 1200px;
             margin: 0 auto;
             display: flex;
-            height: 25vh;
+            height: auto;
+            flex-wrap: wrap;
             justify-content: space-evenly;
             align-items: center;
+            padding: 20px 0;
         }
 
         .sc2 h3 {
@@ -218,9 +223,11 @@
         .sc2-left,
         .sc2-center,
         .sc2-right {
+            min-width: 200px;
             display: flex;
             flex-direction: column;
             align-items: center;
+            padding: 10px 0;
         }
 
         /* ----------sc3---------- */
@@ -240,7 +247,6 @@
         }
 
         .sc3-container {
-            width: 100%;
             display: flex;
             flex-direction: column;
         }
@@ -268,18 +274,25 @@
             object-position: center center;
         }
 
+        .sc3-1-1 {
+            position: relative;
+        }
+
         .sc3 .sc3-box {
             border: 1px solid rgb(235, 139, 190);
             background-color: rgba(251, 251, 251, 0.8);
-            max-width: 100px;
+            width: 100px;
             height: 25px;
             text-align: center;
             padding: 15px 0 0 0;
-            transform: translate(220px, -70px)
+            position: absolute;
+            bottom: 20px;
+            right: -20px;
         }
 
         .sc3-2 {
             display: flex;
+            align-self: flex-end;
         }
 
         .sc3-2-1 {
@@ -287,19 +300,14 @@
             width: 100px;
             height: 25px;
             border-radius: 3px;
-            margin: -30px 0 0px 0;
             font-size: 20px;
             color: white;
             text-align: center;
             padding-top: 10px;
+            margin-top: 10px;
         }
 
-        .sc3-2-2 {
-            width: 60px;
-            height: 25px;
-            border-radius: 3px;
-            margin: -30px 0 0px 0;
-        }
+
 
         /* ----------sc4---------- */
         .sc4 {
@@ -435,8 +443,6 @@
             padding-bottom: 10px;
         }
 
-        .sc6-container {}
-
         .sc6-1-up {
             display: flex;
             justify-content: center;
@@ -477,7 +483,6 @@
             align-items: center;
             margin: 10px;
             max-width: 400px;
-
         }
 
         .sc6-2-title {
@@ -500,8 +505,8 @@
 
         /* ----------sc7---------- */
         .sc7 {
-            min-height: 40vh;
             background-color: #ccc;
+            padding-bottom: 20px;
         }
 
         .sc7-container {
@@ -513,11 +518,15 @@
         }
 
         .sc7-1-left {
-            background-color: #fcc;
             display: flex;
             width: 100%;
             max-width: 500px;
-            padding: 10px;
+            padding: 20px;
+        }
+
+        .sc7-1-left p {
+            line-height: 1.5;
+            color: #555
         }
 
         .sc7-1-left img {
@@ -526,19 +535,20 @@
             padding: 0 5px;
         }
 
-        .sc7-1-center {}
+        .sc7-1-center {
+            margin-right: 40px;
+        }
 
         .sc7-2-top {
             display: flex;
             align-items: center;
-            background-color: #cfc;
         }
 
         .sc7-2-down {
             display: flex;
             align-items: center;
-            background-color: #ccf;
         }
+
 
         .sc7-3-left,
         .sc7-3-right {
@@ -547,39 +557,58 @@
             padding: 10px;
         }
 
+        .sc7-4-word {
+            height: 20px;
+            padding-top: 13px;
+            padding-left: 4px;
+        }
+
         .sc7-1-right {
             display: flex;
             justify-content: center;
-            background-color: #ffc;
             width: 200px;
             height: 30px;
             padding: 7px;
-            border: 1px solid rgb(177, 54, 119);
+            border: 1px solid #b13678be;
             border-radius: 5px;
             background-size: cover;
+            align-self: center;
+
         }
 
         .sc7-1-right img {
-            width: auto;
-            height: auto;
-            ;
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        .sc7-2-img {
+            width: 35px;
+            height: 35px;
+            padding: 0 5px;
+        }
+
+        .sc7-2-word {
+            color: #b13678be;
+            font-size: 20px;
+            padding: 10px;
         }
 
         /* ----------footer---------- */
         footer {
             background-color: #ccc;
+            padding: 0 60px;
+        }
+
+        .footer-1 {
+            padding: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            text-align: center;
+            border-top: 3px solid #bbb;
         }
     </style>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.0/jquery.js"></script>
-    <script>
-        $(document).ready(function () {
-            $(window).resize(function () {
-                width = $(window).width();
-                $("span").text(width);
-            });
-        });    
-    </script>
 </head>
 
 <body>
@@ -661,19 +690,19 @@
                     </div>
                     <div class="sc3-box">油頭</div>
                 </div>
-                <div class="sc3-1-2">
+                <div class="sc3-1-1">
                     <div class="sc3-img">
                         <img src="images/sc3/14366_18.jpg" alt="">
                     </div>
                     <div class="sc3-box">灰色系</div>
                 </div>
-                <div class="sc3-1-3">
+                <div class="sc3-1-1">
                     <div class="sc3-img">
                         <img src="images/sc3/22736_8.jpg" alt="">
                     </div>
                     <div class="sc3-box">大捲</div>
                 </div>
-                <div class="sc3-1-4">
+                <div class="sc3-1-1">
                     <div class="sc3-img">
                         <img src="images/sc3/3425_14.jpg" alt="">
                     </div>
@@ -759,27 +788,39 @@
                 <div class="sc7-2-top">
                     <div class="sc7-3-left">
                         <img src="images/sc7/email.svg" alt="">
-                        <p>聯絡我們</p>
+                        <div class="sc7-4-word">
+                            <p>聯絡我們</p>
+                        </div>
                     </div>
                     <div class="sc7-3-right">
                         <img src="images/sc7/ios.svg" alt="">
-                        <p>iOS</p>
+                        <div class="sc7-4-word">
+                            <p>iOS</p>
+                        </div>
                     </div>
                 </div>
                 <div class="sc7-2-down">
                     <div class="sc7-3-left">
                         <img src="images/sc7/facebook_g.svg" alt="">
-                        <p>粉絲專頁</p>
+                        <div class="sc7-4-word">
+                            <p>粉絲專頁</p>
+                        </div>
                     </div>
                     <div class="sc7-3-right">
                         <img src="images/sc7/android.svg" alt="">
-                        <p>Android</p>
+                        <div class="sc7-4-word">
+                            <p>Android</p>
+                        </div>
                     </div>
                 </div>
             </div>
             <div class="sc7-1-right">
-                <img src="images/sc7/btn-join4.png" alt="">
-                <h4>設計師加入</h4>
+                <div class="sc7-2-img">
+                    <img src="images/sc7/btn_join5.png" alt="">
+                </div>
+                <div class="sc7-2-word">
+                    <h4>設計師加入</h4>
+                </div>
             </div>
         </div>
     </section>
@@ -787,9 +828,10 @@
 
 
     <footer>
-        <p>髮弄資訊股份有限公司 &copy; 2018. All Rights Reserved</p>
-        <p>使用者條款與隱私權政策</p>
-        <div id="show"></div>
+        <div class="footer-1">
+            <p>髮弄資訊股份有限公司 &copy; 2018. All Rights Reserved</p>
+            <p>使用者條款與隱私權政策</p>
+        </div>
     </footer>
 
 </body>

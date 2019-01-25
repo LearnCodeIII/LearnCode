@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .banner {
+            max-width: 1000px;
+            height: 400px;
+            background: url(images/slide3.jpeg)no-repeat center center;
+            background-size: cover;
+            margin: 0 auto;
+        }
+
+        @media screen and (max-width:1000px) {
+            .banner{
+            background: url(images/slide3.jpeg)no-repeat center center;
+                background-size: cover;
+                max-width: 100vh;
+                height: 40vh;
+            }
+        }
+
+            @media screen and (max-width: 768px) {
+                .banner {
+                    background: url(images/slide1.jpeg)no-repeat center center;
+                    background-size: cover;
+                }
+            }
+    </style>
+</head>
+
+<body>
+    <div class="banner"></div>
+</body>
+
+</html>
