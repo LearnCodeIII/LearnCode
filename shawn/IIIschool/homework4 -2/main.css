@@ -11,6 +11,19 @@ body {
     min-width:320px;
     margin: 0 auto;
 }
+.section-title {
+    text-align: center;
+    font-size: 2rem;
+    margin-top:0;
+    margin-bottom:3px;
+}
+.section-title-line {
+    margin:0 auto;
+    margin-bottom: 3px;
+    background:black;
+    width: 60px;
+    height: 4px;
+}
 @media screen and (max-width:1199px){
     .container {
         width:100%;
@@ -244,8 +257,6 @@ nav.cheat {
         background:url('./images/avatar/long-hair.jpg')
         top center no-repeat;
         background-size:cover;
-        height:180vw;
-
     }
     .section1 .sloganwrap {
         background:rgba(0, 0, 0, 0.904);
