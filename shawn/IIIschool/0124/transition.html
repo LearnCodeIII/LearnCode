@@ -1,0 +1,44 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .card_wrap{
+            perspective: 1000px;
+        }
+        .card_wrap, .card{
+            width: 400px;
+            height: 560px;
+        }
+        .card{
+            transition: .5s;
+            position: relative;
+            transform-style: preserve-3d;
+        }
+        .card_wrap:hover .card{
+            transform: rotateY(180deg);
+        }
+        img{
+            position: absolute;
+            left:0;
+            top:0;
+            backface-visibility: hidden;
+        }
+        .back{
+            transform: rotateY(180deg);
+        }
+    </style>
+</head>
+<body>
+    <div class="card_wrap">
+        <div class="card">
+            <img class="" src="images/dr_strange.jpg" alt="">
+            <img class="back" src="images/dr_fate.jpg" alt="">
+        </div>
+    </div>
+</body>
+</html>

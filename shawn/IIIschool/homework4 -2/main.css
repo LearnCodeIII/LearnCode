@@ -1,0 +1,312 @@
+* {
+    font-family: 'Noto Sans TC', sans-serif , "微軟正黑體";
+    box-sizing: border-box;
+}
+body {
+    background:rgb(232, 237, 246);
+}
+.container {
+    background:white;
+    width:1200px;
+    min-width:320px;
+    margin: 0 auto;
+}
+@media screen and (max-width:1199px){
+    .container {
+        width:100%;
+    }
+}
+.d-flex {
+    display:flex
+}
+.list-unstyled {
+    list-style-type:none;
+    padding:0;
+    margin: 0;
+}
+.list-unstyled a,.list-unstyled a:link {
+    color: rgb(168, 168, 168);
+    text-decoration: none;
+}
+/*nav start*/
+nav {
+    position:fixed;
+    top:0;
+    width:100%;
+    background:rgb(255, 255, 255);
+    z-index:999;
+}
+nav .logo img{
+    display:block;
+    max-width:200px;
+}
+@media screen and (max-width:768px){
+    .navbar {
+        border:0px solid white;
+    }
+    nav .logo img{
+        display:block;
+        max-width:160px;
+        padding:10px;
+    }
+}
+nav .item {
+    justify-content: space-between;
+    flex:1;
+    line-height: 56px;
+}
+nav ul li{
+    font-size: 1.3rem;
+}
+nav ul li a{
+    display:block;
+    height:100%;
+    padding:0.3rem 1rem;
+    transition:.8s;
+}
+nav ul li a:hover {
+    padding:0.3rem 2rem;
+    background:rgba(168, 168, 168, 0.698);
+    color:white;
+}
+nav ul li a.nav-setting:hover {
+    padding:0.3rem 1rem;
+    background:white;
+    cursor: pointer;
+}
+nav .l-item {
+    flex:1;
+}
+nav .l-item,nav .r-item {
+    align-content: center
+}
+nav .r-item img {
+    display: block;
+    width:70%
+}
+nav.cheat {
+    position: relative;
+    z-index:0
+}
+@media screen and (max-width:768px){
+    .item {
+        display:none;    
+    }
+}
+/*section1 start*/
+.section1 {
+    background:url('./images/avatar/long-hair.jpg')
+    top center no-repeat;
+    background-size:cover;
+    width:100%;
+}
+.section1 .cover{
+    background:rgba(0, 0, 0, 0.513)
+}
+.section1 .container:nth-child(1) {
+    background-color: transparent;
+    align-items: center;
+    flex-direction: column;
+    
+}
+.section1 img.coverlogo {
+    filter:brightness(200%);
+    margin:1rem 0 1rem;
+    transform: scale(0.9)
+}
+.section1 h1{
+    color:white;
+    font-size:4rem;
+    font-weight: 500;
+    letter-spacing: 0.5rem;
+    margin: 0 0 0.8rem;
+}
+.section1 h2{
+    color:white;
+    font-size:2rem;
+    font-weight: lighter;
+    margin: 0.5rem 0 2rem;
+}
+@media screen and (max-width:1200px){
+    .section1 img.coverlogo {
+        filter:brightness(200%);
+        margin:0.3rem 0 0rem;
+        transform: scale(0.7)
+    }
+    .section1 h1{
+        color:white;
+        font-size:3rem;
+        font-weight: 500;
+        letter-spacing: 0.5rem;
+        margin: 0 0 0.3rem;
+    }
+    .section1 h2{
+        color:white;
+        font-size:1.4rem;
+        font-weight: normal;
+        margin: 0.5rem 0 2rem;
+    }
+}
+@media screen and (max-width:768px){
+    .section1 img.coverlogo {
+        filter:brightness(200%);
+        margin:0rem;
+        transform: scale(0.5)
+    }
+    
+}
+@media screen and (max-width:568px){
+    .section1 h1{
+        color:white;
+        font-size:2.5rem;
+        font-weight: 500;
+        letter-spacing: 0.5rem;
+        margin: -1.5rem 0rem 0;
+    }
+    .section1 h2{
+        color:white;
+        font-size:1.2rem;
+        font-weight: normal;
+        margin: 0.5rem 0 1.5em;
+    }
+}
+.section1 .searchbar {
+    padding:4px;
+    margin:0 0 2rem;
+    max-width:600px;
+    width:90vw;
+    min-height: 4rem;
+    border:2px solid #f6a3b9;
+    background:rgba(0, 0, 0, 0.397);
+    font-size: 1.2rem;
+    color:white;
+    display:flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.section1 .searchbar .location {
+    flex:1.2 0 100px ;
+    display:flex;
+    font-size: 1.2rem;
+    justify-content: space-evenly;
+    cursor: pointer;
+}
+.section1 .searchbar .location span{
+    font-size:0.8rem;
+    transform:translatey(5px);
+}
+.section1 .searchbar .search {
+    flex:2.4 1;
+    max-width:65%;
+    padding:1.4rem 0;
+    border:none;
+    border-left: 2px solid #f6a3b9;
+    background:transparent;
+    height:30px;
+    color:white;
+    text-indent: 1rem;
+    font-size: 1.2rem;
+    text-align: left;
+}
+.section1 .searchbar .search::placeholder {
+    color:white;
+    font-family: 'Noto Sans TC', sans-serif;
+    
+}
+.section1 .searchbar .btn-go {
+    flex:1.2 1 108px;
+    padding:1rem 0;
+    background:rgb(169,79,98);
+    display:flex;
+    justify-content: center;
+    transition: .5s;
+}
+.section1 .searchbar .btn-go:hover {
+    background:rgb(163, 53, 77);
+    cursor: pointer;
+}
+.section1 .searchbar .btn-go img {
+    margin-right: 0.2rem;
+}
+@media screen and (max-width:768px){
+    .section1 .location {
+        max-width:30vw;
+    }
+    .section1 .searchbar {
+        max-width:90%;
+    }
+}
+.section1 .sloganwrap {
+    background:rgba(0, 0, 0, 0.7);
+}
+@media screen and (max-width:768px){
+    .section1 {
+        background:url('./images/avatar/long-hair.jpg')
+        top center no-repeat;
+        background-size:cover;
+        height:180vw;
+
+    }
+    .section1 .sloganwrap {
+        background:rgba(0, 0, 0, 0.904);
+    }
+}
+.section1 .sloganwrap .container {
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-content: center;
+}
+.section1 .slogan {
+    flex:1 0 0px;
+    height:270px;
+    display:flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    margin:10px;
+}
+.section1 .slogan img{
+    height:180px;
+}
+.section1 .slogan h4{
+    margin-top: 0;
+    color:white;
+    font-weight: normal;
+    font-size: 1.5rem;
+    white-space:nowrap;
+}
+@media screen and (max-width:768px){
+    .section1 .slogan {
+        height:240px;
+        flex:1 0 0;
+        min-width:50vw;
+    }
+    .section1 .slogan img{
+        height:150px;
+    }
+    .section1 .slogan h4{
+        margin-top: 0;
+        color:white;
+        font-weight: normal;
+        font-size: 1.5rem;
+        white-space:nowrap;
+    }
+}
+/*section2 start*/
+.section2 {
+    background:#555;
+}
+/*section3 start*/
+.section3 {
+    background:#999;
+}
+/*section4 start*/
+.section4 {
+    background:#555;
+}
+/*footer start*/
+footer {
+    background:#999
+}
