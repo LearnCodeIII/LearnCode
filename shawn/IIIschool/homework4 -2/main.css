@@ -29,7 +29,7 @@ body {
 [class$=wrap] + .container {
     display:flex;
     justify-content: flex-end;
-    width:90vw;
+    width:90%;
 }
 .btn-more {
     display:inline;
