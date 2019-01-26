@@ -7,7 +7,7 @@
 body {
     background:rgb(232, 237, 246);
 }
-.section2 h3,.section3 h3 {
+.section2 h3,.section3 h3,footer h3 {
     font-size:1.7rem;
     padding-top: 2rem;
     margin-bottom: 0.3rem;
@@ -26,7 +26,31 @@ body {
     min-width:320px;
     margin: 0 auto;
 }
-@media screen and (max-width:1199px){
+[class$=wrap] + .container {
+    display:flex;
+    justify-content: flex-end;
+    width:90vw;
+}
+.btn-more {
+    display:inline;
+    padding:0.1rem 0.6rem;
+    text-align: center;
+    color:white;
+    background:rgb(169,79,98);
+    border-radius: 3px;
+    cursor: pointer;
+    transition:.5s;
+}
+.btn-more:hover {
+    display:inline;
+    padding:0.1rem 0.6rem;
+    text-align: center;
+    color:white;
+    background:rgb(129, 46, 64);
+    border-radius: 3px;
+    cursor: pointer;
+}
+@media screen and (max-width:1200px){
     .container {
         width:100%;
     }
@@ -118,12 +142,12 @@ nav.cheat {
     }
 }
 /*section1 start*/
-.section1 {
+.section1{
     background:url('./images/avatar/long-hair.jpg')
     top center no-repeat;
     background-size:cover;
     width:100%;
-    height: auto;
+    height:auto;
 }
 .section1 .cover{
     background:rgba(0, 0, 0, 0.753)
@@ -374,8 +398,42 @@ nav.cheat {
     }
 }
 /*section3 start*/
-.section3 {
-    background:#999;
+.section3 .articlewrap {
+    margin:0 1rem;
+    display:flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width:auto;
+}
+.section3 .article {
+    margin: 0 auto;
+    margin-bottom: 1.5rem;
+    flex:1 0 300px;
+}
+.section3 .article-avatar {
+    position:relative;
+    margin: 0 auto;
+    background:white;
+    width:300px;
+    height: 200px;
+    overflow: hidden;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.section3 .article-title {
+    position:absolute;
+    text-shadow: 2px 2px 4px black;
+}
+.section3 .article-avatar img {
+    width:100%;
+}
+@media screen and (max-width:992px){
+    .section3 .article {
+        margin: 0 auto;
+        margin-bottom: 1.5rem;
+        flex:1 0 100%;
+    }
 }
 /*footer start*/
 footer {
