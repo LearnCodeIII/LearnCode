@@ -1,12 +1,26 @@
 * {
     font-family: 'Noto Sans TC', sans-serif , "微軟正黑體";
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 body {
     background:rgb(232, 237, 246);
 }
+.section2 h3,.section3 h3 {
+    padding-top: 2rem;
+    margin-bottom: 0.3rem;
+    text-align: center;
+}
+.line {
+    margin: 0 auto;
+    margin-bottom: 2rem;
+    height: 0.15rem;
+    width:2rem;
+    border-top:3px solid black;
+    padding-bottom: 0.5rem;
+}
 .container {
-    background:white;
     width:1200px;
     min-width:320px;
     margin: 0 auto;
@@ -58,11 +72,20 @@ nav .item {
 nav ul li{
     font-size: 1.3rem;
 }
+
 nav ul li a{
     display:block;
     height:100%;
     padding:0.3rem 1rem;
     transition:.8s;
+}
+@media screen and (max-width:1200px){
+    nav ul li{
+        font-size: 1.1rem;
+    }
+    nav ul li a{
+        padding:0.3rem 0.5rem;
+    }
 }
 nav ul li a:hover {
     padding:0.3rem 2rem;
@@ -99,9 +122,10 @@ nav.cheat {
     top center no-repeat;
     background-size:cover;
     width:100%;
+    height: auto;
 }
 .section1 .cover{
-    background:rgba(0, 0, 0, 0.513)
+    background:rgba(0, 0, 0, 0.753)
 }
 .section1 .container:nth-child(1) {
     background-color: transparent;
@@ -142,7 +166,7 @@ nav.cheat {
     }
     .section1 h2{
         color:white;
-        font-size:1.4rem;
+        font-size:1.2rem;
         font-weight: normal;
         margin: 0.5rem 0 2rem;
     }
@@ -165,7 +189,7 @@ nav.cheat {
     }
     .section1 h2{
         color:white;
-        font-size:1.2rem;
+        font-size:1rem;
         font-weight: normal;
         margin: 0.5rem 0 1.5em;
     }
@@ -231,6 +255,7 @@ nav.cheat {
 @media screen and (max-width:768px){
     .section1 .location {
         max-width:30vw;
+        font-size:12px;
     }
     .section1 .searchbar {
         max-width:90%;
@@ -243,12 +268,10 @@ nav.cheat {
     .section1 {
         background:url('./images/avatar/long-hair.jpg')
         top center no-repeat;
-        background-size:cover;
-        height:180vw;
-
+        background-size: autos;
     }
     .section1 .sloganwrap {
-        background:rgba(0, 0, 0, 0.904);
+        background:rgb(0, 0, 0);
     }
 }
 .section1 .sloganwrap .container {
@@ -296,7 +319,26 @@ nav.cheat {
 }
 /*section2 start*/
 .section2 {
-    background:#555;
+    background:rgb(145, 145, 145);
+}
+.section2 .panelwrap {
+    margin:0 1rem;
+    display:flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    background:rgb(211, 211, 211);
+    width:auto;
+}
+.section2 .panel {
+    margin: 0 auto;
+    background:black;
+    width:200px;
+    height: 300px;
+    flex-basis: 200px;
+
+}
+.section2 .panel img {
+
 }
 /*section3 start*/
 .section3 {
