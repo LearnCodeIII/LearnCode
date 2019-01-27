@@ -558,13 +558,27 @@
         }
 
         /* ----------sc6---------- */
-        .sc6 {
-            background-color: rgba(51, 25, 0, 0.863);
+        .sc6-bg-outside{
+            height: 270px;
+            width: 100vw;
+            overflow: hidden;
+            float: left;
+        }
+        .sc6-bg {
+            background: url(images/sc6/slide2.jpg) no-repeat center center fixed;
+            background-size: cover;
             width: 100%;
-            min-height: 30vh;
-            height: 100%;
+            /* min-height: 30vh; */
+            height: 200%;
+            -webkit-filter: brightness(0.6) blur(12px);
+            transform: translateY(-15px);
+        }
+
+        .sc6-container{
             color: white;
-            padding-bottom: 10px;
+            width: 100%;
+            margin: 0 auto;
+            position: absolute;
         }
 
         .sc6-1-up {
@@ -641,6 +655,7 @@
         .sc7 {
             background-color: #ccc;
             padding-bottom: 20px;
+            clear: both;
         }
 
         .sc7-container {
@@ -699,7 +714,6 @@
             color: black;
             text-decoration: none;
         }
-
 
         .sc7-1-right {
             display: flex;
@@ -764,6 +778,7 @@
             line-height: 1.5;
         }
         /* ----------media---------- */
+        /* PC */
         @media screen and (max-width:1220px){
             .sc3-1{
                 display: flex;
@@ -813,7 +828,7 @@
             }
         }
 
-
+        /* PC */
         @media screen and (max-width:768px) {
             #nav-menu{
                 display: block;
@@ -860,23 +875,62 @@
                 justify-content: center;
             }
 
+
             .sc7-1-center{
                 margin-left: 40px;
                 margin-bottom: 15px;
             }
+
+            .sc7-1-right {
+                width: 80%;
+            }
+
+            .sc7-2-word {
+                padding: 10px 2px;
+            }
+
+            .sc7-2-img {
+            padding: 0 2px 2px 2px;
+            }
         }
 
+        /* 特殊破版調整 */
+        @media screen and (max-width:641px){
+            .sc6-bg-outside{
+                height: 60vh;
+            }
+            .sc6-container{
+                height: 60vh;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+        }
+
+            .sc6-1-down{
+                display: flex;
+                /* flex-direction: column; */
+            }
+        }   
+
+        /* 特殊破版調整 */
         @media screen and (max-width:539px){
             .sc5{
                 padding-top: 30px;
             }
 
+            .sc6-bg-outside{
+                height: 80vh;
+            }
+
+            .sc6-container{
+                height: 80vh;
+            }
             .sc7-1-left p {
                 text-align: center;
             }
-
         }
 
+        /* S5 / iphone6.7.8+plus+X / Pixel2+XL */
         @media screen and (max-width:465px){
             .sc1-3-right-pink{
                 margin-top: 5px;
@@ -887,9 +941,30 @@
                 padding: 15px 0 0 0;
                 font-size: 14px;
             }
+
+            .sc6-container{
+                height: 80vh;
+            }
         }
 
+        /* iphone4 / iphone5 */
+        @media screen and (max-width:320px){
+            .sc4-title{
+                padding-top: 40px;
+            }
 
+            .sc4-2-word {
+                font-size: 15px;
+            }
+
+            .sc6-bg-outside{
+                height: 120vh;
+            }
+
+            .sc6-container{
+                height: 120vh;
+            }
+        }
 
     </style>
 </head>
@@ -1052,26 +1127,28 @@
         </div>
     </section>
 
-    <section class="sc6">
-        <div class="sc6-container">
-            <div class="sc6-1-up">
-                <div class="sc6-2-left">
-                    <p>已有</p>
-                    <h2>635</h2>
-                    <p>位設計師</p>
-                </div>
-                <div class="sc6-2-right">
-                    <P>發表</P>
-                    <h2>6421</h2>
-                    <p>張髮型作品</p>
-                </div>
+    <div class="sc6-bg-outside">
+        <div class="sc6-bg">
+        </div>
+    </div>
+    <section class="sc6-container">
+        <div class="sc6-1-up">
+            <div class="sc6-2-left">
+                <p>已有</p>
+                <h2>635</h2>
+                <p>位設計師</p>
             </div>
-            <div class="sc6-1-down">
-                <div class="sc6-2-title">優秀設計師募集中</div>
-                <div class="sc6-2-button">
-                    <div class="sc6-3 sc6-3-left"><a href="">了解更多</a></div>
-                    <div class="sc6-3 sc6-3-right"><a href="">立即免費註冊</a></div>
-                </div>
+            <div class="sc6-2-right">
+                <P>發表</P>
+                <h2>6421</h2>
+                <p>張髮型作品</p>
+            </div>
+        </div>
+        <div class="sc6-1-down">
+            <div class="sc6-2-title">優秀設計師募集中</div>
+            <div class="sc6-2-button">
+                <div class="sc6-3 sc6-3-left"><a href="">了解更多</a></div>
+                <div class="sc6-3 sc6-3-right"><a href="">立即免費註冊</a></div>
             </div>
         </div>
     </section>
