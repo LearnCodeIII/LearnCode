@@ -16,6 +16,13 @@
         body {
             font-family: 'El Messiri', 'Noto Sans TC', sans-serif;
         }
+        input{
+            font-family: 'El Messiri', 'Noto Sans TC', sans-serif;
+        }
+        button{
+            font-family: 'El Messiri', 'Noto Sans TC', sans-serif;
+        }
+        
 
         /* ----------nav---------- */
         .nav {
@@ -26,22 +33,25 @@
         }
 
         .nav-container {
-            display: flex;
             align-items: center;
             width: 100%;
             max-width: 1200px;
             margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
         }
 
         .nav .logo {
             max-width: 150px;
+            padding: 6px 8px;
+            transition: .2s;
+        }
+        .nav .logo:hover{
+            background: rgba(122, 120, 110, 0.1);
         }
 
-        .nav-container {
+        .nav .logo img{
             width: 100%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
         }
 
         .nav-1 {
@@ -56,24 +66,58 @@
             align-items: center;
             justify-content: flex-end;
             flex-grow: 1;
-            flex-wrap: wrap
+            flex-wrap: wrap;
         }
-
+        
         .word-left {
-            font-size: 16px;
-            font-weight: 400;
-            padding: 12px 18px 3px 18px;
+            transition: .2s;
+            padding: 22px 15px 16px 15px;
         }
 
+        .word-left a,.word-left a:link{
+            color: #222;
+            font-size: 16px;
+            font-weight: 400;
+            text-decoration: none;
+        }
+
+        .word-left:hover {
+            text-decoration: none;
+            background: rgba(122, 120, 110, 0.1);
+        }
+        
         .word-right {
-            font-size: 16px;
-            font-weight: 400;
-            padding: 12px 18px 3px 18px;
+            padding: 22px 15px 16px 15px;
+            transition: .2s;
         }
 
-        .set {
+        .word-right a,.word-right a:link{
+            color: #222;
+            font-size: 16px;
+            font-weight: 400;
+            text-decoration: none;
+        }
+
+        .word-right:hover {
+            text-decoration: none;
+            background: rgba(122, 120, 110, 0.1);
+        }
+
+        .set img{
             width: 30px;
-            transform: scale(1.5) translateY(-4px)
+            transform: scale(1.5);
+            margin: 5px 5px 0 5px;
+            padding: 0 7px;
+            transition: .2s;
+        }
+
+        .set:hover {
+            background: rgba(122, 120, 110, 0.1);
+        }  
+
+        #nav-menu{
+            transition: .5s;
+            display: none;
         }
 
         /* ----------sc1---------- */
@@ -106,14 +150,14 @@
             margin: 150px 0 20px 0;
         }
 
-        .sc1 h1 {
+        .sc1 h1{
             font-size: 45px;
             font-weight: 900;
             margin: 8px;
             color: white;
         }
 
-        .sc1 h3 {
+        .sc1 h3{
             font-size: 20px;
             margin: 8px;
             color: white;
@@ -121,13 +165,14 @@
 
         .sc1-1-pink {
             border: 1px solid rgb(235, 139, 190);
+            opacity: 0.9;
             width: 85vw;
             max-width: 600px;
             margin: 40px;
         }
 
         .sc1-2-black {
-            background: rgba(0, 0, 0, 0.7);
+            background: rgba(0, 0, 0, 0.4);
             display: flex;
             padding: 5px;
             flex-wrap: wrap;
@@ -136,33 +181,54 @@
         .sc1-3-left-pink {
             display: flex;
             flex: 1 0 120px;
-            border-right: 1px solid rgb(235, 139, 190);
+            border-right: 1px solid rgba(235, 139, 190,.9);
             align-items: center;
             justify-content: space-evenly;
-            padding-top: 5px;
         }
 
-        .sc1-3-left-pink svg {
-            transform: translateY(-5px)
+        .sc1-3-button{
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            font-size: 18px;
+            background-color: rgba(0, 0, 0, .5);
+            border: none;
+            color: #fff;
+            padding: 2px 0 0 0;
+        }
+        .sc1-3-left-pink img {
+            height: 25px;
+            transform: translateY(5px);
         }
 
         .sc1-3-center {
+            min-width: 165px;
             flex: 4 0 140px;
             align-content: center;
             justify-content: flex-start;
-            padding-top: 5px;
             font-size: 20px;
-            padding-left: 15px;
         }
-
+        .sc1-3-serch{
+            font-weight: 500;
+            font-size: 18px;
+            background-color:rgba(0, 0, 0, .5);
+            border: none;
+            color: #aaa;
+            width: 95%;
+            padding: 10px 0 4px 10px;
+        }
         .sc1-3-right-pink {
+            min-width: 100px;
             background-color: rgb(235, 139, 190);
             display: flex;
             align-items: center;
-            justify-content: space-evenly;
+            justify-content: center;
             color: white;
             padding-top: 5px;
             flex: 1 0 80px;
+            transition: .5s;
         }
 
         .sc1-3-right-pink h3 {
@@ -170,15 +236,20 @@
         }
 
         .sc1-3-right-pink img {
-            height: 20px;
-            width: 20px;
+            transform: translateY(-2px);
+            height: 25px;
+            width: 25px;
         }
 
         .sc1-3-right-word {
+            text-decoration: none;
             padding-top: 2px;
-            font-size: 20px;
+            font-size: 18px;
             color: white;
-            font-weight: 600;
+            font-weight: 500;
+        }
+        .sc1-3-right-pink:hover{
+            background-color: rgb(240, 178, 210);
         }
 
         .arrow {
@@ -198,7 +269,6 @@
             margin: 0 auto;
             display: flex;
             height: auto;
-            flex-wrap: wrap;
             justify-content: space-evenly;
             align-items: center;
             padding: 20px 0;
@@ -212,7 +282,6 @@
 
         .sc2 img {
             display: flex;
-            flex-wrap: wrap;
             width: 100px;
         }
 
@@ -252,37 +321,19 @@
         }
 
         .sc3-1 {
+            position: relative;
             display: flex;
             justify-content: space-between;
             flex-wrap: wrap;
         }
 
-        @media screen and (max-width:768px) {
-            .sc3-1 {
-                display: flex;
-                justify-content: center;
-            }
-
-            .sc3-img {
-                min-width: 340px;
-                margin: 10px 0;
-            }
-
-            .sc4-1 {
-                margin: 20px;
-            }
-            .sc7-1-center{
-                margin-left: 40px;
-                margin-bottom: 15px;
-            }
-        }
-
         .sc3-img {
             width: 100%;
             max-width: 300px;
-            height: 450px;
+            height: 100%;
             overflow: hidden;
         }
+
 
         .sc3 img {
             width: 100%;
@@ -295,6 +346,14 @@
             position: relative;
         }
 
+        .sc3-1-1:hover .sc3-box{
+            background-color: rgba(235, 139, 190, 0.8);
+        }
+
+        .sc3-1-1:hover .sc3-box a{
+            color: white;
+        }
+
         .sc3 .sc3-box {
             border: 1px solid rgb(235, 139, 190);
             background-color: rgba(251, 251, 251, 0.8);
@@ -304,7 +363,13 @@
             padding: 15px 0 0 0;
             position: absolute;
             bottom: 20px;
-            right: -20px;
+            left:220px;
+            transition: .5s;
+        }
+
+        .sc3-box a,.sc3-box a:link{
+            text-decoration: none;
+            color:rgb(177, 54, 119);
         }
 
         .sc3-2 {
@@ -322,9 +387,26 @@
             text-align: center;
             padding-top: 10px;
             margin-top: 10px;
+            transition: .3s;
         }
 
+        .sc3-2,.sc3-2:link {
+            width: 100px;
+            height: 25px;
+            border-radius: 3px;
+            font-size: 20px;
+            text-align: center;
+            padding-top: 10px;
+        }
 
+        .sc3-2-1:hover{
+            background-color: rgb(240, 178, 210)
+        }
+
+        .sc3-2-1 a{
+            text-decoration: none;
+            color: white;
+        }
 
         /* ----------sc4---------- */
         .sc4 {
@@ -353,12 +435,16 @@
             position: relative;
         }
 
+        .sc4-1:hover .sc4-2-img img{
+            transform: scale(1.05);
+        }
+
         .sc4-2-img {
             max-width: 400px;
             min-width: 50px;
             height: 250px;
             overflow: hidden;
-            -webkit-filter: brightness(.95);
+            -webkit-filter: brightness(0.95);
         }
 
         .sc4-2-img img {
@@ -366,17 +452,21 @@
             height: 100%;
             object-fit: cover;
             object-position: center center;
+            transition: .5s;
         }
 
         .sc4-2-word {
             position: absolute;
             bottom: 40%;
-            text-align: center;
             font-size: 22px;
-            font-weight: 900;
-            color: white;
+        }
+        .sc4-2-word a{
             -webkit-text-stroke: 0.1px #333;
+            text-align: center;
+            font-weight: 900;
             letter-spacing: 1px;
+            color: white;
+            text-decoration: none;
         }
 
         .sc4-3 {
@@ -386,15 +476,26 @@
             margin-top: 10px;
         }
 
-        .sc4-2-1 {
+        .sc4-2-1,.sc4-2-1:link {
             background-color: rgb(177, 54, 119);
             width: 100px;
             height: 25px;
             border-radius: 3px;
             font-size: 20px;
-            color: white;
             text-align: center;
             padding-top: 10px;
+            transition: .4s;
+        }
+
+        .sc4-2-1 a{
+            text-decoration: none;
+            color: white;
+        }
+
+
+        .sc4-2-1:hover{
+            text-decoration: none;
+            background-color: rgb(240, 178, 210);
         }
 
         /* ----------sc5---------- */
@@ -510,7 +611,6 @@
 
         .sc6-2-title {
             font-size: 30px;
-            margin: 10px;
             letter-spacing: 2px;
             margin: 15px 10px;
             padding-top: 5px;
@@ -523,7 +623,18 @@
             width: 150px;
             text-align: center;
             padding: 15px 0 10px;
+        }
+
+        .sc6-3 a{
             color: black;
+            text-decoration: none;} 
+
+        .sc6-3:hover{
+            background:rgba(240, 178, 210,.8);
+        }
+
+        .sc6-3:hover a{
+            color: white;
         }
 
         /* ----------sc7---------- */
@@ -549,7 +660,7 @@
 
         .sc7-1-left p {
             line-height: 1.5;
-            color: #555
+            color: #555;
         }
 
         .sc7-1-left img {
@@ -562,29 +673,33 @@
             margin-right: 40px;
         }
 
-        .sc7-2-top {
+        .sc7-2-top,.sc7-2-down {
             display: flex;
             align-items: center;
         }
 
-        .sc7-2-down {
-            display: flex;
-            align-items: center;
-        }
-
-
-        .sc7-3-left,
-        .sc7-3-right {
+        .sc7-3-left a,
+        .sc7-3-right a{
             display: flex;
             align-items: center;
             padding: 10px;
+            text-decoration: none;
+        }
+        .sc7-3-button:hover a{
+            text-decoration: underline;
         }
 
         .sc7-4-word {
             height: 20px;
             padding-top: 13px;
-            padding-left: 4px;
+            padding-left: 7px;
         }
+
+        .sc7-1-center p,.sc7-1-center p:link{
+            color: black;
+            text-decoration: none;
+        }
+
 
         .sc7-1-right {
             display: flex;
@@ -616,6 +731,22 @@
             font-size: 20px;
             padding: 10px;
         }
+        .sc7-2-word a,.sc7-2-word a:link{
+            text-decoration: none;
+            color: #b13678be; 
+        }
+
+        .sc7-1-right:hover{
+            background-color: rgb(177, 54, 119);
+            color: white;
+        }
+        .sc7-1-right:hover a{
+            color: white;
+        }
+        
+        .sc7-1-right:hover img{
+        -webkit-filter:brightness(4);
+        }
 
         /* ----------footer---------- */
         footer {
@@ -630,25 +761,159 @@
             justify-content: center;
             text-align: center;
             border-top: 3px solid #bbb;
+            line-height: 1.5;
         }
+        /* ----------media---------- */
+        @media screen and (max-width:1220px){
+            .sc3-1{
+                display: flex;
+                justify-content: center;
+                padding: 0 20px;
+            }
+
+            .sc3-1-1{
+                margin: 10px 3px;
+                display: flex;
+                justify-content: center;
+                width: 47%;
+            }
+
+            .sc3-img{
+                width: 100%;
+                height: 100%;
+                max-width: 400px;
+            }
+
+            .sc3 .sc3-box {
+                bottom: 20px;
+                left:75%;
+                z-index: 2;
+            }
+
+            .sc4-img{
+                display: flex;
+                flex-direction: column;
+            }
+
+            .sc4-container{
+                padding: 0 20px;
+            }
+
+            .sc4-1{
+                max-width: 800px;
+                width: 100%;
+                margin: 5px auto;
+            }
+
+            .sc4-2-img{
+                max-width: 650px;
+                width: 100%;
+                max-height: 350px;
+                height: 100%;
+            }
+        }
+
+
+        @media screen and (max-width:768px) {
+            #nav-menu{
+                display: block;
+                padding: 15px 12px 6px 12px;
+            }
+
+            #nav-menu:hover{
+                background: rgba(122, 120, 110, 0.1);
+            }
+
+            #nav-menu img{
+                width: 95%;
+            }
+            
+            .nav-1,.nav-2,.set{
+                display: none;
+            }
+
+            .sc2-container{
+                display: flex;
+                flex-direction: column;
+            }
+
+
+            .sc3-1-1 {
+                background-color:#cff;
+            }
+
+
+            .sc3 .sc3-box {
+                width: 80px;
+                padding: 15px 0 0 0;
+            }
+
+            .sc3-2 {
+                align-self: center;
+            }
+
+            .sc4-2-word {
+                font-size: 18px;
+            }
+
+            .sc4-3{
+                justify-content: center;
+            }
+
+            .sc7-1-center{
+                margin-left: 40px;
+                margin-bottom: 15px;
+            }
+        }
+
+        @media screen and (max-width:539px){
+            .sc5{
+                padding-top: 30px;
+            }
+
+            .sc7-1-left p {
+                text-align: center;
+            }
+
+        }
+
+        @media screen and (max-width:465px){
+            .sc1-3-right-pink{
+                margin-top: 5px;
+            }
+
+            .sc3 .sc3-box {
+                width: 60px;
+                padding: 15px 0 0 0;
+                font-size: 14px;
+            }
+        }
+
+
+
     </style>
 </head>
 
 <body>
     <div class="nav">
         <div class="nav-container">
-            <img class="logo" src="images/nav/nav-logo.png" alt="">
+            <div class="logo">
+                <a href=""><img src="images/nav/nav-logo.png" alt=""></a>
+            </div>
             <div class="nav-container">
                 <div class="nav-1">
-                    <div class="word-left">找髮型</div>
-                    <div class="word-left">找設計師</div>
-                    <div class="word-left">美髮誌</div>
+                    <div class="word-left"><a href="">找髮型</a></div>
+                    <div class="word-left"><a href="">找設計師</a></div>
+                    <div class="word-left"><a href="">美髮誌</a></div>
                 </div>
                 <div class="nav-2">
-                    <div class="word-right">註冊</div>
-                    <div class="word-right">登入</div>
+                    <div class="word-right"><a href="">註冊</a></div>
+                    <div class="word-right"><a href="">登入</a></div>
                 </div>
-                <img class="set word-right" src="images/nav/setting.png" alt="">
+                <a class="set" href=""><img src="images/nav/setting.png" alt=""></a>
+            </div>
+            <div id="nav-menu">
+                <a href=""><img src="images/nav/menu_g.svg" alt=""></a>
             </div>
         </div>
     </div>
@@ -664,21 +929,27 @@
                 <div class="sc1-1-pink">
                     <div class="sc1-2-black">
                         <div class="sc1-3-left-pink">
-                            <div>
-                                <img src="images/sc1/sc2-icon_searchbar_location.png" alt="">
-                            </div>
-                            <h3>找地圖</h3>
-                            <svg class="arrow" aria-hidden="true" data-prefix="fas" data-icon="sort-down" class="svg-inline--fa fa-sort-down fa-w-10"
-                                role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
-                                <path fill="currentColor" d="M41 288h238c21.4 0 32.1 25.9 17 41L177 448c-9.4 9.4-24.6 9.4-33.9 0L24 329c-15.1-15.1-4.4-41 17-41z"></path>
-                            </svg>
+                            <button type="button" class="sc1-3-button">
+                                <span>
+                                    <img src="images/sc1/sc2-icon_searchbar_location.png" alt="">
+                                </span>
+                                所有地區
+                                <span>
+                                    <svg class="arrow" aria-hidden="true" data-prefix="fas" data-icon="sort-down" class="svg-inline--fa fa-sort-down fa-w-10"
+                                        role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+                                        <path fill="currentColor" d="M41 288h238c21.4 0 32.1 25.9 17 41L177 448c-9.4 9.4-24.6 9.4-33.9 0L24 329c-15.1-15.1-4.4-41 17-41z"></path>
+                                    </svg>
+                                </span>
+                            </button>
                         </div>
                         <div class="sc1-3-center">
-                            <h3>搜尋髮型主題</h3>
+                            <input class="sc1-3-serch" type="serch" placeholder="搜尋髮型主題">
                         </div>
                         <div class="sc1-3-right-pink">
                             <img src="images/sc1/sc2-icon_searchbar_search.png" alt="">
-                            <div class="sc1-3-right-word">去逛逛</div>
+                            <a class="sc1-3-right-word" href="">
+                                <div>去逛逛</div>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -709,32 +980,34 @@
             <div class="sc3-1">
                 <div class="sc3-1-1">
                     <div class="sc3-img">
-                        <img src="images/sc3/138974.jpg" alt="">
+                        <a href=""><img src="images/sc3/138974.jpg" alt=""></a>
                     </div>
-                    <div class="sc3-box">油頭</div>
+                    <div class="sc3-box"><a href="">油頭</a></div>
                 </div>
                 <div class="sc3-1-1">
                     <div class="sc3-img">
-                        <img src="images/sc3/14366_18.jpg" alt="">
+                        <a href=""><img src="images/sc3/14366_18.jpg" alt=""></a>
                     </div>
-                    <div class="sc3-box">灰色系</div>
+                    <div class="sc3-box"><a href="">灰色系</a></div>
                 </div>
                 <div class="sc3-1-1">
-                    <div class="sc3-img">
-                        <img src="images/sc3/22736_8.jpg" alt="">
-                    </div>
-                    <div class="sc3-box">大捲</div>
+                    <a href="">
+                        <div class="sc3-img">
+                            <img src="images/sc3/22736_8.jpg" alt="">
+                    </a>
                 </div>
-                <div class="sc3-1-1">
-                    <div class="sc3-img">
-                        <img src="images/sc3/3425_14.jpg" alt="">
-                    </div>
-                    <div class="sc3-box">男孩髮型</div>
-                </div>
+                <div class="sc3-box"><a href="">大捲</a></div>
             </div>
-            <div class="sc3-2">
-                <div class="sc3-2-1">more</div>
+            <div class="sc3-1-1">
+                <div class="sc3-img">
+                    <a href=""><img src="images/sc3/3425_14.jpg" alt=""></a>
+                </div>
+                <div class="sc3-box"><a href="">男孩髮型</a></div>
             </div>
+        </div>
+        <div class="sc3-2">
+            <div class="sc3-2-1"><a href="">more</a></div>
+        </div>
         </div>
     </section>
 
@@ -745,20 +1018,20 @@
             </div>
             <div class="sc4-img">
                 <div class="sc4-1">
-                    <div class="sc4-2-img"><img src="images/sc4/11155.jpg" alt=""></div>
-                    <div class="sc4-2-word">鬆感的劉海！配上極捲的捲度!反而...</div>
+                    <div class="sc4-2-img"><a href=""><img src="images/sc4/11155.jpg" alt=""></a></div>
+                    <div class="sc4-2-word"><a href="">鬆感的劉海！配上極捲的捲度!反而...</a></div>
                 </div>
                 <div class="sc4-1">
-                    <div class="sc4-2-img"><img src="images/sc4/128141.jpg" alt=""></div>
-                    <div class="sc4-2-word">日系鬆鬆捲度 吹感即可霧面髮色</div>
+                    <div class="sc4-2-img"><a href=""><img src="images/sc4/128141.jpg" alt=""></a></div>
+                    <div class="sc4-2-word"><a href="">日系鬆鬆捲度 吹感即可霧面髮色</a></div>
                 </div>
                 <div class="sc4-1">
-                    <div class="sc4-2-img"><img src="images/sc4/9344.jpg" alt=""></div>
-                    <div class="sc4-2-word">歐巴新寵，括號瀏海你跟風了嗎？</div>
+                    <div class="sc4-2-img"><a href=""><img src="images/sc4/9344.jpg" alt=""></a></div>
+                    <div class="sc4-2-word"><a href="">歐巴新寵，括號瀏海你跟風了嗎？</a></div>
                 </div>
             </div>
             <div class="sc4-3">
-                <div class="sc4-2-1">more</div>
+                <div class="sc4-2-1"><a href="">more</a></div>
             </div>
         </div>
     </section>
@@ -770,8 +1043,8 @@
                 <div class="sc5-2-1-title">快速找到好髮型</div>
                 <div class="sc5-2-2-app">
                     <div class="sc5-2-applink">
-                        <img src="images/sc5/btn_app_ios_h.png" alt="">
-                        <img src="images/sc5/btn_app_android_h.png" alt="">
+                        <a href=""><img src="images/sc5/btn_app_ios_h.png" alt=""></a>
+                        <a href=""><img src="images/sc5/btn_app_android_h.png" alt=""></a>
                     </div>
                     <div class="sc5-2-p">下載並註冊後就可以開始發表作品囉!</div>
                 </div>
@@ -796,8 +1069,8 @@
             <div class="sc6-1-down">
                 <div class="sc6-2-title">優秀設計師募集中</div>
                 <div class="sc6-2-button">
-                    <div class="sc6-3 sc6-3-left">了解更多</div>
-                    <div class="sc6-3 sc6-3-right">立即免費註冊</div>
+                    <div class="sc6-3 sc6-3-left"><a href="">了解更多</a></div>
+                    <div class="sc6-3 sc6-3-right"><a href="">立即免費註冊</a></div>
                 </div>
             </div>
         </div>
@@ -811,31 +1084,42 @@
             </div>
             <div class="sc7-1-center">
                 <div class="sc7-2-top">
-                    <div class="sc7-3-left">
-                        <img src="images/sc7/email.svg" alt="">
-                        <div class="sc7-4-word">
-                            <p>聯絡我們</p>
-                        </div>
+
+                    <div class="sc7-3-left sc7-3-button">
+                        <a href="">
+                            <img src="images/sc7/email.svg" alt="">
+                            <div class="sc7-4-word">
+                                <p>聯絡我們</p>
+                            </div>
+                        </a>
                     </div>
-                    <div class="sc7-3-right">
-                        <img src="images/sc7/ios.svg" alt="">
-                        <div class="sc7-4-word">
-                            <p>iOS</p>
-                        </div>
+                    <div class="sc7-3-right sc7-3-button">
+                        <a href="">
+                            <img src="images/sc7/ios.svg" alt="">
+                            <div class="sc7-4-word">
+                                <p>iOS</p>
+                            </div>
+                        </a>
                     </div>
+
                 </div>
+
                 <div class="sc7-2-down">
-                    <div class="sc7-3-left">
-                        <img src="images/sc7/facebook_g.svg" alt="">
-                        <div class="sc7-4-word">
-                            <p>粉絲專頁</p>
-                        </div>
+                    <div class="sc7-3-left sc7-3-button">
+                        <a href="">
+                            <img src="images/sc7/facebook_g.svg" alt="">
+                            <div class="sc7-4-word">
+                                <p>粉絲專頁</p>
+                            </div>
+                        </a>
                     </div>
-                    <div class="sc7-3-right">
-                        <img src="images/sc7/android.svg" alt="">
-                        <div class="sc7-4-word">
-                            <p>Android</p>
-                        </div>
+                    <div class="sc7-3-right sc7-3-button">
+                        <a href="">
+                            <img src="images/sc7/android.svg" alt="">
+                            <div class="sc7-4-word">
+                                <p>Android</p>
+                            </div>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -844,7 +1128,7 @@
                     <img src="images/sc7/btn_join5.png" alt="">
                 </div>
                 <div class="sc7-2-word">
-                    <h4>設計師加入</h4>
+                    <a href="">設計師加入</a>
                 </div>
             </div>
         </div>
