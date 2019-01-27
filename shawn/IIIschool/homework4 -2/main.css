@@ -602,7 +602,7 @@ footer {
 }
 .btn .btn-recognize:hover,.btn .btn-sign:hover{
     color:rgb(255, 255, 255);
-    background:#48adc5;
+    background:rgb(169,79,98);
     cursor: pointer;
     box-shadow: 2px 2px 5px black;
 }
