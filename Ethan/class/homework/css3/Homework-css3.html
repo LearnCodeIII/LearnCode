@@ -13,8 +13,6 @@
     <title>CSS3 Homework 3</title>
 
     <style>
-        @meida and screen and (max-width:960px) {}
-
         body {
             font-family: 'El Messiri', 'Noto Sans TC', sans-serif;
         }
@@ -83,7 +81,6 @@
             max-width: 100%;
             background: url(images/sc1/long-hair.jpg)no-repeat center top;
             background-size: cover;
-            min-height: 40vh;
         }
 
         .sc1-container {
@@ -98,8 +95,7 @@
             max-width: 100%;
             background-color: rgba(0, 0, 0, .55);
             background-size: 100%;
-            height: 70vh;
-            min-height: 40vh;
+            height: 100%;
         }
 
         .sc1-container img {
@@ -223,7 +219,7 @@
         .sc2-left,
         .sc2-center,
         .sc2-right {
-            min-width: 200px;
+            min-width: 300px;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -261,7 +257,28 @@
             flex-wrap: wrap;
         }
 
+        @media screen and (max-width:768px) {
+            .sc3-1 {
+                display: flex;
+                justify-content: center;
+            }
+
+            .sc3-img {
+                min-width: 340px;
+                margin: 10px 0;
+            }
+
+            .sc4-1 {
+                margin: 20px;
+            }
+            .sc7-1-center{
+                margin-left: 40px;
+                margin-bottom: 15px;
+            }
+        }
+
         .sc3-img {
+            width: 100%;
             max-width: 300px;
             height: 450px;
             overflow: hidden;
@@ -312,7 +329,6 @@
         /* ----------sc4---------- */
         .sc4 {
             height: auto;
-            position: relative;
             margin-bottom: 20px;
         }
 
@@ -334,6 +350,7 @@
         .sc4-1 {
             display: flex;
             justify-content: center;
+            position: relative;
         }
 
         .sc4-2-img {
@@ -384,28 +401,31 @@
         .sc5 {
             background-color: #ccc;
             width: 100%;
-            height: 30vh;
+            max-height: 300px;
+            position: relative;
+        }
+
+        .sc5-container {
+            margin: 0 auto;
+            max-width: 800px;
             display: flex;
             justify-content: center;
-            position: relative;
-            flex-wrap: wrap;
         }
 
         .sc5-1 {
-            width: 55%;
-            max-width: 250px;
-            height: 100%;
+            height: 200px;
+            max-width: 180px;
             overflow: hidden;
         }
 
         .sc5-1 img {
             height: 100%;
-            object-fit: contain;
+            width: 100%;
+            object-fit: cover;
             object-position: bottom left;
         }
 
         .sc5-2 {
-            width: 45%;
             max-width: 400px;
             display: flex;
             flex-wrap: wrap;
@@ -419,6 +439,9 @@
         }
 
         .sc5-2-2-app {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
             padding-bottom: 10px;
         }
 
@@ -741,15 +764,17 @@
     </section>
 
     <section class="sc5">
-        <div class="sc5-1"><img src="images/sc5/phones_v3.png" alt=""></div>
-        <div class="sc5-2">
-            <div class="sc5-2-1-title">快速找到好髮型</div>
-            <div class="sc5-2-2-app">
-                <div class="sc5-2-applink">
-                    <img src="images/sc5/btn_app_ios_h.png" alt="">
-                    <img src="images/sc5/btn_app_android_h.png" alt="">
+        <div class="sc5-container">
+            <div class="sc5-1"><img src="images/sc5/phones_v3.png" alt=""></div>
+            <div class="sc5-2">
+                <div class="sc5-2-1-title">快速找到好髮型</div>
+                <div class="sc5-2-2-app">
+                    <div class="sc5-2-applink">
+                        <img src="images/sc5/btn_app_ios_h.png" alt="">
+                        <img src="images/sc5/btn_app_android_h.png" alt="">
+                    </div>
+                    <div class="sc5-2-p">下載並註冊後就可以開始發表作品囉!</div>
                 </div>
-                <div class="sc5-2-p">下載並註冊後就可以開始發表作品囉!</div>
             </div>
         </div>
     </section>
