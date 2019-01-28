@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Filter</title>
+    <style>
+        .container {}
+
+        img {
+            width: 250px;
+
+        }
+
+        .blur:hover {
+            filter: blur(10px);
+        }
+
+        .brightness:hover {
+            filter: brightness(2);
+        }
+
+        .contrast:hover {
+            filter: contrast(200%);
+        }
+
+        .drop-shadow:hover {
+            filter: drop-shadow(2px 2px 20px #000);
+        }
+
+        .grayscale:hover {
+            filter: grayscale(100%);
+        }
+
+        .hue-rotate:hover {
+            filter: hue-rotate(80deg);
+        }
+
+        .invert:hover {
+            filter: invert(100%);
+        }
+
+        .saturate:hover {
+            filter: saturate(0);
+        }
+
+        .sepia:hover {
+            filter: sepia(200%);
+        }
+
+        .filter:hover {
+            filter: hue-rotate(620deg) brightness(2) ;
+        }
+
+        .drop-shadow2 {
+            filter: drop-shadow(2px 2px 20px #000);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <img class="blur" src="images/ironman.jpg">
+        <img class="brightness" src="images/ironman.jpg">
+        <img class="contrast" src="images/ironman.jpg">
+        <img class="drop-shadow" src="images/ironman.jpg">
+        <img class="grayscale" src="images/ironman.jpg">
+        <img class="hue-rotate" src="images/ironman.jpg">
+        <img class="invert" src="images/ironman.jpg">
+        <img class="saturate" src="images/ironman.jpg">
+        <img class="filter" src="images/ironman.jpg">
+
+        <img class="drop-shadow2" src="images/picture.svg">
+    </div>
+</body>
+
+</html>

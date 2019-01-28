@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Multiple Columns</title>
+    <style>
+        .column-count {
+            margin: 50px auto;
+            max-width: 960px;
+            column-count: 4;
+        }
+
+        @media screen and (max-width:768px) {
+            .column-count {
+                column-count: 3;
+            }
+        }
+
+        @media screen and (max-width:512px) {
+            .column-count {
+                column-count: 2;
+            }
+        }
+
+        .column-fill {
+            column-fill: auto;
+        }
+
+        body {
+            background-color: #aaa;
+        }
+
+        .frame {
+            margin: 10px;
+            border: 1px solid #ccc;
+            width: 100%;
+            background-color: white;
+            border-radius: 15px;
+            overflow: hidden;
+            -webkit-column-break-inside: avoid;
+            /* Chrome, Safari, Opera */
+            page-break-inside: avoid;
+            /* Firefox */
+            break-inside: avoid;
+            /* IE 10+ */
+        }
+
+        .frame p {
+            padding: 8px;
+        }
+
+        .frame img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="column-count">
+        <div class="frame">
+            <img src="images/news3.jpg" alt="">
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. At, hic atque sapiente dolores voluptas
+                deleniti
+                iusto pariatur soluta? Eos, molestiae? Recusandae itaque saepe ut quisquam dolorum, deserunt atque
+                inventore ullam.
+                Iste consequuntur quisquam beatae nam dicta laboriosam pariatur cum tenetur ducimus consectetur atque
+                non
+                vero quo repellendus praesentium sit, qui aspernatur accusamus fugit ipsa! Minima modi mollitia
+                inventore
+                quod incidunt.
+                Repudiandae amet reiciendis facere modi delectus minus hic recusandae non dolores harum accusamus
+                nesciunt
+                aperiam corrupti, similique natus at numquam optio culpa, vero mollitia quos ratione. Incidunt quisquam
+                dolorum commodi.
+            </p>
+        </div>
+
+        <div class="frame">
+            <img src="images/news2.jpg" alt="">
+            <p>
+                Dolores, aliquid amet! Molestiae quos porro, fuga ducimus iste assumenda temporibus magnam est
+                eaque
+                vero
+                modi delectus eos eius inventore officiis itaque hic aperiam voluptas unde corrupti quas! Porro,
+                corrupti.
+                Perspiciatis sed quis adipisci minus eligendi aperiam nobis fugiat ut voluptas temporibus nam
+                eveniet
+                iusto
+                culpa, facere consequatur nihil? Nihil tempore omnis dolores ullam odit unde similique corrupti
+                eaque
+                quisquam?
+                Molestiae ut magni cupiditate sint rerum reiciendis porro, obcaecati doloremque deserunt in! Quasi
+                delectus
+                assumenda ipsam accusantium nesciunt velit ad. Excepturi minima ullam error quasi iusto nulla quo,
+                qui
+                nihil.
+                Nostrum illum magnam reprehenderit error aliquam, voluptates ducimus quia rerum officiis maiores
+                voluptatum
+                nobis expedita facere, perferendis quidem quisquam dolorum temporibus porro est nemo! Ipsa magni
+                blanditiis
+                ex veniam ab.
+                Voluptatum quas quos provident totam molestiae, minus magni cum, ut, error ea eligendi quisquam
+                quia
+                non
+                explicabo repellat delectus placeat. Maxime, pariatur nihil eligendi modi animi laborum nam cum
+                minus!
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. At, hic atque sapiente dolores voluptas
+                deleniti
+                iusto pariatur soluta? Eos, molestiae? Recusandae itaque saepe ut quisquam dolorum, deserunt atque
+                inventore ullam.
+                Iste consequuntur quisquam beatae nam dicta laboriosam pariatur cum tenetur ducimus consectetur
+                atque
+                non
+                vero quo repellendus praesentium sit, qui aspernatur accusamus fugit ipsa! Minima modi mollitia
+                inventore
+                quod incidunt.
+            </p>
+        </div>
+
+        <div class="frame">
+            <img src="images/earth.png" alt="">
+            <p>
+                Repudiandae amet reiciendis facere modi delectus minus hic recusandae non dolores harum accusamus
+                nesciunt
+                aperiam corrupti, similique natus at numquam optio culpa, vero mollitia quos ratione. Incidunt quisquam
+                dolorum commodi.
+                Dolores, aliquid amet! Molestiae quos porro, fuga ducimus iste assumenda temporibus magnam est eaque
+                vero
+                modi delectus eos eius inventore officiis itaque hic aperiam voluptas unde corrupti quas! Porro,
+                corrupti.
+                Perspiciatis sed quis adipisci minus eligendi aperiam nobis fugiat ut voluptas temporibus nam eveniet
+                iusto
+                culpa, facere consequatur nihil? Nihil tempore omnis dolores ullam odit unde similique corrupti eaque
+                quisquam?
+                Molestiae ut magni cupiditate sint rerum reiciendis porro, obcaecati doloremque deserunt in! Quasi
+                delectus
+                assumenda ipsam accusantium nesciunt velit ad. Excepturi minima ullam error quasi iusto nulla quo, qui
+                nihil.
+                Nostrum illum magnam reprehenderit error aliquam, voluptates ducimus quia rerum officiis maiores
+                voluptatum
+                nobis expedita facere, perferendis quidem quisquam dolorum temporibus porro est nemo! Ipsa magni
+                blanditiis
+                ex veniam ab.
+                Voluptatum quas quos provident totam molestiae, minus magni cum, ut, error ea eligendi quisquam quia
+                non
+                explicabo repellat delectus placeat. Maxime, pariatur nihil eligendi modi animi laborum nam cum
+                minus!Lorem
+                ipsum dolor sit amet consectetur adipisicing elit. At, hic atque sapiente dolores voluptas deleniti
+                iusto pariatur soluta? Eos, molestiae? Recusandae itaque saepe ut quisquam dolorum, deserunt atque
+                inventore ullam.
+                Iste consequuntur quisquam beatae nam dicta laboriosam pariatur cum tenetur ducimus consectetur atque
+                non
+                vero quo repellendus praesentium sit, qui aspernatur accusamus fugit ipsa! Minima modi mollitia
+                inventore
+                quod incidunt.
+            </p>
+        </div>
+
+        <div class="frame">
+            <img src="images/news2.jpg" alt="">
+            <p>
+                Repudiandae amet reiciendis facere modi delectus minus hic recusandae non dolores harum accusamus
+                nesciunt
+                aperiam corrupti, similique natus at numquam optio culpa, vero mollitia quos ratione. Incidunt quisquam
+                dolorum commodi.
+                Dolores, aliquid amet! Molestiae quos porro, fuga ducimus iste assumenda temporibus magnam est eaque
+                vero
+                modi delectus eos eius inventore officiis itaque hic aperiam voluptas unde corrupti quas! Porro,
+                corrupti.
+                Perspiciatis sed quis adipisci minus eligendi aperiam nobis fugiat ut voluptas temporibus nam eveniet
+                iusto
+                culpa, facere consequatur nihil? Nihil tempore omnis dolores ullam odit unde similique corrupti eaque
+                quisquam?
+                Molestiae ut magni cupiditate sint rerum reiciendis porro, obcaecati doloremque deserunt in! Quasi
+                delectus
+                assumenda ipsam accusantium nesciunt velit ad. Excepturi minima ullam error quasi iusto nulla quo, qui
+                nihil.
+                Nostrum illum magnam reprehenderit error aliquam, voluptates ducimus quia rerum officiis maiores
+                voluptatum
+                nobis expedita facere, perferendis quidem quisquam dolorum temporibus porro est nemo! Ipsa magni
+                blanditiis
+                ex veniam ab.
+                Voluptatum quas quos provident totam molestiae, minus magni cum, ut, error ea eligendi quisquam quia
+                non
+                explicabo repellat delectus placeat. Maxime, pariatur nihil eligendi modi animi laborum nam cum
+                minus!Lorem
+                ipsum dolor sit amet consectetur adipisicing elit. At, hic atque sapiente dolores voluptas deleniti
+                iusto pariatur soluta? Eos, molestiae? Recusandae itaque saepe ut quisquam dolorum, deserunt atque
+                inventore ullam.
+            </p>
+        </div>
+        <div class="frame">
+            <img src="images/news3.jpg" alt="">
+            <p>
+                Iste consequuntur quisquam beatae nam dicta laboriosam pariatur cum tenetur ducimus consectetur atque
+                non
+                vero quo repellendus praesentium sit, qui aspernatur accusamus fugit ipsa! Minima modi mollitia
+                inventore
+                quod incidunt.
+                Repudiandae amet reiciendis facere modi delectus minus hic recusandae non dolores harum accusamus
+                nesciunt
+                aperiam corrupti, similique natus at numquam optio culpa, vero mollitia quos ratione. Incidunt quisquam
+                dolorum commodi.
+                Dolores, aliquid amet! Molestiae quos porro, fuga ducimus iste assumenda temporibus magnam est eaque
+                vero
+                modi delectus eos eius inventore officiis itaque hic aperiam voluptas unde corrupti quas! Porro,
+                corrupti.
+                Perspiciatis sed quis adipisci minus eligendi aperiam nobis fugiat ut voluptas temporibus nam eveniet
+                iusto
+                culpa, facere consequatur nihil? Nihil tempore omnis dolores ullam odit unde similique corrupti eaque
+                quisquam?
+            </p>
+        </div>
+
+        <div class="frame">
+            <img src="images/news4.jpg" alt="">
+            <p>
+                Molestiae ut magni cupiditate sint rerum reiciendis porro, obcaecati doloremque deserunt in! Quasi
+                delectus
+                assumenda ipsam accusantium nesciunt velit ad. Excepturi minima ullam error quasi iusto nulla quo, qui
+                nihil.
+                Nostrum illum magnam reprehenderit error aliquam, voluptates ducimus quia rerum officiis maiores
+                voluptatum
+                nobis expedita facere, perferendis quidem quisquam dolorum temporibus porro est nemo! Ipsa magni
+                blanditiis
+                ex veniam ab.
+                Voluptatum quas quos provident totam molestiae, minus magni cum, ut, error ea eligendi quisquam quia
+                non
+                explicabo repellat delectus placeat. Maxime, pariatur nihil eligendi modi animi laborum nam cum minus!
+            </p>
+        </div>
+    </div>
+</body>
+
+</html>

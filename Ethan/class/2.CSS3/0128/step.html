@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        @keyframes changecolor{
+            0%{
+                background-color: blue;
+            }
+            100%{
+                background-color: red;
+            }
+        }
+
+        .box{
+            margin: 10px;
+            width: 200px;
+            height: 200px;
+            background-color: #cfc;
+            animation: changecolor 5s;
+        }
+
+        .steps{
+            animation-timing-function: steps(4, end);
+        }
+    
+        .steps2{
+            animation-timing-function: steps(4, start);
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+    <div class="box steps"></div>
+    <div class="box steps2"></div>
+</body>
+</html>

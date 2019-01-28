@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>clip-path</title>
+    <style>
+        .box {
+            width: 200px;
+            height: 200px;
+            overflow: hidden;
+            clip-path: circle(50% at 50% 50%);
+            transition: .5s;
+        }
+
+        .box img {
+            width: 100%;
+        }
+
+        .box:hover {
+            clip-path: circle(30% at 50% 50%)
+        }
+
+        /* 圓形 clipPath:circle(50% at 50% 50%); */ (半徑 at 座標 座標)
+        /* 橢圓形 clipPath:ellipse(25% 50% at 50% 50%) */(寬度 高度 at 座標 座標)
+        /* 內置矩形 clipPath:inset(5px 10px 20px 30px round 10% 20% 30% 50%); */前四個是與圖形的距離 round 後四個是左上開始的各角角度
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <img src="images/ironman.jpg" alt="">
+    </div>
+</body>
+
+</html>

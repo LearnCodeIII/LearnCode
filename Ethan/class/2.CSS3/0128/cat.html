@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Cat strp animation</title>
+    <style>
+        @keyframes gogo {
+            from {
+                background-position: left 0;
+            }
+
+            to {
+                background-position: -3150px 0;
+            }
+        }
+
+        .frame {
+            margin: 100px auto;
+            width: 350px;
+            height: 380px;
+            background: url(images/cat.png);
+            animation: gogo 3s infinite steps(9);
+        }
+
+        .frame:hover{
+            animation: gogo .5s steps(9) infinite;
+       
+    </style>
+</head>
+
+<body>
+    <div class="frame">
+    </div>
+</body>
+
+</html>

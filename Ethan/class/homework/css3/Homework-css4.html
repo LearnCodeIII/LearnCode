@@ -27,23 +27,26 @@
         /* ----------nav---------- */
         .nav {
             width: 100%;
+            /* height: 50px; */
             position: fixed;
             background-color: rgb(255, 255, 255);
-            z-index: 10;
+            z-index: 3;
         }
 
         .nav-container {
-            max-width:1200px; 
-            width: 100%;
             align-items: center;
+            width: 100%;
+            max-width: 1200px;
             margin: 0 auto;
             display: flex;
             justify-content: space-between;
-        }
+        } 
 
         .nav .logo {
             max-width: 150px;
-            padding: 6px 8px;
+            width: 100%;
+            height: 100%;
+            padding: 3px 12px;
             transition: .2s;
         }
 
@@ -53,7 +56,8 @@
 
         .nav .logo img{
             width: 100%;
-        }
+            transform: translateY(2px);
+        } 
 
         .nav-1 {
             display: flex;
@@ -104,12 +108,16 @@
             background: rgba(122, 120, 110, 0.1);
         }
 
+        .set{
+            padding: 2px 3px;
+            transition: .3s;    
+        }
+
         .set img{
             width: 30px;
             transform: scale(1.5);
             margin: 5px 5px 0 5px;
             padding: 0 7px;
-            transition: .2s;
         }
 
         .set:hover {
@@ -118,7 +126,7 @@
 
         #nav-menu{
             transition: .5s;
-            display: none;
+            opacity: 0;
         }
 
         /* ----------sc1---------- */
@@ -289,7 +297,7 @@
         .sc2-left,
         .sc2-center,
         .sc2-right {
-            min-width: 300px;
+            min-width: 250px;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -313,6 +321,12 @@
         }
 
         .sc3-container {
+            margin: 0 auto;
+            max-width: 1300px;
+            padding: 0 15px;
+        }
+
+        .sc3-column{
             display: flex;
             flex-direction: column;
         }
@@ -330,7 +344,7 @@
 
         .sc3-img {
             width: 100%;
-            max-width: 300px;
+            max-width: 290px;
             height: 100%;
             overflow: hidden;
         }
@@ -364,8 +378,9 @@
             padding: 15px 0 0 0;
             position: absolute;
             bottom: 20px;
-            left:220px;
+            left:200px;
             transition: .5s;
+            z-index: 2;
         }
 
         .sc3-box a,.sc3-box a:link{
@@ -374,40 +389,34 @@
         }
 
         .sc3-2 {
+            width: 100px;
             display: flex;
             align-self: flex-end;
+            margin-top: 10px;
+            transition: .5s;
         }
 
-        .sc3-2-1 {
+        .sc3-2-1,.sc3-2-1:link {
             background-color: rgb(177, 54, 119);
             width: 100px;
             height: 25px;
             border-radius: 3px;
             font-size: 20px;
-            color: white;
             text-align: center;
             padding-top: 10px;
-            margin-top: 10px;
-            transition: .3s;
-        }
-
-        .sc3-2,.sc3-2:link {
-            width: 100px;
-            height: 25px;
-            border-radius: 3px;
-            font-size: 20px;
-            text-align: center;
-            padding-top: 10px;
-        }
-
-        .sc3-2-1:hover{
-            background-color: rgb(240, 178, 210)
+            transition: .4s;
         }
 
         .sc3-2-1 a{
             text-decoration: none;
             color: white;
         }
+
+        .sc3-2-1:hover{
+            text-decoration: none;
+            background-color: rgb(240, 178, 210)
+        }
+
 
         /* ----------sc4---------- */
         .sc4 {
@@ -421,6 +430,7 @@
             display: flex;
             flex-direction: column;
             align-items: center;
+            padding: 0 15px;
         }
 
         .sc4-img {
@@ -475,6 +485,8 @@
             display: flex;
             justify-content: flex-end;
             margin-top: 10px;
+            margin-left: -30px;
+            transition: .5s;
         }
 
         .sc4-2-1,.sc4-2-1:link {
@@ -515,15 +527,15 @@
         }
 
         .sc5-1 {
-            height: 200px;
-            max-width: 180px;
+            height: auto;
+            max-width: 240px;
             overflow: hidden;
         }
 
         .sc5-1 img {
             height: 100%;
             width: 100%;
-            object-fit: cover;
+            object-fit: contain;
             object-position: bottom left;
         }
 
@@ -537,7 +549,12 @@
 
         .sc5-2-1-title {
             font-size: 30px;
-            padding: 10px 0 0 7px;
+            padding: 30px 0 0 7px;
+            font-weight: 100;
+        }
+
+        .sc5-2-1-title p{
+            font-weight: 100;
         }
 
         .sc5-2-2-app {
@@ -561,7 +578,7 @@
         /* ----------sc6---------- */
         .sc6-bg-outside{
             height: 270px;
-            width: 100vw;
+            width: 100%;
             overflow: hidden;
             float: left;
         }
@@ -758,7 +775,7 @@
         .sc7-1-right:hover a{
             color: white;
         }
-：
+
         .sc7-1-right:hover img{
             -webkit-filter:brightness(4);
         }
@@ -780,7 +797,7 @@
         }
         /* ----------media---------- */
         /* PC */
-        @media screen and (max-width:1220px){
+        @media screen and (max-width:1246px){
             .sc3-1{
                 display: flex;
                 justify-content: center;
@@ -794,6 +811,10 @@
                 width: 47%;
             }
 
+            .sc3-2-1{
+                margin-left: -20px;
+            }
+
             .sc3-img{
                 width: 100%;
                 height: 100%;
@@ -803,7 +824,6 @@
             .sc3 .sc3-box {
                 bottom: 20px;
                 left:75%;
-                z-index: 2;
             }
 
             .sc4-img{
@@ -833,7 +853,8 @@
         @media screen and (max-width:768px) {
             #nav-menu{
                 display: block;
-                padding: 15px 12px 6px 12px;
+                opacity: 1;
+                padding: 20px 15px 12px 15px;
             }
 
             #nav-menu:hover{
@@ -841,12 +862,13 @@
             }
 
             #nav-menu img{
-                width: 95%;
+                width: 100%;
             }
-            
+
             .nav-1,.nav-2,.set{
                 display: none;
             }
+
 
             .sc2-container{
                 display: flex;
@@ -858,7 +880,6 @@
                 background-color:#cff;
             }
 
-
             .sc3 .sc3-box {
                 width: 80px;
                 padding: 15px 0 0 0;
@@ -866,6 +887,10 @@
 
             .sc3-2 {
                 align-self: center;
+            }
+
+            .sc3-2-1{
+                margin-left: 0;
             }
 
             .sc4-2-word {
@@ -876,6 +901,9 @@
                 justify-content: center;
             }
 
+            .sc4-3 {
+                margin-left: 0;
+            }
 
             .sc7-1-center{
                 margin-left: 40px;
@@ -898,12 +926,6 @@
 
         /* 特殊破版調整 */
         @media screen and (max-width:641px){
-            .sc3 .sc3-box {
-                width: 60px;
-                padding: 15px 0 0 0;
-                font-size: 14px;
-            }
-
             .sc6-bg-outside{
                 height: 60vh;
             }
@@ -916,7 +938,7 @@
 
             .sc6-1-down{
                 display: flex;
-                /* flex-direction: column; */
+                flex-direction: column;
             }
         }   
 
@@ -944,6 +966,22 @@
                 margin-top: 5px;
             }
 
+            .sc3 .sc3-box {
+                width: 57px;
+                padding: 15px 0 0 0;
+                font-size: 14px;
+            }
+
+            .sc5-1 img{
+                object-fit: cover;
+                margin-right: 20px;
+            }
+
+            .sc5-2{
+                width: 70%;
+                padding-right:20px ;
+            }
+
             .sc6-container{
                 height: 80vh;
             }
@@ -951,12 +989,29 @@
 
         /* iphone4 / iphone5 */
         @media screen and (max-width:320px){
+            .sc3 .sc3-box{
+                left:60%;
+            }
+
             .sc4-title{
                 padding-top: 40px;
             }
 
             .sc4-2-word {
                 font-size: 15px;
+            }
+
+            .sc5-1{
+                margin-right: 0;   
+            }
+
+            .sc5-1 img{
+                object-fit: cover;
+            }
+
+            .sc5-2{
+                width: 40%;
+                padding-right: 10px;
             }
 
             .sc6-bg-outside{
@@ -967,12 +1022,11 @@
                 height: 120vh;
             }
         }
-
     </style>
 </head>
 
 <body>
-    <div class="nav">
+    <nav class="nav">
         <div class="nav-container">
             <div class="logo">
                 <a href=""><img src="images/nav/nav-logo.png" alt=""></a>
@@ -993,7 +1047,7 @@
                 <a href=""><img src="images/nav/menu_g.svg" alt=""></a>
             </div>
         </div>
-    </div>
+    </nav>
 
 
 
@@ -1034,6 +1088,7 @@
         </div>
     </section>
 
+
     <section class="sc2">
         <div class="sc2-container">
             <div class="sc2-left">
@@ -1051,42 +1106,48 @@
         </div>
     </section>
 
+
     <section class="sc3">
         <div class="sc3-title">熱門主題</div>
         <div class="sc3-container">
-            <div class="sc3-1">
-                <div class="sc3-1-1">
-                    <div class="sc3-img">
-                        <a href=""><img src="images/sc3/138974.jpg" alt=""></a>
-                    </div>
-                    <div class="sc3-box"><a href="">油頭</a></div>
-                </div>
-                <div class="sc3-1-1">
-                    <div class="sc3-img">
-                        <a href=""><img src="images/sc3/14366_18.jpg" alt=""></a>
-                    </div>
-                    <div class="sc3-box"><a href="">灰色系</a></div>
-                </div>
-                <div class="sc3-1-1">
-                    <a href="">
+            <div class="sc3-column">
+                <div class="sc3-1">
+                    <div class="sc3-1-1">
                         <div class="sc3-img">
-                            <img src="images/sc3/22736_8.jpg" alt="">
-                    </a>
+                            <a href=""><img src="images/sc3/138974.jpg" alt=""></a>
+                        </div>
+                        <div class="sc3-box"><a href="">油頭</a></div>
+                    </div>
+                    <div class="sc3-1-1">
+                        <div class="sc3-img">
+                            <a href=""><img src="images/sc3/14366_18.jpg" alt=""></a>
+                        </div>
+                        <div class="sc3-box"><a href="">灰色系</a></div>
+                    </div>
+                    <div class="sc3-1-1">
+                        <a href="">
+                            <div class="sc3-img">
+                                <img src="images/sc3/22736_8.jpg" alt="">
+
+                            </div>
+                        </a>
+                        <div class="sc3-box"><a href="">大捲</a></div>
+                    </div>
+                    <div class="sc3-1-1">
+                        <div class="sc3-img">
+                            <a href=""><img src="images/sc3/3425_14.jpg" alt=""></a>
+                        </div>
+                        <div class="sc3-box"><a href="">男孩髮型</a></div>
+                    </div>
                 </div>
-                <div class="sc3-box"><a href="">大捲</a></div>
-            </div>
-            <div class="sc3-1-1">
-                <div class="sc3-img">
-                    <a href=""><img src="images/sc3/3425_14.jpg" alt=""></a>
+                <div class="sc3-2">
+                    <div class="sc3-2-1"><a href="">more</a>
+                    </div>
                 </div>
-                <div class="sc3-box"><a href="">男孩髮型</a></div>
             </div>
-        </div>
-        <div class="sc3-2">
-            <div class="sc3-2-1"><a href="">more</a></div>
-        </div>
         </div>
     </section>
+
 
     <section class="sc4">
         <div class="sc4-container">
@@ -1108,16 +1169,20 @@
                 </div>
             </div>
             <div class="sc4-3">
-                <div class="sc4-2-1"><a href="">more</a></div>
+                <div class="sc4-2-1"><a href="">more</a>
+                </div>
             </div>
         </div>
     </section>
+
 
     <section class="sc5">
         <div class="sc5-container">
             <div class="sc5-1"><img src="images/sc5/phones_v3.png" alt=""></div>
             <div class="sc5-2">
-                <div class="sc5-2-1-title">快速找到好髮型</div>
+                <div class="sc5-2-1-title">
+                    <p>快速找到好髮型</p>
+                </div>
                 <div class="sc5-2-2-app">
                     <div class="sc5-2-applink">
                         <a href=""><img src="images/sc5/btn_app_ios_h.png" alt=""></a>
@@ -1129,11 +1194,11 @@
         </div>
     </section>
 
+
     <div class="sc6-bg-outside">
         <div class="sc6-bg">
         </div>
     </div>
-
     <section class="sc6-container">
         <div class="sc6-1-up">
             <div class="sc6-2-left">
@@ -1155,6 +1220,7 @@
             </div>
         </div>
     </section>
+
 
     <section class="sc7">
         <div class="sc7-container">
