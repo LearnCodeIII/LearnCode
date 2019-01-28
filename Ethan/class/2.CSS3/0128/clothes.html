@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        .bg {
+            background-color: #ccc;
+            height: 100vh;
+            display: flex;
+        }
+
+
+        .c1:hover img {
+            transform: rotateZ(-20deg);
+            transform-origin: top;
+            transition: .5s;
+        }
+
+        @keyframes right-move {
+            0% {
+                transform: rotateZ(-20deg);
+                transform-origin: top;
+                transition: .5s;
+            }
+
+            100% {
+                transform: rotateZ(20deg);
+                transform-origin: top;
+            }
+        }
+
+        .c2 {
+            animation: right-move 1s;
+            animation-direction: alternate-reverse;
+            animation-iteration-count: infinite;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="bg">
+        <div class="c1"><img src="images/clothes_v1.png" alt=""></div>
+        <div class="c2"><img src="images/clothes_v3.png" alt=""></div>
+        <div class="c3"><img src="images/clothes_v4.png" alt=""></div>
+    </div>
+</body>
+
+</html>

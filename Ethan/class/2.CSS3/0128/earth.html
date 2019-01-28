@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>space</title>
+    <style>
+        body {
+            background: url(images/space-bg.jpg);
+        }
+
+        @keyframes circle {
+            from {
+                transform: rotate(0) translateX(160px);
+            }
+
+            to {
+                transform: rotate(360deg) translateX(160px);
+            }
+        }
+        @keyframes mooncircle {
+            from {
+                transform: rotate(0) translateX(80px);
+            }
+
+            to {
+                transform: rotate(360deg) translateX(80px);
+            }
+        }
+
+        .space {
+            width: 600px;
+            height: 600px;
+            margin: 0 auto;
+            border: 1px solid #ccc;
+            position: relative;
+        }
+
+        img {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            border: 1px solid #fff;
+            border-radius: 50%;
+        }
+
+        .sun {
+            margin: -264px 0 0 -264px;
+            padding: 200px;
+        }
+
+        .earth-area {
+            width: 150px;
+            height: 150px;
+            position: absolute;
+            margin: -105px 0 0 -105px;
+            left: 50%;
+            top: 50%;
+            padding: 30px;
+            animation: circle 8s infinite linear;
+        }
+
+        .earth-area-ab {
+            width: 320px;
+            height: 320px;
+            position: relative;
+        }
+
+        .earth {
+            margin: -82px 0 0 -82px;
+            padding: 46px;
+        
+        }
+
+        .moon{
+            border: none;
+            margin: -25px 0 0 -25px;
+            position: absolute;
+            animation: mooncircle 1.5s infinite linear;
+        }
+
+
+    </style>
+</head>
+
+<body>
+    <div class="space">
+        <img class="sun" src="images/sun.png" alt="">
+        <div class="earth-area">
+            <div class="earth-area-ab">
+                <img class="earth" src="images/earth.png" alt="">
+                <img class="moon" src="images/moon.png" alt="">
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
