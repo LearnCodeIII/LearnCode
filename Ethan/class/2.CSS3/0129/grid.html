@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Grid</title>
+    <style>
+        .wrapper {
+            width: 960px;
+            height: 600px;
+            background: lightblue;
+            margin: 20px auto;
+        }
+
+        .grid-items {
+            border: 1px solid #000;
+        }
+
+        .grid {
+            display: grid;
+        }
+
+        /* 直切 水平分割 分成幾欄 也可以設定固定數字,該區塊固定 , 其他區塊把剩餘空間填滿 */
+        .grid-template-columns {
+            grid-template-columns: auto auto auto;
+        }
+
+        /* 橫切 垂直分割 分成幾欄 也可以設定固定數字,該區塊固定 , 其他區塊把剩餘空間填滿 */
+        .grid-template-row {
+            grid-template-rows: auto 100px auto;
+        }
+
+        /* 欄與列的間距設定 gap */
+        .grid-row {
+            grid-row-gap: 10px;
+        }
+        .grid-column {
+            grid-column-gap: 20px;
+        }
+        .grid-gap{
+            grid-gap: 10px 20px;
+        }
+
+        /* fr是grid裡面的新單位, 跟flex-grow不同的是,他不只是填補剩餘空間,更直接指定此空間比例,因此2fr為1fr兩倍無誤 */
+        .grid-template-row-fr {
+            grid-template-rows: 1fr 2fr 1fr;
+        }
+
+        /* justify content / align-content 跟flex用法一樣, 但grid沒有軸線翻轉問題,所以一定是水平對齊 */
+        .justify-content{
+            justify-content: center;
+        }
+        .align-content{
+            align-content: center;
+        }
+
+        /* justify-self / align-self 跟flex用法一樣 */
+        .justuft-self{
+            justify-self: center;
+        }
+        .align-self{
+            align-self: center;
+        }
+
+
+            
+    </style>
+</head>
+
+<body>
+    <div class="wrapper grid grid-template-columns grid-template-row grid-gap">
+        <div class="grid-items">1</div>
+        <div class="grid-items">2</div>
+        <div class="grid-items">3</div>
+        <div class="grid-items">4</div>
+        <div class="grid-items">5</div>
+        <div class="grid-items">6</div>
+        <div class="grid-items">7</div>
+        <div class="grid-items">8</div>
+        <div class="grid-items">9</div>
+    </div>
+</body>
+
+</html>

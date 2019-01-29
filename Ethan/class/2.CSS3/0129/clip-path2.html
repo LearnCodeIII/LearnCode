@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>clip-path2</title>
+    <style>
+        .container {
+            margin: 100px auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            width: 400px;
+            position: relative;
+            background-color: #cfc;
+        }
+
+        .box {
+            height: 200px;
+            width: 200px;
+            clip-path: polygon(50% 10%, 90% 50%, 50% 90%, 10% 50%);
+            overflow: hidden;
+            transition: .5s;
+        }
+
+        .box:hover {
+            clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+        }
+
+        .movebox {
+            position: absolute;
+        }
+
+        .box3 {
+            top: 100px;
+        }
+
+        .box6 {
+            top: 300px;
+        }
+
+        .box9 {
+            top: 500px;
+        }
+
+        .box12 {
+            top: 700px;
+        } 
+
+        img {
+            width: 100%;
+        }
+
+        .word{
+            color: white;
+            font-size: 15px;
+            font-weight: 700;
+        }
+
+    </style>
+</head>
+
+<body>
+    <iv class="container">
+        <div class="box "><img src="images/ironman.jpg" alt=""></div>
+        <div class="box "><img src="images/dr_strange.jpg" alt=""></div>
+        <div class="box box3 movebox"><img src="images/deadpool.jpg" alt=""></div>
+        <div class="box "><img src="images/ironman.jpg" alt=""></div>
+        <div class="box "><img src="images/dr_strange.jpg" alt=""></div>
+        <div class="box box6 movebox"><img src="images/deadpool.jpg" alt=""></div>
+        <div class="box "><img src="images/ironman.jpg" alt=""></div>
+        <div class="box "><img src="images/dr_strange.jpg" alt=""></div>
+        <div class="box box9 movebox"><img src="images/deadpool.jpg" alt=""></div>
+        <div class="box "><img src="images/ironman.jpg" alt=""></div>
+        <div class="box "><img src="images/dr_strange.jpg" alt=""></div>
+        <div class="box box12 movebox"><img src="images/deadpool.jpg" alt=""></div>
+    </iv>
+</body>
+
+</html>
