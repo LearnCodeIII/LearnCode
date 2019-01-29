@@ -13,9 +13,10 @@
             overflow: hidden;
             clip-path: circle(50% at 50% 50%);
             transition: .5s;
+            margin: 10px;
         }
 
-        .box img {
+        img {
             width: 100%;
         }
 
@@ -23,14 +24,46 @@
             clip-path: circle(30% at 50% 50%)
         }
 
-        /* 圓形 clipPath:circle(50% at 50% 50%); */ (半徑 at 座標 座標)
-        /* 橢圓形 clipPath:ellipse(25% 50% at 50% 50%) */(寬度 高度 at 座標 座標)
-        /* 內置矩形 clipPath:inset(5px 10px 20px 30px round 10% 20% 30% 50%); */前四個是與圖形的距離 round 後四個是左上開始的各角角度
+        .box2 {
+            width: 200px;
+            height: 200px;
+            overflow: hidden;
+            clip-path: polygon(0% 100%, 50% 0%,100% 100%);
+            transition: .5s;
+            margin: 10px;
+        }
+        .box2:hover{
+            clip-path: polygon(0% 0%, 50% 100%,100% 0%);
+        }
+
+        .box3 {
+            width: 200px;
+            height: 200px;
+            overflow: hidden;
+            clip-path: polygon(50% 0%, 100% 50%, 50% 100%,0% 50%);
+            transition: .5s;
+            margin: 10px;
+        }
+        .box3:hover {
+            clip-path: polygon(100% 50%, 50% 100%, 0% 50%, 50% 0);
+        }
+
+        /* 圓形 clipPath:circle(50% at 50% 50%) (半徑 at 座標 座標)
+        橢圓形 clipPath:ellipse(25% 50% at 50% 50%)(寬度 高度 at 座標 座標)
+        內置矩形 clipPath:inset(5px 10px 20px 30px round 10% 20% 30% 50%);前四個是與圖形的距離 round 後四個是左上開始的各角角度
+        三角形 /多邊形 clippath:polygon(0% 100%,50% 0%,100% 100%);數值分別為「x軸位置 y軸位置 "%"」然後每個逗號都是一個點,依配置順序連線 */
+
     </style>
 </head>
 
 <body>
     <div class="box">
+        <img src="images/ironman.jpg" alt="">
+    </div>
+    <div class="box2">
+        <img src="images/ironman.jpg" alt="">
+    </div>
+    <div class="box3">
         <img src="images/ironman.jpg" alt="">
     </div>
 </body>

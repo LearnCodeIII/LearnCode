@@ -7,20 +7,23 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <style>
-        .box{
+        .box {
             margin: 350px auto;
             width: 200px;
             height: 200px;
             background: #fff;
             border: 1px solid red;
-            outline: 100px solid #000;
+            outline: 2000px solid #000;
             outline-offset: 0px;
             transition: 1s;
+            position: absolute;
+            right:20px;
+            top: -320px;
         }
 
-        .box:hover{
-            outline-offset: 120px;
-            outline: 1px solid #ccc;            
+        .box:active {
+            outline-offset: 2000px;
+            outline: 1px solid #ccc;
             background: red;
             border-radius: 50%
         }

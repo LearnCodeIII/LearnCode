@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Grid layout</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 960px;
+            background-color: #eee;
+            margin: 0 auto;
+        }
+
+        .grid {
+            /* 加入grid家族 */
+            display: grid;
+            /* 劃分地盤 */
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-auto-rows: auto auto auto auto;
+            /* 利益分配 */
+            grid-template-areas: "header header header header"
+                "nav nav nav nav"
+                "main main main aside"
+                "footer footer footer footer";
+        }
+
+        /* 做RWD的時候直接改成一列就好了,還可以把不要的區塊拿掉!! */
+        @media screen and (max-width:768px) {
+            .grid {
+                grid-template-columns: 1fr;
+                grid-template-areas: "header"
+                    "nav"
+                    "aside"
+                    "main"
+                    "footer"
+            }
+        }
+
+        header {
+            grid-area: header;
+        }
+
+        img {
+            max-width: 100%;
+        }
+
+        nav {
+            /* 要給各區塊名號他們才能拿利益 */
+            grid-area: nav;
+            background: lightsalmon;
+        }
+
+        .navul {
+            display: flex;
+            justify-content: space-evenly;
+            font-size: 20px;
+            padding: 5px 0;
+        }
+
+        main {
+            padding: 0 20px;
+            grid-area: main;
+        }
+
+        aside {
+            padding: 20px 20px;
+            grid-area: aside;
+        }
+
+        footer {
+            grid-area: footer;
+            text-align: center;
+            padding: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container grid">
+        <header>
+            <img src="images/japan-tohoku.jpg" alt="">
+        </header>
+        <nav>
+            <ul class="navul">
+                <li>home</li>
+                <li>homeya</li>
+                <li>homeyaya</li>
+                <li>homeyayaya</li>
+            </ul>
+        </nav>
+        <main>
+            <h1>日本東北介紹</h1>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Explicabo error, asperiores necessitatibus
+                fugiat nemo ipsam fugit, corrupti dolor aspernatur, minima eum nihil placeat modi culpa vero recusandae
+                facere accusamus excepturi?
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Adipisci autem laborum nihil sequi explicabo!
+                Voluptates ex eaque cumque culpa incidunt dolorem corporis soluta voluptatem quasi alias, sapiente amet
+                eveniet dolorum?
+                Molestias atque natus culpa veritatis perferendis unde adipisci quo ipsa accusantium doloremque quos ad
+                suscipit, perspiciatis modi? Repudiandae ullam neque natus? Ad ratione repellat obcaecati. Cumque iste
+                quibusdam doloremque quisquam.
+                Recusandae, aliquid? Mollitia libero porro architecto aut perferendis harum obcaecati? Obcaecati ipsa
+                eos labore harum, quo enim saepe dolores possimus incidunt libero illo iure minima sunt cum cupiditate
+                nemo distinctio?
+                Quod nihil aliquid quibusdam eius inventore delectus nesciunt qui voluptatum sint nam officiis dicta
+                quos reiciendis veniam rerum, sunt eos quis vel eligendi in? Consectetur aut error nemo dolorum ex.</p>
+        </main>
+        <aside>
+            <h1>Aside</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam ex ipsa inventore, in modi dolores
+                autem consequatur eaque voluptatibus reiciendis, veritatis fuga ab harum perferendis cupiditate ipsum
+                eum. Pariatur, corrupti.</p>
+        </aside>
+        <footer>
+            footer
+        </footer>
+    </div>
+</body>
+
+</html>
