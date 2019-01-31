@@ -139,6 +139,28 @@ nav.cheat {
         display:none;    
     }
 }
+nav .hamburgar {
+    display:none;
+    justify-content: flex-end;
+    align-items:center;
+    margin-right:1rem;
+    width:100%;
+    color: #666;
+}
+@media screen and (max-width:768px){
+    nav .hamburgar {
+        display:flex;
+        font-size: 2rem;
+        line-height: 3rem;
+    }
+}
+@media screen and (max-width:568px){
+    nav .hamburgar {
+        display:flex;
+        font-size: 1.5rem;
+        line-height: 3rem;
+    }
+}
 /*section1 start*/
 .section1{
     background:url('./images/avatar/long-hair.jpg')
@@ -389,8 +411,29 @@ nav.cheat {
     }
 }
 @media screen and (max-width:768px){
+    .section2 .panel-avatar {
+        margin: 0 auto;
+        background:white;
+        width:150px;
+        height: 200px;
+        overflow: hidden;
+    }
+    .section2 .panel-title {
+        position:absolute;
+        bottom:10%;
+        right:calc( 30% - 50px);
+        border:2px solid rgb(169,79,98);
+        color:rgb(169,79,98);
+        background:rgba(255, 255, 255, 0.603);
+        width:5rem;
+        height: 2rem;
+        display:flex;
+        justify-content: center;
+        align-content: center;
+        font-size: 1.5rem;
+    }
     .section2 .panel {
-        flex:1 0 100%;
+        flex:1 0 50%;
     }
 }
 /*section3 start*/
@@ -408,9 +451,9 @@ nav.cheat {
 }
 .section3 .article-avatar {
     position:relative;
-    margin: 0 auto;
+    margin: 0 10px;
     background:white;
-    width:300px;
+    flex:1;
     height: 200px;
     overflow: hidden;
     display:flex;
@@ -424,7 +467,7 @@ nav.cheat {
 .section3 .article-avatar img {
     width:100%;
 }
-@media screen and (max-width:992px){
+@media screen and (max-width:768px){
     .section3 .article {
         margin: 0 auto;
         margin-bottom: 1.5rem;
@@ -685,7 +728,7 @@ footer {
     display:block;
     position: absolute;
     color:rgb(169,79,98);
-    left:2.5rem;
+    left:3rem;
     font-size: 0.8rem;
     cursor: pointer;
 }

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    html,body {
+        margin: 0;
+        padding: 0;
+        height:100%;
+    }
+    .page-wrapper{
+        background:transparent;
+        height: 100%;
+    }
+    .page-change {
+        background:#ccc;
+        position: absolute;
+        z-index: 3;
+        top:-50px;
+        right:0;
+        width:50px;
+        height: 100px;
+        transition: .5s;
+    }
+    .page-change:active {
+        position: absolute;
+        z-index: 0;
+        top:0;
+        right:0;
+        animation:change 1s both;
+        animation-play-state: running;
+    }
+    @keyframes change{
+        100%{
+            transform: translate(0,0);
+            width:100vmax;
+            height: 100vmax;
+        }
+    }
+    </style>
+</head>
+<body>
+    <div class="page-wrapper">
+        123
+    </div>
+    <div class="page-change">
+    </div>
+    <div class="page-change2">
+    </div>
+</body>
+</html>

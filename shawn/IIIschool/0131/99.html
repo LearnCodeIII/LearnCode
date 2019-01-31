@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    .d-flex {
+        display:flex;
+    }
+    .wrapper{
+        box-sizing: border-box;
+        background:#F0F0F0;
+        width:1280px;
+        height: 1338px;
+        margin: 0 auto;
+        padding:80px 85px;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-content: space-between;
+    }
+    .wrapper .box {
+        width:350px;
+        height: 366px;
+        color:#2EB738;
+        font-family: Helvetica Neue, Regular;
+        font-size: 24px;
+    }
+    .wrapper .header-box{
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .wrapper .body-box{
+        background:#FFFFFF;
+        border-radius: 100px 0 30px 0;
+        box-shadow: 0 3px 10px #D8D8D8;
+    }
+    .header-box .border {
+        justify-content: space-around;
+        align-items: center;
+    }
+    .header-box .border-x {
+        font-family: Helvetica Neue, Regular; 
+        font-size: 24px;  
+    }
+    .header-box .border-line {
+        border:0.5px solid #2EB738;
+        flex-basis: 280px;
+    }
+    .header-box h1 {
+        text-align: center;
+        font-family: PingFang TC, Medium;
+        font-size: 56px;
+        line-height: 78px;
+        margin: 0;
+    }
+    .header-box h2 {
+        text-align: center;
+        font-family: Helvetica Neue, Regular;
+        font-size: 24px;
+        line-height: 78px;
+        margin: 0;
+    }
+    footer {
+        box-sizing: border-box;
+        width: 1280px;
+        height: 34px;
+        margin: 0 auto;
+        padding:8px 85px;
+        background:#2EB738;
+        color:#F0F0F0;
+        font-family: Helvetica Neue, Regular;
+        justify-content: flex-end;
+    }
+    </style>
+</head>
+<body>
+    <div class="wrapper d-flex">
+        <div class="box header-box d-flex">
+            <div class="border d-flex">
+                <div class="border-x">x</div>
+                <div class="border-line"></div>
+                <div class="border-x">x</div>
+            </div>
+            <div class="content">
+                <h1>九九乘法表</h1>
+                <h2>MULTIPLICATION CHART</h2>
+            </div>
+            <div class="border d-flex">
+                <div class="border-x">x</div>
+                <div class="border-line"></div>
+                <div class="border-x">x</div>
+            </div>
+        </div>
+        <div class="box body-box"></div>
+        <div class="box body-box"></div>
+        <div class="box body-box"></div>
+        <div class="box body-box"></div>
+        <div class="box body-box"></div>
+        <div class="box body-box"></div>
+        <div class="box body-box"></div>
+        <div class="box body-box"></div>
+        
+    </div>
+    <footer class="container d-flex">
+        Copyright © 2019 HexSchool. All rights reserved.
+    </footer>
+    
+</body>
+</html>

@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>dashboard</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+
+
+    <style>
+    .btn-menu {
+        left:0;
+        bottom: 0;
+        height:40px;;
+        width:240px;
+        z-index: 2
+    }
+    .btn-menu a:hover {
+        background:#495057;
+        cursor: pointer;
+    }    
+    .menu {
+        top:0;
+        left:0;
+        bottom: 0;
+        width:240px;
+    }
+    .menu .brand {
+        font-size: 2rem;
+        color:white;
+    }
+    .menu .avatar{
+        overflow: hidden;
+        width: 60px;
+        height: 60px;
+    }
+    .menu figure img {
+        width:100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .menu .menu-toggle:hover {
+        background:black;
+        cursor: pointer;
+        border-bottom: 1px solid rgb(175, 175, 175);
+    }
+    main {
+        background:#ccc;
+        min-height:240vh;
+        margin-left:240px;
+        margin-top:56px;
+    }
+    nav {
+        position: fixed;
+        left:240px;
+        right:0;
+        top:0;
+    }
+    </style>
+  </head>
+  <body>
+    <div class="position-fixed btn-menu d-flex text-center align-items-center">
+        <a class="flex-grow-1 text-white py-2" data-toggle="tooltip" data-placement="top" title="Setting"><i class="fas fa-cog"></i></a>
+        <a class="flex-grow-1 text-white py-2" data-toggle="tooltip" data-placement="top" title="Fullscreen"><i class="fas fa-arrows-alt"></i></a>
+        <a class="flex-grow-1 text-white py-2" data-toggle="tooltip" data-placement="top" title="Fixed"><i class="fas fa-eye-slash"></i></a>
+        <a class="flex-grow-1 text-white py-2" data-toggle="tooltip" data-placement="top" title="Power"><i class="fas fa-power-off"></i></a>
+    </div>
+    <section class="position-fixed bg-dark menu">
+        <div class="brand">
+            <i class="fas fa-igloo p-3"></i>Igloo
+        </div>
+        <div class="p-2 d-flex">
+            <figure class="avatar overflow-hidden rounded-circle mr-3">
+                <img class="object-fit-cover" src="./images/avatar.jpg" alt="">
+            </figure>
+            <div>
+                <div class="text-light h5">Duck</div>
+                <div><a href="" class="text-white text-secondary h6">see my info.</a></div>
+            </div>
+        </div>
+        <h3 class="h6 p-2 text-white">GENERAL</h3>
+        <ul class="list-unstyled text-white">
+            <li class="d-flex justify-content-between align-items-center p-3 menu-toggle">
+                <div>
+                    <a class="d-block ">
+                        <i class="fas fa-home"></i> Home
+                    </a>
+                </div>
+                <i class="fas fa-angle-down"></i>
+            </li>
+            <li class="d-flex justify-content-between align-items-center p-3 menu-toggle">
+                <div>
+                    <a class="d-block ">
+                        <i class="far fa-credit-card"></i> Card
+                    </a>
+                </div>
+                <i class="fas fa-angle-down"></i>
+            </li>
+        </ul>    
+    </section>
+    <main>
+        <nav class="bg-white d-flex justify-content-between align-items-center">
+            <a class="p-3">
+                <i class="fas fa-bars text-dark"></i>
+            </a>
+        </nav>
+        <section class="p-4">
+            <h1>Dashboard</h1>
+            <div class="container-fulid">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="card p-3 h6">
+                            Your work
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>        
+    </main>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script>
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip()
+        })
+    </script>
+  </body>
+</html>
