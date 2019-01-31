@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    /* @keyframes changeColor {
+        from {
+            background:red;
+        }
+        to {
+            background:blue;
+        }
+    }
+    .box {
+        width: 200px;
+        height: 200px;
+        background:black;
+        margin:10px;
+        animation:changeColor 2s;
+    }
+    .step {
+        animation-timing-function:steps(3);
+    }
+    .step2 {
+        animation-timing-function:steps(3, start);
+    }
+    */
+    
+    /* 衣服擺動
+    @keyframes changeDeg {
+        0% {transform: rotate(0deg)}
+        30% {transform: rotate(4deg)}
+        60% {transform: rotate(-3deg)}
+        85% {transform: rotate(2deg)}
+        100% {transform: rotate(0deg)}
+    }
+    .clothes {
+        transition: 0.5s;
+        transform-origin: center top;
+    }
+    .transition:hover {
+        transform: rotate(15deg); 
+    }
+    .animation:hover {
+        animation: changeDeg 1.5s;
+    } */
+    @keyframes walk{
+        from{
+            background-position: left 0px ;
+        }
+        to{
+            background-position: -3500px;
+        }
+    }
+    .walk {
+        background:url('./images/normal.png');
+        width:350px;
+        height:380px;
+        overflow: hidden;
+        animation: walk 3s infinite;
+        animation-timing-function: steps(10);
+    }
+    .walk:hover {
+        animation:walk 1s infinite;
+        animation-timing-function: steps(10);
+    }
+    </style>
+</head>
+<body>
+    <!-- <div class="box"></div>
+    <div class="box step"></div>
+    <div class="box step2"></div> -->
+
+    <!-- <img class="clothes transition" src="./images/clothes_v4.png" alt="">
+    <img class="clothes animation" src="./images/clothes_v4.png" alt="">
+    <img class="clothes " src="./images/clothes_v4.png" alt=""> -->
+
+    <div class="walk">
+        
+    </div>
+</body>
+</html>

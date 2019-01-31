@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        html,body{
+            background:rgb(255, 255, 255);
+        }
+    .wrapper{
+        width:100px;
+        height: 100px;
+        margin: 0 auto;
+        padding: 0;
+        position: relative;
+    }
+    .box {
+        box-sizing: border-box;
+        width: 50%;
+        height: 50%;
+        position: absolute;
+        left:0;
+        top:0;
+        -webkit-clip-pathcircle:(20%);
+        clip-path: circle(20%);
+        }
+    .box1{
+        background:#CBDDB8;
+        animation:changePosition 4s infinite 0s;
+    }
+    .box2{
+        background:#B4C6B1;
+        animation:changePosition 4s infinite -1s;
+    }
+    .box3{
+        background:#A9BCB4;
+        animation:changePosition 4s infinite -2s;
+    }
+    .box4{
+        background:#9FA8A2;
+        animation:changePosition 4s infinite -3s;
+    }
+    @keyframes changePosition {
+        0%{transform: translate(0,0);}
+        25%{transform: translate(100%,0)}
+        50%{transform: translate(100%,100%)}
+        75%{transform: translate(0,100%)}
+        100%{transform: translate(0,0)}
+    }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="box box1"></div>
+        <div class="box box2"></div>
+        <div class="box box3"></div>
+        <div class="box box4"></div>
+    </div>
+</body>
+</html>

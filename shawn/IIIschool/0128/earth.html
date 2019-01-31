@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        @keyframes spaceflow {
+            from{
+                background-position:left;
+            }
+            to{
+                background-position:1800px;
+            }
+        }
+    html,body {
+        margin: 0;
+        padding: 0;
+    }
+    .space {
+        
+        height: 100vh;
+        background:url('./images/space-bg.jpg') center center repeat;
+        background-size:cover;
+        filter: brightness(120%);
+        animation: spaceflow 35s linear infinite;
+        resize:both;
+        overflow: hidden;
+        min-width:800px;
+        min-height:800px;
+    }
+    @keyframes planetShining {
+        0%{
+            filter:brightness(60%);
+        }
+        50%{
+            filter: brightness(100%);
+        }
+        100%{
+            filter:brightness(60%);
+        }
+    }
+    @keyframes circleSun {
+        from {
+            transform: rotate(0deg) translate(-50%,calc(-50% - 260px));
+        }
+        to   {
+            transform: rotate(360deg) translate(-50%,calc(-50% - 260px));
+        }
+    }
+    @keyframes circleEarth {
+        from {
+            transform: rotate(0) translate(-50%,calc(-50% - 90px));
+        }
+        to   {
+            transform: rotate(360deg) translate(-50%,calc(-50% - 90px)) ;
+        }
+    }
+    @keyframes circleStrange {
+        from {
+            transform: rotate(0) translate(-50%,calc(-50% - 390px)) rotate(720deg);
+        }
+        to   {
+            transform: rotate(360deg) translate(-50%,calc(-50% - 390px)) rotate(0);
+        }
+    }
+    @keyframes earthRotate {
+        from {
+            background-position: left 0;
+        }
+        to{
+            background-position: -500px;
+        }
+    }
+    @keyframes sunRotate {
+        from {
+            background-position: left 0;
+        }
+        to{
+            background-position: -128px;
+        }
+    }
+    .sun {
+        display:block;
+        position: absolute;
+        z-index: 1;
+        transform: translate(-50%,-50%);
+        top:50%;
+        left:50%;
+        border:1px dashed white;    
+        border-radius:50%;
+        padding:200px;resize:both;
+        overflow: hidden;
+    }
+    .sun-pic {
+        background:url('./images/sun.png') repeat;
+        background-size:cover;
+        width:128px;
+        height: 128px;
+        animation: sunRotate 5s linear infinite,planetShining linear 1s infinite;
+        box-shadow: 0 0 20px 2px rgb(255, 53, 3), 0 0 30px 3px black inset;
+        border-radius:50%;
+    }
+    .earth {
+        position: absolute;
+        z-index: 2;
+        transform: translate(-50%,-50%);
+        top:50%;
+        left:50%;
+        border:1px dashed white;    
+        border-radius:50%;
+        padding:50px;
+        animation:circleSun linear 20s infinite;
+        transform-origin:0px 0px;
+        
+    }
+    .earth-pic {
+        width:72px;
+        height: 72px;
+        background:url('./images/earth2.jpg') center center repeat;
+        background-size:cover;
+        border-radius: 50%;
+        animation:earthRotate 8s linear infinite;
+        box-shadow: 0 0 20px rgb(3, 226, 255), 0 0 10px black inset;
+    }
+    .moon {
+        position: absolute;
+        z-index: 3;
+        transform: translate(-50%,-50%);
+        top:50%;
+        left:50%;
+        animation:circleEarth linear 8s infinite;
+        transform-origin:0px 0px;
+    }
+    </style>
+</head>
+<body>
+    <div class="space">
+        <div class="sun"><div class="sun-pic"></div></div>
+        <!-- <img class="sun" src="./images/sun.png" alt=""> -->
+        <div class="earth">
+            <div class="earth-pic"></div>
+            <img class="moon" src="./images/moon.png" alt="">
+        </div>
+    </div>
+</body>
+</html>

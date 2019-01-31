@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    .box {
+        width:200px;
+        height: 200px;
+        overflow: hidden;
+        clip-path: circle(50% at 50% 50%);
+        transition:.5s;
+    }
+    .box img{
+        width:200%;
+        object-position: -95px -30px;
+    }
+    .box:hover {
+        clip-path: circle(35% at 50% 50%)
+    }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <img src="./images/_MG_0028.jpg" alt="">
+    </div>
+</body>
+</html>

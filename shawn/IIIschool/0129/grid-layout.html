@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        html,body{
+            margin: 0;
+            padding: 0;
+        }
+        .container{
+            max-width: 960px;
+            height: 900px;
+            background:#ccc;
+            margin:0 auto;
+        }
+        ul {margin: 0;padding: 0;list-style-type: none;}
+        a {color:white;text-decoration: none;}
+        .grid {
+            display:grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-template-rows: 1fr 14fr 1fr;
+            grid-template-areas:"header header header header""main main main aside""footer footer footer footer"
+        }
+        @media screen and (max-width:768px){
+            .grid {
+            display:grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-template-rows: 1fr 14fr 1fr;
+            grid-template-areas:"header header header header""main main main main""footer footer footer footer"
+        }
+            aside{
+                display:none;
+            }
+            h1 {
+                font-size:0.5rem;
+            }
+        }
+        @media screen and (max-width:568px){
+            header .item {
+                display:none;
+            }
+        }
+        header{background:#320A28;color:white;grid-area:header;}
+        main{background:#CB9173;color:white;grid-area:main;}
+        aside{background:#8E443D;color:white;grid-area:aside;}
+        footer{background:#511730;color:white;grid-area:footer;text-align: center;display:grid;align-content: center}
+
+        header{
+            padding: 0;
+            margin: 0;
+            display:grid;
+            grid-template-columns:12fr 4fr; 
+            align-items: center;
+            transition:.5s;
+        }
+        header .brand{
+            display:grid;
+            grid-template-columns: 1fr 12fr;
+        }
+        header ul {
+            display:grid;
+            grid-template-columns: 3fr 3fr 3fr;
+        }
+        header a {
+            display:block;
+            padding:1rem;
+            transition:.8s;
+        }
+        header ul a {
+            text-align: center;
+        }
+        header a:hover {
+            background:#CB9173;
+        }
+        main {padding:1rem;}
+        main h1{text-align: center;font-family: Arial;font-size:3rem;letter-spacing: 0.5rem;}
+        main article{font-size: 2rem;}
+    </style>
+</head>
+<body>
+    <div class="container grid">
+        <header>
+            <div class="brand"><a href="">LOGO</a><div></div></div>
+            <ul class="item">
+                <li><a href="">About</a></li>
+                <li><a href="">Work</a></li>
+                <li><a href="">Contact</a></li>
+            </ul>
+        </header>
+        <main>
+            <h1>Main</h1>
+            <article>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eos consectetur nostrum unde nisi error, pariatur blanditiis deserunt natus asperiores ipsa. Id, error ducimus totam quos explicabo iste deserunt dolorem! Error.</article>
+        </main>
+        <aside>
+            aside
+        </aside>
+        <footer>
+            footer
+        </footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    </style>
+</head>
+
+<body>
+
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <script>
+        var movieName = ['殺死巨人的女孩','驚濤佈局','三角草的春天']
+        
+        var p = d3.select('body').selectAll('p')
+
+        var enter = update.enter()
+        var exit = update.exit()
+        
+        update
+            .text(function(d,i){
+                return d + " " + i
+            })
+        enter
+            .append('p')
+            .text(function(d,i){
+                return d + " " + i
+            })
+        exit.remove()
+    </script>
+</body>
+
+</html>
