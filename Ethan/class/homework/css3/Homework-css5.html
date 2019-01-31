@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC" rel="stylesheet">
+
+    <title>Homework after</title>
+    <style>
+        /* 工具組 */
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        body {
+            box-sizing: border-box;
+            font-family: 'Noto Sans TC', sans-serif;
+            background-color: #eee;
+        }
+
+        .d-flex {
+            display: flex;
+        }
+
+        .list-unstyled li {
+            list-style: none;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        .container {
+            max-width: 960px;
+            margin: 0 auto;
+        }
+
+        /* ----------------------------------------------- */
+
+        /* nav */
+        nav {
+            background-color: #fff;
+        }
+
+        .nav-links {
+            align-items: center;
+        }
+
+        nav .container {
+            width: 100%;
+            justify-content: space-between;
+        }
+
+        nav li {
+            padding: 0 15px;
+            display: block;
+            height: 50px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #222;
+            min-height: 100%;
+            display: flex;
+            align-items: center;
+        }
+
+        .list-unstyled li:hover {
+            background-color: rgba(0, 0, 0, .7);
+        }
+
+        .nav-left {
+            align-items: center;
+        }
+
+        .nav-right {
+            align-items: center;
+        }
+
+        nav img {
+            height: 46px;
+        }
+
+        /* ---------------------------------------------------- */
+
+        /* banner */
+        .banner{
+            color: white;
+        }
+
+        .banner .bg {
+            background: url(images/sc1/long-hair.jpg) no-repeat center center;
+            width: 100%;
+            height: 70vh;
+        }
+
+        .banner .container{
+            text-align: center;
+        }
+
+        .banner .logo{
+            margin-top: 50px;
+            max-width: 250px;
+        }
+
+        .banner h1{
+            font-size: 55px;
+            padding: 20px;
+        }
+
+        .banner h4{
+            padding: 10px;
+            font-size: 20px;
+        }
+
+        .banner-search{
+            background-color: rgba(0,0,0,.7);
+            padding: 2px;
+            outline: 2px solid pink;
+            outline-offset: 3px;
+            height: 40px;
+            width: 500px;
+            margin: 20px auto;
+        }
+        .banner .area{
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            width: 140px;
+        }
+        .banner input{
+            padding: 0 10px;
+            background: none;
+            border: none;
+            flex-grow: 1;
+            height: 100%;
+        }
+        .banner .run{
+            justify-content: center;
+            align-items: center;
+            background-color: pink;
+            height: 100%;
+            width: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="d-flex list-unstyled">
+        <div class="d-flex container">
+            <ul class="nav-left d-flex">
+                <li></li><a href=""><img src="images/nav/nav-logo.png" alt=""></a></li>
+                <li><a href="">找髮型</a></li>
+                <li><a href="">找設計師</a></li>
+                <li><a href="">找沙龍</a></li>
+            </ul>
+            <ul class="nav-right d-flex">
+                <li><a href="">註冊</a></li>
+                <li><a href="">登入</a></li>
+                <li><a href=""><img src="images/nav/setting.png" alt=""></a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="banner">
+        <div class="bg">
+            <div class="container">
+                <img class="logo" src="images/sc1/logo_icon_g.png" alt="">
+                <h1>你的時尚地圖</h1>
+                <h4>給你最多髮型靈感及在地優秀設計師</h4>
+                <div class="banner-search d-flex">
+                    <div class="area d-flex">
+                        <img src="images/sc1/sc2-icon_searchbar_location.png" alt="">
+                        所有主題
+                    </div>
+                    <input type="text" placeholder="所有髮型主題">
+                    <div class="run d-flex">
+                        <img src="images/sc1/sc2-icon_searchbar_search.png" alt="">
+                        來逛逛
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>
