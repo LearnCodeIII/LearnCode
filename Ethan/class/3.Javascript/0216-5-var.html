@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Javascript lesson1-4</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            padding: 0;
+            margin: 0;
+        }
+
+        .bg {
+            background-color: #eee;
+            padding: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="bg">
+        <div id="info"></div>
+        <div class="info"></div>
+        <h1 class="info"></h1>
+        <h1 class="info"></h1>
+        <h1 class="info"></h1>
+    </div>
+
+
+    <script>
+        // 基本類型的變數(Number Boolean String),設定後會給他一個值
+        var a = 10;
+        var b = a;
+        b = 5;
+        console.log(a)
+
+        // 複雜類型的設定後會給他一個參照點,除了基本類之外都是複雜類型.
+        var ef = document.getElementById("info");
+        var ee = ef;
+        ee.innerHTML = a;
+
+        // getElementsByClassName要多加一個參照點,就算只有一行也要加
+        document.getElementsByClassName("info")[0].innerHTML = b;
+        document.getElementsByClassName("info")[1].innerHTML = a;
+
+    </script>
+</body>
+
+</html>
