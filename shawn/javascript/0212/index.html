@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <form onsubmit="checkForm();return false" name="form1">
+        <label for="firstname">first-name:</label>
+        <input type="text" name="name" id="name">
+        <br>
+        <label for="age">age :</label>
+        <input type="number" name="age" id="age"><span id="age-check"></span>
+        <br>
+        <label for="gender">gender :</label>
+        <select name="gender" id="gender">
+            <optgroup label="select your gender">
+                <option value="man">man</option>
+                <option value="woman">woman</option>
+            </optgroup>
+        </select>
+        <input type="submit">
+    </form>
+    <script>
+    function checkForm(){
+        let age = document.form1.age.value;
+            gender = document.form1.gender.value;
+            name = document.form1.name.value;
+        let ageCheck = document.querySelector('#age-check');
+        if (age<0 || age>150){
+            ageCheck.innerHTML = "年齡輸入錯誤，請檢查輸入年齡"
+        }else {
+            if (gender==="man"){
+                gender = "先生"
+            }else {
+                gender = "女士"
+            }
+            alert('Welcome'+ name +gender);
+        }
+    }
+    </script>
+</body>
+</html>
