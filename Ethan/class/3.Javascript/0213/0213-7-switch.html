@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <input type="text" id="in" onkeyup="oup.innerHTML=''";>
+    <button onclick="func();"> send </button>
+    <div>請輸入你的成績</div>
+
+    <div id="ouput"></div>
+
+
+    <script>
+        var inn = document.querySelector("#in");
+        var oup = document.querySelector("#ouput");
+
+        function func() {
+            var i = parseInt(inn.value);
+            var ii = parseInt(i / 10);
+
+            if (i <= 100 && i > 0) {
+                switch (ii) {
+                    case 10:
+                    case 9:
+                        oup.innerHTML = "A";
+                        break;
+                    case 8:
+                        oup.innerHTML = "B";
+                        break;
+                    case 7:
+                        oup.innerHTML = "C";
+                        break;
+                    case 6:
+                        oup.innerHTML = "D";
+                        break;
+                    default:
+                        oup.innerHTML = "F";
+                        break;
+                }
+            }
+        }
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="info"></div>
+
+
+
+    <script>
+        // 此為練習------------------------------------------------------------
+
+        // 嚴格審查
+        'use strict'
+        var info = document.querySelector("#info");
+
+        // 2.4.6............30
+        // var為傳統變數定義用法
+        for (var i = 2; i <= 30; i += 2) {
+            info.innerHTML += `${i} <br>`;
+        }
+
+
+        // 10.9.8.7..............1
+        // var為傳統變數定義用法
+        for (var m = 10; m >= 1; m--) {
+            info.innerHTML += `${m} <br>`;
+        }
+
+        // 10.9.8.7..............1(寫法2)
+        // var為傳統變數定義用法
+        for (var m = 0; m < 10; m++) {
+            info.innerHTML += `${10-m} <br>`;
+        }
+
+        // 57.60.63.66...........114
+        // var為傳統變數定義用法
+        for (var n = 57; n <= 114; n += 3) {
+            info.innerHTML += `${n} <br>`;
+        }
+    </script>
+</body>
+</html>

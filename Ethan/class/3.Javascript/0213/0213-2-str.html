@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div id="place"></div>
+    <br>
+    <div id="place1"></div>
+    <br>
+    <div id="place2"></div>
+    <br>
+    <div id="place3"></div>
+    <br>
+    <div id="place4"></div>
+    <br>
+    <div id="place5"></div>
+    <br>
+    <div id="place6"></div>
+
+
+    <script>
+        var str = "10年敗光4億睡4000女 頭彩富翁淪落運柴工人10年敗光4億睡4000女 頭彩富翁淪落運柴工人";
+
+        var place = document.querySelector("#place");
+        var place1 = document.querySelector("#place1");
+        var place2 = document.querySelector("#place2");
+        var place3 = document.querySelector("#place3");
+        var place4 = document.querySelector("#place4");
+        var place5 = document.querySelector("#place5");
+        var place6 = document.querySelector("#place6");
+
+        place.innerHTML = str.split("");
+
+        place1.innerHTML = str.split("敗光");
+
+        place2.innerHTML = str.split("敗光").join("怒花");
+
+        place3.innerHTML = str.IndexOf("敗光");
+
+        place4.innerHTML = str.IndexOf("敗光", 7);
+ 
+       place5.innerHTML = str.lastIndexOf("敗光");
+
+        place6.innerHTML = str.lastIndexOf("敗光", 7);
+        
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+    }
+
+    #rect {
+        background: #ccc;
+        width: 800px;
+        height: 600px;
+        position: relative;
+    }
+
+    .ball {
+        position: absolute;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background-color: blue;
+        color: white;
+        font-weight: 900;
+        line-height: 40px;
+        text-align: center;
+    }
+</style>
+
+<body>
+    <div id="rect"></div>
+
+
+    <script>
+        const bg = document.querySelector("#rect");
+        let cr , i , k , n = 0 ;
+
+        // 算好x.y座標,讓他直接替補與進位的概念做出排序
+            for (i = 0; i < 30; i++ , n++) {
+
+                // left套x座標用餘數的概念決定排哪一個
+                var left = (i%4) * 50;
+                // high套y座標,用整數的概念決定排哪一排
+                var hi = parseInt(i/4)*60;
+                var txt = n;
+                
+                
+                bg.innerHTML += `<div class="ball" style="left: ${left}px; top: ${hi}px;">${txt}</div>`
+                
+                
+                
+                
+            }
+
+    </script>
+</body>
+
+</html>

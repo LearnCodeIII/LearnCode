@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>0213 - re0212class</title>
+</head>
+
+<body>
+    <form name="formname" onsubmit="myform(); return false;">
+        <label for="age">Age</label>
+        <input type="number" name="age" id="age">
+        <br>
+        <label for="gender"></label>
+        <select name="gender" id="gender">
+            <option value="">請選擇</option>
+            <option value="男">男</option>
+            <option value="女">女</option>
+        </select>
+        <br>
+        <input type="submit">
+    </form>
+
+    <div id="print"></div>
+
+    <script>
+        function myform() {
+            var age = document.formname.age.value;
+            var gender = document.formname.gender.value;
+
+            var print = document.getElementById("print");
+
+            if (age >= 18 && gender == "女") {
+                print.innerHTML = "歡迎";
+            } else {
+                print.innerHTML = "Good Bye";
+            }
+
+
+        }
+
+    </script>
+</body>
+
+</html>

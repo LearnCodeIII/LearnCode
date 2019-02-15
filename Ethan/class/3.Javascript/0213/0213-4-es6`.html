@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="info"></div>
+
+
+
+    <script>
+            var info = document.querySelector("#info");
+            var aaa = 4+3;
+
+
+
+            // `這個es6的字串專用符號,裡面變數用${}表示，且可以換行，但是換行前面的空格也會算到HTML裡面的空格歐~~(當然跟HTML裡面的空格一樣只算一格)!! 以下為範例
+            info.innerHTML = `sdf ${aaa}dsfgdsfgdfsgijlk
+            dfgjdlskfgjdlfg
+            dfjkgdjolgfkdlfg
+            `;
+    </script>
+</body>
+
+</html>

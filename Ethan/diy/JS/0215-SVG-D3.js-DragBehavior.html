@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <title>D3-js D3-nest</title>
+    <style>
+        #r {
+            position: absolute;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="r"></div>
+
+    <script>
+        var drag = d3.behavior.drag()
+            .on('dragstart', function () {
+                rect.style({ 'background': 'red' });
+            })
+            .on('drag', function () {
+                rect.style({
+                    'left': (d3.event.x - 25) + 'px',
+                    'top': (d3.event.y - 25) + 'px',
+                    'background': 'green'
+                });
+            })
+            .on('dragend', function () {
+                rect.style({ 'background': '#000' });
+            });
+
+        var rect = d3.select('#r')
+            .style({ 'left': '50px', 'top': '50px' })
+            .call(drag);
+    </script>
+</body>
+
+</html>

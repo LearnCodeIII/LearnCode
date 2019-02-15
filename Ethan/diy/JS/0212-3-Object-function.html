@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>0212 Javascript Learn-3</title>
+</head>
+
+<body>
+
+    <script>
+        // 用new Object建立物件
+        var person = new Object();
+        person["firstname"] = "Ethan";
+        person["lastname"] = "hunt";
+
+        // 呼叫物件的值
+        console.log(person["firstname"]);
+        console.log(person["lastname"]);
+        console.log(person["firstname"] + " " + person["lastname"]);
+
+        // []內是變數的呼叫物件
+        var name = ["firstname"];
+        console.log(person[name]);
+
+        // 用點來建立物件的子層
+        person.address = new Object();
+        person.address.country = "Taiwan";
+        person.address.sity = "Taipei";
+        person.address.locate = "101";
+
+        // 呼叫子層物件的值
+        console.log(person["address"]["sity"]);
+        console.log(person.address["country"]);
+        console.log(person.address);
+
+        // **用大括號建立物件
+        var person1 = {
+            age:"18",
+            job:"agent",
+            like:{
+                food:"pizza",
+                sport:"bike",
+                tv:"none"
+            } 
+        }
+        console.log(person1);
+        
+
+        // 直接在函式參數的地方建立物件        
+        function SayHi(person){
+            console.log("Hi" + " " + person.job);
+        }
+        // 下方這行會con出person1的job
+        SayHi(person1); 
+        // 下方這行沒指定,而且又新增物件,因此會con出函式原廠標配中新加上去的job
+        SayHi({job:"bod", lastname:"powell"});
+
+        // 函數本身也是一種物件,因此函數SayHi這個本身就是物件名稱,可以直接console
+        console.log(SayHi);
+
+        // 既然函數是物件,當然也可以賦予屬性(點就是上面講到的"點建立子層法")
+        SayHi.language = "Engilsh";
+        console.log(SayHi.language);
+</script>
+
+</body>
+
+</html>

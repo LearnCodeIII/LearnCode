@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="info"></div>
+
+
+
+    <script>
+        // 嚴格審查
+        'use strict'
+        var info = document.querySelector("#info");
+
+        // var為傳統變數定義用法
+        for (var i = 0 ; i <= 10 ; i++) {
+            info.innerHTML += `${i} <br>`;
+        }
+            info.innerHTML += `${i} -------<br>`;
+
+
+
+        // let為es6新增的變數定義用法,它有區域性只會活在自己的小圈圈中(scope),
+        for (let k = 0 ; k <= 10 ; k++) {
+            info.innerHTML += `${k} <br>`;
+        }
+            // info.innerHTML += `${k} -------<br>`;所以在這邊的k就會為定義
+
+    </script>
+</body>
+
+</html>
