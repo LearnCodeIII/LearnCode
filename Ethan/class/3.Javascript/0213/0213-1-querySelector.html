@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <table>
+        <tr>
+            <td>1</td>
+            <td class="myclass">2</td>
+            <td>3</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td class="myclass">5</td>
+            <td>6</td>
+        </tr>
+    </table>
+
+
+    <script>
+        var td1 = document.querySelector("td");
+        var td2 = document.querySelectorAll("td");
+
+        var td3 = document.querySelector(".myclass");
+        var td4 = document.querySelectorAll(".myclass");
+
+        var old1 = document.getElementsByClassName("myclass")[0];
+        var old2 = document.getElementsByClassName("myclass")[1];
+        var old3 = document.getElementsByClassName("myclass");
+
+        console.log(td1);
+        console.log(td2);
+
+        console.log(td3);
+        console.log(td4);
+
+        console.log(old1);
+        console.log(old2);
+        console.log(old3);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <title>D3-js D3-nest</title>
+
+</head>
+
+<body>
+    <script>
+        var data = [
+            { name: 'Tom', score: 98, type: 'class1', sex: 'man' },
+            { name: 'Jack', score: 72, type: 'class2', sex: 'man' },
+            { name: 'Owen', score: 93, type: 'class3', sex: 'man' },
+            { name: 'Mark', score: 41, type: 'class4', sex: 'man' },
+            { name: 'Marry', score: 67, type: 'class4', sex: 'woman' },
+            { name: 'Rock', score: 59, type: 'class2', sex: 'man' },
+            { name: 'Jason', score: 83, type: 'class1', sex: 'man' },
+            { name: 'Peter', score: 47, type: 'class3', sex: 'man' },
+            { name: 'Cherry', score: 53, type: 'class1', sex: 'woman' },
+            { name: 'Jean', score: 68, type: 'class4', sex: 'woman' }
+        ];
+
+        // 透過 d3.nest 的轉換，可以將原本的數據變成以 key 和 value 為主的巢狀結構，並且可以針對巢狀結構的每個節點進行排序，而所得到的巢狀結構數據，可以在程式裡重複使用而不會影響到原本的數據。
+        var b = d3.nest()
+            .key(function (d) { return d.type; }) //以type為主做排序
+            .entries(data);　//把值丟回項目中
+        // 這邊做的就是回傳以class為分類的陣列資料.
+
+        var a = d3.nest()
+            .key(function (d) { return d.sex; })
+            .entries(data);
+        // 這邊做的就是回傳以sex為分類的陣列資料.
+
+        console.log("d3.nest以type為主")
+        console.log(b);
+        console.log("d3.nest以sex為主")
+        console.log(a);
+
+
+
+        //------------------------nest.sortKeys---------------------------------
+        // -----descending---降冪
+        var c = d3.nest()
+            .key(function (d) { return d.score; }) //以key(score)為主做排序
+            .sortKeys(d3.descending)  //降冪
+            .entries(data);
+        //這邊做的就是回傳以score為分類做陣列資料，並且用降序來排列(大到小)
+
+        // -----ascending---升冪
+        var d = d3.nest()
+            .key(function (d) { return d.score; })
+            .sortKeys(d3.ascending)  //升冪
+            .entries(data);
+        //這邊做的就是回傳以score為分類做陣列資料，並且用升序來排列(小到大)
+
+        // -----sortKeys---1---針對所連接的值進行排序作業
+        var e = d3.nest()
+            .key(function (d) { return d.type; }) //以type為主做排序
+            .key(function (d) { return d.score; }) //以score為主做排序
+            .sortKeys(d3.descending)  //不把 type 排序，而是會把 type 內的 score 排序
+            .entries(data);
+
+        // -----sortKeys---2---不用升降冪，並把分數以60分成上面或下面
+        var f = d3.nest()
+            .key(function (d) { return d.score; }) //以score為主做排序 (把分數為主的資料全部打出來)
+            .sortKeys(function (a) { return a < 60; })  //上面先出現60分以上的
+            .entries(data);
+
+        var g = d3.nest()
+            .key(function (d) { return d.score; })
+            .sortKeys(function (a) { return a > 60; })
+            .entries(data);
+
+        console.log("descending---降冪")
+        console.log(c);
+        console.log("ascending---升冪")
+        console.log(d);
+        console.log("sortKeys---1---針對所連接的值進行排序作業")
+        console.log(e);
+        console.log("sortKeys---2---把分數分成60在上面")
+        console.log(f);
+        console.log("sortKeys---2---把分數分成60在下面")
+        console.log(g);
+
+
+
+        //-----nest.rollup(function)---將 value 內的所有東西,根據我們所下的條件，彙總成一個 value
+        //---不是像 sum 一樣，可以把內容的所有數字相加起來得到一個總和!!!
+        var h = d3.nest()
+            .key(function (d) { return d.type; })
+            .rollup(function (d) { return d.length; }) //彙總的 value 就會得到陣列的長度
+            .entries(data);
+
+
+        var i = d3.nest()
+            .key(function (d) { return d.type; })
+            .rollup(function (d) { return d3.sum(d, function (dd) { return dd.score; }); }) //先得到陣列長度，再求內容所有分數的總和
+            .entries(data);
+
+        console.log("nest.rollup根據條件彙總成一個 value")
+        console.log(h);
+        console.log("sum求內容所有分數的總和")
+        console.log(i);
+
+
+
+        // -----map---entries---把 data 的值丟進去 nest 裏頭處理
+        //.entries(data); //丟進去變成陣列
+        //.map(data); //丟進去變成物件
+        // 基本上因為 d3.js 已經有相當豐富的圖表讓大家使用，因此如何利用巢狀結構，做出適合圖表的數據，就變成使用者要學習的了。
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

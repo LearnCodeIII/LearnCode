@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="info"></div>
+
+
+
+    <script>
+        var n = 255;
+
+        // 把數字轉字串
+        // ()不填就是直接轉
+        console.log(n.toString(16));
+        console.log(n.toString() );
+        
+        
+        // 字串轉數字
+        // 後面不填就是10進位,但是在這邊ff10進位會跑不出數字而顯示Nan
+        console.log(parseInt("ff", 16));
+        console.log(parseInt("19") );
+
+    </script>
+</body>
+
+</html>

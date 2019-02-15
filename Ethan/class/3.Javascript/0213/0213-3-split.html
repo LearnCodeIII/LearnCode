@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        span.myclass {
+            color: red;
+            font-weight: 900;
+        }
+    </style>
+
+
+</head>
+
+<body>
+
+    <input type="text" id="input" onkeyup="func()">
+    <div id="info">
+        1983年，母親替親戚做保被倒債千萬元，當時100萬元就可以買1間台北市房子，曹家不得不變賣辛苦攢下的5間房，曹愛琴心疼地說：「哥哥、嫂嫂們真的很辛苦，花10多年才把債務還清。」本以為終於可以喘口氣，曹國財卻在1992年因氣喘引發呼吸衰竭病逝，周夏珍則被診斷出罹患肝癌。25
+    </div>
+
+    <div id="ouput"></div>
+
+    <script>
+            var info = document.querySelector("#info");
+            var inp = document.querySelector("#input");
+            var oup = document.querySelector("#ouput");
+
+
+        function func() {
+            var str = info.innerText;
+            var inpp = inp.value;
+            oup.innerHTML = str.split(inpp).join('<span class="myclass">' + inpp + '</span>') 
+        }
+    </script>
+</body>
+
+</html>

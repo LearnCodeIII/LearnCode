@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+    }
+
+    #rect {
+        background: #ccc;
+        width: 800px;
+        height: 600px;
+        position: relative;
+    }
+
+    .ball {
+        position: absolute;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background-color: blue;
+        color: white;
+        font-weight: 900;
+        line-height: 40px;
+        text-align: center;
+    }
+</style>
+
+<body>
+    <div id="rect"></div>
+
+
+    <script>
+        const bg = document.querySelector("#rect");
+        let cr , i , k , n = 0 ;
+
+        // 排圈圈另外一種寫法
+        for (k = 0; k < 6; k++) {
+            for (i = 0; i < 10; i++ , n++) {
+                console.log(n);
+                var left = i * 50;
+                var txt = n;
+                var hi = k*60;
+                bg.innerHTML += `<div class="ball" style="left: ${left}px; top: ${hi}px;">${txt}</div>`
+            }
+        }
+
+    </script>
+</body>
+
+</html>

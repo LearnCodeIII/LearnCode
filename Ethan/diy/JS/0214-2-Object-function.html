@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>0212 Javascript Learn-3</title>
+</head>
+
+<body>
+
+    <script>
+        var ii = new Object();
+        ii["nember1"] = 7;
+        ii["nember2"] = 77;
+        console.log(ii);
+
+
+
+        var oo = {
+            pp: 9,
+            ll: 10
+        }
+
+        // delete oo.pp;
+        console.log(oo);
+
+        var mm = new Object();
+        mm.nn = "666";
+        mm.nn = new Object();
+        mm.nn.pp = "66666";
+
+        console.log(typeof mm.nn);
+        console.log(mm.nn);
+
+        
+
+
+
+
+
+        // 用new Object建立物件
+        var x = new Object();
+        x["firstname"] = "123";
+        x["lastname"] = "321";
+        console.log(x);
+        // 呼叫物件的值
+        console.log(x["firstname"]);
+
+        // []內是變數的呼叫物件
+        var z = ["firstname"];
+        console.log(x[z]);
+
+
+        // 用點來建立物件的子層
+        x.vv = new Object();
+        x.vv.aa = "oh ya";
+        x.qq =
+            console.log(x.vv.aa)
+        console.log(typeof x.vv)
+
+        // 呼叫子層物件的值
+        console.log(x.vv.aa)
+
+        // **用大括號建立物件
+        var y = {
+            qq: 111,
+            ww: 222,
+            ee: 333,
+            rr: 444
+        };
+        console.log(y);
+
+        var p = {
+            qq: 555
+        }
+
+        // 直接在函式參數的地方建立物件        
+        function func(u) {
+            var x = u;
+            console.log(x.qq);
+        }
+
+        func(p);
+
+
+        // 下方這行會con出person1的job
+
+        // 下方這行沒指定,而且又新增物件,因此會con出函式原廠標配中新加上去的job
+
+
+        // 函數本身也是一種物件,因此函數SayHi這個本身就是物件名稱,可以直接console
+
+
+        // 既然函數是物件,當然也可以賦予屬性(點就是上面講到的"點建立子層法")
+
+    </script>
+
+</body>
+
+</html>
