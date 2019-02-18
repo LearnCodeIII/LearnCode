@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+    .bg {
+        background-color: #ccc;
+        width: 960px;
+        height: 500px;
+    }
+</style>
+
+<body>
+    <div class="bg">
+        <div id="rect"></div>
+    </div>
+
+
+    <!-- Array的splice是拿來新增 刪除 取代用的 -->
+    <script>
+        var rect = document.querySelector("#rect");
+        var ar = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h'];
+        var br = ar.slice();
+        // slice是複製一份出來(表層複製)
+
+        rect.innerHTML = `${br}<br>`
+
+        // splice(要動的範圍,要刪除的數量,要新增的數量(可一直放逗號增加新增的數量))
+        
+        // 刪除()
+        br.splice(2,3);
+        rect.innerHTML += `${br}<br>`
+        // 這個做到的是刪除第三個/第四個/第五個
+
+        // 新增
+        var br = ar.slice();
+        br.splice(2,0,"nine","nine");
+        rect.innerHTML += `${br}<br>`
+        // 這個做到的是在第三個的地方插入nine/第四個也是
+        
+        // 取代
+        var br = ar.slice();
+        br.splice(2,2, 'nine,nine');
+        rect.innerHTML += `${br}<br>`
+        // 這個做到的是在第三個的地方刪除兩個再插入nine兩個,所以等於取代
+
+    </script>
+</body>
+
+</html>

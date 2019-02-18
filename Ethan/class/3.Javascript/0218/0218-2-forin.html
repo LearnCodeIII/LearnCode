@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+    .bg {
+        background-color: #ccc;
+        width: 960px;
+        height: 500px;
+    }
+</style>
+
+<body>
+    <div class="bg">
+        <div id="rect"></div>
+    </div>
+    <script>
+        // 以下為Object與特性演示,用for/in把物件obj的內容套進變數s
+        var rect = document.querySelector("#rect");
+        var obj = { name: 'Ethan', age: 20, gender: 'male' };
+        var s;
+        for (s in obj) {
+            rect.innerHTML +=  `${s} : ${obj[s]} <br>`;
+        }
+            
+            
+            
+            rect.innerHTML += `---------------------- <br>`;
+        // for (d in job) {
+        //     rect.innerHTML += `${d} : ${job[d]} <br>`;
+        // }
+
+
+
+        // 以下為陣列與特性演示,一樣用for/in把陣列job的內容套進變數d,
+        var job = ['Agent', 20, { name: 'Tom', age: 20 }];
+        var d;
+        job[2.5] = '2.5';
+        job[9] = 'ninenine~';
+        for (d in job) {
+            rect.innerHTML += `${d} : ${job[d]} <br>`;
+            rect.innerHTML += `length:${d.length} <br>`;
+        }
+        rect.innerHTML += `length:${job.length} <br>`;
+        // 這邊會發現如果沒有遵守陣列的規則,最後長度會錯亂
+    </script>
+</body>
+
+</html>

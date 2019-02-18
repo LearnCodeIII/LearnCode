@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="rect"></div>
+
+    <script>
+        var rect = document.querySelector('#rect');
+
+        var ar = [{ name: 'Bill', age: 25, id: 'A001' },
+        { name: 'Ethan', age: 27, id: 'A002' },
+        { name: 'Peter', age: 23, id: 'A003' },
+        { name: 'Elsa', age: 23, id: 'A004' },
+        { name: 'Sasa', age: 23, id: 'A005' },
+        { name: 'Coco', age: 23, id: 'A006' },
+        { name: 'David', age: 23, id: 'A007' },
+        ];
+
+
+        // 這邊比較用大於!!!
+        var run = ar.sort(function (a, b) {
+            return a.name > b.name ? 1: -1;
+        })
+        console.log(run);
+    </script>
+</body>
+
+</html>

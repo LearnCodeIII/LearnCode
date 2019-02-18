@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+    .bg {
+        background-color: #ccc;
+        width: 960px;
+        height: 500px;
+    }
+</style>
+
+<body>
+    <div class="bg">
+        <div id="rect"></div>
+    </div>
+
+    <script>
+
+
+        // Array裡的sort是用來排序的
+        const rect = document.querySelector("#rect");
+        var lt = [];
+        var i;
+        
+        for (i = 0; i < 49; i++) {
+            lt.push(i+1);
+        }
+        
+        
+        rect.innerHTML = `${lt} <br>`;
+
+            // 反轉
+        lt.reverse();
+        rect.innerHTML += `${lt} <br>`;
+
+            // 預設是依照文字第一位大小排序
+        lt.sort();
+        rect.innerHTML += `${lt} <br>`;
+
+            // 高低排序
+        lt.sort(
+            function (a, b) {
+                return a - b;
+            }
+        );
+        rect.innerHTML += `${lt} <br>`;
+
+            // 高低排序
+        lt.sort(
+            function (a, b) {
+                return b - a;
+            }
+        );
+        rect.innerHTML += `${lt} <br>`;
+
+
+            // 創造亂數
+        lt.sort(
+            function (a, b) {
+                return Math.random() - .5;
+            }
+        );
+        rect.innerHTML += `${lt} <br>`;
+
+    </script>
+</body>
+
+</html>

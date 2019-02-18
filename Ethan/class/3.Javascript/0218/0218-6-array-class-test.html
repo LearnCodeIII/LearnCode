@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+    span.red {
+        color: red;
+    }
+</style>
+
+<body>
+    <div id="rect"></div>
+
+    <script>
+        var rect = document.querySelector("#rect");
+        var ar = ['1', '2', '4', '5', '7', '11', '13', '19', '22', '28', '29', '31', '33', '38',];
+
+        // 過濾條件
+        var br = ar.filter(function (val) {
+            return val % 2 === 0;
+        })
+        console.log(br)
+        rect.innerHTML = br.toString()+'<br>';
+
+
+        // map針對每一個做加工然後回傳
+        var cr = ar.map(function(val){
+            return val*val;
+        })
+        rect.innerHTML = cr.toString()+'<br>';
+
+
+
+        var dr = ar.map(function(val){
+            var className = val%2 ? '' : 'red';
+            return `<span class="${className}">${val}</span>`;
+        });
+        rect.innerHTML += dr.toString() + '<br>';
+    
+
+
+        var er = ar.map(function(val){
+            var className = val%2 ? 'red' : '';
+            return `<span class="${className}">${val}</span>`;
+        });
+        rect.innerHTML += er.toString() + '<br>';
+    </script>
+</body>
+</html>

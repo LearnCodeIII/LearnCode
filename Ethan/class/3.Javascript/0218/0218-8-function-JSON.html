@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>function1</title>
+</head>
+
+<body>
+    <div id="rect"></div>
+
+
+    <script>
+        var rect = document.querySelector('#rect');
+
+        var people = [{ name: 'Bill', age: 25, id: 'A001' },
+        { name: 'Ethan', age: 27, id: 'A002' },
+        { name: 'Peter', age: 23, id: 'A003' },
+        ]
+
+        var j = JSON.stringify(people);
+        var jj = JSON.parse(JSON.stringify(people));
+        var jjj = people.slice();
+
+        rect.innerHTML = JSON.stringify(people)  + '<br>';
+        rect.innerHTML +=  JSON.parse(JSON.stringify(people)) + '<br>';
+        rect.innerHTML += people.slice()  + '<br>';
+
+        people[0].name = 'tttttttt';
+
+        console.log(j);
+        console.log(jj);
+        console.log(jjj);
+
+    </script>
+</body>
+
+</html>
