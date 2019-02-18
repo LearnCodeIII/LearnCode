@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="rect"></div>
+
+
+    <script>
+        var rect = document.querySelector("#rect");
+
+
+        var people = [{ name: 'Bill', age: 25, id: 'A001' },
+        { name: 'Ethan', age: 27, id: 'A002' },
+        { name: 'Peter', age: 23, id: 'A003' },
+        ];
+
+
+        // forEach的括號內容為:(值,索引)
+        people.forEach(function(val,ind){
+        rect.innerHTML += `${ind}:${val.name}<br>`;
+        })
+
+        
+    </script>
+</body>
+
+</html>

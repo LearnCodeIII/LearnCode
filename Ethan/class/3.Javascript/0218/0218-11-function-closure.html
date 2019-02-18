@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>function1</title>
+</head>
+
+<body>
+    <div id="rect"></div>
+
+
+    <script>
+        var rect = document.querySelector('#rect');
+
+        // 在Javascript裡面全域變數越少越好,因此變數盡可能都用closure的方式處理(區域變數),
+        // 另外各個區域與外面溝通時,最好使用參數與回傳值
+
+        // closure方法一
+        (function () {
+            var a;
+            return a;
+        }());
+
+        // closure方法二
+        (function () {
+            var a;
+            return a;
+        }());
+
+    </script>
+</body>
+
+</html>

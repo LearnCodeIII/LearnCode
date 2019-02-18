@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>function1</title>
+</head>
+
+<body>
+    <div id="rect"></div>
+
+
+    <script>
+        var rect = document.querySelector('#rect');
+        var a = [2, 7, 8, 9, 11];
+
+        var b = a.slice();
+        rect.innerHTML += a + '<br>';
+        rect.innerHTML += b + '<br>';
+        a[0] = 1111;
+        rect.innerHTML += a + '<br>';
+        rect.innerHTML += b + '<br>';
+
+        rect.innerHTML += '-----------------<br>';
+
+
+        var c = [2, 7, 8, 9, 11];
+        
+        rect.innerHTML += a + '<br>';
+        rect.innerHTML += b + '<br>';
+        c[0] = 2222;
+        rect.innerHTML += a + '<br>';
+        rect.innerHTML += b + '<br>';
+
+
+
+    </script>
+</body>
+
+</html>

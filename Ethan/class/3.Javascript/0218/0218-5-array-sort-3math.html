@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="rect"></div>
+
+    <script>
+        var rect = document.querySelector('#rect');
+
+        var lt = [{ name: 'Bill', age: 25, id: 'A001' },
+        { name: 'Ethan', age: 27, id: 'A002' },
+        { name: 'Peter', age: 23, id: 'A003' },
+        ];
+
+
+        // 用sort排序/另外加上三元運算子
+        // (判斷式)?(true時回傳):(false時回傳)
+        lt.sort(
+            function (a, b) {
+                return a.name > b.name ? -1 : 1;
+            }
+        );
+        console.log(lt);
+    </script>
+</body>
+
+</html>

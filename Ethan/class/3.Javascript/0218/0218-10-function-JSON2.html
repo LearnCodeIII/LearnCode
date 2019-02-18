@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>function1</title>
+</head>
+
+<body>
+    <div id="rect"></div>
+
+
+    <script>
+        var rect = document.querySelector('#rect');
+        var p = [2, 7, 8, 9, 11];
+
+        function func(ar) {
+            var ar2 = JSON.parse(JSON.stringify(ar));
+            ar2.pop();
+            return ar2;
+        };
+
+        var k = func(p);
+
+        p[0] = 100;
+        rect.innerHTML += p + '<br>';
+        rect.innerHTML += k + '<br>';
+        rect.innerHTML += p.toString() + '<br>';
+        rect.innerHTML += k.toString() + '<br>';
+    </script>
+</body>
+
+</html>
