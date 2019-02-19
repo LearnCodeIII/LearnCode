@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="rect"></div>
+
+    <script>
+        var rect = document.querySelector("#rect");
+
+        setTimeout(function () {
+            rect.innerHTML += 10;
+        }, 3000);
+
+        // 在這邊for裡面用let宣告i就可以做到1-9的,用var就會全部跑出10歐~~~
+        for (let i = 0; i < 10; i++) {
+            setTimeout(function () {
+                rect.innerHTML += i + '<br>';
+            }, 200*i);
+        };
+
+    </script>
+</body>
+
+</html>
