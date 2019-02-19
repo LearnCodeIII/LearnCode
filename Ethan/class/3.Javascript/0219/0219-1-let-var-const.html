@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="rect"></div>
+
+    <script>
+        var rect = document.querySelector("#rect");
+        let b = 99;
+
+        const func = (function () {
+            let a = 10;
+            let b = 100;
+            return function () {
+                a++;
+                return a;
+            }
+        })();
+
+        console.log(func)
+
+        rect.innerHTML += func() + '<br>';
+        rect.innerHTML += func() + '<br>';
+        rect.innerHTML += func() + '<br>';
+        rect.innerHTML += func() + '<br>';
+        rect.innerHTML += func() + '<br>';
+        rect.innerHTML += func() + '<br>';
+        rect.innerHTML += func() + '<br>';
+
+
+
+    </script>
+</body>
+
+</html>

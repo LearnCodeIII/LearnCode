@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="rect"></div>
+
+    <script>
+        var rect = document.querySelector("#rect");
+
+        // 算出現在到午夜前倒數多久
+
+        var clock = n => {
+            var now = new Date();
+            var end = new Date(2019, 1, 20);
+            // console.log(end);
+
+            var now_num = now.getTime();
+            // console.log(now_num);
+            var end_num = end.getTime();
+            // console.log(end_num);
+
+            var final = (end_num - now_num) / 1000;
+            // console.log(final);
+
+            var ts = parseInt(final);
+            // console.log('ts' + ts);
+            var tm = parseInt(ts / 60);
+            // console.log('tm' + tm);
+            var th = parseInt(tm / 60);
+            // console.log('th' + th);
+
+            var rs = ts % 60;
+            // console.log('rs' + rs);
+            var rm = tm % 60;
+            // console.log('rm' + rm);
+            var rh = th;
+            // console.log('rh' + rh);
+
+            var rs_plus = rs < 10 ? 0 : '';
+            var rm_plus = rm < 10 ? 0 : '';
+            var rh_plus = rh < 10 ? 0 : '';
+
+            rect.innerHTML = `${rh_plus}${rh}:${rm_plus}${rm}:${rs_plus}${rs}`;
+            setTimeout(clock, 1000);
+        };
+
+        clock();
+
+
+
+    </script>
+</body>
+
+</html>

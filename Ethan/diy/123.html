@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="rect"></div>
+    <script>
+        var rect = document.querySelector("#rect");
+
+        rect.innerHTML += '5 && 3' + (5 && 3) + '<br>';
+        rect.innerHTML += '0 && 3' + (0 && 6) + '<br>';
+        // rect.innerHTML += '0 && 3' + (0 || 63) + '<br>';
+        // rect.innerHTML += '0 && 3' + (0 || 63) + '<br>';
+
+    </script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="rect"></div>
+
+    <script>
+        var rect = document.querySelector("#rect");
+
+        // ES6才可以用的箭頭函式
+        // 第一種寫法
+        const a = n =>  n*n;
+        
+        // 第二種寫法
+        const b = n =>  {
+            var c = n*n; 
+            return c;
+            };
+
+        var aa = a(6);
+        var bb = b(10);
+
+        rect.innerHTML += aa + '<br>';
+        rect.innerHTML += bb + '<br>';
+    </script>
+</body>
+
+</html>

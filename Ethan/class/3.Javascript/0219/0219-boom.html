@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    .container {
+        background:black;
+        border-radius: 50%;
+        width: 100px;
+        height: 100px;
+    }
+    .clock {
+        background:white;
+        height: 100%;
+        border-radius: 50%;
+        transform: scale(0.85);
+        position: relative;
+    }
+    .line {
+        position:absolute;
+        top:50%;
+        left:50%;
+        transform-origin: top left;
+    }
+    .hour {
+        background:rgba(0, 0, 0);
+        width:20%;
+        height: 5px;
+        z-index:3;   
+    }
+    .mintue {
+        background:rgba(0, 0, 0);
+        width:40%;
+        height: 5px;
+        z-index: 2;
+    }
+    .second {
+        background:rgb(248, 51, 51);
+        width:49%;
+        height: 3px;
+        z-index: 1;
+    }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="clock">
+            <div class="hour line"></div>
+            <div class="mintue line"></div>
+            <div class="second line"></div>
+        </div>
+    </div>
+    <script>
+    function Time(){
+        var now = new Date();
+        var hour = document.getElementsByClassName('hour')[0],
+            mintue = document.getElementsByClassName('mintue')[0],
+            second = document.getElementsByClassName('second')[0];
+        var h =(720/24)*(now.getHours())-90;
+            m =(720/60)*(now.getMinutes())-90;
+            s =(720/60)*(now.getSeconds())-90;
+        hour.style.transform=`rotate(${h}deg)`;
+        mintue.style.transform=`rotate(${m}deg)`;
+        second.style.transform=`rotate(${s}deg)`;
+        hour.style.transform+="translate(0,-50%)";
+        mintue.style.transform+="translate(0,-50%)";
+        second.style.transform+="translate(0,-50%)";
+        setTimeout(Time,1000);
+    }
+    Time();
+    </script>
+</body>
+</html>

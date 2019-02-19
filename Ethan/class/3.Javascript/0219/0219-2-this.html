@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="rect"></div>
+
+    <script>
+        var rect = document.querySelector("#rect");
+
+
+        // 建立一個新的類別person()
+        // 然後設定this指向新類別
+        // 但這時thsi會指向windos
+        function Person(name, age) {
+            this.name = name || 'bill';
+            this.age = age || 20;
+        };
+
+        // 不能用直接呼叫的方法使用this,這樣裡面的this都會指向window,所以要建立新類別
+        // 舊的建立類別方法就是用new加上類別名稱(),例如以下:
+        var aa = new Person();
+        var bb = new Object();
+        var cc = new Array();
+
+        rect.innerHTML = aa();
+
+
+
+    </script>
+</body>
+
+</html>
