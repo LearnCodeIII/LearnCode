@@ -7,11 +7,28 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Array</title>
 </head>
+<style>
+
+</style>
 
 <body>
+    <canvas id="pCanvas" width="600" height="380" style="background:#000000;">
+        <!-- // 您的瀏覽器不支援 HTML5 動畫，請改用 Chrome 或 Firefox -->
+    </canvas>
     <script>
-// 要做隨機球的大小/顏色/位置
-// 然後出現之後要飛起來或是掉下去
+                function drawCanvas() {
+                    context.clearRect(0, 0, canvas.width, canvas.height);
+                    context.beginPath();
+                    context.arc(x, y, 12, 0, Math.PI * 2, true);
+                    context.closePath();
+                    context.fill();
+                    x += 6;
+                    if (x > 560) x = 10;
+                    setInterval(drawCanvas, 32);
+                }
+                drawCanvas();
+
+
 
     </script>
 </body>
