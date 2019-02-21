@@ -21,15 +21,15 @@
         function Person(name, age) {
             this.name = name || 'bill';
             this.age = age || 20;
-        };
+            return this.name + this.age;
+        }
 
         // 不能用直接呼叫的方法使用this,這樣裡面的this都會指向window,所以要建立新類別
         // 舊的建立類別方法就是用new加上類別名稱(),例如以下:
         var aa = new Person();
         var bb = new Object();
         var cc = new Array();
-
-        rect.innerHTML = aa();
+        console.log(aa);
 
 
 

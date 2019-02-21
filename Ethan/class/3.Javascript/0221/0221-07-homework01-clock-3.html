@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Array</title>
+</head>
+<style>
+    .clock {
+        width: 600px;
+        height: 600px;
+        position: relative;
+        background: #eee;
+        border-radius: 50%;
+        box-shadow: #777 0 0 5px;
+        transition: 1s;
+    }
+
+    .clock1 {
+        position: relative;
+        margin-top: -600px;
+    }
+
+    .hand {
+        position: absolute;
+        left: 295px;
+        top: 295px;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        box-shadow: #000 0 0 2px;
+        transition: .5s;
+    }
+
+    .hand1 {
+        position: absolute;
+        left: 295px;
+        top: 295px;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+    }
+
+    .hand_hr {
+        position: absolute;
+        width: 24px;
+        height: 200px;
+        border-radius: 12px;
+        background-color: #222;
+        top: -183px;
+        left: -7px;
+        box-shadow: #000 0 0 2px;
+    }
+
+    .hand_min {
+        position: absolute;
+        width: 12px;
+        height: 240px;
+        border-radius: 6px;
+        background-color: orange;
+        top: -228px;
+        opacity: .8;
+        left: -1px;
+        box-shadow: #000 0 0 2px;
+    }
+
+    .hand_sec {
+        position: absolute;
+        width: 2px;
+        height: 280px;
+        border-radius: 1.5px;
+        background-color: white;
+        top: -277px;
+        left: 4px;
+    }
+
+    .line1 {
+        position: absolute;
+        width: 10px;
+        height: 3px;
+        background-color: white;
+        left: 297px;
+        top: 0px;
+    }
+
+    .line2 {
+        position: absolute;
+        width: 20px;
+        height: 3px;
+        background-color: #333;
+        left: 297px;
+        top: 0px;
+    }
+</style>
+</head>
+
+<body>
+    <div class="clock">
+        <div class="hand">
+            <div class="hand_hr"></div>
+        </div>
+        <div class="hand">
+            <div class="hand_min"></div>
+        </div>
+        <div class="hand">
+            <div class="hand_sec"></div>
+        </div>
+    </div>
+    <div class="clock1"></div>
+
+
+    <script>
+        function start() {
+            var hand = document.querySelectorAll(".hand");
+            var clock = document.querySelector(".clock");
+            var clock1 = document.querySelector(".clock1");
+            var line_bg = document.querySelectorAll(".line_bg");
+            var hr = hand[0], min = hand[1], sec = hand[2], i;
+
+            for (i = 0; i < 60; i++) {
+                if (i % 5 == 0) {
+                    clock1.innerHTML += `<div class="hand1" style="transform:rotate(${i * 6}deg);"><div class="line2"></div></div>`;
+                } else {
+                    clock1.innerHTML += `<div class="hand1" style="transform:rotate(${i * 6}deg);"><div class="line1"></div></div>`;
+                };
+            };
+
+            var func = function () {
+                var now_time = new Date, now_hr = now_time.getHours(), now_min = now_time.getMinutes(), now_sec = now_time.getSeconds();
+                clock.innerHTML = `<div class="hand" style="transform:rotate(${now_hr * 30 + now_min * .5}deg);"><div class="hand_hr"></div></div><div class="hand" style="transform:rotate(${now_min * 6}deg);"><div class="hand_min"></div></div><div class="hand" style="transform:rotate(${now_sec * 6}deg);"><div class="hand_sec"></div></div>`;
+                clock.style.backgroundColor = `hsl(${now_sec * 6}, 100%, 50%)`;
+                setTimeout(func, 1000);
+            };
+            func();
+        }
+        start();
+
+    </script>
+</body>
+
+</html>

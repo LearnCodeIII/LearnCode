@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Array</title>
+</head>
+<style>
+
+</style>
+
+<body>
+    <canvas id="pCanvas" width="600" height="380" style="background:#000000;">
+        <!-- // 您的瀏覽器不支援 HTML5 動畫，請改用 Chrome 或 Firefox -->
+    </canvas>
+    <script>
+                function drawCanvas() {
+                    context.clearRect(0, 0, canvas.width, canvas.height);
+                    context.beginPath();
+                    context.arc(x, y, 12, 0, Math.PI * 2, true);
+                    context.closePath();
+                    context.fill();
+                    x += 6;
+                    if (x > 560) x = 10;
+                    setInterval(drawCanvas, 32);
+                }
+                drawCanvas();
+
+
+
+    </script>
+</body>
+
+</html>

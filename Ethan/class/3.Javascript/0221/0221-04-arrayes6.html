@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Array</title>
+</head>
+
+<body>
+    <script>
+        // ...是ES6的展法用法,
+        // 一般用在兩個地方,
+        // 1.函式的條件式中,不確定項(範例中就是假設不知道還有多少值,所以把剩下的都丟進去並變成陣列)
+        // %%範例中第一個(a,)就是第一個值會先塞進a, 剩下的才吃...p然後變成陣列
+        // 2.把陣列展開(範例中就是呼叫函式時,把a陣列的值展開然後再丟進去)
+        var a = [1, 2, 3, 4, 5, 6]
+        var func = (a, ...p) => {
+            console.log(a, p);
+        }
+        func(...a);
+    </script>
+</body>
+
+</html>
