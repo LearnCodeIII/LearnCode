@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Array</title>
+</head>
+<style>
+    .clock {
+        width: 600px;
+        height: 600px;
+        position: relative;
+        background: #eee;
+        border-radius: 50%;
+        box-shadow: #777 0 0 5px;
+        transition: 1s;
+    }
+
+    .hand {
+        position: absolute;
+        left: 300px;
+        top: 300px;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background: #eee;
+        box-shadow: #000 0 0 2px;
+        transition: .5s;
+    }
+
+    .hand_hr {
+        position: absolute;
+        width: 24px;
+        height: 230px;
+        border-radius: 12px;
+        background-color: #222;
+        top: -212px;
+        left: -7px;
+        box-shadow: #000 0 0 2px;
+    }
+
+    .hand_min {
+        position: absolute;
+        width: 12px;
+        height: 270px;
+        border-radius: 6px;
+        background-color: orange;
+        top: -258px;
+        opacity: .8;
+        left: -1px;
+        box-shadow: #000 0 0 2px;
+    }
+
+    .hand_sec {
+        position: absolute;
+        width: 3px;
+        height: 50px;
+        border-radius: 1.5px;
+        background-color: white;
+        top: -290px;
+        left: 3px;
+    }
+</style>
+</head>
+
+<body>
+    <div class="clock">
+        <div class="hand">
+            <div class="hand_hr"></div>
+        </div>
+        <div class="hand">
+            <div class="hand_min"></div>
+        </div>
+        <div class="hand">
+            <div class="hand_sec"></div>
+        </div>
+    </div>
+
+
+    <script>
+        var hand = document.querySelectorAll(".hand");
+        var clock = document.querySelector(".clock");
+        var hr = hand[0];
+        var min = hand[1];
+        var sec = hand[2];
+
+        var func = function () {
+            var now_time = new Date;
+            var now_hr = now_time.getHours();
+            var now_min = now_time.getMinutes();
+            var now_sec = now_time.getSeconds();
+            console.log(now_hr);
+            console.log(now_min);
+            console.log(now_sec);
+            hr.style = `transform:rotate(${now_hr * 30 + now_min * .5}deg)`;
+            min.style = `transform:rotate(${now_min * 6}deg)`;
+            sec.style = `transform:rotate(${now_sec * 6}deg)`;
+            clock.style.backgroundColor = `hsl(${now_sec*6}, 100%, 50%)`;
+            setTimeout(func, 1000)
+        };
+        func();
+    </script>
+</body>
+
+</html>

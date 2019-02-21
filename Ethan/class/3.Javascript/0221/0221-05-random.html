@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Array</title>
+</head>
+
+<body>
+    <script>
+        // random這玩意會跑出隨機數
+        // 重點是!!!
+        // 這個數字只會0-1
+        var r = Math.random();
+        console.log(r);
+
+        // 如果要做出1-6的隨機數可以這樣做
+        // 先把甩出來的數字x6
+        // 然後因為會出現0所以+1~就好啦
+        var rr = parseInt(r*6)+1;
+        console.log(rr);
+
+
+
+
+    </script>
+</body>
+
+</html>
