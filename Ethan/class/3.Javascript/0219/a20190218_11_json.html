@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+<style>
+    span.red {
+        color: red;
+    }
+</style>
+<body>
+
+<div id="rect"></div>
+
+
+
+<script>
+
+    const rect = document.querySelector('#rect');
+    let p = [
+        {"name":"peter","age":23,"id":"A011"},
+        {"name":"david","age":25,"id":"A006"},
+        {"name":"bill","age":27,"id":"A009"}
+        ];
+
+    rect.innerHTML += JSON.stringify(p) + '<br>';
+
+
+    let p_json = JSON.parse(JSON.stringify(p));
+
+    let p_slice = p.slice();
+
+    p[0].name = '----';
+    console.log('p:', p);
+    console.log('p_json:', p_json);
+    console.log('p_slice:', p_slice);
+
+</script>
+</body>
+</html>
+

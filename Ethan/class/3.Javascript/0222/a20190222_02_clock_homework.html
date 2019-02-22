@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+<style>
+    .clock {
+        position: relative;
+        width: 600px;
+        height: 600px;
+        background-color: #b0e9ff;
+        border-radius: 50%;
+    }
+    .hand {
+        position: absolute;
+        left: 300px;
+        top: 300px;
+    }
+
+    .sec-hand {
+        position: absolute;
+        background-image: url('img/mario.gif');
+        background-size: cover;
+        width: 100px;
+        height: 100px;
+
+        left: -50px;
+        top: -300px;
+    }
+    .min-hand {
+        position: absolute;
+        width: 14px;
+        height: 220px;
+        background-color: #211cff;
+        left: -7px;
+        top: -213px;
+        border-radius: 7px;
+    }
+    .hr-hand {
+        position: absolute;
+        width: 20px;
+        height: 160px;
+        background-color: #22890f;
+        left: -10px;
+        top: -150px;
+        border-radius: 10px;
+    }
+    .tick {
+        position: absolute;
+        width: 2px;
+        height: 20px;
+        background-color: black;
+        left: -1px;
+        top: -300px;
+    }
+</style>
+<body>
+
+<div class="clock">
+    <div class="ticks">
+        <!--<div class="hand">-->
+            <!--<div class="tick"></div>-->
+        <!--</div>-->
+    </div>
+    <div class="hand">
+        <div class="hr-hand"></div>
+    </div>
+    <div class="hand">
+        <div class="min-hand"></div>
+    </div>
+    <div class="hand">
+        <div class="sec-hand"></div>
+    </div>
+</div>
+
+
+
+
+<script>
+    const clock = document.querySelector('.clock');
+    const hands = document.querySelectorAll('.clock>.hand');
+    const hr_h = hands[0];
+    const min_h = hands[1];
+    const sec_h = hands[2];
+
+    const ticks = document.querySelector('.ticks');
+
+    let str, el, ticks_hands;
+
+    str = '';
+    for(let i=0; i<60; i++){
+        str += '<div class="hand"><div class="tick"></div></div>';
+    }
+    ticks.innerHTML = str;
+    ticks_hands = document.querySelectorAll('.ticks>.hand');
+    for(let i=0; i<60; i++){
+        el = ticks_hands[i];
+        el.style.transform = `rotate(${i*6}deg)`;
+        if(i%5===0){
+            el.children[0].style.width = '6px';
+            el.children[0].style.height = '30px';
+            el.children[0].style.left = '-3px';
+        }
+    }
+
+    const run = ()=>{
+        var now = new Date();
+        var hr = now.getHours();
+        var min = now.getMinutes();
+        var sec = now.getSeconds();
+        var msec = now.getMilliseconds();
+
+        hr_h.style.transform = `rotate(${hr*30+min*.5}deg)`;
+        min_h.style.transform = `rotate(${min*6}deg)`;
+        sec_h.style.transform = `rotate(${sec*6+msec*0.006}deg)`;
+
+        setTimeout(run, 30);
+    };
+
+    run();
+
+</script>
+</body>
+</html>
+

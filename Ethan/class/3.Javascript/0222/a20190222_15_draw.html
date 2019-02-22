@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+<style>
+    #rect {
+        position: relative;
+        width: 800px;
+        height: 600px;
+        background-color: #b0e9ff;
+    }
+    .ball {
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        background-color: #ff2f27;
+        border-radius: 50%;
+        border: 1px solid black;
+        pointer-events: none; /* 不要感應到滑鼠 */
+    }
+
+    #info {
+        position: fixed;
+        top: 0;
+        left: 0;
+    }
+</style>
+<body>
+<div id="info"></div>
+<div id="rect">
+
+</div>
+
+
+
+
+<script>
+    const info = document.querySelector('#info');
+    const rect = document.querySelector('#rect');
+
+    const randomColor = ()=>{
+        const zero = '000000';
+        let c = Math.floor(Math.random()*256*256*256).toString(16);
+        return '#' + zero.slice(0, 6-c.length) + c;
+    };
+
+    rect.addEventListener('mousemove', function(event){
+        const b = document.createElement('div');
+        b.className = 'ball';
+        size = 6+Math.floor(Math.random()*21);
+        b.style.width = size +'px';
+        b.style.height = size +'px';
+        b.style.backgroundColor = randomColor();
+
+        b.style.left = event.offsetX - size/2 + 'px';
+        b.style.top = event.offsetY - size/2 + 'px';
+        rect.appendChild(b);
+    });
+
+
+</script>
+</body>
+</html>
+

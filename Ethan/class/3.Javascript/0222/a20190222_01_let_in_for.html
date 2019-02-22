@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+
+<body>
+
+<div id="rect"></div>
+
+
+<script>
+
+    const rect = document.querySelector('#rect');
+
+    for(let i=0; i<10; i++){
+        setTimeout(function(){
+            rect.innerHTML += i +'<br>';
+        }, 200*i)
+
+    }
+
+</script>
+</body>
+</html>
+

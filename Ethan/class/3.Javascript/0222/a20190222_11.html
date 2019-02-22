@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+<style>
+    #rect {
+        position: relative;
+        width: 800px;
+        height: 600px;
+        background-color: #b0e9ff;
+        top: 100px;
+        /*overflow: hidden;*/
+    }
+
+    .ball {
+        position: absolute;
+        width: 40px;
+        height: 40px;
+        background-color: #ff2f27;
+        border-radius: 50%;
+        text-align: center;
+        line-height: 40px;
+        color: white;
+        /* border: 1px solid black; */
+        transition: .1s;
+    }
+
+    .bigball {
+        position: absolute;
+        width: 80px;
+        height: 80px;
+        background-color: #086bff;
+        border-radius: 50%;
+        text-align: center;
+        line-height: 40px;
+        color: white;
+        /* border: 1px solid black; */
+        left: 360px;
+        top: 260px;
+    }
+
+    .bigball:hover {
+        background-color: #0443a1;
+    }
+
+    .bigball:active {
+        background-color: #fbff00;
+    }
+</style>
+
+<body>
+    <div id="rect">
+        <div class="bigball">
+            <div class="ball"></div>
+        </div>
+    </div>
+
+
+    <script>
+        const rect = document.querySelector('#rect');
+        const bigball = document.querySelector('.bigball');
+        const ball = document.querySelector('.ball');
+
+        rect.addEventListener('click', function (event) {
+            console.log('1:', event);
+        });
+        bigball.addEventListener('click', function (event) {
+            console.log('2:', event);
+        });
+        ball.addEventListener('click', function (event) {
+            console.log('3:', event);
+        });
+
+
+
+    </script>
+</body>
+
+</html>
