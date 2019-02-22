@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #clock {
+            position: relative;
+            width: 600px;
+            height: 600px;
+            background-color: #9c8a81;
+            border-radius: 50%;
+        }
+
+        .hand {
+            position: absolute;
+            top: 300px;
+            left: 300px;
+        }
+
+        .hand2 {
+            position: absolute;
+            top: 300px;
+            left: 300px;
+        }
+
+        .hr-hand {
+            position: absolute;
+            width: 6px;
+            height: 160px;
+            background-color: #000000;
+            top: -157px;
+            left: -3px;
+        }
+
+        .min-hand {
+            position: absolute;
+            width: 4px;
+            height: 200px;
+            background-color: #555555;
+            top: -198px;
+            left: -2px;
+        }
+
+        .sec-hand {
+            position: absolute;
+            width: 2px;
+            height: 240px;
+            background-color: #ffffff;
+            border-radius: 2px;
+            top: -240px;
+            left: -1px;
+        }
+
+        .dot {
+            position: absolute;
+            width: 5px;
+            height: 5px;
+            border-radius: 50%;
+            background: #000;
+            top: 100px;
+            left: 100px;
+            /* transform: translate(50px 50px); */
+            transform-origin: 200px 200px;
+        }
+
+        .dot2 {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: rgb(255, 255, 255);
+            top: 98px;
+            left: 98px;
+            /* transform: translate(50px 50px); */
+            transform-origin: 202px 202px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="clock">
+        <div class="hand">
+            <div class="hr-hand"></div>
+        </div>
+        <div class="hand">
+            <div class="min-hand"></div>
+        </div>
+        <div class="hand">
+            <div class="sec-hand"></div>
+        </div>
+    </div>
+
+    <script>
+        const clock = document.querySelector('#clock');
+        const hand = document.querySelectorAll('#clock>.hand'); //抓一堆原點
+        const hr_hand = hand[0]; //設定時針的原點 一堆原點裡面的第1個[0]原點
+        const min_hand = hand[1]; //分針der
+        const sec_hand = hand[2];
+        const num_hand = hand[3];
+        
+        let b, i;
+
+        for (i = 0; i <= 60; i++) {
+            b = document.createElement('div');
+            b.className = ('dot');
+            b.style.transform = `rotate(${3 + i * 6}deg)`;
+            // console.log(b.style.transformOrigin)
+            clock.appendChild(b);
+
+            if((i-2)%5==0){
+                b.className = ('dot2')
+            }
+
+        };
+
+        const run = () => {
+
+
+            var now = new Date()
+            var hr = now.getHours(); //設定時針der時間
+            var min = now.getMinutes();
+            var sec = now.getSeconds();
+            var msec = now.getMilliseconds(); //取毫秒
+
+            hr_hand.style.transform = `rotate(${hr * 30}deg)`; //設定時針的時間的角度 一小時時針=30度
+            min_hand.style.transform = `rotate(${min * 6}deg)`; // 一分鐘分針=6度
+            sec_hand.style.transform = `rotate(${sec * 6 + msec * 0.006}deg)`;
+            setTimeout(run, 30);
+        };
+
+        run();
+
+
+    </script>
+</body>
+
+</html>

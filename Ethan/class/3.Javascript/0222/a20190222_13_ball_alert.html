@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+<style>
+    #rect {
+        position: relative;
+        width: 800px;
+        height: 600px;
+        background-color: #b0e9ff;
+        top: 100px;
+        /*overflow: hidden;*/
+    }
+
+    .ball {
+        position: absolute;
+        width: 40px;
+        height: 40px;
+        background-color: #ff2f27;
+        border-radius: 50%;
+        text-align: center;
+        line-height: 40px;
+        color: white;
+        /* border: 1px solid black; */
+        transition: .1s;
+    }
+
+    .bigball {
+        position: absolute;
+        width: 80px;
+        height: 80px;
+        background-color: #086bff;
+        border-radius: 50%;
+        text-align: center;
+        line-height: 40px;
+        color: white;
+        /* border: 1px solid black; */
+        left: 360px;
+        top: 260px;
+    }
+
+    .bigball:hover {
+        background-color: #0443a1;
+    }
+
+    .bigball:active {
+        background-color: #fbff00;
+    }
+</style>
+
+<body>
+
+    <div id="rect">
+        <div class="bigball" "></div>
+    </div>
+
+
+    <script>
+        const rect = document.querySelector('#rect');
+        const bigball = document.querySelector('.bigball');
+        // 選擇要切成幾份
+        const ballNum = 12;
+
+        bigball.addEventListener('click', function (event) {
+            console.log(event);
+            })
+
+        // 算出弧度
+        // 一個PI等於180度,去除以要分成幾段就可以算出那一段的弧度
+        const angUnit = Math.PI * 2 / ballNum;
+        let b, i, x, y;
+        const balls = [];
+
+        for (i = 0; i < ballNum; i++) {
+            // 每次迴圈建立一個div
+            b = document.createElement('div');
+            // 並為該div賦予class
+            b.className = 'ball';
+            // 裡面文字為i
+            b.innerHTML = i;
+            // 400-20是中心點 , 然後去加上x的距離(200為半徑)
+            x = 400 - 20 + Math.cos(angUnit * i) * 200;
+            y = 300 - 20 + Math.sin(angUnit * i) * 200;
+
+            // setAttribute可將屬性設定入HTML標籤中
+            // 這樣不會影響到其他支API
+            // 用法為(屬性名稱, 值)
+            // 所以這行為推出去
+            b.setAttribute('data-endX', parseInt(x));
+            b.setAttribute('data-endY', parseInt(y));
+            // 這行為回到原點
+            b.setAttribute('data-beginX', '380');
+            b.setAttribute('data-beginY', '280');
+
+            b.style.left = '380px';
+            b.style.top = '280px';
+
+            // 每次迴圈都把最新的資料丟進陣列
+            balls.push(b);
+            rect.appendChild(b);
+        }
+
+
+
+        rect.appendChild(bigball);
+
+        // forEach是陣列方法,可以提取出陣列的值 與索引
+        // balls.forEach(function(el, ind){
+        //     setTimeout(function(){
+        //         // 把style的值去等於剛設定的屬性值,就可以改變物件動作
+        //         el.style.left = el.getAttribute('data-endX') + 'px';
+        //         el.style.top = el.getAttribute('data-endY') + 'px';
+        //     }, ind*200);
+        // });
+
+        // 一開始要關所以設定false
+        let isopened = false;
+
+        // 第二種寫法
+        const openmenu = () => {
+            // 啟動函式後讓自己不等於自己,就會在false跟true間互換
+            isopened = !isopened;
+            // 去陣列撈資料
+            balls.forEach(function (el, ind) {
+                // 讓圈圈會輪流出來
+                setTimeout(function () {
+                    if (isopened) {
+                        el.style.left = el.getAttribute('data-endX') + 'px';
+                        el.style.top = el.getAttribute('data-endY') + 'px';
+                    } else {
+                        el.style.left = el.getAttribute('data-beginX') + 'px';
+                        el.style.top = el.getAttribute('data-beginY') + 'px';
+                    }
+                }, ind * 30)
+            });
+
+            // 第一種寫法
+            // const openmenu = () => {
+            //     isopened = !isopened;
+            //     if (isopened) {
+            //         balls.forEach(function (el, ind) {
+            //             setTimeout(function () {
+            //                 // 把style的值去等於剛設定的屬性值, 就可以改變物件動作
+            //                 el.style.left = el.getAttribute('data-endX') + 'px';
+            //                 el.style.top = el.getAttribute('data-endY') + 'px';
+            //             }, ind * 30);
+            //         });
+            //     } else {
+            //         balls.forEach(function (el, ind) {
+            //             setTimeout(function () {
+            //                 // 把style的值去等於剛設定的屬性值, 就可以改變物件動作
+            //                 el.style.left = el.getAttribute('data-beginX') + 'px';
+            //                 el.style.top = el.getAttribute('data-beginY') + 'px';
+            //             }, ind * 30);
+            //         });
+            //     };
+            // };
+        }
+
+
+
+    </script>
+</body>
+
+</html>

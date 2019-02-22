@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+<style>
+    span.red {
+        color: red;
+    }
+</style>
+<body>
+
+<div id="rect"></div>
+
+<script>
+
+    const rect = document.querySelector('#rect');
+
+    var run = ()=>{
+        var now = new Date;
+        rect.innerHTML =  now.toString();
+        setTimeout(run, 1000);
+    };
+
+    run();
+
+</script>
+</body>
+</html>
+

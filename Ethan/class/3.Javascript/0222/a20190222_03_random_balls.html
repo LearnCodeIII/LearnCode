@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+<style>
+    #rect {
+        position: relative;
+        width: 800px;
+        height: 600px;
+        background-color: #b0e9ff;
+    }
+    .ball {
+        position: absolute;
+        width: 40px;
+        height: 40px;
+        background-color: #ff2f27;
+        border-radius: 50%;
+        border: 1px solid black;
+    }
+</style>
+<body>
+
+<div id="rect"></div>
+
+
+<script>
+
+    const rect = document.querySelector('#rect');
+    let b, i;
+
+    // 隨機取得顏色
+    const randomColor = ()=>{
+        const zero = '000000';
+        let c = Math.floor(Math.random()*256*256*256).toString(16);
+        return '#' + zero.slice(0, 6-c.length) + c;
+    };
+
+
+    for(i=0; i<100; i++){
+        let k = i*17;
+        let x, y, size, bgc;
+
+        b = document.createElement('div');
+        b.className = 'ball';
+        size = 10+Math.floor(Math.random()*31);
+        b.style.left = Math.floor(Math.random()*800) + 'px';
+        b.style.top = Math.floor(Math.random()*600) + 'px';
+        b.style.width = size +'px';
+        b.style.height = size +'px';
+        bgc = Math.floor(Math.random()*360);
+        b.style.backgroundColor = randomColor();
+        rect.appendChild(b);
+    }
+
+
+
+</script>
+</body>
+</html>
+

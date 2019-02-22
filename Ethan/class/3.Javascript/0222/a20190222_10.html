@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+<style>
+    #rect {
+        position: relative;
+        width: 800px;
+        height: 600px;
+        background-color: #b0e9ff;
+        top: 100px;
+        /*overflow: hidden;*/
+    }
+
+    .ball {
+        position: absolute;
+        width: 40px;
+        height: 40px;
+        background-color: #ff2f27;
+        border-radius: 50%;
+        text-align: center;
+        line-height: 40px;
+        color: white;
+        /* border: 1px solid black; */
+        transition: .1s;
+    }
+
+    .bigball {
+        position: absolute;
+        width: 80px;
+        height: 80px;
+        background-color: #086bff;
+        border-radius: 50%;
+        text-align: center;
+        line-height: 40px;
+        color: white;
+        /* border: 1px solid black; */
+        left: 360px;
+        top: 260px;
+    }
+
+    .bigball:hover {
+        background-color: #0443a1;
+    }
+
+    .bigball:active {
+        background-color: #fbff00;
+    }
+</style>
+<button>asdf</button>
+
+<body>
+    <div id="rect">
+        <div class="bigball"></div>
+    </div>
+
+
+    <script>
+        const rect = document.querySelector('#rect');
+        const bigball = document.querySelector('.bigball');
+        const btn = document.querySelector('button');
+
+        // 事件處理器有三種用法
+        // 1.寫在HTML標籤內
+        // 2.javascript內寫(以下)
+        bigball.onclick = function () {
+            console.log(6);
+        }
+
+
+
+        // 3.用監聽器(可重覆抓多組事件)
+        bigball.addEventListener('click', function () {
+            console.log(7);
+        })
+        // or
+        const listener = function () {
+            console.log(7);
+        }
+        bigball.addEventListener('click', listener());
+        btn.addEventListener('click', listener());
+
+    </script>
+</body>
+
+</html>

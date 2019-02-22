@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+<style>
+    span.red {
+        color: red;
+    }
+</style>
+<body>
+
+<div id="rect"></div>
+
+
+
+<script>
+
+    const rect = document.querySelector('#rect');
+
+    function Person(name, age) {
+        this.name = name || 'bill';
+        this.age = age || 20;
+        this.toString = function(){
+            return this.name + ' ' + this.age;
+        };
+        console.log(this);
+    }
+
+    Person.prototype.toMyString = function(){
+        return `{ name: ${this.name}, age: ${this.age} }`;
+    };
+
+    var p = new Person();
+    var p3 = new Person('peter', 30);
+
+    rect.innerHTML += p.toString() + '<br>';
+    rect.innerHTML += p.toMyString() + '<br>';
+    rect.innerHTML += p3.toString() + '<br>';
+    rect.innerHTML += p3.toMyString() + '<br>';
+
+
+    var p2 = {
+        name: 'bill',
+        age: 20
+    };
+
+
+    Object.prototype.toString = function(){
+        var s;
+        var str = '';
+        for(s in this){
+            str += s + ': ' + this[s] + "\n";
+        }
+        return str;
+    }
+
+
+</script>
+</body>
+</html>
+

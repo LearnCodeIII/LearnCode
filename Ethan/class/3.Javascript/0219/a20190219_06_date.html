@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+<style>
+    span.red {
+        color: red;
+    }
+</style>
+<body>
+
+<div id="rect"></div>
+
+<script>
+
+    const rect = document.querySelector('#rect');
+
+    const run = ()=>{
+        let now = new Date;
+        // rect.innerHTML =  now.toString().split(' ')[4];
+
+        let h = '0' + now.getHours();
+        let m = '0' + now.getMinutes();
+        let s = '0' + now.getSeconds();
+        rect.innerHTML =
+            h.slice(h.length-2, h.length) + ':' +
+            m.slice(m.length-2, m.length) + ':' +
+            s.slice(s.length-2, s.length);
+
+        setTimeout(run, 1000);
+    };
+
+    run();
+
+</script>
+</body>
+</html>
+
