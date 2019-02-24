@@ -11,14 +11,14 @@
         position: relative;
         width: 800px;
         height: 600px;
-        background-color: #b0e9ff;
+        background-color: #eee;
     }
 
     .ball {
         position: absolute;
         width: 40px;
         height: 40px;
-        background-color: #ff2f27;
+        /* background-color: #ff2f27; */
         border-radius: 50%;
         text-align: center;
         line-height: 40px;
@@ -28,23 +28,43 @@
 </style>
 
 <body>
-    <div id="rect"></div>
+    <div id="rect""></div>
 
     <script>
-        const rect = document.querySelector("#rect");
+        const rect = document.querySelector(" #rect"); 
+        // 滑鼠按下去執行監聽
+        rect.onmousedown = function () {
+            rect.addEventListener('mousemove', mousego, true);
+        }; 
+        // 滑鼠放開取消監聽
+        rect.onmouseup = function () {
+            rect.removeEventListener('mousemove', mousego, true);
+        };
 
+        // 下面為監聽設定
+        function mousego(event) {
+            let　cre = document.createElement("div"); 
+            let rmunber = Math.random();
+            let rmunber2 = Math.random();
+            let rmunber3 = Math.random();
+            let rbig = rmunber*60;
+            let rcolor1 = parseInt(rmunber*255);
+            let rcolor2 = parseInt(rmunber2*255);
+            let rcolor3 = parseInt(rmunber3*255);
+            let colorr = `${rcolor1},${rcolor2},${rcolor3}`;
+            console.log(rmunber);
 
-        rect.addEventListener("mousemove", function(event) {
-            let cre = document.createElement("div");
-            cre.className = "ball";
-            cre.style.left = event.offsetX + 'px';
-            cre.style.top = event.offsetY + 'px';
-
+            
+            
+            cre.className = "ball"; 
+            cre.style.left = (event.offsetX-30) + 'px';
+            cre.style.top = (event.offsetY-30) + 'px'; 
+            cre.style.width = rbig+'px';
+            cre.style.height = rbig+'px';
+            cre.style.backgroundColor = `rgb(${colorr})`;
             rect.appendChild(cre);
-        });
-// 滑鼠按下去在偵聽滑鼠移動
-// 放開就取消偵聽滑鼠移動
-    </script>
-</body>
-
+        }; 
+        // 滑鼠按下去在偵聽滑鼠移動 // 放開就取消偵聽滑鼠移動 
+    </script> 
+    </body>
 </html>
