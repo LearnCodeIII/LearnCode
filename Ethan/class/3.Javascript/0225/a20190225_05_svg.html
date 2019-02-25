@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+
+<body>
+
+    <svg version="1.1" id="圖層_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+        y="0px" viewBox="0 0 600 400" style="enable-background:new 0 0 600 400;" xml:space="preserve">
+        <style type="text/css">
+            .st0 {
+                fill: #0D00A2;
+            }
+            <!-- fill是svg專用的標籤 -->
+
+        </style>
+        <!-- g是group -->
+        <g>
+            <!-- polygon是矩形 -->
+            <polygon class="st0" points="95.4,117.3 72.7,96.1 103.3,90.9 116.4,62.7 130.8,90.2 161.7,94 139.9,116.2 145.9,146.7
+		118.1,132.9 90.9,148 	" />
+        </g>
+    </svg>
+
+    <script>
+        const st0 = document.querySelector('.st0');
+
+
+        // mouseover是滑鼠移進範圍內
+        st0.addEventListener('mouseover', event => {
+            console.log(event.type);
+            st0.style.fill = '#FF0000';
+        });
+
+        // mouseout是滑鼠離開範圍
+        st0.addEventListener('mouseout', event => {
+            console.log(event.type);
+            st0.style.fill = '#0D00A2';
+        });
+
+    </script>
+</body>
+
+</html>

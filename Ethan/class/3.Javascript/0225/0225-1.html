@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+<style>
+    #rect {
+        position: relative;
+        width: 800px;
+        height: 600px;
+        background-color: #b0e9ff;
+    }
+    .ball {
+        position: absolute;
+        width: 40px;
+        height: 40px;
+        background-color: #ff2f27;
+        border-radius: 50%;
+        text-align: center;
+        line-height: 40px;
+        color: white;
+        border: 1px solid black;
+        transition: .2s;
+        left: 50px;
+        top: 50px;
+    }
+    .big-ball {
+        position: absolute;
+        width: 180px;
+        height: 180px;
+        background-color: #2c47ff;
+        border-radius: 50%;
+        text-align: center;
+        line-height: 80px;
+        color: white;
+        border: 1px solid black;
+        left: 360px;
+        top: 260px;
+    }
+</style>
+<body>
+
+<div id="rect">
+    <div class="big-ball">
+        <div class="ball"></div>
+    </div>
+</div>
+
+
+
+
+<script>
+
+    const rect = document.querySelector('#rect');
+    const bigBall = document.querySelector('.big-ball');
+    const ball = document.querySelector('.ball');
+
+
+    // capturing and at target
+    rect.addEventListener('click', function(event){
+        console.log('1:', event.eventPhase, event.currentTarget, event.target);
+
+        event.stopPropagation(); //停止事件物件的傳遞
+        // event.preventDefault(); 停止預設動作例如:focuse
+
+    }, true); // useCapture
+    bigBall.addEventListener('click', function(event){
+        console.log('2:', event.eventPhase, event.currentTarget, event.target);
+    }, true);
+    ball.addEventListener('click', function(event){
+        console.log('3:', event.eventPhase, event.currentTarget, event.target);
+    }, true);
+
+    // bubbling and at target
+    rect.addEventListener('click', function(event){
+        console.log('4:', event.eventPhase, event.currentTarget, event.target);
+    });
+    bigBall.addEventListener('click', function(event){
+        console.log('5:', event.eventPhase, event.currentTarget, event.target);
+    });
+    ball.addEventListener('click', function(event){
+        console.log('6:', event.eventPhase, event.currentTarget, event.target);
+
+    });
+
+</script>
+</body>
+</html>
+
