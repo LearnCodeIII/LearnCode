@@ -10,8 +10,9 @@
     #rect {
         position: relative;
         width: 800px;
-        height: 600px;
+        height: 800px;
         background-color: #eee;
+        border-radius: 50%;
     }
 
     .ball {
@@ -32,12 +33,12 @@
 
     <script>
         const rect = document.querySelector(" #rect"); 
-        // 滑鼠按下去執行監聽
-        rect.onmousedown = function () {
+        // 滑鼠按下去執行監聽.放在window就可以讓滑鼠就算在範圍外放開都可以停止
+        window.onmousedown = function () {
             rect.addEventListener('mousemove', mousego, true);
         }; 
         // 滑鼠放開取消監聽
-        rect.onmouseup = function () {
+        window.onmouseup = function () {
             rect.removeEventListener('mousemove', mousego, true);
         };
 

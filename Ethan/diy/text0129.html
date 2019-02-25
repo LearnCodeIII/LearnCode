@@ -6,42 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <style>
-        * {
-            padding: 0;
-            margin: 0;
-        }
-
-        .bg {
-            background-color: #ccc;
-            transition: .5s;
-            width: 100vw;
-            height: 500vh;
-        }
-
-        .circle {
-            width: 30px;
-            height: 30px;
-            border-radius: 50%;
-        }
-
-        .circle-B {
-            background-color: blue;
-        }
-
-        .circle-B:hover .bg{
-            background-color: yellow;
-        }
-
-
-        .circle-Y {
-            background-color: yellow;
-        }
-
-        .circle-Y:active .bg {
-            background-color: blue;
-        }
-    </style>
 </head>
 
 <body>
@@ -49,6 +13,16 @@
         <div class="circle circle-Y"></div>
         <div class="circle circle-B"></div>
     </div>
+    <script>
+        var i = 6;
+        var ar = [];
+        while (i--) {
+            ar.push(i);
+            console.log(i)
+        }
+    </script>
+
+
 </body>
 
 </html>

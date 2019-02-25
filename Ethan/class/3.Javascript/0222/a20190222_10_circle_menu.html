@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+<style>
+    #rect {
+        position: relative;
+        width: 800px;
+        height: 600px;
+        background-color: #b0e9ff;
+        top: 100px;
+        /*overflow: hidden;*/
+    }
+    .ball {
+        position: absolute;
+        width: 40px;
+        height: 40px;
+        background-color: #ff2f27;
+        border-radius: 50%;
+        text-align: center;
+        line-height: 40px;
+        color: white;
+        border: 1px solid black;
+        transition: .2s;
+    }
+    .big-ball {
+        position: absolute;
+        width: 80px;
+        height: 80px;
+        background-color: #2c47ff;
+        border-radius: 50%;
+        text-align: center;
+        line-height: 80px;
+        color: white;
+        border: 1px solid black;
+        left: 360px;
+        top: 260px;
+    }
+</style>
+<body>
+
+<div id="rect">
+    <div class="big-ball" onclick="openMenu()"></div>
+</div>
+
+
+<script>
+
+    const rect = document.querySelector('#rect');
+    const bigBall = document.querySelector('.big-ball');
+    const ballNum = 12;
+
+    const angUnit = Math.PI * 2 / ballNum;
+    let b, i, x, y;
+    const balls = [];
+
+    let isOpened = false;
+
+
+
+
+    for(i=0; i<ballNum; i++){
+        b = document.createElement('div');
+        b.className = 'ball';
+        b.innerHTML = i;
+        x = 400-20 + Math.cos(angUnit*i)*200;
+        y = 300-20 + Math.sin(angUnit*i)*200;
+
+        b.setAttribute('data-endX', parseInt(x));
+        b.setAttribute('data-endY', parseInt(y));
+        b.setAttribute('data-beginX', '380');
+        b.setAttribute('data-beginY', '280');
+        b.style.left = '380px';
+        b.style.top = '280px';
+
+        balls.push(b);
+        rect.appendChild(b);
+    }
+
+    rect.appendChild(bigBall);
+
+
+    const  openMenu = ()=>{
+        let tx, ty;
+
+        isOpened = ! isOpened;
+
+        if(isOpened) {
+            balls.forEach(function (el, ind) {
+                setTimeout(function () {
+                    el.style.left = el.getAttribute('data-endX') + 'px';
+                    el.style.top = el.getAttribute('data-endY') + 'px';
+                }, ind * 100);
+            });
+        } else {
+            balls.forEach(function (el, ind) {
+                setTimeout(function () {
+                    el.style.left = el.getAttribute('data-beginX') + 'px';
+                    el.style.top = el.getAttribute('data-beginY') + 'px';
+                }, ind * 100);
+            });
+        }
+
+        console.log(isOpened);
+    };
+
+
+
+
+</script>
+</body>
+</html>
+
