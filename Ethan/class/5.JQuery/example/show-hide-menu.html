@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Show Hide Menu</title>
+  
+  <style>
+  body{
+    background: #ccc;
+  }
+  .transition{
+    transition: 0.4s;
+  }
+  .wrapper{
+    width:800px;
+    margin: 20px auto
+  }
+  .menu{
+    display: inline-block;
+    cursor: pointer;
+    position: relative;
+    padding: 0 0 0 2px;
+  }
+  .menu.active{
+    background: #fff;
+  }
+  .menu ul{
+    position: absolute;
+    left:0;
+    top:42px;
+    background:rgba(255,255,255,.8);
+    width:120px;
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+  }
+  .menu.active ul{
+    opacity: 1;
+    max-height: 400px;
+  }
+  .menu ul li a{
+    display: block;
+    padding:10px 12px;
+    
+  }
+  .menu ul li a:hover{
+    background: lightblue;
+  }
+  ul,li{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .bar{
+      width: 36px;
+      height: 6px;
+      background: #666;
+      margin: 6px 0;
+      border-radius: 2px;
+  }
+  .active .bar1{
+      -webkit-transform: rotate(-45deg) translate(-9px, 7px) ;
+      transform: rotate(-45deg) translate(-9px, 7px) ;
+  }
+
+  .active .bar2{opacity: 0;}
+
+  .active .bar3{
+      -webkit-transform: rotate(45deg) translate(-9px, -8px) ;
+      transform: rotate(45deg) translate(-9px, -8px) ;
+  }
+
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+    <div class="menu transition" >
+      <div class="bar bar1 transition"></div>
+      <div class="bar bar2 transition"></div>
+      <div class="bar bar3 transition"></div>
+      <ul class="transition">
+        <li><a class="transition">Home</a></li>
+        <li><a class="transition">Shop</a></li>
+        <li><a class="transition">Gallery</a></li>
+        <li><a class="transition">About</a></li>
+      </ul>
+    </div>
+  </div>
+  <script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+  <script>
+    $(".menu").click(function(){
+      $(this).toggleClass('active');
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>相簿選取</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css">
+  <style>
+  ul{
+    width:640px;
+    margin: 20px auto;
+  }
+   li{
+    float:left;
+    width:19%;
+    height:120px;
+    overflow: hidden;
+    list-style: none;
+    margin:4px .5%;
+    padding:0;
+    border:4px solid #fff;
+    box-shadow: 0 2px 5px #333;
+   }
+   li img{
+    width:100%;
+    height: 100%;
+    object-fit: cover;
+   }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <figure class="text-center">
+      <img src="images/pic1.jpg" alt="">
+    </figure>
+    <ul class="clearfix">
+      <li><img src="images/pic1.jpg" alt=""></li>
+      <li><img src="images/pic2.jpg" alt=""></li>
+      <li><img src="images/pic3.jpg" alt=""></li>
+      <li><img src="images/pic4.jpg" alt=""></li>
+      <li><img src="images/pic5.jpg" alt=""></li>
+    </ul>
+  </div><!-- container -->
+  
+  <script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+  <script>
+    $("li").click(function(){
+      $(this).siblings().css("border-color", "white").end().css("border-color", "yellow");
+    });
+  </script>
+</body>
+</html>

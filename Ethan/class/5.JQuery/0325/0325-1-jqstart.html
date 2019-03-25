@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <style>
+        button{
+            background: red;
+        }
+        .yellow{
+            background: yellow;
+        }
+        #btn{
+            background: green;
+        }
+
+    </style>
+</head>
+
+<body>
+<!-- <script> -->
+    // 以下為DOM Ready,因為 jQuery 是把事件綁到 DOM 上，用這種寫法才會等頁面上的 DOM 讀取完後才執行程式
+    // $(function(){ 
+        // 執行碼 
+        // });
+<!-- </script> -->
+        
+
+
+
+    <div class="container">
+        <button>button</button>
+        <button class="yellow" id="btn">button</button>
+        <button class="yellow" id="btn">button</button>
+        <div>
+            <a href="http://google.com">google</a>
+            <a href="http://google.com" target="_blank">google2</a>
+            
+        </div>
+    </div>
+        
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script>
+        // $()裡面放選擇器, 然後用點連接, 後面放執行動作
+        // 先後順序很重要, 後面會把前面蓋過去, 所以這樣會全部顯示紅色, 因為第二行把全部都改紅了
+        // $('.yellow').css('background', 'yellow');
+        // $('button').css('background', 'red');
+
+
+        // 這樣才會乖乖顯示紅跟黃
+        // $('button').css('background', 'red');
+        // $('.yellow').css('background', 'yellow');
+
+        // 之所以前端id只能下一個, 正是因為javascript抓到一個id之後就收工了, 不會抓第2個
+        // 所以以下會顯示紅綠紅 (第二個btn吃不到)
+        $('button').css('background', 'red');
+        $('.yellow').css('background', 'red');
+        $('#btn').css('background', 'green');
+        $("a[target='_blank']").css('background','yellow');
+
+
+
+        
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="area1"></div>
+    <button type="button" onclick="testajax()">button</button>
+    <br>
+    <input type="text">
+    <script>
+        var htmlarea = document.querySelector('#area1');
+
+        function testajax() {
+            fetch('test.txt')
+
+                .then(function (response) {
+                    return response.json();
+                })
+
+                .then(function (txt) {
+                    htmlarea.innerHTML = txt;
+                })
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        // function testajax() {
+        //     var tes = new XMLHttpRequest();
+        //     tes.onreadystatechange = function () {
+        //         if (this.readyState == 4 && this.status == 200) {
+        //             htmlarea.innerHTML += this.responseText;
+        //         }
+        //     }
+        //     tes.open("GET", 'test.txt', true);
+        //     tes.send();
+        // }
+
+    </script>
+</body>
+
+</html>

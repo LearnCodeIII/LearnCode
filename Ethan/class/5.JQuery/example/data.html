@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Data</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <style>
+    .col-md-12{
+      margin-top: 30px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <p class="text-primary text-center" id="showData">Show Data Here.</p>
+      </div>
+      <div class="text-center" id="nameCard" data-name="Jason" data-last-name="Kidd" data-age="42">Jason Kidd</div>
+      <a class="btn btn-primary" role="button" id="getData">Get Data!</a>
+      <div class="col-md-12">
+        <p class="text-primary text-center" id="showJsonData">Show Json Data Here.</p>
+      </div>
+      <div class="text-center" id="jsonCard" data-options='{"first":"Jason","last":"Kidd"}' >Jason Kidd</div>
+        <a class="btn btn-primary" role="button" id="getJsonData">Get Json Data!</a>
+      <div class="text-center" id="nameCard2" data-name="" data-last-name="" data-age="">Jason Kidd</div>
+      <a class="btn btn-primary" role="button" id="setData">Set Data</a>    
+    </div><!-- row -->
+    
+  </div><!-- container -->
+  <script src="js/jquery.min.js"></script>
+  <script>
+    $("#getData").click(function(){
+      nameCard="First Name: "+$("#nameCard").data('name')+", Last Name: "+$("#nameCard").data('lastName')+", Age: "+$("#nameCard").data('age');
+      $("#showData").text(nameCard);
+    });
+    $("#getJsonData").click(function(){
+      nameCard=$("#jsonCard").data('options').first+" "+$("#jsonCard").data('options').last;
+      // console.log(nameCard);
+      $("#showJsonData").text(nameCard);
+    });
+    $("#setData").click(function(){
+      $("#nameCard2").data('name', 'Stephen');
+      $("#nameCard2").data('lastName', 'Curry');
+      $("#nameCard2").data('age', 28);
+      nameCard="First Name: "+$("#nameCard2").data('name')+", Last Name: "+$("#nameCard2").data('lastName')+", Age: "+$("#nameCard2").data('age');
+      $("#nameCard2").text(nameCard);
+    });
+
+  </script>
+</body>
+</html>

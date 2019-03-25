@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Add</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  </head>
+  <body>
+      <div class="container">
+          <div class="my-3">
+              <form class="form-inline">
+                <div class="form-group mx-sm-3 mb-2">
+                    <label for="" class="sr-only"></label>
+                    <input type="text" class="form-control" id="name" placeholder="輸入姓名">
+                  </div>
+                  <div class="form-group mx-sm-3 mb-2">
+                    <label for="" class="sr-only"></label>
+                    <input type="text" class="form-control" id="age" placeholder="輸入年齡">
+                  </div>
+                  <div class="form-group mx-sm-3 mb-2">
+                    <label for="" class="sr-only"></label>
+                    <input type="email" class="form-control" id="email" placeholder="輸入 email">
+                  </div>
+                  <a  class="btn btn-primary mb-2 text-white" id="addRow">送出</a>
+              </form>
+          </div>
+          <table class="table table-bordered">
+              <thead>
+                  <tr>
+                      <th>姓名</th>
+                      <th>年齡</th>
+                      <th>email</th>
+                      <th>動作</th>
+                  </tr>
+              </thead>
+              <tbody id="tebleCon">
+                  
+              </tbody>
+          </table>
+      </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script>
+        $("#addRow").click(function(){
+            // var newRow='<tr><td scope="row">Tom</td><td>20</td><td>tom@test.com</td><td><button class="btn btn-info">delete</button></td></tr>';
+            var newRow='<tr>';
+                // newRow=newRow+'<td scope="row">Tom</td>';
+                newRow+='<td scope="row">'+$("#name").val()+'</td>';
+                newRow+='<td>'+$("#age").val()+'</td>';
+                newRow+='<td>'+$("#email").val()+'</td>';
+                newRow+='<td><button class="btn btn-info delete">delete</button></td>';
+                newRow+='</tr>';
+            $("#tebleCon").append(newRow);
+        });
+        
+        $("#tebleCon").on("click",".delete",function(){
+            $(this).closest("tr").remove();
+        });
+    </script>
+</body>
+</html>

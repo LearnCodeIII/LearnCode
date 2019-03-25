@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>If Switch</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <style>
+    .col-md-12{
+      margin-top: 30px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="row text-center">
+      <div class="col-md-12 ">
+        <h1 class="text-primary" id="showInfo">Show Info Here.</h1>
+      </div>
+      <a class="btn btn-primary" role="button" id="click">Show</a>
+    </div>
+  </div><!-- container -->
+  <script src="js/jquery.min.js"></script>
+  <script>
+    var num=13;
+
+    $("#click").click(function(){
+      showInfo="";
+      // if(num==0){
+      //   showInfo="a";
+      // }else if(num>0 && num <=10){
+      //   showInfo="b";
+      // }else if(num>10 && num <=100){
+      //   showInfo="c";
+      // }else{
+      //   showInfo="d";
+      // }
+      switch (true){
+        case (num==0): 
+          showInfo="a";
+          break;
+        case (num>0 && num <=10):
+          showInfo="b";
+          break;
+        case (num>10 && num <=100):
+          showInfo="c";
+          break;
+        default:
+          showInfo="d";
+      }
+      $("#showInfo").text(showInfo);
+    });
+    
+  </script>
+</body>
+</html>

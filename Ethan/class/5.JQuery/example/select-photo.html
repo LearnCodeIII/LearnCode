@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>select photo</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css">
+  <style>
+  .container{
+    max-width: 640px;
+  }
+  ul{
+    margin-top: 20px;
+  }
+   li{
+    float:left;
+    width:18%;
+    box-sizing: border-box;
+    list-style: none;
+    margin:1%;
+    padding:0;
+    border:2px solid #ddd;
+    height:100px;
+    overflow: hidden;
+   }
+   li.active{
+    border:2px solid #EC4BA4;
+   }
+   li img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+   }
+   figure{
+    height:300px;
+   }
+   figure img{
+    height: 300px;
+   }
+  </style>
+</head>
+<body>
+  <div class="container">
+  <figure class="text-center">
+    <img id="mainPhoto" src="images/pic1.jpg" alt="">
+  </figure>
+  <ul class="">
+      <li><img src="images/pic1.jpg" alt=""></li>
+      <li><img src="images/pic2.jpg" alt=""></li>
+      <li><img src="images/pic3.jpg" alt=""></li>
+      <li><img src="images/pic4.jpg" alt=""></li>
+      <li><img src="images/pic5.jpg" alt=""></li>
+  </ul>
+  </div>
+  <script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+  <script>
+    
+
+    $("ul li").click(function(){
+      $(this).addClass("active").siblings().removeClass("active");
+      var $img=$(this).find("img").attr("src");
+      //console.log($img);
+      $("#mainPhoto").attr("src", $img);
+
+    });
+  </script>
+</body>
+</html>

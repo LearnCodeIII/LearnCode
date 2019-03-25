@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Tree Trabelsal</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <style>
+   
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>.children()</h2>
+    <div class="children">
+      Hi, I am <span>Tom</span>.
+    </div>
+    <h2>.closest()</h2>
+    <ul class="closest">
+      <li>no. 1</li>
+      <li>no. 2</li>
+      <li>no. 3</li>
+      <li>no. 4</li>
+    </ul>
+    <h2>.find()</h2>
+    <p class="find">
+      Hello, I am <span>Jason</span>.
+    </p>
+    <h2>.next()</h2>
+    <ul>
+      <li>list item 1</li>
+      <li>list item 2</li>
+      <li class="next">list item 3</li>
+      <li>list item 4</li>
+      <li>list item 5</li>
+    </ul>
+    <h2>.nextAll()</h2>
+    <ul>
+      <li>list item 1</li>
+      <li class="next-all">list item 2</li>
+      <li >list item 3</li>
+      <li>list item 4</li>
+      <li>list item 5</li>
+    </ul>
+    <h2>.nextUntil()</h2>
+    <ul>
+      <li>list item 1</li>
+      <li class="next-until">list item 2</li>
+      <li >list item 3</li>
+      <li>list item 4</li>
+      <li id="item5">list item 5</li>
+      <li>list item 6</li>
+    </ul>
+    <h2>.parent()</h2>
+    <ul>
+      <li>list item 1</li>
+      <li>list item 2</li>
+      <li >list item 3</li>
+      <li>list item 4</li>
+      <li class=""><span class="parent">list item 5</span></li>
+      <li>list item 6</li>
+    </ul>
+    <h2>.parentsUntil()</h2>
+    <ul id="parentsUntil">
+      <li>list item 1</li>
+      <li>list item 2</li>
+      <li >list item 3</li>
+      <li>list item 4</li>
+      <li class=""><span class="parents-until">list item 5</span></li>
+      <li>list item 6</li>
+    </ul>
+    <h2>.siblings()</h2>
+    <ul>
+      <li>list item 1</li>
+      <li>list item 2</li>
+      <li >list item 3</li>
+      <li>list item 4</li>
+      <li class="siblings">list item 5</li>
+      <li>list item 6</li>
+    </ul>
+  </div><!-- container -->
+  
+  <script src="js/jquery.min.js"></script>
+  <script>
+    $(".children").children('span').css("background", "yellow");
+    $(".closest li").click(function(){
+      $(this).closest("li").css("background", "yellow");
+    });
+    $(".find").find('span').css("color", "red");
+    $(".next").next('li').css("color", "red");
+    $(".next-all").nextAll('li').css("color", "red");
+    $(".next-until").nextUntil('#item5').css("color", "red");
+    $(".parent").parent().css("color", "red");
+    $(".parents-until").parentsUntil("#parentsUntil").css("color", "red");
+    $(".siblings").siblings().css("color", "red");
+  </script>
+</body>
+</html>

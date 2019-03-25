@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Visible & Hidden2</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <style>
+        .box {
+            width: 64px;
+            height: 64px;
+            margin: 5px;
+            background: lightcoral;
+            transition: .5s;
+        }
+
+        td div {
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="py-3">
+        <button type="button" class="btn btn-primary" id="eq">eq</button>
+        <button type="button" class="btn btn-primary" id="first">first</button>
+        <button type="button" class="btn btn-primary" id="has">has</button>
+        <button type="button" class="btn btn-primary" id="not">not</button>
+    </div>
+    <table class="table table-bordered">
+        <tr>
+            <td></td>
+            <td>LeBron James</td>
+            <td>Jason Kidd</td>
+            <td class="active">Jason Williams</td>
+            <td>James Harden</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td class="active">James Harden</td>
+            <td>Jason Williams</td>
+            <td>
+                <div>
+                    <div></div>
+                </div>
+            </td>
+            <td>Jason Kidd</td>
+        </tr>
+        <tr>
+            <td>James Harden</td>
+            <td>LeBron James</td>
+            <td class="active"></td>
+            <td>
+                <div></div>
+            </td>
+            <td>Jason Williams</td>
+        </tr>
+        <tr>
+            <td>
+                <button type="button" class="btn btn-primary">Button</button>
+            </td>
+            <td>
+                <p></p>
+            </td>
+            <td>LeBron James</td>
+            <td>Jason Kidd</td>
+            <td>Jason Williams</td>
+        </tr>
+        <tr>
+            <td>
+                <section class="box"></section>
+                <section class="box"></section>
+            </td>
+            <td>
+                <section class="box"></section>
+                <section class="box"></section>
+            </td>
+            <td>Jason Williams</td>
+            <td>
+                <p></p>
+            </td>
+            <td>James Harden</td>
+        </tr>
+    </table>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+
+    <script>
+        $('#eq').click(function () {
+            $('td:eq(2)').css('background', 'pink');
+        });
+        $('#first').click(function () {
+            $('td:first').css('background', 'lightblue');
+        });
+        $('#has').click(function () {
+            $('td:has(p)').css('background', 'yellow');
+        });
+        $('#not').click(function () {
+            $('td').not('.active').css('background', '#ccc');
+        });
+
+        // 下列為選到td內所有的div
+        // $('td div').css('border','1px solid red');
+        // $('td').find('div').css('border','1px solid red');
+
+        // 下列為選td下一層的div
+        // $('td>div').css('border','1px solid red');
+        // $('td').children('div').css('border','1px solid red');
+
+        // 這邊的this指的是點及的地方
+        $('td').click(function () {
+            $(this).find('.box').css('border-radius', '50%');
+            // $(this).css('background','none')
+            // $(this).next().css('background' , '#cac');
+            // $(this).prev(').css('background' , 'red');
+            // 盡量併成一行寫
+            // $(this).css('background','none').next().css('background' , '#cac').prev().prev().css('background','red');
+
+            // next就是之後全部
+            // $(this).nextAll().css('background' , '#cac');
+
+            // nextUntil就是之後遇到誰就停
+            // $(this).nextUntil('.active').css('background' , '#cac');
+        });
+        
+        // parent就是往上選(依照結構)
+        $('.btn').click(function () {
+            // $('.btn').parent().css('background', '#cac');
+            // $('.btn').parents().css('background', '#cac');
+            // 下列為往上選最接近的該元素
+            $('.btn').closest('tr').css('background', '#cac');
+        });
+
+    </script>
+</body>
+
+</html>

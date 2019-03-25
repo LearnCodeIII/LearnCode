@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>select all</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css">
+	<style>
+		tr.active{
+			background: lightblue;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<table class="table table-bordered">
+		<thead>
+			<tr>
+				<th><input type="checkbox" id="checkAll"></th>
+				<th>姓名</th>
+				<th>電話</th>
+				<th>email</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+		        <td><input type="checkbox"></td>
+		        <td>Jack</td>
+		        <td>0900000000</td>
+		        <td>jack@sample.com</td>
+		      </tr>
+		      <tr>
+		        <td><input type="checkbox"></td>
+		        <td>Tom</td>
+		        <td>0900000000</td>
+		        <td>tom@sample.com</td>
+		      </tr>
+		      <tr>
+		        <td><input type="checkbox"></td>
+		        <td>Judy</td>
+		        <td>0900000000</td>
+		        <td>judy@sample.com</td>
+		      </tr>
+		      <tr>
+		        <td><input type="checkbox"></td>
+		        <td>Sam</td>
+		        <td>0900000000</td>
+		        <td>sam@sample.com</td>
+		      </tr>
+		    </tbody>
+		</table>
+	</div><!-- container -->
+	<script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+  	<script>
+  	var dataCount=$("tbody tr").length;
+
+
+  		$("tbody :checkbox").click(function(){
+  			//each 
+  			// var $i=0;
+  			// $("tbody :checkbox").each(function(){
+  			// 	if($(this).prop("checked")){
+  			// 		$i=$i+1;
+  			// 	}
+  			// });
+  			// if($i==dataCount){
+  			// 	$("#checkAll").prop("checked", true);
+  			// }else{
+  			// 	$("#checkAll").prop("checked", false);
+  			// }
+  			if($(this).prop("checked")){
+  				$(this).parent().parent().addClass("active");
+  			}else{
+  				$(this).parent().parent().removeClass("active");
+  			}
+
+  			//get count
+  			var checkCount=$("tbody :checkbox:checked").length;
+  			if(checkCount==dataCount){
+  				$("#checkAll").prop("checked", true);
+  			}else{
+  				$("#checkAll").prop("checked", false);
+  			}
+
+  		});
+  		$("#checkAll").click(function(){
+  			if($(this).prop("checked")){
+  				$("tbody tr td").find(":checkbox").prop("checked", true);
+  				$("tbody tr").addClass("active");
+  			}else{
+  				$("tbody tr td").find(":checkbox").prop("checked", false);
+  				$("tbody tr").removeClass("active");
+  			}
+  		});
+  	</script>
+
+</body>
+</html>

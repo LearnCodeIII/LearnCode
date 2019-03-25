@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+  <meta charset="UTF-8">
+  <title>Slider</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <style>
+.wrapper{
+  margin:0 auto;
+  width: 800px;
+}
+ul, li{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.transition{
+  transition:all .5s;
+  -webkit-transition: all .5s;
+}
+.slide{
+  width:800px;
+  overflow: hidden;
+  height:300px;
+  background: #000;
+  position: relative;
+}
+.slide ul.slide_img{
+  left:0;
+  position: absolute;
+  /*width:2400px;*/
+  z-index: 1;
+  margin:0;
+  padding:0;
+}
+.slide ul.slide_img li{
+  width:800px;
+  float:left;
+  height:300px;
+  list-style: none;
+}
+.slide ul.slide_img li img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+.slide ul.slide_node{
+  position: absolute;
+  left:0;
+  bottom:10px;
+  width:100%;
+  text-align: center;
+  z-index: 10;
+}
+.slide ul.slide_node li{
+  margin:0 5px;
+  display: inline-block;
+  cursor: pointer;
+  width:16px;
+  height:16px;
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: 0 0 5px #000 inset;
+}
+.slide ul.slide_node li:hover, .slide ul.slide_node li.active{
+  background: skyblue;
+}
+.dir_btn{
+  position: absolute;
+  top:50%;
+  margin-top: -12px;
+  color: #fff;
+  z-index: 10;
+  font-size: 24px;
+  opacity: .5;
+  cursor: pointer;
+}
+.dir_btn:hover{
+  opacity: .8;
+  text-decoration: none;
+  color:#fff;
+}
+.glyphicon-chevron-left{
+  left:5px; 
+}
+.glyphicon-chevron-right{
+  right:5px; 
+}
+</style>
+</head>
+
+<body>
+  <section class="wrapper">
+    <div class="slide">
+      <a class="dir_btn glyphicon glyphicon-chevron-left" id="left"></a>
+      <a class="dir_btn glyphicon glyphicon-chevron-right" id="right"></a>
+      <ul class="slide_img transition" id="slide_img">
+        <!-- <li><img src="images/slide1.jpeg" alt=""></li>
+        <li><img src="images/slide2.jpeg" alt=""></li>
+        <li><img src="images/slide3.jpeg" alt=""></li> -->
+      </ul>
+      <ul class="slide_node" id="slide_node">
+        
+      </ul>
+    </div>
+  </section><!-- wrapper -->
+  <script
+  src="https://code.jquery.com/jquery-2.2.4.min.js"
+  integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+  crossorigin="anonymous"></script>
+  <script>
+    var slide=0;
+    var sliderWidth=800;
+    var sliders=["slide1.jpeg", "slide2.jpeg", "slide3.jpeg", "slide4.jpeg"];
+    var slideCount=sliders.length; //取得陣列長度
+
+    sliderAppend();
+    function sliderAppend(){
+      var sliderContent=""; 
+      var sliderDot="";
+      $("#slide_img").width(sliderWidth*slideCount+"px")
+      for(i=0;i<slideCount;i++){
+        sliderContent+="<li><img src='images/"+sliders[i]+"'></li>";
+        sliderDot+="<li></li>";
+      }
+      $("#slide_img").append(sliderContent);
+      $("#slide_node").append(sliderDot);
+      $("#slide_node li").eq(0).addClass("active");
+    }
+    function goSlider(slide){
+      width=0-sliderWidth*slide+"px";
+      $(".slide_img").css("left", width);
+      $("#slide_node li").eq(slide).addClass('active').siblings().removeClass();
+    }
+
+    $(".slide_node li").hover(function(){
+      slide=$(this).index();
+      goSlider(slide);
+    });
+    $("#left").click(function(){
+      if(slide-1>=0){
+        slide=slide-1;
+
+      }else{
+          slide=slideCount-1;
+      }
+        goSlider(slide);
+    });
+    $("#right").click(function(){
+      if(slide+1<slideCount){
+        slide=slide+1;
+
+      }else{
+          slide=0;
+      }
+        goSlider(slide);
+    });
+
+    //timer
+    var autoSlide = setInterval(slideTimer, 3000);
+
+    function slideTimer() {
+        slide= slide>= (slideCount-1) ? 0 : slide+1;
+        goSlider(slide);
+    }
+    $(".slide").hover(function(){
+        clearInterval(autoSlide);
+    }, function(){
+        autoSlide = setInterval(slideTimer, 3000);
+    })
+
+  </script>
+</body>
+</html>
