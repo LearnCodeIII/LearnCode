@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>計算機</title>
+  <link rel="stylesheet" href="css/reset.css">
+  <style>
+    .account{
+      padding:10px;
+      width: 210px;
+      margin:20px auto;
+      background: lemonchiffon;
+      border-radius: 4px;
+      border:2px solid tan;
+      font-size: 25px;
+    }
+    .account_con{
+      background: tan;
+      border: 1px solid tan;
+    }
+    .account_con li{
+      float:left;
+      margin:1px;
+      width:50px;
+      line-height: 50px;
+    }
+    .account_con li.b3{
+      width:154px;
+    }
+    .monitor{
+      text-align: right;
+      padding:0 10px;
+      height:50px;
+      line-height: 50px;
+      vertical-align: middle;
+      background: slategray;
+      color:#fff;
+    }
+    .button{
+      box-sizing:border-box;
+      display: block;
+      height: 50px;
+      line-height: 50px;
+      vertical-align: middle;
+      /*border:1px solid oldlace;*/
+      background: ivory;
+      text-align: center;
+      font-weight: bold;
+      cursor: default;
+    }
+    .button:hover{
+      background: oldlace;
+    }
+    .button:active{
+      background: tan;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="account clearfix">
+    <div class="monitor" id="monitor">0</div>
+    <ul class="account_con clearfix">
+      <li class="b3"><a class="button" id="ac">AC</a></li>
+      <li><a class="button" id="devided">÷</a></li>
+      <li><a class="button num">7</a></li>
+      <li><a class="button num">8</a></li>
+      <li><a class="button num">9</a></li>
+      <li><a class="button" id="times">×</a></li>
+      <li><a class="button num">6</a></li>
+      <li><a class="button num">5</a></li>
+      <li><a class="button num">4</a></li>
+      <li><a class="button" id="minus">﹣</a></li>
+      <li><a class="button num">3</a></li>
+      <li><a class="button num">2</a></li>
+      <li><a class="button num">1</a></li>
+      <li><a class="button" id="plus">＋</a></li>
+      <li class="b3"><a class="button num">0</a></li>
+      <li><a class="button">=</a></li>
+    </ul>
+  </div>
+  <script src="js/jquery.min.js"></script>
+  <script>
+    var number=0;
+    $(".num").click(function(){
+      $value=$(this).text();
+      number=$("#monitor").text();
+      if(number==0){
+        number=$value;
+      }else{
+        number=String(number)+$value;
+      }
+      $("#monitor").text(number);
+    });
+    $("#ac").click(function(){
+      number=0;
+      $("#monitor").text(number);
+    });
+    $("#plus").click(function(){
+
+    });
+
+  </script>
+</body>
+</html>

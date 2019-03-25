@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Easing</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <style>
+  .box{
+    width:200px;
+    height:200px;
+    margin:20px auto;
+    background: lightblue;
+  }
+  #pic_wrap{
+    padding:10px;
+    width:220px;
+    margin:0 auto;
+  }
+  #pic_wrap img{
+    display: none;
+  }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="row" >
+      <div class="col-md-12 text-center" style="margin:20px 0;">
+        <a class="btn btn-primary" id="easing">easing</a>
+      </div>
+      <div class="col-md-12">
+        <div class="box"></div>
+      </div>
+      
+    </div>
+  </div><!-- container -->
+  <script src="js/jquery.min.js"></script>
+  <script src="js/plugins/jquery.easing.js"></script>
+  <script>
+    $("#easing").click(function(){
+      $(".box").animate({ height: '300px' }, 600, 'easeInBounce')
+    });
+    
+  </script>
+</body>
+</html>

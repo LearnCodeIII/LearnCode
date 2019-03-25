@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sliding</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <style>
+  .box{
+    width:200px;
+    height:200px;
+    margin:20px auto;
+    background: lightblue;
+  }
+  
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="row" >
+      <div class="col-md-12 text-center" style="margin:20px 0;">
+        <a class="btn btn-primary" id="slideDown">slideDown</a> <a class="btn btn-primary" id="slideUp">slideUp</a> <a class="btn btn-primary" id="slideToggle">slideToggle</a>
+      </div>
+      <div class="col-md-12">
+        <div class="box"></div>
+      </div>
+    </div>
+  </div><!-- container -->
+  <script src="js/jquery.min.js"></script>
+  <script>
+    $("#slideDown").click(function(){
+      $(".box").slideDown();
+    });
+    $("#slideUp").click(function(){
+      $(".box").slideUp();
+    });
+    $("#slideToggle").click(function(){
+      $(".box").slideToggle();
+    });
+  </script>
+</body>
+</html>

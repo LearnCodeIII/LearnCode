@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Append</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css">
+  <style>
+  a.btn{
+    color:#fff !important;
+    cursor: pointer;
+  }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="row" >
+      <div class="col-md-12" style="margin:20px 0;">
+        <a class="btn btn-primary" id="append">append</a> <a class="btn btn-primary" id="prepend">prepend</a>
+      </div>
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th>name</th>
+            <th>age</th>
+            <th>email</th>
+            <th>action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- <tr>
+            <td>Jason</td>
+            <td>20</td>
+            <td>jason@sample.com</td>
+          </tr> -->
+        </tbody>
+      </table>
+    </div>
+  </div><!-- container -->
+  <script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+  <script>
+    var person=["Jason", "Tom"];
+    $("#append").click(function(){
+      var content="<tr>";
+      content+="<td>"+person[0]+"</td>";
+      content+="<td>20</td>";
+      content+="<td>"+person[0]+"@sample.com</td>";
+      content+="<td><a class='btn btn-primary btn-delete'>delete</a></td>";
+      content+="</tr>";
+      $("tbody").append(content);
+    });
+    $("#prepend").click(function(){
+      var content="<tr>";
+      content+="<td>"+person[1]+"</td>";
+      content+="<td>20</td>";
+      content+="<td>"+person[1]+"@sample.com</td>";
+      content+="<td><a class='btn btn-primary btn-delete'>delete</a></td>";
+      content+="</tr>";
+      $("tbody").prepend(content);
+    });
+
+    $("tbody").on("click", ".btn-delete", function(){
+      $(this).parent().parent().remove();
+      // console.log("delete");
+    });
+  </script>
+</body>
+</html>

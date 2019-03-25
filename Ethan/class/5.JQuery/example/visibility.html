@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>form</title>
+	<style>
+		.box{
+			width:200px;
+			height:200px;
+			background: pink;
+			margin:10px;
+			float: left;
+		}
+	</style>
+</head>
+<body>
+	<button>show box</button>
+	<div></div>
+	<div class="box"></div>
+	<div class="box"></div>
+	<div class="box" style="display: none"></div>
+	<div class="box"></div>
+	<div class="box" style="display: none"></div>
+
+	<script src="jquery.js"></script>
+		
+  	<script>
+  		$("button").click(function(){
+  			//$(".box:hidden").css("background","red");
+  			$(".box:hidden").css("background","red").show();
+  		});
+  	</script>
+
+</body>
+</html>

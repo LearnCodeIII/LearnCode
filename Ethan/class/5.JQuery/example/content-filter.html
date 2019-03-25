@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Content Filter</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <style>
+   
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>:contains()</h2>
+    <div class="contain">Jason Kidd</div>
+    <div class="contain">LeBron James</div>
+    <div class="contain">Jason Williams</div>
+    <div class="contain">James Harden</div>
+    <h2>:empty</h2>
+    <table class="table empty">
+      <tr>
+        <td>1</td>
+        <td></td>
+        <td>3</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>5</td>
+        <td>6</td>
+        <td></td>
+        <td></td>
+      </tr>
+    </table>
+    <h2>:has()</h2>
+    <table class="table has">
+      <tr>
+        <td><p>1</p></td>
+        <td></td>
+        <td>3</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>5</td>
+        <td><p>6</p></td>
+        <td></td>
+        <td></td>
+      </tr>
+    </table>
+  </div><!-- container -->
+  
+  <script src="js/jquery.min.js"></script>
+  <script>
+    $("div.contain:contains('Jason')").css("background", "yellow");
+    $(".empty td:empty").css("background", "yellow");
+    $(".has td:has(p)").css("background", "yellow");
+  </script>
+</body>
+</html>

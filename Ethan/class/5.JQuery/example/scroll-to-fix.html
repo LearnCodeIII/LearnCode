@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Scroll To Fix</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css">
+  <style>
+   body{
+    height: 300vh;
+   }
+   header{
+    height: 130px;
+   }
+   nav{
+    background:#37CAEB;
+    padding:20px;
+    text-align: center;
+    color:#fff;
+   }
+   nav.fixed{
+    position: fixed;
+    top:0;
+    right:0;
+    left:0;
+   }
+  </style>
+</head>
+<body>
+    <header></header>
+  <nav class="nav">I'm nav</nav>
+  
+  <script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+  
+  <script>
+    var navTop=$("nav").offset().top;
+
+    $(window).scroll(function(){
+      var scrollTop=$(this).scrollTop();
+      if(scrollTop>=navTop){
+        $("nav").addClass("fixed");
+      }else{
+        $("nav").removeClass("fixed");
+      }
+    });
+    
+  </script>
+</body>
+</html>

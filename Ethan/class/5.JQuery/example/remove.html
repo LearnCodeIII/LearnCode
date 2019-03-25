@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Remove</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css">
+  <style>
+  a.btn{
+    color:#fff !important;
+    cursor: pointer;
+  }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="row" >
+      <div class="col-md-12" style="margin:20px 0;">
+        <a class="btn btn-primary" id="append">Add</a>
+      </div>
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th>name</th>
+            <th>age</th>
+            <th>email</th>
+            <th>action</th>
+          </tr>
+        </thead>
+        <tbody>
+          
+        </tbody>
+      </table>
+    </div>
+  </div><!-- container -->
+  <script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+  <script>
+    $("#append").click(function(){
+      $("tbody").append("<tr><td>Tom</td><td>20</td><td>tom@gmail.com</td><td><a class='btn btn-primary'>delete</a></td></tr>");
+    });
+    $("table").on("click", ".btn", function(){
+      $(this).parent().parent().remove();
+    });
+
+  </script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>menu</title>
+  <style>
+  .menu{
+    position: fixed;
+    background: #000;
+    z-index: 10;
+    left:10px;
+    top:10px;
+    width:30px;
+    height:30px;
+    border: 1px solid #fff;
+    cursor: pointer;
+  }
+  .menu.active{
+    background: red;
+  }
+  .block{
+    background: rgba(0,0,0,.8);
+    width:100vw;
+    height: 100vh;
+    left:-100vw;
+    top:0;
+    position: fixed;
+  }
+  </style>
+</head>
+<body>
+  <div class="menu"></div>
+  <div class="block"></div>
+  <script src="js/jquery.min.js"></script>
+  <script>
+    $(".menu").click(function(){
+      if($(this).hasClass('active')){
+        $(this).removeClass('active')
+        $(".block").animate({'left': '100vw'}, 500).animate({'left': '-100vw'}, 1);
+      }else{
+        $(this).addClass('active')
+        $(".block").animate({'left': 0}, 500);
+      }
+    });
+
+  </script>
+</body>
+</html>

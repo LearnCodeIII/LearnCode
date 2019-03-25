@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Show Hide Menu</title>
+  
+  <style>
+  body{
+    background: #ccc;
+  }
+  .transition{
+    transition: 0.4s;
+  }
+  .wrapper{
+    width:800px;
+    margin: 20px auto
+  }
+  .menu{
+    display: inline-block;
+    cursor: pointer;
+    padding: 0 0 0 2px;
+  }
+  ul,li{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .bar{
+      width: 36px;
+      height: 6px;
+      background: #666;
+      margin: 6px 0;
+      border-radius: 2px;
+  }
+  .active .bar1{
+      -webkit-transform: rotate(-45deg) translate(-9px, 7px) ;
+      transform: rotate(-45deg) translate(-9px, 7px) ;
+  }
+
+  .active .bar2{opacity: 0;}
+
+  .active .bar3{
+      -webkit-transform: rotate(45deg) translate(-9px, -8px) ;
+      transform: rotate(45deg) translate(-9px, -8px) ;
+  }
+
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+    <div class="menu transition" >
+      <div class="bar bar1 transition"></div>
+      <div class="bar bar2 transition"></div>
+      <div class="bar bar3 transition"></div>
+    </div>
+  </div>
+  <script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+  <script>
+    
+    
+  </script>
+</body>
+</html>

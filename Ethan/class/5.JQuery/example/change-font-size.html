@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Change Font Size</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <style>
+        .fontL{
+            font-size: 17px;
+        }
+        .fontM{
+            font-size: 15px;
+        }
+        .fontS{
+            font-size: 13px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="d-flex justify-content-end my-2">
+            <div class="btn-group" role="group" aria-label="" id="change_btns">
+                <button type="button" class="btn btn-secondary" data-size="l">大</button>
+                <button type="button" class="btn btn-secondary" data-size="m">中</button>
+                <button type="button" class="btn btn-secondary" data-size="s">小</button>
+            </div>
+        </div>
+        <div>
+            <h1>jQuery</h1>
+            <p>jQuery is a cross-platform JavaScript library designed to simplify the client-side scripting of HTML. It is free, open-source software using the permissive MIT License. Web analysis indicates that it is the most widely deployed JavaScript library by a large margin. </p>
+            <p>
+                jQuery's syntax is designed to make it easier to navigate a document, select DOM elements, create animations, handle events, and develop Ajax applications. jQuery also provides capabilities for developers to create plug-ins on top of the JavaScript library. This enables developers to create abstractions for low-level interaction and animation, advanced effects and high-level, themeable widgets. The modular approach to the jQuery library allows the creation of powerful dynamic web pages and Web applications.
+            </p>
+        </div>
+    </div>
+    <script
+            src="https://code.jquery.com/jquery-3.3.1.min.js"
+            integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+            crossorigin="anonymous"></script>
+    <script>
+        $("#change_btns .btn").click(function(){
+            let size=$(this).data("size");
+            switch (size){
+                case "l":
+                    $("body").removeClass().addClass("fontL");
+                    break;
+                case "m":
+                    $("body").removeClass().addClass("fontM");
+                    break;
+                case "s":
+                    $("body").removeClass().addClass("fontS");
+                    break;
+
+            }
+        });
+    </script>
+</body>
+</html>

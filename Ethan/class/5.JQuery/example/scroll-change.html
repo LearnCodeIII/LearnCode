@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Scroll Top</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css">
+  <style>
+   body{
+    height:300vh;
+   }
+   .o_box{
+    background: orange;
+    position: fixed;
+    left:40px;
+    top:40px;
+    bottom:40px;
+    right:70%;
+    transition: all .5s;
+    opacity: 0;
+   }
+   .o_box.show{
+    opacity: 1;
+    right:50%;
+   }
+   .o_box.active{
+    right:40px;
+   }
+  </style>
+</head>
+<body>
+  <div class="o_box"></div>
+  
+  <script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+  <script>
+    $(window).scroll(function(event){
+       var st = $(this).scrollTop();
+       if(st>100){
+        $(".o_box").addClass('show');
+       }else{
+        $(".o_box").removeClass('show');
+       }
+       if(st>500){
+        $(".o_box").addClass('active');
+       }else{
+        $(".o_box").removeClass('active');
+       }
+    });
+    
+  </script>
+</body>
+</html>

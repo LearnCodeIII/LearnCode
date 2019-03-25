@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Ajax</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+  <style>
+  
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 col-md-offset-3">
+      <table class="table" id="table">
+        <thead><tr>
+          <th>地圖</th>
+          <th>學校數</th>
+        </tr></thead>
+        <tbody id="tableContent"></tbody>
+      </table>
+      </div>
+    </div>
+  </div><!-- container -->
+  
+  <script src="js/jquery.min.js"></script>
+  <script>
+  $(function(){
+    $(".table").on("click", "tr", function(){
+      console.log($(this).data("nameEn")+", "+$(this).data("nameJp"));
+    });
+  });
+    
+    $.ajax({
+      url: 'map.json', 
+      type: 'GET',
+      dataType: 'json',
+      error: function(xhr) {
+        //錯誤處理
+      },
+      success: function(response) {
+        //資料正確回傳處理
+        //console.log(response.length)
+        lists="";
+        for(i=0; i<response.length; i++){
+          lists+="<tr data-name-en='"+response[i]["name_en"]+"' data-name-jp='"+response[i]["name_jp"]+"'>";
+          lists+="<td>"+response[i]["name_tw"]+"</td>";
+          lists+="<td>"+response[i]["count"]+"</td>";
+          lists+="</tr>";
+        }
+        $("#tableContent").append(lists);
+      }
+    });
+  </script>
+</body>
+</html>

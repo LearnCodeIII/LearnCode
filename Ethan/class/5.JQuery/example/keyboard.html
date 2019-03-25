@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Keyboard</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css">
+  <style>
+    .col-md-12{
+      margin-top: 30px;
+    }
+    .clear{
+      clear: both;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="row" style="margin-top:20px;">
+      <div id="showValue"></div>
+      <div class="col-md-12">
+          <input type="text" class="form-control" id="inputArea" placeholder="Type me">
+      </div><!-- col-md-12 -->
+      <div id="">keydown: <span id="keydownCode"></span>, keypress: <span id="keypressCode"></span></div>
+      <div class="col-md-12">
+          <input type="text" class="form-control" id="inputValue" placeholder="Show Keyboard value">
+      </div><!-- col-md-12 -->
+      
+    </div>
+  </div><!-- container -->
+  <script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+  <script>
+    $("#inputArea").keydown(function(){
+      $("#showValue").text("keydown");
+    });
+    $("#inputArea").keypress(function(){
+      $("#showValue").text("keypress");
+    });
+    $("#inputArea").keyup(function(){
+      $("#showValue").text("keyup");
+    });
+
+    $("#inputValue").keydown(function(e){
+      $("#keydownCode").text(e.which);
+    });
+    $("#inputValue").keypress(function(e){
+      $("#keypressCode").text(e.which);
+    });
+
+    $("body").keydown(function(e){
+      if(e.which==13){
+        alert("you presss enter!");
+      }
+    });
+
+  </script>
+</body>
+</html>

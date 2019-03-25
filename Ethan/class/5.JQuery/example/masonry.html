@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Masonry</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <style>
+    .row{
+      margin-top: 20px;
+    }
+    .row img{
+      max-width: 100%;
+    }
+    .col-md-3{
+      margin-bottom: 20px;
+    }
+    .col-md-3 figure{
+      
+      box-shadow: 0 0 5px #333;
+      border-radius: 4px;
+      overflow: hidden;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-3 col-sm-4">
+        <figure>
+          <img src="http://unimap.wingzero.tw/uniform/kaohsiung/kghs/14854389944_5_thumb.jpg" alt="">
+        </figure>
+      </div>
+      <div class="col-md-3 col-sm-4">
+        <figure>
+          <img src="http://unimap.wingzero.tw/uniform/miaoli/shhs/14847576587_8.jpeg" alt="">
+        </figure>
+      </div>
+      <div class="col-md-3 col-sm-4">
+        <figure>
+          <img src="http://unimap.wingzero.tw/uniform/hsinchu/ydvs/14850122190_1.jpg" alt="">
+        </figure>
+      </div>
+      <div class="col-md-3 col-sm-4">
+        <figure>
+          <img src="http://unimap.wingzero.tw/uniform/tainan/nyvs/14842189576_7_thumb.jpg" alt="">
+        </figure>
+      </div>
+      <div class="col-md-3 col-sm-4">
+        <figure>
+          <img src="http://unimap.wingzero.tw/uniform/tainan/nyvs/14842182902_3_thumb.jpg" alt="">
+        </figure>
+      </div>
+      <div class="col-md-3 col-sm-4">
+        <figure>
+          <img src="http://unimap.wingzero.tw/uniform/taoyuan/tzsavs/14841420126_7_thumb.jpg" alt="">
+        </figure>
+      </div>
+    </div><!-- row -->
+  </div>
+  
+  <script src="js/jquery.min.js"></script>
+  <script src="js/plugins/imagesloaded.pkgd.min.js"></script>
+  <script src="js/plugins/masonry.pkgd.min.js"></script>
+  <script>
+  $(function(){
+    var $grid = $('.row').imagesLoaded( function() {
+    $grid.masonry({
+      itemSelector: '.col-md-3',
+      percentPosition: true,
+      columnWidth: '.col-md-3'
+    }); 
+  });
+  });
+  
+  </script>
+</body>
+</html>

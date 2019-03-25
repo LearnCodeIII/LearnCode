@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Fade</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <style>
+  .box{
+    width:200px;
+    height:200px;
+    margin:20px auto;
+    background: lightblue;
+  }
+  #pic_wrap{
+    padding:10px;
+    width:220px;
+    margin:0 auto;
+  }
+  #pic_wrap img{
+    display: none;
+  }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="row" >
+      <div class="col-md-12 text-center" style="margin:20px 0;">
+        <a class="btn btn-primary" id="fadeIn">fadeIn</a> <a class="btn btn-primary" id="fadeOut">fadeOut</a> <a class="btn btn-primary" id="fadeToggle">fadeToggle</a>
+      </div>
+      <div class="col-md-12">
+        <div class="box"></div>
+      </div>
+      <div class="col-md-12 text-center">
+        <a class="btn btn-primary" id="showPic">Show Pictures</a>
+      </div>
+      <div class="col-md-12">
+        <div id="pic_wrap">
+          <img src="images/pic1.jpg" alt="">
+        </div>
+      </div>
+    </div>
+  </div><!-- container -->
+  <script src="js/jquery.min.js"></script>
+  <script>
+    $("#fadeIn").click(function(){
+      $(".box").fadeIn();
+    });
+    $("#fadeOut").click(function(){
+      $(".box").fadeOut();
+    });
+    $("#fadeToggle").click(function(){
+      $(".box").fadeToggle();
+    });
+    $("#showPic").click(function(){
+      $("#pic_wrap img").fadeIn(500, function(){
+        $("#pic_wrap").css("background", "purple");
+      });
+    });
+  </script>
+</body>
+</html>

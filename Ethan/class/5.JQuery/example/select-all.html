@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>select all</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css">
+	<style>
+		
+	</style>
+</head>
+<body>
+	<div class="container">
+		<table class="table table-bordered">
+		<thead>
+			<tr>
+				<th><input type="checkbox" id="checkAll"></th>
+				<th>姓名</th>
+				<th>電話</th>
+				<th>email</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+		        <td><input type="checkbox"></td>
+		        <td>Jack</td>
+		        <td>0900000000</td>
+		        <td>jack@sample.com</td>
+		      </tr>
+		      <tr>
+		        <td><input type="checkbox"></td>
+		        <td>Tom</td>
+		        <td>0900000000</td>
+		        <td>tom@sample.com</td>
+		      </tr>
+		      <tr>
+		        <td><input type="checkbox"></td>
+		        <td>Judy</td>
+		        <td>0900000000</td>
+		        <td>judy@sample.com</td>
+		      </tr>
+		      <tr>
+		        <td><input type="checkbox" ></td>
+		        <td>Sam</td>
+		        <td>0900000000</td>
+		        <td>sam@sample.com</td>
+		      </tr>
+		    </tbody>
+		</table>
+	</div><!-- container -->
+	<script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+  	<script>
+  		var totalData=$("tbody :checkbox").length;
+  		var checkCount=$("tbody :checked").length;
+  		// console.log(totalData);
+  		// console.log(checkCount);
+  		$("tbody :checkbox").click(function(){
+  			checkCount=$("tbody :checked").length;
+  			// console.log(checkCount);
+  			if(checkCount==totalData){
+  				$("#checkAll").prop("checked", true);
+  			}else{
+  				$("#checkAll").prop("checked", false);
+  			}
+  		});
+
+  		$("#checkAll").click(function(){
+  			var ifCheck=$(this).prop("checked");
+  			// console.log(ifCheck);
+  			if(ifCheck){
+  				$("tbody :checkbox").prop("checked", true);
+  			}else{
+  				$("tbody :checkbox").prop("checked", false);
+  			}
+  		});
+  		$(":checkbox").click(function(){
+  			$("tr").css("background", "none");
+      		$(":checked").parent().parent().css("background","lightblue");
+  		});
+  	</script>
+
+</body>
+</html>

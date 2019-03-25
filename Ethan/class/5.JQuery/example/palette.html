@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Palette</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css">
+  <style>
+   .container{
+    margin-top: 20px;
+   }
+   .show_color{
+    height:400px;
+    border:1px solid #aaa;
+   }
+   .circle{
+    width:60px;
+    height: 60px;
+    display: inline-block;
+    margin:0 10px 10px 0;
+    overflow: hidden;
+    border-radius: 50%;
+   }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-6 show_color"></div>
+      <div class="col-sm-6">
+        <div class="circle" style="background-color: red"></div>
+        <div class="circle" style="background-color: orange"></div>
+        <div class="circle" style="background-color: yellow"></div>
+        <div class="circle" style="background-color: green"></div>
+        <div class="circle" style="background-color: blue"></div>
+        <div class="circle" style="background-color: indigo"></div>
+        <div class="circle" style="background-color: purple"></div>
+      </div>
+    </div><!-- row -->
+  </div><!-- container -->
+  
+  <script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+  <script>
+    $(".circle").click(function(){
+      color=$(this).css("background-color");
+      $(".show_color").css("background-color", color);
+    });
+    
+  </script>
+</body>
+</html>

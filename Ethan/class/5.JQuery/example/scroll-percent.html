@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <title>Window Event</title>
+    <style>
+        body{
+            transition: all .5s;
+        }
+    section{
+        height: 300vh;
+    }
+    .bar{
+        position:fixed;
+        top:0px;
+        left:0;
+        height:50px;
+        background: brown;
+        
+    }
+    </style>
+</head>
+<body>
+    <section>
+
+    </section>
+    <div class="bar"></div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+        
+    <script>
+        $(window).scroll(function(){
+           var position=$(this).scrollTop();
+           var height=$("body").height();
+           var windowH=$(window).height();
+            var percent= (position/ (height- windowH) ) * 100 +"%";
+        //   console.log(windowH);
+          $(".bar").width(percent);
+           if(position>400){
+                $("body").css("background", "lightblue");
+           }else{
+                $("body").css("background", "white");
+           }
+        });
+    </script>
+</body>
+</html>

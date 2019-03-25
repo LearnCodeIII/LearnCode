@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Get Val</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css">
+  <style>
+    .btn{
+      color:#fff !important;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h2 class="text-primary text-center" id="showValue">Hello, <span id="showName"></span></h2>
+      </div>
+    </div><!-- row -->
+    <h2>Get val()</h2>
+    <form>
+  <div class="form-group row">
+    <label for="" class="col-sm-2 col-form-label">input</label>
+    <div class="col-sm-3">
+      <input type="text" class="form-control" id="input" value="" placeholder="請輸入名字">
+    </div>
+    <div class="col-sm-3">
+      <a class="btn btn-primary" id="getText">get</a> <a class="btn btn-primary" id="setText">set</a>
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="" class="col-sm-2 col-form-label">Fruit</label>
+    <div class="col-sm-3">
+      <select name="" class="form-control" id="selectFruit">
+        <option value="1">apple</option>
+        <option value="2">orange</option>
+        <option value="3">banana</option>
+      </select>
+    </div>
+    <div class="col-sm-3">
+      <a class="btn btn-primary" id="getSelect">get</a>
+    </div>
+  </div>
+</form>
+  </div><!-- container -->
+  <script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+  <script>
+    $("#getText").click(function(){
+      var info=$("#input").val();
+      $("#showName").text(info);
+    });
+    $("#setText").click(function(){
+      $("#input").val("text");
+    });
+
+    $("#getSelect").click(function(){
+      showSelect();
+    });
+
+    $("#selectFruit").change(function(){
+      showSelect();
+    });
+
+    function showSelect(){
+      var fruitNum=$("#selectFruit").val();
+      var fruit=$("#selectFruit option:selected").text();
+      $("#showValue").text("number: "+fruitNum+", fruit: "+fruit);
+    }
+  </script>
+</body>
+</html>
