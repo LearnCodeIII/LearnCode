@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Scroll Top</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <style>
+        body {
+            height: 400vh;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="progress fixed-top">
+        <div class="progress-bar" role="progressbar" style="width: 50%;" aria-valuemin="0" aria-valuemax="100"></div>
+    </div>
+
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <script>
+        $(window).scroll(function () {
+            // 算出捲動數值
+            var sh = $(this).scrollTop();
+            // 算出頁面總數值
+            var bh = $('body').height();
+            // 算出單一頁面數值
+            var wh = $(window).height();
+            // 頁面總數值-單頁數值(因為scrollTop取的是捲動直條的最上方,而頁面總數直取的是完整的頁面包括下方,所以要扣掉一頁才是正確的百分比)
+            var fh = bh-wh;
+            // 最後算出目前捲動值佔頁面的百分之幾
+            var ph = Math.round((sh / fh)*100)+'%';
+            console.log('sh: '+sh+',bh: '+bh +',wh: '+wh+',ph: '+ph);
+            
+            // 丟回去html
+            $('.progress-bar').width(ph);
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Font Change Size</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <style>
+        btn {
+            transition: .5s;
+        }
+
+        html.sm-active {
+            font-size: 1rem;
+        }
+
+        html.md-active {
+            font-size: 1.5rem;
+        }
+
+        html.lg-active {
+            font-size: 2rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="d-flex justify-content-end">
+            <div class="btn-group" role="group" aria-label="">
+                <button type="button" class="btn btn-primary" id="small">小</button>
+                <button type="button" class="btn btn-primary" id="normal">中</button>
+                <button type="button" class="btn btn-primary" id="large">大</button>
+            </div>
+        </div>
+        <h1>德國反一帶一路 警告義：將嘗苦果</h1>
+        <p>義大利加入中國的「一帶一路」計劃，成為七大工業國（G7）第一個擁抱一帶一路的成員國
+            ，引發歐洲國家批評，德國外交部長馬斯（Heiko Maas）前天警告，中國並非自由的民主國
+            家，「只顧眼前的利益，會比原來預料還早嘗到苦果」，一些國家如果以為，與中國做生意
+            能得到比較多好處，會驚訝根本不是這麼一回事，且醒來時才發現自己依賴中國。</p>
+        <h4>義記者遭陸官員威脅</h4>
+        <p>馬斯強調，中國毫不留情在全世界捍衛自身利益，歐盟國家唯有聯合起來，才能克服中國與
+            俄羅斯等「巨人」帶來的挑戰。北京透過一帶一路的基礎建設投資，擴大對歐洲的影響力，
+            歐盟成員對歐洲可能因此被分化多次表示憂心，德國總理梅克爾（Angela Merkel）上周在
+            歐盟高峰會上，沒有直接批評義大利加入一帶一路，但強調「歐洲聯合行動會更好」。</p>
+        <p>此外，義大利《羅馬日報》報導，中國國家主席習近平日前訪問義大利期間，該報女記者龐
+            皮利（Giulia Pompili）竟遭中國大使館官員楊涵（音譯，Yang Han）威脅，多次要她「停
+            止說中國的壞話」，甚至還要拿走她的手機。該報在一帶一路的議題上與羅馬官方立場相左
+            ，對此事表示「義大利不是中國，羅馬也不是北京。」無國界記者組織東亞地區負責人艾偉
+            昂（Cedric Alviani）指出，中國外交官員類似鴨霸言行越來越普遍，民主國家必須對此作
+            出回應，媒體與政界都不應接受類似壓力。</p>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <script>
+        $('#small').click(function () {
+            $('html').removeClass().addClass('sm-active');
+            // $('#small').addClass('active').siblings().removeClass('active');
+        });
+        $('#normal').click(function () {
+            $('html').removeClass().addClass('md-active');
+            // $('#normal').addClass('active').siblings().removeClass('active');
+
+        });
+        $('#large').click(function () {
+            $('html').removeClass().addClass('lg-active');
+            // $('#large').addClass('active').siblings().removeClass('active');
+        });
+
+        // 省一些code 所以把上方的第二行用這行寫完
+        $('.btn').click(function(){
+            $(this).addClass('active').siblings().removeClass('active');
+        });
+    </script>
+</body>
+
+</html>

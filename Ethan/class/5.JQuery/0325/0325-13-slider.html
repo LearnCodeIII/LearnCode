@@ -15,18 +15,18 @@
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <style>
         .wrapper {
-            width: 800px;
+            max-width: 800px;
             margin: 0 auto;
         }
 
         .wrapper-img {
+            max-width: 800px;
             position: relative;
-            width: 800px;
             height: 500px;
             overflow: hidden;
         }
 
-        .wrapper .img-size {
+        .img-size {
             position: absolute;
             width: 3200px;
             height: 500px;
@@ -34,7 +34,7 @@
             transition: .5s;
         }
 
-        .wrapper .img-size img {
+        .img-size img {
             width: 100%;
             height: 100%;
             object-fit: cover;
@@ -57,10 +57,10 @@
         }
 
         .arrow {
-            width: 770px;
+            width: 100%;
             display: flex;
             position: absolute;
-            left: 15px;
+            /* left: 15px; */
             bottom: 230px;
             cursor: pointer;
         }
@@ -75,7 +75,7 @@
 <body>
     <div class="wrapper">
         <div class="wrapper-img">
-            <ul class="list-unstyled img-size d-flex">
+            <ul id="slider" class="list-unstyled img-size d-flex">
                 <li>
                     <img src="images/slide1.jpeg" alt="">
                 </li>
@@ -128,11 +128,14 @@
 
 
         var sNumber = 0;
+        var maxsNumber = $('#slider li').length;
+        var wsize = 800;
+
         $(`.circle:eq(${sNumber})`).css('background', 'white');
+        
         $('.circle').mouseenter(function () {
             var sNumber = $(this).index();
-            var smove = 0 - sNumber * 800;
-            console.log(sNumber);
+            var smove = 0 - sNumber * wsize;
             $('.img-size').css('left', smove + 'px');
             $(`.circle:eq(${sNumber})`).css('background', 'white')
                 .siblings().css('background', 'rgba(255, 255, 255, .5)');
@@ -140,24 +143,18 @@
 
         $('.arrow-l').click(function () {
             if (sNumber > 0) {
-                sNumber--
-                var smove = 0 - sNumber * 800;
-                console.log(sNumber);
+                sNumber--;
+                var smove = 0 - sNumber * wsize;
                 $('.img-size').css('left', smove + 'px');
                 smovegogogo();
-                // $(`.circle:eq(${sNumber})`).css('background', 'white')
-                //     .siblings().css('background', 'rgba(255, 255, 255, .5)');
             }
         });
         $('.arrow-r').click(function () {
             if (sNumber < 3) {
-                sNumber++
-                var smove = 0 - sNumber * 800;
-                console.log(sNumber);
+                sNumber++;
+                var smove = 0 - sNumber * wsize;
                 $('.img-size').css('left', smove + 'px');
                 smovegogogo();
-                // $(`.circle:eq(${sNumber})`).css('background', 'white')
-                //     .siblings().css('background', 'rgba(255, 255, 255, .5)');
             }
         });
 
@@ -166,6 +163,9 @@
                 .siblings().css('background', 'rgba(255, 255, 255, .5)');
             }
         
+        $(window).resize(function(){
+            console.log('resize');
+        });
 
 
     </script>

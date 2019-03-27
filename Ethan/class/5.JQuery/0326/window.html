@@ -27,10 +27,27 @@
             transition: .5s;
             transform: translateX(600px);
         }
+        .contain{
+            width: 300px;
+            height: 300px;
+            border: 1px solid #ccc;
+            overflow: auto;
+        }
+        .box{
+            width: 700px;
+            height: 100px;
+            background:lightblue;
+        }
     </style>
 </head>
 
 <body>
+    <button type="button" class="btn btn-primary">button</button>
+    <div class="contain">
+        <div class="box"></div>
+    </div>
+
+
     <img class="flybug" src="images/01.png" alt="">
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -59,6 +76,14 @@
                 $('.flybug').css('transform', 'translateX(0px)');
             }
         });
+        $('.contain').scroll(function(){
+            var scrollLeft = $(this).scrollLeft();
+            console.log(scrollLeft);
+        });
+
+        $('.btn').click(function(){
+            $(window).scrollTop(300);
+        })
     </script>
 </body>
 </html>
