@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Cat Walk</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css">
+  <style>
+    .map{
+      position: relative;
+      width:640px;
+      height:480px;
+      margin: 20px auto;
+      background: url(images/map.png);
+    }
+    .cat{
+      position: absolute;
+      left:0;
+      top:0;
+      width:184px;   
+      height:200px;   
+      margin:2% auto;   
+      background: url(images/cat.png) left top;
+      transform-origin: left top;
+      transform: scale(.4);   
+    }  
+    @keyframes play {  
+       100% { background-position: -1658px; }   
+    }
+    .cat{   
+        animation: play .8s steps(9) infinite;   
+        -webkit-animation: play .8s steps(9) infinite;   
+    }
+  </style>
+</head>
+<body>
+  <div class="map">
+    <div class="cat"></div>
+  </div><!-- map -->
+  <script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+  <script>
+    const UP=83;
+      const UP_L=115;
+      const DOWN=88;
+      const DOWN_L=120;
+      const RIGHT=68;
+      const RIGHT_L=100;
+      const LEFT=65;
+      const LEFT_L=97;
+      const SPEED=3;
+    var posX=0;
+    var posY=0;
+    // var posY=0;
+    $("body").keypress(function(event){
+      keyCode=event.which;
+      switch(keyCode){
+        case UP:
+        case UP_L:
+          posY=parseInt(posY)-SPEED;
+          $(".cat").css("top",posY+"px");
+          break;
+        case DOWN:
+        case DOWN_L:
+          posY=parseInt(posY)+SPEED;
+          $(".cat").css("top",posY+"px");
+          break;
+        case LEFT:
+        case LEFT_L:
+          posX=parseInt(posX)-SPEED;
+          $(".cat").css("left",posX+"px");
+          break;
+        case RIGHT:
+        case RIGHT_L:
+          posX=parseInt(posX)+SPEED;
+          $(".cat").css("left",posX+"px");
+          break;
+        default:
+      }
+    });
+    
+  </script>
+</body>
+</html>

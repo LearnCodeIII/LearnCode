@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>vegas</title>
+  <link rel="stylesheet" href="vegas.min.css">
+</head>
+<body>
+  
+  <script src="../../jquery.min.js"></script>
+  <script src="vegas.min.js"></script>
+  <script>
+  $("body").vegas({
+    preload: true,
+    slides: [
+        { src: "../../../images/slide1.jpeg" },
+        { src: "../../../images/slide2.jpeg" },
+        { src: "../../../images/slide3.jpeg",
+          video: {
+                src: [
+                    'atoms.mp4'
+                ],
+                loop: false,
+                mute: true
+            }
+
+        },
+    ]
+});
+  </script>
+</body>
+</html>

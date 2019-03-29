@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Counter</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  </head>
+  <body>
+      <div class="container">
+        <form class="form-inline mt-4">
+            <div class="form-group">
+                <input type="number" class="form-control" id="num1" placeholder value="0"
+            </div>
+            <div class="form-group">
+                <select name="" id="calculate" class="form-control">
+                    <option value="+">+</option>
+                    <option value="-">-</option>
+                    <option value="*">*</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <input type="number" class="form-control" id="num2" placeholder="" value="0">
+            </div>
+            <a class="btn btn-primary ml-2 text-white" id="count">=</a>
+            <div class="form-group">
+                    <input type="text" class="form-control-plaintext ml-2" id="result" placeholder="" readonly value="0">
+                </div>
+        </form>
+        
+      </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script>
+        $("#count").click(function(){
+            //parseInt 正整數
+            var num1=parseFloat($("#num1").val());
+            var num2=parseFloat($("#num2").val());
+            var calc=$("#calculate").val();
+            var result=0;
+            if(calc=="+"){
+                result=num1+num2;
+            }else if(calc=="-"){
+                result=num1-num2;
+            }else if(calc=="*"){
+                result=num1*num2;
+            }
+            // console.log(num1 + num2);
+            $("#result").val(result);
+        });
+    </script>
+  </body>
+</html>

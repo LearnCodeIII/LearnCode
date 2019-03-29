@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Select All</title>
+  
+  <style>
+    .container{
+      display: flex;
+      flex-wrap:wrap;
+      max-width: 960px;
+      margin:0 auto;
+    }
+    .box{
+      flex:0 0 19%;
+      height:100px;
+      margin: 10px .5%;
+      background: #4EDDF3;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+  </div><!-- container -->
+  <script src="js/jquery.min.js"></script>
+  <script>
+    $(".box").click(function(){
+      $index=$(this).index();
+      $(".box").css("background", "#4EDDF3");
+      $(this).nextAll().css("background", "#50FA3E");
+    });
+  </script>
+</body>
+</html>

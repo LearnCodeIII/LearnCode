@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Scroll Nav</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <style>
+   .full_bg{
+    height: 100vh;
+    background-size: cover;
+    background-position: center center;
+    color: #fff;
+   }
+   h2{
+    margin:0;
+    text-align: center;
+    padding-top:40px;
+   }
+   .main-nav{
+    position: fixed;
+    right:20px;
+    top:20px;
+   }
+   ul li{
+    list-style: none;
+    margin-bottom: 10px;
+   }
+   ul li a{
+    padding:0px 10px;
+    display: block;
+    background:rgba(0,0,0,.8);
+    width:60px;
+    line-height: 40px;
+    vertical-align: middle;
+    color:#fff;
+    text-decoration: none;
+   }
+   ul li a:link, ul li a:hover{
+    color:#fff;
+    text-decoration: none;
+   }
+   ul li a:visited{
+    color:#fff;
+    text-decoration: none;
+   }
+   ul li.active a{
+    background: red;
+   }
+  </style>
+</head>
+<body>
+  <nav class="main-nav" >
+    <ul id="nav">
+      <li><a href="#page1">Menu1</a></li>
+      <li><a href="#page2">Menu2</a></li>
+      <li><a href="#page3">Menu3</a></li>
+    </ul>
+  </nav>
+  <div class="scroll_con">
+  <div id="page1" class="full_bg" style="background-image: url(https://c1.staticflickr.com/1/610/32018886091_26923e1265_b.jpg)">
+    <h2>Section 1</h2>
+  </div>
+  <div id="page2" class="full_bg" style="background-image: url(https://c1.staticflickr.com/1/515/32137434825_672c4948fc_b.jpg)">
+    <h2>Section 2</h2>
+  </div>
+  <div id="page3" class="full_bg" style="background-image: url(https://c1.staticflickr.com/1/512/31327010303_a9910ae7f8_b.jpg)">
+    <h2>Section 3</h2>
+  </div>
+  </div><!-- scroll_con -->
+  <script src="js/jquery.min.js"></script>
+  <script src="js/plugins/jquery.nav.js"></script>
+  <script>
+  $("#nav").onePageNav({
+    currentClass: 'active',
+    changeHash: false,
+    scrollSpeed: 750,
+    scrollThreshold: 0.5,
+    filter: '',
+    easing: 'swing',
+    begin: function() {
+        //I get fired when the animation is starting
+    },
+    end: function() {
+        //I get fired when the animation is ending
+    },
+    scrollChange: function($currentListItem) {
+        //I get fired when you enter a section and I pass the list item of the section
+    }
+}); 
+    
+    
+  </script>
+</body>
+</html>

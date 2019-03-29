@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>CSS</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css">
+	<style>
+		.btn{
+			color:#fff !important;
+		}
+		.block{
+			height:300px;
+			position:relative;
+		}
+		.box{
+			left:0;
+			position: absolute;
+			background: pink;
+			width:120px;
+			height:120px;
+			transition: all .5s;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<h2 class="text-center" id="show">show data here</h2>
+		<div class="block">
+			<div class="box"></div>
+		</div>
+		<div class="row">
+			<a class="btn btn-primary" id="getCss">Get CSS value</a> <a class="btn btn-primary" id="setCss1">Set CSS value 1</a> <a class="btn btn-primary" id="setCss2">Set CSS value 2</a> <a class="btn btn-primary" id="move">Move</a> <a class="btn btn-primary" id="bigger">Bigger</a> <a class="btn btn-primary" id="changeColor">Color</a>
+		</div>
+	</div><!-- container -->
+	<script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+  	<script>
+  		var colorArr=["red", "green", "blue", "purple", "lightblue"];
+  		var colorArrL=colorArr.length;
+  		var colorNum=0;
+  		$("#getCss").click(function(){
+  			var cssValue=$(".box").css("width");
+  			$("#show").text(cssValue);
+  		});
+
+  		$("#setCss1").click(function(){
+  			var style={
+  				background: "red",
+  				width: 180,
+  				height: 200,
+  				borderRadius: "50%"
+  			};
+  			$(".box").css(style);
+  		});
+
+  		$("#setCss2").click(function(){
+  			$(".box").css("border-radius", "50%");
+  		});
+
+  		$("#move").click(function(){
+  			$(".box").css("left", "+=20px");
+  		});
+
+  		$("#bigger").click(function(){
+  			$(".box").css({
+  				width: "+=10px",
+  				height: "+=10px"
+  			});
+  		});
+
+  		$("#changeColor").click(function(){
+  			colorNum=colorNum%colorArrL;
+  			$(".box").css("background", colorArr[colorNum]);
+  			colorNum++;
+  		});
+  	</script>
+</body>
+</html>

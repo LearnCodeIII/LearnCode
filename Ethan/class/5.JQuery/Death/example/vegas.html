@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Vegas</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="js/plugins/vegas/vegas.min.css">
+  <style>
+  
+  </style>
+</head>
+<body>
+  
+  <script src="js/jquery.min.js"></script>
+  <script src="js/plugins/vegas/vegas.min.js"></script>
+  <script>
+  $(function(){
+      $("body").vegas({
+        timer: false,
+        transition: 'slideLeft2',
+        slides: [
+            { src: 'images/slide1.jpeg' },
+            { src: 'images/slide2.jpeg', transition: 'slideRight2' },
+            { src: 'images/slide3.jpeg' },
+        ]
+    });
+  });
+  </script>
+</body>
+</html>

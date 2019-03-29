@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Animate</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+  <style>
+   .box{
+    width:200px;
+    height:200px;
+    margin:20px auto;
+    background: lightblue;
+   }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="box animated"></div>
+      <div class="col-sm-12 text-center"><a class="btn btn-primary animate-btn" data-animate="flipInY">flipInY</a> <a class="btn btn-primary animate-btn" data-animate="rotateInDownLeft">rotateInDownLeft</a> <a class="btn btn-primary animate-btn" data-animate="bounceInUp">bounceInUp</a>
+      </div>
+    </div><!-- row -->
+  </div><!-- container -->
+  
+  <script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+  <script>
+  var animate;
+
+    $(".animate-btn").click(function(){
+      animate=$(this).attr('data-animate');
+      $(".box").addClass(animate).one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function() {
+            $(this).removeClass(animate);
+        });
+    });
+
+  </script>
+</body>
+</html>

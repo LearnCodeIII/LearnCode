@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>filtering</title>
+	<style>
+		.box{
+			width:200px;
+			height:200px;
+			background: pink;
+			margin:10px;
+			float: left;
+		}
+	</style>
+</head>
+<body>
+	<button id="eq">eq</button> <button id="first">first</button> <button id="last">last</button> <button id="has">has</button> <button id="not">not</button> <button id="reset">reset</button>
+	<div></div>
+	<div class="box"></div>
+	<div class="box"></div>
+	<div class="box box_n"><p></p></div>
+	<div class="box"></div>
+	<div class="box"></div>
+
+	<script src="jquery.js"></script>
+		
+  	<script>
+  		$("button").click(function(){
+  			$(".box").css("background", "pink");
+  		});
+  		$("#eq").click(function(){
+  			$(".box").eq(1).css("background", "red");
+  		});
+  		$("#first").click(function(){
+  			$(".box").first().css("background", "red");
+  		});
+  		$("#last").click(function(){
+  			$(".box").last().css("background", "red");
+  		});
+  		$("#has").click(function(){
+  			$(".box").has("p").css("background", "red");
+  		});
+  		$("#not").click(function(){
+  			$(".box").not(".box_n").css("background", "red");
+  		});
+
+  		
+  		
+  	</script>
+
+</body>
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+  <meta charset="UTF-8">
+  <title>Card Flip</title>
+</head>
+<style>
+body{
+  margin:50px;
+}
+.container{
+  /*perspective:1000px;*/
+  /*perspective:1000px;*/
+}
+.box img{
+  width:300px;
+}
+.card{
+  position: relative;
+  transform-style:preserve-3d;
+  float:left;
+  margin: 0 20px 20px;
+  width:200px;
+  height:280px; 
+  /*height:400px;*/
+}
+.card.active{
+  transform: rotateY(180deg);
+  -webkit-transform: rotateY(180deg);
+}
+.card img{
+  width:100%;
+  position: absolute;
+  left:0;
+  top:0;
+  display: block;
+  -webkit-backface-visibility: hidden;  
+  backface-visibility: hidden;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.front{
+  transform: rotateY(180deg);
+  -webkit-transform: rotateY(180deg);
+}
+.back{
+  
+}
+.transition{
+  transition: all .5s;
+  -webkit-transition: all .5s;
+}
+.box:hover{
+  transform:rotateY(180deg);
+  -webkit-transform:rotateY(180deg);
+}
+</style>
+<body>
+  <div class="container">
+    <div class="card transition">
+      <div class="card_wrap">
+        <img class="back" src="images/card.jpg">
+        <img class="front" src="images/dr_strange.jpg" alt="">
+      </div>
+    </div>
+    <div class="card transition">
+      <div class="card_wrap">
+        <img class="back" src="images/card.jpg">
+        <img class="front" src="images/dr_fate.jpg" alt="">
+      </div>
+    </div>
+    <div class="card transition">
+      <div class="card_wrap">
+        <img class="back" src="images/card.jpg">
+        <img class="front" src="images/dr_fate.jpg" alt="">
+      </div>
+    </div>
+    <div class="card transition">
+      <div class="card_wrap">
+        <img class="back" src="images/card.jpg">
+        <img class="front" src="images/dr_strange.jpg" alt="">
+      </div>
+    </div>
+  </div>
+  <script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+  <script>
+      $(".card").click(function(){
+        let cardOpen=$(".card.active").length;
+        let open=$(this).hasClass("active");
+        if(cardOpen>=2){
+            if(open){
+                $(this).removeClass("active");
+            }
+        }else{
+            $(this).toggleClass("active");
+        }
+        console.log("count: "+cardOpen+", open: "+open)
+      });
+  </script>
+</body>
+</html>

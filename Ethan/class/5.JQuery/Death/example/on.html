@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>On</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <style>
+  .col-md-12{
+    margin-top: 30px;
+  }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="row" style="">
+      <div class="col-md-12">
+        <p class="text-primary text-center" id="showAction">Show Action Here.</p>
+      </div>
+      <div class="col-md-12">
+        <a class="btn btn-primary" id="onMe">Click</a>
+        <a class="btn btn-primary" id="onMe2">On Action</a>
+      </div>
+    </div><!-- row -->
+    <div class="row">
+      <div class="col-md-12">
+        <a class="btn btn-primary btn-block" id="addList">Click to Add List</a>
+      </div>
+      <div class="col-md-12">
+        <ul class="list-group" id="lists">
+
+        </ul>
+      </div>
+    </div>
+  </div><!-- container -->
+  <script src="js/jquery.min.js"></script>
+  <script>
+    $("#onMe").on("click", function(){
+      $("#showAction").text("click");
+    });
+
+    $(".col-md-12").on({
+      mouseenter: function(){
+        $("#showAction").text("Mouse Enter");
+      }, 
+      mouseleave: function(){
+        $("#showAction").text("Mouse Leave");
+      }, 
+      click: function(){
+        $("#showAction").text("Click");
+      },
+      dblclick: function(){
+        $("#showAction").text("Double Click");
+      } 
+    }, "#onMe2");
+
+    $("#addList").on("click", function(){
+      $("#lists").append('<li class="list-group-item">Hello!</li>');
+    });
+    $("#lists").on("click", "li",function(){
+      $("#showAction").text($(this).text());
+    });
+
+    
+
+  </script>
+</body>
+</html>

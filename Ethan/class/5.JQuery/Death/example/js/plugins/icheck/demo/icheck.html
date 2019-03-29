@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Checkboxes and radio buttons customization (jQuery and Zepto) plugin</title>
+  <meta charset="utf-8">
+  <meta content="width=device-width" name="viewport">
+  <link href="./css/custom.css?v=1.0.2" rel="stylesheet">
+  <link href="../skins/all.css?v=1.0.2" rel="stylesheet">
+  <style>
+  label{
+    position: relative;
+    
+  }
+  label span{
+    margin-left: 24px;
+  }
+  </style>
+  <script src="./js/jquery.js"></script>
+  <script src="../icheck.js?v=1.0.2"></script>
+  
+</head>
+<body>
+  <label>
+    <div class="icheckbox">
+      <input type="checkbox" name="quux[1]">
+    </div>
+    <span>Foo</span>
+  </label>
+  <label>
+    <div class="icheckbox">
+      <input type="checkbox" name="quux[1]">
+    </div>
+    <span>Foo2</span>
+  </label>
+  
+  
+
+
+
+  <script>
+   $(document).ready(function(){
+      $('input').iCheck({
+        checkboxClass: 'icheckbox_futurico',
+        radioClass: 'iradio_futurico',
+        increaseArea: '20%' // optional
+      });
+    });
+  </script>
+</body>
+</html>

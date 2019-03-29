@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Mouse Event</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <style>
+  .col-md-12{
+    margin-top: 30px;
+  }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="row" style="">
+      <div class="col-md-12">
+        <p class="text-primary text-center" id="showAction">Show Action Here.</p>
+      </div>
+      <div class="col-md-12">
+        <a class="btn btn-primary" id="click">Click</a>
+        <a class="btn btn-primary" id="dbclick">Double Click</a>
+        <a class="btn btn-primary" id="mousedown">Mouse Down</a>
+        <a class="btn btn-primary" id="mouseup">Mouse Up</a>
+        <a class="btn btn-primary" id="hover">Hover</a>
+      </div>
+      <div class="col-md-12">
+        <input id="focus" type="text" class="form-control" placeholder="Focus me!">
+      </div>
+      <div class="col-md-12">
+        <a class="btn btn-primary btn-block" id="all">All</a>
+      </div>
+    </div><!-- row -->
+  </div><!-- container -->
+  <script src="js/jquery.min.js"></script>
+  <script>
+    $("#click, #all").click(function(){
+      $("#showAction").text("click");
+    });
+    $("#dbclick, #all").dblclick(function(){
+      $("#showAction").text("Double Click");
+    });
+    $("#mousedown").mousedown(function(){
+      $("#showAction").text("Mouse Down");
+    });
+    $("#mouseup").mouseup(function(){
+      $("#showAction").text("Mouse Up");
+    });
+    $("#hover, #all").hover(function(){
+      $("#showAction").text("Hover On");
+    },
+    function(){
+      $("#showAction").text("Hover Out");
+    });
+    $("#focus").focus(function(){
+      $("#showAction").text("Focus");
+    });
+    $("#focus").blur(function(){
+      $("#showAction").text("Blur");
+    });
+
+
+  </script>
+</body>
+</html>

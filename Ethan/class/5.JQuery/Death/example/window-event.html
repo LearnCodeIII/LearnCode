@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Windows Event</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <style>
+  .full_bg{
+    height: 100vh;
+    background-size: cover;
+    background-position: center center;
+   }
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="row" style="margin-top:20px;">
+      <div class="col-sm-8 box" id="box">
+        <textarea id="textarea" class="form-control" id="" cols="30" rows="5"></textarea>
+      </div>
+      <div class="col-sm-4">
+        Box Width=<span id="getWidth"></span><br>
+        Scroll Top=<span id="scrollTop"></span>
+      </div>
+    </div>
+  </div><!-- container -->
+  <script src="js/jquery.min.js"></script>
+  <script>
+    $(window).resize(function(){
+      var boxWidth=$("#box").width();
+      $("#getWidth").text(boxWidth+"px");
+    });
+    $("#textarea").scroll(function(){
+      console.log("hi")
+      var scrollTop=$("#textarea").scrollTop();
+      $("#scrollTop").text(scrollTop+"px");
+    });
+
+  </script>
+</body>
+</html>

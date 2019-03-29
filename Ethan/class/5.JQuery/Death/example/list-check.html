@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>List Check</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css">
+  <style>
+   .container{
+    margin-top: 20px;
+   }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <table class="table table-bordered">
+      <tr>
+        <td><input type="checkbox"></td>
+        <td>Jack</td>
+        <td>0900000000</td>
+        <td>jack@sample.com</td>
+      </tr>
+      <tr>
+        <td><input type="checkbox"></td>
+        <td>Tom</td>
+        <td>0900000000</td>
+        <td>tom@sample.com</td>
+      </tr>
+      <tr>
+        <td><input type="checkbox"></td>
+        <td>Judy</td>
+        <td>0900000000</td>
+        <td>judy@sample.com</td>
+      </tr>
+      <tr>
+        <td><input type="checkbox"></td>
+        <td>Sam</td>
+        <td>0900000000</td>
+        <td>sam@sample.com</td>
+      </tr>
+
+    </table>
+    
+  </div><!-- container -->
+  
+  <script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+  <script>
+  $(function(){
+
+    $(":checkbox").click(function(){
+      $("tr").css("background", "none");
+      $(":checked").parent().parent().css("background","lightblue");
+    });
+  });
+    
+  </script>
+</body>
+</html>

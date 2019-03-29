@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Selector 2</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <style>
+   
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Hello World</h1>
+    <table class="table table-bordered">
+      <tr>
+        <td><input type="checkbox" checked></td>
+        <td>1</td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><input type="checkbox"></td>
+        <td>2</td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><input type="checkbox"></td>
+        <td>3</td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><input type="checkbox"></td>
+        <td>4</td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><input type="checkbox"></td>
+        <td>5</td>
+        <td></td>
+        <td></td>
+      </tr>
+    </table>
+    <h2>Child Filter</h2>
+    <div>
+      <span>first</span>
+      <span>second</span>
+      <span>third</span>
+      <span>forth</span>
+    </div>
+    <div>
+      <b>zero</b>
+      <span>second</span>
+      <span>third</span>
+      <span>forth</span>
+    </div>
+    <h2>Only Child</h2>
+    <div>
+      <button class="btn btn-default">1</button>
+      <button class="btn btn-default">2</button>
+    </div>
+    <div>
+      <button class="btn btn-default">1</button>
+    </div>
+  </div><!-- container -->
+  
+  <script src="js/jquery.min.js"></script>
+  <script>
+    $("input:not(:checked)").parent().css( "background-color", "yellow" );
+    $(":header").css("background", "gray");
+    $(".table tr:gt(-3)").css("background", "yellow");
+    $("span:first-of-type").css( "color","red" );
+    $("div button:only-child").css("background", "yellow");
+  </script>
+</body>
+</html>

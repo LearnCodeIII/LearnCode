@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Form Event</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css">
+  <style>
+  a.btn{
+    color:#fff !important;
+    cursor: pointer;
+  }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <a class="btn btn-success" id="doFocus">focus!</a>
+    <div class="row" style="">
+      <h1 class="col-12 text-center" id="show">Show Something Here</h1>
+    </div><!-- row -->
+    <div class="row" >
+      <div class="col-12">
+        <form>
+          <div class="form-group">
+            <label for="">name</label>
+            <input type="text" class="form-control" id="text" aria-describedby="" placeholder="Name">
+          </div>
+          <div class="form-group">
+            <label for="">Select</label>
+            <select class="form-control" name="" id="select">
+              <option value="">1</option>
+              <option value="">2</option>
+              <option value="">3</option>
+            </select>
+          </div>
+          <div class="form-check">
+            <label class="form-check-label">
+              <input type="checkbox" id="check" class="form-check-input">
+              Check me out
+            </label>
+          </div>
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+      </div><!-- col-12 -->
+    </div><!-- row -->
+  </div><!-- container -->
+  <script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+  <script>
+    $("#check").focus(function(){
+      $("#show").text("focus!");
+    });
+    // $("#text").blur(function(){
+    //   $("#show").text("blur!");
+    // });
+    $("#doFocus").click(function(){
+      $("#text").focus();
+    });
+    $("#text").change(function(){
+      $("#show").text("change!");
+    });
+
+  </script>
+</body>
+</html>

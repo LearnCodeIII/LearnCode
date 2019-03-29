@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+    <style>
+        .box {
+            width: 200px;
+            height: 200px;
+            background-color: lightblue;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="py-2">
+            <!-- html有支援自定屬性, 以下的data-animated就是自定的 -->
+            <button type="button" class="btn btn-primary" id="swing" data-animated="swing">swing</button>
+            <button type="button" class="btn btn-primary" id="bounceIn" data-animated="bounceIn">bounceIn</button>
+            <button type="button" class="btn btn-primary" id="bounceIn" data-animated="flipOutX">flipOutX</button>
+            <button type="button" class="btn btn-primary" id="bounceIn"
+                data-animated="jackInTheBox">jackInTheBox</button>
+        </div>
+        <!-- 直接在要動的物件上冠上animated -->
+        <div class="box animated"></div>
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <script>
+        // $('#swing').click(function () {
+        //     // $('.box').addClass('swing');
+        //     animateCSS('.box', 'swing')
+        // });
+        // $('#bounceIn').click(function () {
+        //     // 原本的做法有bug歐~
+        //     // $('.box').addClass('bounceIn');
+        //     // 直接引入animateCSS的用法
+        //     animateCSS('.box', 'bounceIn')
+        // });
+
+
+        $('.btn').click(function () {
+            // 透過自定屬性與直接取值代變數, 可以不用寫這麼多次喔
+            // attr就是取html的屬性 當然後面加上逗號也是可以給值喔
+            var animated = $(this).attr('data-animated');
+            animateCSS('.box', animated);
+        });
+
+        // 直接抓animateCSS的function來用
+        function animateCSS(element, animationName, callback) {
+                const node = document.querySelector(element)
+                node.classList.add('animated', animationName)
+
+                function handleAnimationEnd() {
+                    node.classList.remove('animated', animationName)
+                    node.removeEventListener('animationend', handleAnimationEnd)
+
+                    if (typeof callback === 'function') callback()
+                }
+
+                node.addEventListener('animationend', handleAnimationEnd)
+            }
+    </script>
+</body>
+
+</html>

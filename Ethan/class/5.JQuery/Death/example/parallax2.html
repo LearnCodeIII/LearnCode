@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Parallax</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <style>
+    .parallax-window,.parallax-window2 {
+      min-height: 500px;
+      /*background: transparent;*/
+  }
+  </style>
+</head>
+<body>
+  <div class="parallax-window" data-parallax="scroll" data-image-src="https://c1.staticflickr.com/1/610/32018886091_26923e1265_b.jpg"  data-bleed="10" data-speed="0.2"  data-natural-width="1400" data-natural-height="1400"></div>
+  <div class="parallax-window2" data-parallax="scroll" data-image-src="https://c1.staticflickr.com/1/610/32018886091_26923e1265_b.jpg"  data-bleed="10" data-speed="0.2"  data-natural-width="1400" data-natural-height="1400"></div>
+  
+  <script src="js/jquery.min.js"></script>
+  <script src="js/plugins/parallax.min.js"></script>
+  <script>
+    $('.parallax-window').parallax({imageSrc: 'https://c1.staticflickr.com/1/610/32018886091_26923e1265_b.jpg'});
+    $('.parallax-window2').parallax({imageSrc: 'https://c1.staticflickr.com/1/515/32137434825_672c4948fc_b.jpg'});
+  </script>
+</body>
+</html>
