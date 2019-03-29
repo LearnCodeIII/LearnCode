@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Type</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <style>
+    .col-md-12{
+      margin-top: 30px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <p class="text-primary text-center" id="showAction">Show Action Here.</p>
+      </div>
+      <a class="btn btn-primary" role="button" id="typeBoo">Boolean</a> <a class="btn btn-primary" role="button" id="callFunction">Call Function!</a>
+    </div>
+  </div><!-- container -->
+  <script src="js/jquery.min.js"></script>
+  <script>
+    var exist=true;
+    $("#typeBoo").click(function(){
+      $("#showAction").text(exist);
+    });
+    
+    $("#callFunction").click(function(){
+      callMe();
+    });
+    function callMe(){
+      
+      $("#showAction").text("I'm here");
+    }
+
+  </script>
+</body>
+</html>

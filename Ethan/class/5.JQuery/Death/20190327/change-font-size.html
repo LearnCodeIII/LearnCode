@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en" >
+  <head>
+    <title>Change Font Size</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <style>
+        html{
+            font-size: 16px;
+        }
+        html.small{
+            font-size: 14px;
+        }
+        html.big{
+            font-size: 18px;
+        }
+        
+    </style>
+  </head>
+  <body>
+      <div class="container">
+          <div class="d-flex py-2 justify-content-end">
+                <div class="btn-group" role="group" aria-label="">
+                        <button type="button" class="btn btn-primary" id="sizeS">小</button>
+                        <button type="button" class="btn btn-primary active" id="sizeM">中</button>
+                        <button type="button" class="btn btn-primary" id="sizeL">大</button>
+                </div>
+          </div>
+          <h1>jQuery</h1><p>
+          jQuery is a JavaScript library designed to simplify HTML DOM tree traversal and manipulation, as well as event handling, CSS animation, and Ajax.[3] It is free, open-source software using the permissive MIT License.[2] Web analysis (from 2017) indicates that it is the most widely deployed JavaScript library by a large margin.[4][5]</p>
+
+<p>jQuery's syntax is designed to make it easier to navigate a document, select DOM elements, create animations, handle events, and develop Ajax applications. jQuery also provides capabilities for developers to create plug-ins on top of the JavaScript library. This enables developers to create abstractions for low-level interaction and animation, advanced effects and high-level, themeable widgets. The modular approach to the jQuery library allows the creation of powerful dynamic web pages and Web applications.</p>
+      </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script>
+        $("#sizeS").click(function(){
+            $("html").removeClass().addClass("small");
+        })
+        $("#sizeM").click(function(){
+            $("html").removeClass();
+        })
+        $("#sizeL").click(function(){
+            $("html").removeClass().addClass("big");
+        })
+        $(".btn-group .btn").click(function(){
+            $(this).addClass("active").siblings().removeClass("active");
+        });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Get Value</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css">
+  <style>
+    .btn{
+      color:#fff !important;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h2 class="text-primary text-center" id="showValue">Show Value Here.</h2>
+      </div>
+    </div><!-- row -->
+    <h2>Get text(), html()</h2>
+    <div class="row">
+      <div class="col-xs-4">
+        <div id="content">Here is <b>content</b>.</div>
+      </div>
+      <div class="col-xs-8"><a class="btn btn-primary" id="getText">Get text()</a> <a class="btn btn-primary" id="getHtml">Get html()</a></div>
+    </div><!-- row -->
+    <h2>Get attr()</h2>
+    <div class="row">
+      <div class="col-xs-4">
+        <a id="attrCon" href="https://www.google.com" title="google">google</a>
+      </div>
+      <div class="col-xs-8"><a class="btn btn-primary" id="getHref">Get URL</a> <a class="btn btn-primary" id="getTitle">Get title</a> <a class="btn btn-primary" id="setURL">Set URL</a></div>
+    </div><!-- row -->
+    <h2>Get prop()</h2>
+    <div class="row">
+      <div class="col-xs-4">
+        <input type="checkbox" id="checkMe" checked="checked">
+      </div>
+      <div class="col-xs-8"><a class="btn btn-primary" id="getCheck">Get Check</a> <a class="btn btn-primary" id="setCheck">Set Check</a>
+    </div><!-- row -->
+  </div><!-- container -->
+  <script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+  <script>
+    $("#getText").click(function(){
+      var getText=$("#content").text();
+      $("#showValue").html(getText);
+    });
+    $("#getHtml").click(function(){
+      var getHtml=$("#content").html();
+      $("#showValue").text(getHtml);
+    });
+
+    $("#getHref").click(function(){
+      var getHref=$("#attrCon").attr("href");
+      $("#showValue").text(getHref);
+    });
+    $("#getTitle").click(function(){
+      var getTitle=$("#attrCon").attr("title");
+      $("#showValue").text(getTitle);
+    });
+
+    $("#setURL").click(function(){
+      $("#attrCon").attr("href", "https://zh-tw.facebook.com/").attr("title", "facebook").text("facebook");
+    });
+
+    $("#getCheck").click(function(){
+      var checked=$("#checkMe").prop("checked");
+      $("#showValue").text(checked);
+    });
+    $("#setCheck").click(function(){
+      $("#checkMe").prop("checked", true);
+    });
+    
+  </script>
+</body>
+</html>

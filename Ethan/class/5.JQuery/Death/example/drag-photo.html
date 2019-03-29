@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Drag</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <style>
+  *{
+    padding:0;
+    margin:0;
+  }
+    .slider{
+      position: relative;
+      height:500px;
+      background: url(images/slide1.jpeg) center center fixed;
+      background-size: cover;
+    }
+    .slider2{
+      position: absolute;
+      width:20%;
+      left:0;
+      top:0;
+      bottom:0;
+      background: url(images/slide2.jpeg) center center fixed;
+      background-size: cover;
+      z-index: 2;
+    }
+    .slide_bar{
+      position: absolute;
+      left:20%;
+      background: white;
+      width:2px;
+      top:0;
+      bottom:0;
+      cursor: pointer;
+      z-index: 5;
+    }
+    /*.slider .btn{position: absolute; top:50%;}
+    .btn1{
+      left:20%;
+    }
+    .btn2{
+      right:20%;
+    }*/
+  </style>
+</head>
+<body>
+  <div class="slider">
+    <div class="slide_bar" id="slide_bar"></div>
+    <!-- <div class="btn btn-primary btn1">Button1</div>
+    <div class="btn btn-primary btn2">Button2</div> -->
+    <div class="slider2"></div>
+  </div>
+  
+  <script src="js/jquery.min.js"></script>
+  <script src="js/plugins/jquery-ui/jquery-ui.min.js"></script>
+  <script>
+  var xPox=0;
+    $("#slide_bar").draggable({ 
+      axis: "x",
+      drag: function(){
+        // var sliderWidth=$(".slider").width();
+        // var offset = $(this).offset();
+        var xPos = offset.left+"px";
+        //var sWidth=(xPos/sliderWidth)*100+"%";
+        $(".slider2").width(xPos);
+      }
+    });
+  </script>
+</body>
+</html>

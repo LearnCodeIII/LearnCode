@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tilt</title>
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,600,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Fira+Sans+Extra+Condensed" rel="stylesheet">
+    <style>
+        .box{
+            width:200px;
+            height:200px;
+            background: purple;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1><span class="js-tilt" data-tilt-glare="true" data-tilt-maxGlare=".1">tilt</span><span class="js-tilt" data-tilt-glare="true">.js</span></h1>
+    <p>
+        A tiny requestAnimationFrame powered 60+fps lightweight parallax tilt effect for jQuery.
+    </p>
+    <div class="js-parent">
+        <div class="box js-tilt"  data-tilt-maxglare=".5" data-tilt-glare="true">
+        </div>
+    </div>
+</header>
+<script src="../../jquery.min.js"></script>
+<script src="tilt.jquery.min.js"></script>
+<script>
+    $('.js-tilt').tilt();
+
+    /*tilt.on('change', function (e, transforms) {
+     console.log(transforms);
+     });
+
+     tilt.on('tilt.mouseLeave', function (e) {
+     console.log(e);
+     });
+
+     tilt.on('tilt.mouseEnter', function (e) {
+     console.log(e);
+     });*/
+</script>
+</body>
+</html>

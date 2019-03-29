@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Filtering</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <style>
+        td div{
+            padding: 10px;
+        }
+        .box{
+            width:64px;
+            height: 64px;
+            background: yellowgreen;
+            margin: 5px;
+            transition: .5s;
+        }
+    </style>
+</head>
+  <body>
+      <div class="container">
+          <div class="py-3">
+              <button class="btn btn-info" id="eq">eq</button>
+              <button class="btn btn-info" id="first">first</button>
+              <button class="btn btn-info" id="has">has</button>
+              <button class="btn btn-info" id="not">not</button>
+          </div>
+          <table class="table-bordered table">
+              <tr>
+                  <td></td>
+                  <td>Jason Kidd</td>
+                  <td></td>
+                  <td><p></p></td>
+                  <td></td>
+              </tr>
+              <tr>
+                  <td>
+                        <button type="button" class="btn btn-primary">click</button>
+                </td>
+                  <td ></td>
+                  <td><div><div></div></div></td>
+                  <td class="active"><p></p></td>
+                  <td></td>
+              </tr>
+              <tr>
+                  <td>LeBron James</td>
+                  <td><p></p></td>
+                  <td class="active"></td>
+                  <td>Jason Williams</td>
+                  <td><div></div></td>
+              </tr>
+              <tr>
+                  <td></td>
+                  <td class="active"></td>
+                  <td></td>
+                  <td>James Harden</td>
+                  <td></td>
+              </tr>
+              <tr>
+                  <td><section class="box"></section>
+                    <section class="box"></section>
+                </td>
+                <td><section class="box"></section>
+                    <section class="box"></section>
+                </td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+              </tr>
+          </table>
+              
+      </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script>
+        $("#eq").click(function(){
+            $("td").eq(2).css("background", "pink");
+        });
+        $("#first").click(function(){
+            $("td").first().css("background", "lightblue");
+        });
+        $("#has").click(function(){
+            $("td").has("p").css("background", "yellow");
+        });
+        $("#not").click(function(){
+            $("td").not(".active").css("background", "purple");
+        });
+        // $("td div").css("border", "1px solid red");
+        // $("td>div").css("border", "1px solid red");
+        // $("td").find("div").css("border", "1px solid red");
+        // $("td").children("div").css("border", "1px solid red");
+
+        $("td").click(function(){
+            $(this).find(".box").css("border-radius", "50%");
+            // $(this).css("background", "none");
+            // $(this).next().css("background", "pink");
+            // $(this).prev().css("background", "red");
+            // 上面三行等於下面這行
+            // $(this).css("background", "none").next().css("background", "pink").prev().prev().css("background", "red");
+            // $(this).nextAll().css("background", "pink");
+            // $(this).nextUntil(".active").css("background", "pink");
+        });
+
+        $(".btn").click(function(){
+            // $(this).parent().parent().css("background", "pink");
+            // $(this).parents().css("background", "pink");
+            $(this).closest("tr").css("background", "pink");
+        });
+    </script>
+  </body>
+</html>

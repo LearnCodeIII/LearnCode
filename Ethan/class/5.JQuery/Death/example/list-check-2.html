@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>List Check</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <style>
+   .container{
+    margin-top: 20px;
+   }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <table class="table table-bordered">
+      <tr>
+        <td><input type="checkbox"></td>
+        <td>Jack</td>
+        <td>0900000000</td>
+        <td>jack@sample.com</td>
+      </tr>
+      <tr>
+        <td><input type="checkbox"></td>
+        <td>Tom</td>
+        <td>0900000000</td>
+        <td>tom@sample.com</td>
+      </tr>
+      <tr>
+        <td><input type="checkbox"></td>
+        <td>Judy</td>
+        <td>0900000000</td>
+        <td>judy@sample.com</td>
+      </tr>
+      <tr>
+        <td><input type="checkbox"></td>
+        <td>Sam</td>
+        <td>0900000000</td>
+        <td>sam@sample.com</td>
+      </tr>
+
+    </table>
+    
+  </div><!-- container -->
+  
+  <script src="js/jquery.min.js"></script>
+  <script>
+  $(function(){
+
+    $(":checkbox").click(function(){
+      if($(this).prop("checked")){
+        $(this).parent().parent().css("background","lightblue");
+      }else{
+        $(this).parent().parent().css("background","none");
+      }
+      
+    });
+  });
+    
+  </script>
+</body>
+</html>

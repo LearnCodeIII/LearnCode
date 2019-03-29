@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Drag</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        .picture{
+            margin:20px auto;
+            width:800px;
+            height:540px;
+            background: url(images/slide1.jpeg);
+            background-size:cover;
+            position: relative;
+        }
+        .cover{
+            position: absolute;
+            left:0;
+            top:0;
+            bottom:0;
+            width:50%;
+            background: lightseagreen;
+            opacity: .5;
+        }
+        .drag{
+            position: absolute;
+            width:10px;
+            height:100%;
+            background: lightseagreen;
+            left:50%;
+            top:0;
+        }
+    </style>
+</head>
+<body>
+    <div class="picture">
+        <div class="cover"></div>
+        <div class="drag" id="drag"></div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="
+        crossorigin="anonymous"></script>
+        <script>
+            $("#drag").draggable({ 
+                axis: "x",
+                containment: "parent", 
+                scroll: false,
+                drag: function () {
+                    var dragPos=$(this).css("left");
+                   $(".cover").css("width", dragPos);
+                },
+            });
+        </script>
+</body>
+</html>

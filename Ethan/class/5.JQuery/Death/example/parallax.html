@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>parallax</title>
+<style>
+body{
+  height:200vh;
+	background:url(http://assets.worldwildlife.org/photos/13148/images/hero_full/17_292_Earth_Hour_Web_Images_1600x600_v4.jpg) fixed;
+  background-size: cover;
+}
+#gear{
+  position: fixed;
+  left:50%;
+  top:-300px;
+  margin:-150px 0 0 -150px;
+  transition: all .5s;
+}
+#gear.active{
+  top:50%;
+}
+#f0{
+  position: absolute;
+  top:20px;
+}
+#f1{
+  position: fixed;
+  left:2%;
+  top:50px;
+}
+#f2{
+  position: fixed;
+  right:2%;
+  top:100px;
+}
+</style>
+</head>
+
+<body>
+  <div id="f0"></div>
+  <img src="images/gear.png" class="" id="gear" alt="">
+  <img id="f1" src="images/01.png" >
+  <img id="f2" src="images/02.png" >
+<script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+
+<script>
+
+  $(window).scroll(function(){
+    var scrollTop=$(this).scrollTop();
+    var deg=scrollTop/5+"deg";
+
+
+    if(scrollTop>=100){
+      $("#gear").addClass("active");
+    }else{
+      $("#gear").removeClass("active");
+    }
+
+
+    $("#gear").css("transform", "rotate("+deg+")");
+    
+    var pos1=50-0.05*(scrollTop-50);
+    $("#f1").css("top", pos1);
+    var pos2=100-0.1*(scrollTop-100);
+    $("#f2").css("top", pos2);
+
+  });
+
+</script>
+</body>
+</html>

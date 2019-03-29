@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Time</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <style>
+    body{
+      height: 100vh;
+  color:#333;
+  /*min-height: 100%;*/
+  background: #4cb5e4; /* Old browsers */
+background: -moz-linear-gradient(top, #4cb5e4 0%, #53d3b8 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#4cb5e4), color-stop(100%,#53d3b8)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top, #4cb5e4 0%,#53d3b8 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top, #4cb5e4 0%,#53d3b8 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top, #4cb5e4 0%,#53d3b8 100%); /* IE10+ */
+background: linear-gradient(to bottom, #4cb5e4 0%,#53d3b8 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4cb5e4', endColorstr='#53d3b8',GradientType=0 ); /* IE6-9 */
+}
+body.night{
+  background: #0b0b14; /* Old browsers */
+background: -moz-linear-gradient(top, #0b0b14 0%, #0c154c 98%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#0b0b14), color-stop(98%,#0c154c)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top, #0b0b14 0%,#0c154c 98%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top, #0b0b14 0%,#0c154c 98%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top, #0b0b14 0%,#0c154c 98%); /* IE10+ */
+background: linear-gradient(to bottom, #0b0b14 0%,#0c154c 98%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0b0b14', endColorstr='#0c154c',GradientType=0 ); /* IE6-9 */
+}
+body.dusk {
+  background: #c66a31; /* Old browsers */
+background: -moz-linear-gradient(top, #c66a31 15%, #ddb530 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(15%,#c66a31), color-stop(100%,#ddb530)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top, #c66a31 15%,#ddb530 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top, #c66a31 15%,#ddb530 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top, #c66a31 15%,#ddb530 100%); /* IE10+ */
+background: linear-gradient(to bottom, #c66a31 15%,#ddb530 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c66a31', endColorstr='#ddb530',GradientType=0 ); /* IE6-9 */
+}
+  </style>
+</head>
+<body>
+  
+  <script src="js/jquery.min.js"></script>
+  <script>
+    var d = new Date();
+    var h = d.getHours();
+    if(d<6){
+      $("body").addClass('night');
+    }else if(d>18){
+      $("body").addClass('night');
+    }else if(d<18 && d>=17){
+      $("body").addClass('dust');
+    }
+
+  </script>
+</body>
+</html>

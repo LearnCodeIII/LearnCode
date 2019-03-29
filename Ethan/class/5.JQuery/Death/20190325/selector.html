@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<style>
+    /* .yellow{
+        background: yellow;
+    }
+    button{
+        background: red;
+    }
+    #btn{
+        background: green;
+    } */
+    
+</style>
+<!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script>
+        
+        // $(document).ready(function(){
+            
+        // });
+        $(function(){
+            $("button").css("background", "red");
+        $(".yellow").css("background", "yellow");
+        $("#btn").css("background", "green");
+        $("a[target='_blank']").css("background", "yellow");
+        });
+
+
+    </script>
+  </head>
+  <body>
+    <div class="container">
+        <button>button</button>
+        <button class="yellow" id="btn">button</button>
+        <button class="" id="btn">button 2</button>
+        <div>
+            <a href="https://www.google.com">google</a>
+            <a href="https://www.google.com" target="_blank">google</a>
+        </div>
+    </div>  
+    
+    
+  </body>
+</html>

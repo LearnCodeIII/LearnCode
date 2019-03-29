@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Animate</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+  <style>
+  .box_container{
+    position: relative;
+    height:400px;
+    background:#eee;
+  }
+   .box{
+    position: absolute;
+    width:100px;
+    height:100px;
+    background: #99BBFF;
+    left:50%;
+    top:50%;
+   }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="box_container">
+      <div class="box"></div>
+    </div><!-- row -->
+    <div class="row text-center" style="margin-top:20px">
+      <a class="btn btn-primary" data-dir="left" id="btnLeft"><span class="glyphicon glyphicon-chevron-left"  ></span></a> <a class="btn btn-primary" data-dir="up" id="btnUp"><span class="glyphicon glyphicon-chevron-up" ></span></a> <a class="btn btn-primary" id="btnDown" data-dir="down"><span class="glyphicon glyphicon-chevron-down"></span></a> <a class="btn btn-primary" id="btnRight" data-dir="right"><span class="glyphicon glyphicon-chevron-right"></span></a>
+    </div>
+  </div><!-- container -->
+  
+  <script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+  <script src="jquery.color-2.1.2.min.js"></script>
+  <script>
+    // $("#btnLeft").click(function(){
+    //   $(".box").animate({
+    //     left: "-=5px",
+    //   });
+    // });
+    // $("#btnRight").click(function(){
+    //   $(".box").animate({
+    //     left: "+=5px",
+    //   });
+    // });
+    // $("#btnUp").click(function(){
+    //   $(".box").animate({
+    //     top: "-=5px",
+    //   });
+    // });
+    // $("#btnDown").click(function(){
+    //   $(".box").animate({
+    //     top: "+=5px",
+    //   });
+    // });
+
+    $(".btn").click(function(){
+      var dir=$(this).attr('data-dir');
+      console.log(dir);
+      var move;
+      switch(dir){
+        case 'left':
+          move={
+            left: "-=5px",
+            backgroundColor: 'red'
+          }
+          break;
+        case 'up':
+          move={
+            top: "-=5px",
+            backgroundColor: '#D86377'
+          }
+          break;
+        case 'down':
+          move={
+            top: "+=5px",
+            backgroundColor: '#99BBFF'
+          }
+          break;
+        case 'right':
+          move={
+            left: "+=5px",
+            backgroundColor: '#A0EC74'
+          }
+          break;
+      }
+
+      $(".box").stop().animate(move);
+
+    });
+
+    
+  </script>
+</body>
+</html>

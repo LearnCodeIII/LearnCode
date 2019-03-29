@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS move</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <style>
+        .wrapper{
+            width:800px;
+            height: 400px;
+            background: #eee;
+        }
+        .box{
+            width: 120px;
+            height: 120px;
+            background: lightblue;
+            transition: .5s;
+            left:0;
+            top:0;
+        }
+    </style>
+</head>
+<body>
+<div class="wrapper position-relative mx-auto">
+    <div class="box position-absolute"></div>
+</div>
+<div class="py-3 text-center">
+    <div class="py-1">
+        <button class="btn btn-info" id="up"><i class="fas fa-caret-up"></i></button>
+    </div>
+    <div>
+        <button class="btn btn-info mx-1" id="left"><i class="fas fa-caret-left"></i></button>
+        <button class="btn btn-info mx-1" id="right"><i class="fas fa-caret-right"></i></button>
+    </div>
+    <div class="py-1">
+        <button class="btn btn-info" id="down"><i class="fas fa-caret-down"></i></button>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script>
+    var color=["red", "orange", "blue", "green", "purple"];
+    var colorCount=color.length;
+    var colorIndex=0;
+    
+    $("#right").click(function(){
+        // $(".box").css("left", "+=10px");
+        colorIndex++;
+        // if(colorIndex>=colorCount)colorIndex=0;
+        colorIndex=(colorIndex%colorCount);
+        $(".box").css({
+            left: "+=10px",
+            background: color[colorIndex]
+        });
+    });
+    $("#left").click(function(){
+        // $(".box").css("left", "-=10px");
+        $(".box").css({
+            left: "-=10px",
+            background: "orange"
+        });
+    });
+    $("#up").click(function(){
+
+        // $(".box").css("top", "-=10px");
+        $(".box").css({
+            top: "-=10px",
+            background: "blue"
+        });
+    });
+    $("#down").click(function(){
+        // $(".box").css("top", "+=10px");
+        $(".box").css({
+            top: "+=10px",
+            background: "purple"
+        });
+    });
+
+</script>
+</body>
+</html>

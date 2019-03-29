@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Selector</title>
+  <link rel="stylesheet" href="css/reset.css">
+  <style>
+    .wrapper{
+      margin: 0 auto;
+      width:640px;
+    }
+    .btn{
+      background: red;
+      display: inline-block;
+      padding:6px 20px;
+      margin: 10px 0;
+      color:#fff;
+      border-radius: 4px;
+    }
+    .btn:hover{
+      background: brown;
+    }
+    .id_block{
+      width:400px;
+      height:100px;
+      background: yellow;
+    }
+    .table{
+      width:100%;
+    }
+    .table td{
+      padding:5px;
+      border:1px solid #333;
+    }
+    .table tr:nth-child(even){
+      background: #eee;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+    <button>click me</button>
+    <a class="btn">click me</a>
+    <div id="id_btn" class="id_block"></div>
+    <input type="text" >
+    <ul>
+      <li>click me!</li>
+      <li>click me!</li>
+      <li>click me!</li>
+    </ul>
+  </div>
+  <script src="js/jquery.min.js"></script>
+  <script>
+  $("button").click(function(){
+    alert("I am a button!");
+  });
+  $(".btn").click(function(){
+    console.log("I am class: btn");
+  });
+  $("#id_btn").click(function(){
+    console.log("I am id: id_btn");
+  });
+  $("input[type=text]").focus(function(){
+    console.log("Focus me!!");
+  });
+  $("ul li").click(function(){
+    console.log("list!");
+  });
+  </script>
+</body>
+</html>

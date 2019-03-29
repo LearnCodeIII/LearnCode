@@ -1,0 +1,147 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+	<!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><![endif]-->
+	<meta charset="utf-8">
+	<title>Fancy Input - CSS3 text typing effects for input fields</title>
+	<meta name="description" content="Makes HTML input field typing fun with some CSS3 effects">
+	<meta name="viewport" content="width=device-width">
+	<link rel="shortcut icon" href="favicon.ico">
+	<link rel="stylesheet" href="styles.css">
+	<link rel="stylesheet" href="fancyInput.css">
+	<!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+</head>
+<body>
+	<div id='wrap'>
+		<header>
+			<div class='social'></div>
+			<menu>
+				<button class='active'>Effect 1</button>
+				<button>Effect 2</button>
+				<button>Effect 3</button>
+				<button>Effect 4</button>
+				<button>Effect 5</button>
+			</menu>
+			<menu class='radio'>
+				<label><input type='radio' value='input' name='type' /><span>input</span></label>
+				<label><input type='radio' value='textarea' name='type' /><span>textarea</span></label>
+				<div></div>
+			</menu>
+		</header>
+		
+		<div id='content'>
+			<section class='input'>
+				<div>
+					<input type='text' placeholder='type something...'>
+				</div>
+			</section>
+			<section class='textarea'>
+				<div>
+					<textarea cols='1'></textarea>
+				</div>
+			</section>
+		</div>
+		
+	</div>
+	<script src='fancyInput.js'></script>
+	<script>
+		// Capture TAB to switch between the Demo page views (input/textarea)
+		(function(){
+			var viewTogglers = $('menu.radio input');
+			
+			$(document).on('keydown', function(e){
+				if( e.key == 'tab' || e.keyCode == 9 ){
+					var $checked = viewTogglers.filter(':checked');
+					var $next = viewTogglers.eq(viewTogglers.index($checked) + 1);
+					if(!$next.length){
+						$next = viewTogglers.first();
+					}
+					$next.prop("checked", true).change();
+						
+					return false;
+				}
+			});
+		})();
+	
+		$('section :input').val('').fancyInput()[0].focus();
+
+		// Everything below is only for the DEMO
+		function init(str){
+			var input = $('section input').val('')[0],
+				s = 'type something... ✌'.split('').reverse(),
+				len = s.length-1,
+				e = $.Event('keypress');
+				
+				input.nextElementSibling.className = '';
+			
+			var	initInterval = setInterval(function(){
+					if( s.length ){
+						var c = s.pop();
+						fancyInput.writer(c, input, len-s.length).setCaret(input);
+						input.value += c;
+						//e.charCode = c.charCodeAt(0);
+						//input.trigger(e);
+						
+					}
+					else clearInterval(initInterval);
+			},150);
+		}
+		
+		init();
+		
+		$('menu').on('click', 'button', toggleEffect);
+		$('menu.radio').on('change', 'input', changeForm).find('input:first').prop('checked',true).trigger('change');
+		
+		// change effects
+		function toggleEffect(num){
+			var className = '';
+				idx = $(this).index() + 1,
+				$fancyInput = $('.fancyInput');
+
+			if( idx > 1 )
+				className = 'effect' + idx;
+
+			$('#content').prop('class', className);
+			$fancyInput.find(':input')[0].focus();
+			
+			$(this).addClass('active').siblings().removeClass('active');
+		}
+		
+		function changeForm(e){
+			// radio buttons stuff
+			var page = this.value,
+				highlight = $(e.delegateTarget).find('> div'),
+				label = $(this.parentNode),
+				marginLeft = parseInt( label.css('margin-left') , 10 ),
+				xPos;
+				
+			highlight.css({'left':label.position().left + marginLeft, 'width':label.width() });
+			
+			// page change stuff
+			xPos = '-' + label.index() * 50;
+			$('#content').css( 'transform', 'translateX(' + xPos + '%)' );
+			
+			setTimeout(function(){
+				$('#content').find('.' + page  + ' :input')[0].focus();
+			}, 100);
+		}
+		
+		// social sharing stuff
+		setTimeout(addSocial,500);
+		
+		function addSocial(){
+			// tweet button
+			var tweeter = $('<a href="https://twitter.com/share" class="twitter-share-button">Tweet</a>');
+			// facebook 'like' button
+			var fbLike = $('<iframe class="fbLike" src="http://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fdropthebit.com%2Fdemos%2Ffancy_input%2FfancyInput.html&amp;send=false&amp;layout=standard&amp;width=450&amp;show_faces=false&amp;font=arial&amp;action=like&amp;height=35&amp;colorscheme=light&amp;layout=button_count&amp;appId=2398652648"></iframe>');
+			$('.social').append(fbLike, tweeter);
+			
+			!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="http://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
+
+			window.getComputedStyle(fbLike[0]).getPropertyValue('top');
+			$('.social').addClass('show');
+		};
+	</script>
+</body> 
+</html>
