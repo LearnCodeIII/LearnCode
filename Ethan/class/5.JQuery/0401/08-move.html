@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <meta charset="UTF-8">
+    <title>CSS move</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <style>
+        .wrapper {
+            width: 800px;
+            height: 400px;
+            background: #eee;
+        }
+
+        .box {
+            width: 120px;
+            height: 120px;
+            background: lightblue;
+            transition: .5s;
+            left: 0;
+            top: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper position-relative mx-auto">
+        <div class="box position-absolute"></div>
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script>
+
+        var color = ['lightpink', 'lightgreen', 'lightblue', 'lightyellow'];
+        var colorLength = color.length;
+        var colorNumber = 0;
+        var left = 0;
+        var top = 0;
+        var style = '';
+
+        $(window).keydown(function () {
+            var keycode = event.which;
+            if (keycode == 37 || keycode == 38 || keycode == 39 || keycode == 40) {
+                colorNumber++
+                colorNumber = (colorLength + colorNumber) % colorLength;
+                console.log(keycode);
+                switch (keycode) {
+                    case 37: //左
+                        style = {
+                            left: '-=20px',
+                        };
+                        break;
+                    case 38: //上
+                        style = {
+                            top: '-=20px',
+                        };
+                        break;
+                    case 39: //右
+                        style = {
+                            left: '+=20px',
+                        };
+                        break;
+                    case 40: //下
+                        style = {
+                            top: '+=20px',
+                        };
+                        break;
+                }
+                style.background = color[colorNumber];
+                $('.box').css(style);
+            }
+        });
+
+
+
+// 原始樣貌
+        // $(window).keydown(function () {
+        //     var keycode = event.which;
+        // if (keycode == 37 || keycode == 38 || keycode == 39 || keycode == 40) {
+
+        //     colorNumber++
+        //     colorNumber = (colorLength + colorNumber) % colorLength;
+        //     console.log(keycode);
+
+        //     switch (keycode) {
+        //         case 37: //左
+        //             style = {
+        //                 left: '-=20px',
+        //                 // background: color[colorNumber]
+        //             };
+        //             // $('.box').css({
+        //             //     left: '-=20px',
+        //             //     background: color[colorNumber]
+        //             // });
+        //             break;
+
+        //         case 38: //上
+        //             style = {
+        //                 top: '-=20px',
+        //                 // background: color[colorNumber]
+        //             };
+        //             // $('.box').css({
+        //             //     top: '-=20px',
+        //             //     background: color[colorNumber]
+        //             // });
+        //             break;
+
+        //         case 39: //右
+        //             style = {
+        //                 left: '+=20px',
+        //                 // background: color[colorNumber]
+        //             };
+        //             // $('.box').css({
+        //             //     left: '+=20px',
+        //             //     background: color[colorNumber]
+        //             // });
+        //             break;
+
+        //         case 40: //下
+        //             style = {
+        //                 top: '+=20px',
+        //                 // background: color[colorNumber]
+        //             };
+        //             // $('.box').css({
+        //             //     top: '+=20px',
+        //             //     background: color[colorNumber]
+        //             // });
+        //             break;
+        //     }
+        //     // 簡化code
+        //     style.background = color[colorNumber];
+        //     $('.box').css(style);
+        // }
+        // });
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Cat Walk</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css">
+  <style>
+    .map {
+      position: relative;
+      width: 640px;
+      height: 480px;
+      margin: 20px auto;
+      background: url(images/map.png);
+    }
+
+    .cat {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 184px;
+      height: 200px;
+      margin: 2% auto;
+      background: url(images/cat.png) left top;
+      transform: scale(.2);
+      transition: .5s;
+    }
+
+    @keyframes play {
+      100% {
+        background-position: -1658px;
+      }
+    }
+
+    .cat {
+      animation: play .8s steps(9) infinite;
+      -webkit-animation: play .8s steps(9) infinite;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="py-2">
+      <button type="button" class="btn btn-primary" data-speed="up">加速</button>
+      <button type="button" class="btn btn-primary" data-speed="down">減速</button>
+    </div>
+  </div>
+  <div class="map">
+    <div class="cat"></div>
+  </div><!-- map -->
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"
+    integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script>
+    var left = 0;
+    var top = 0;
+    var style = '';
+    var speed = 10;
+
+    $(window).keydown(function () {
+      var keycode = event.which;
+      if (keycode == 37 || keycode == 38 || keycode == 39 || keycode == 40) {
+        console.log(keycode);
+        switch (keycode) {
+          case 37: //左
+            style = {
+              left: `-=${speed}px`,
+            };
+            break;
+          case 38: //上
+            style = {
+              top: `-=${speed}px`,
+            };
+            break;
+          case 39: //右
+            style = {
+              left: `+=${speed}px`,
+            };
+            break;
+          case 40: //下
+            style = {
+              top: `+=${speed}px`,
+            };
+            break;
+        }
+        $('.cat').css(style);
+      }
+    });
+    $('.btn').click(function(){
+      var speedUpDown = $(this).data('speed');
+      if(speedUpDown=='up'){
+        speed = speed+10;
+      }else{
+        speed = speed-10;
+      }
+    });
+  </script>
+</body>
+
+</html>
