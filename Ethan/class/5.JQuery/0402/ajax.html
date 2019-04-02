@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Ajax</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-md-offset-3">
+                <table class="table" id="table">
+                    <thead>
+                        <tr>
+                            <th>地圖</th>
+                            <th>學校數</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tableContent">
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div><!-- container -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        /*
+        $.get("map.json", function (data) {
+            // console.log( data );
+            let list = "";
+            for (i = 0; i < data.length; i++) {
+                // console.log(data[i]["name_tw"]);
+                list += `
+                <tr>
+                    <td>${data[i]["name_tw"]}</td>
+                    <td>${data[i]["count"]}</td>
+                </tr>
+            `;
+            }
+            $("#tableContent").append(list);
+        }, "json");
+        */
+
+        $.ajax({
+            method: "POST",
+            url: "map.json",
+            // data: { name: "John", location: "Boston" },
+            dataType: "json"
+        })
+            .done(function (data) {
+                // alert("Data Saved: " + msg);
+                let list = "";
+                for (i = 0; i < data.length; i++) {
+                    // console.log(data[i]["name_tw"]);
+                    list += `
+                <tr>
+                    <td>${data[i]["name_tw"]}</td>
+                    <td>${data[i]["count"]}</td>
+                </tr>
+            `;
+                }
+                $("#tableContent").append(list);
+            }).fail(function () {
+                // alert("error");
+            })
+            .always(function () {
+                // alert("complete");
+            });
+
+
+
+    </script>
+</body>
+
+</html>

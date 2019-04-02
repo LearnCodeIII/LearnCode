@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Keyboard Animate Move</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <style>
+        .wrapper {
+            width: 800px;
+            height: 400px;
+            background: #eee;
+        }
+
+        .box {
+            width: 120px;
+            height: 120px;
+            background: lightblue;
+            left: 0;
+            top: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper position-relative mx-auto">
+        <div class="box position-absolute"></div>
+    </div>
+
+    <!-- 因為animate不支援顏色所以要另外掛plug in來跑 -->
+    <script src="/Ethan/class/5.JQuery/0402/jquery.color-2.1.2.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script>
+
+        var color = ['lightpink', 'lightgreen', 'lightblue', 'lightyellow'];
+        var colorLength = color.length;
+        var colorNumber = 0;
+        var left = 0;
+        var top = 0;
+        var style = '';
+
+        $(window).keydown(function () {
+            var keycode = event.which;
+            if (keycode == 37 || keycode == 38 || keycode == 39 || keycode == 40) {
+                colorNumber++
+                colorNumber = (colorLength + colorNumber) % colorLength;
+                console.log(keycode);
+
+                switch (keycode) {
+                    case 37: //左
+                        style = {
+                            left: '-=20px',
+                        };
+                        break;
+                    case 38: //上
+                        style = {
+                            top: '-=20px',
+                        };
+                        break;
+                    case 39: //右
+                        style = {
+                            left: '+=20px',
+                        };
+                        break;
+                    case 40: //下
+                        style = {
+                            top: '+=20px',
+                        };
+                        break;
+                }
+                // 但是掛進來那隻plug in不支援background所以改成backgroundColor
+                style.backgroundColor = color[colorNumber];
+                // stop就是連點時不會等動畫跑完在執行下一個,第一個true會直接先停止跑下一個,第二個true會把原本的位置跑完
+                $('.box').stop(true,true).animate(style, 700);
+            }
+        });
+
+
+
+// 原始樣貌
+        // $(window).keydown(function () {
+        //     var keycode = event.which;
+        // if (keycode == 37 || keycode == 38 || keycode == 39 || keycode == 40) {
+
+        //     colorNumber++
+        //     colorNumber = (colorLength + colorNumber) % colorLength;
+        //     console.log(keycode);
+
+        //     switch (keycode) {
+        //         case 37: //左
+        //             style = {
+        //                 left: '-=20px',
+        //                 // background: color[colorNumber]
+        //             };
+        //             // $('.box').css({
+        //             //     left: '-=20px',
+        //             //     background: color[colorNumber]
+        //             // });
+        //             break;
+
+        //         case 38: //上
+        //             style = {
+        //                 top: '-=20px',
+        //                 // background: color[colorNumber]
+        //             };
+        //             // $('.box').css({
+        //             //     top: '-=20px',
+        //             //     background: color[colorNumber]
+        //             // });
+        //             break;
+
+        //         case 39: //右
+        //             style = {
+        //                 left: '+=20px',
+        //                 // background: color[colorNumber]
+        //             };
+        //             // $('.box').css({
+        //             //     left: '+=20px',
+        //             //     background: color[colorNumber]
+        //             // });
+        //             break;
+
+        //         case 40: //下
+        //             style = {
+        //                 top: '+=20px',
+        //                 // background: color[colorNumber]
+        //             };
+        //             // $('.box').css({
+        //             //     top: '+=20px',
+        //             //     background: color[colorNumber]
+        //             // });
+        //             break;
+        //     }
+        //     // 簡化code
+        //     style.background = color[colorNumber];
+        //     $('.box').css(style);
+        // }
+        // });
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Scroll Top</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <style>
+        .full_bg {
+            height: 100vh;
+            background-size: cover;
+            background-position: center center;
+        }
+
+        .btn-top {
+            right:10px;
+            bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <button class="btn btn-primary position-fixed btn-top" id="goTop">Top</button>
+    <div class="full_bg" style="background-image: url(https://c1.staticflickr.com/1/610/32018886091_26923e1265_b.jpg)">
+    </div>
+    <div class="full_bg" id="p2" style="background-image: url(https://c1.staticflickr.com/1/515/32137434825_672c4948fc_b.jpg)">
+    </div>
+    <div class="full_bg" style="background-image: url(https://c1.staticflickr.com/1/512/31327010303_a9910ae7f8_b.jpg)">
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="jquery.color-2.1.2.min.js"></script>
+    <script>
+        $("#goTop").click(function(){
+            // $(window).scrollTop(0);
+            let p2=$("#p2").offset().top;
+            $("html").animate({
+                scrollTop: p2
+            }, 500)
+        });
+
+    </script>
+</body>
+
+</html>
