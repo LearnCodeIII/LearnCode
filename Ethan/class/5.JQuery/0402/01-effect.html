@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Effect</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <style>
+        .box {
+            width: 200px;
+            height: 200px;
+            background: lavender;
+        }
+
+        .box2 {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <button class="btn btn-info" data-btn="show">Show</button>
+        <button class="btn btn-info" data-btn="hide">Hide</button>
+        <button class="btn btn-info" data-btn="toggle">Toggle</button>
+        <button class="btn btn-info" data-btn="animate">Animate</button>
+
+        <div class="d-flex">
+            <div class="box box1">1</div>
+            <div class="box box2">2</div>
+        </div>
+    </div>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <script>
+        $('.btn').click(function () {
+            let data = $(this).data('btn');
+            switch (data) {
+                case 'show':
+                    // $('.box').show();
+                    $('.box1').fadeOut();
+                    $('.box2').fadeIn();
+                    break;
+                case 'hide':
+                    // $('.box').hide();
+                    // 也可使用call back function (一個執行完再執行下一個)
+                    $('.box1').fadeIn(function () {
+                        $('.box2').fadeOut();
+                    });
+                    break;
+                case 'toggle':
+                    // $('.box').toggle();
+                    // fade為淡入淡出,基本為700毫秒
+                    // $('.box').fadeToggle('700');
+                    // 當然可以設快一點或慢一點
+                    // $('.box').fadeToggle('200');
+                    // 或者直接打slow或fast
+                    // $('.box').fadeToggle('slow');
+                    // slide是滑入滑出
+                    $('.box').slideToggle('slow');
+                    break;
+                case 'animate':
+                    $('.box').animate({
+                        width:300,
+                        'border-radius':'10px'
+                        });
+                    break;
+            }
+        });
+
+    </script>
+</body>
+
+</html>
