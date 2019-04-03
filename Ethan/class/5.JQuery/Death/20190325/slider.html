@@ -90,16 +90,16 @@
                     <i class="fas fa-angle-left transition"></i>
                 </div>
             <ul id="slider" class="list-unstyled slider_img d-flex transition">
-                <li><img src="images/slide1.jpeg" alt=""></li>
+                <!-- <li><img src="images/slide1.jpeg" alt=""></li>
                 <li><img src="images/slide2.jpeg" alt=""></li>
                 <li><img src="images/slide3.jpeg" alt=""></li>
-                <li><img src="images/slide4.jpeg" alt=""></li>
+                <li><img src="images/slide4.jpeg" alt=""></li> -->
             </ul>
             <ul id="page" class="list-unstyled page_point d-flex justify-content-center">
+                <!-- <li></li>
                 <li></li>
                 <li></li>
-                <li></li>
-                <li></li>
+                <li></li> -->
             </ul>
         </div>
       </div>
@@ -109,10 +109,25 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <script>
+        var slidePictures=["slide1.jpeg", "slide2.jpeg", "slide3.jpeg", "slide4.jpeg"];
         var slideNum=0;
         var slideWidth=$(".slider_wrap").width();
-        var slideCount=$("#slider li").length;
+        // var slideCount=$("#slider li").length;
+        var slideCount=slidePictures.length;
         var slideLastIndex=slideCount-1;
+        let slidePic="";
+        let slidePage="";
+        for(i=0; i<slideCount; i++ ){
+            // console.log(slidePictures[i]);
+            // let row=`<li><img src="images/${slidePictures[i]}" alt=""></li>`;
+            slidePic+="<li><img src=\"images/"+slidePictures[i]+"\" ></li>";
+            slidePage+="<li></li>";
+            // $("#slider").append(row);
+            // $("#page").append(page);
+        }
+        $("#slider").append(slidePic);
+        $("#page").append(slidePage);
+
         $(".slider_img").width(slideWidth * slideCount);
         console.log(slideWidth)
         $("#page li").eq(0).css("background", "#fff");

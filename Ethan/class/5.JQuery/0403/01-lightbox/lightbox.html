@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Light Box</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="../0403/lightbox2-master/dist/css/lightbox.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <a href="images/slide1.jpeg" data-lightbox="image-1" data-title="My caption">Photo 1</a>
+        <a href="images/slide2.jpeg" data-lightbox="image-1" data-title="My caption">Photo 2</a>
+        <a href="images/slide3.jpeg" data-lightbox="image-1" data-title="My caption">Photo 3</a>
+        <a href="images/slide4.jpeg" data-lightbox="image-1" data-title="My caption">Photo 4</a>
+    </div>
+    <script src="../0403/lightbox2-master/dist/js/lightbox-plus-jquery.js"></script>
+    <script>
+        // 如果你想做額外的光箱設定就在下面
+        lightbox.option({
+            // 縮放速度
+            'resizeDuration': 200,
+            // 下方數量顯示文字
+            'albumLabel': "第%1張 , 共%2張",
+            // 是否循環
+            'wrapAround': true
+        })
+    </script>
+</body>
+
+</html>
