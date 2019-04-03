@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Shop</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+          integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <style>
+        body {
+            background: #eee;
+        }
+
+        .cart {
+
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="row mt-3 mb-3" id="list">
+
+
+    </div>
+    <div class="row justify-content-center">
+        <div class="col-4">
+            <div id="cart" class="cart card">
+                <div class="card-body">
+                    <h3 class="card-title h5">購物車</h3>
+                    <table class="table table-sm" >
+                        <thead>
+                            <tr>
+                                <th class="text-nowrap">品名</th>
+                                <th class="text-nowrap">單價</th>
+                                <th style="width:100px;">數量</th>
+                            </tr>
+                        </thead>
+                        <tbody id="cart-list">
+
+                        </tbody>
+                    </table>
+                    <button class="btn btn-info btn-block">結帳</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div><!-- container -->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+    $.ajax({
+        url: 'food.json',
+        type: 'GET',
+        dataType: 'json'
+    }).done(function (response) {
+        var lists = "";
+        for (i = 0; i < response.length; i++) {
+            lists += `
+              <div class="col-sm-3">
+                  <div class="card">
+                    <div class="card-body">
+                        <img class="card-img-top" src="images/${response[i]["image"]}" alt="">
+                        <h3 class="card-title h5">${response[i]["name"]}</h3>
+                        <div class="d-flex justify-content-between">
+                            <div class="text-danger">$${response[i]["price"]}</div>
+                            <div><a class="btn btn-info text-white add-card" data-name="${response[i]["name"]}" data-price="${response[i]["price"]}"><i class="fas fa-cart-plus"></i></a></div>
+                        </div>
+                    </div>
+                  </div>
+              </div>
+            `;
+
+        }
+        $("#list").append(lists);
+    })
+        .fail(function (xhr) {
+
+        });
+
+    $("#list").on("click", ".add-card", function () {
+        let name = $(this).data("name");
+        let price = $(this).data("price");
+        let item = `
+            <tr>
+                <td>${name}</td>
+                <td>${price}</td>
+                <td><input type="number" class="form-control text-right" value="1"></td>
+            </tr>
+        `;
+        $("#cart-list").append(item);
+    })
+</script>
+</body>
+</html>

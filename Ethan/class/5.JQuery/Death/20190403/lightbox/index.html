@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Lightbox</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/lightbox.min.css">
+</head>
+  <body>
+      <div class="container">
+          <a href="images/dr_fate.jpg" data-lightbox="image-1" data-title="My caption"><img style="width:100px" src="images/dr_fate.jpg" alt=""></a>
+          <div>
+                <a href="images/slide1.jpeg" data-lightbox="roadtrip">Image #2</a>
+                <a href="images/slide2.jpeg" data-lightbox="roadtrip">Image #3</a>
+                <a href="images/slide3.jpeg" data-lightbox="roadtrip" data-title="intro">Image #4</a>
+          </div>
+      </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="js/lightbox-plus-jquery.min.js"></script>
+    <script>
+        lightbox.option({
+            'resizeDuration': 200,
+            'wrapAround': true,
+            albumLabel: "第 %1 張,共 %2 張"
+        })
+    </script>
+</body>
+</html>
